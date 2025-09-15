@@ -1,0 +1,27 @@
+
+  <h2>Meu Carrinho</h2>
+  <div *ngIf="items.length === 0">
+    Seu carrinho está vazio.
+  </div>
+  <div *ngFor="let item of items; let i = index" class="item">
+    <img [src]="item.imagens[0]" alt="{{ item.nomeModelo }}" class="imagem-produto" />
+    <div class="nome-produto">{{ item.nomeModelo }}
+
+    <div *ngIf="item.tipo === 'encomenda' && item.medidas">
+      <h4>Medidas:</h4>
+      <p>Pescoço: {{ item.medidas.pescoco }}cm</p>
+      <p>Tórax: {{ item.medidas.torax }}cm</p>
+      <p>Comprimento: {{ item.medidas.comprimento }}cm</p>
+      <p *ngIf="item.medidas.observacoes"><strong>Observações:</strong> {{ item.medidas.observacoes }}</p>
+    </div></div>
+    <button class="delete-btn" (click)="removerItem(i)" title="Remover">
+    🗑️
+  </button>
+  </div>
+
+  <div class="botoes">
+    <button (click)="finalizarCompra()">Finalizar Compra</button>
+    <button (click)="continuarComprando()">Continuar Comprando</button>
+  </div>
+
+

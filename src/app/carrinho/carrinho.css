@@ -1,0 +1,128 @@
+h2 {
+  color: #0072ce; /* azul royal */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #e3f2fd; /* azul claro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-produto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.nome-produto {
+  background-color: #fff9c4; /* amarelo claro */
+  color: #333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.item > div h4 {
+  margin-bottom: 0.5rem;
+  color: #0072ce;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.item > div p {
+  margin: 0.2rem 0;
+  color: #004a99;
+  font-size: 1rem;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #0072ce;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 140px;
+}
+
+button:hover {
+  background-color: #004a99;
+}
+
+.botoes button:last-child {
+  background-color: #a5d6a7; /* verde claro */
+  color: #004d40;
+}
+
+.botoes button:last-child:hover {
+  background-color: #81c784; /* verde mais escuro no hover */
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #e53935; /* vermelho padrão */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease;
+  border-radius: 0; /* remove arredondamento */
+}
+.delete-btn:hover {
+  color: #c62828; /* vermelho mais forte no hover */
+}
+
+@media (min-width: 600px) {
+  .item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .imagem-produto {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .nome-produto {
+    flex: 1;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .item > div:nth-child(3) {
+    flex: 2;
+  }
+}

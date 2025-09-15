@@ -1,0 +1,59 @@
+<h2 class="titulo">Produtos para Encomenda</h2>
+
+<div class="produto-grid">
+  <div *ngFor="let produto of produtos; let i = index" class="produto-card">
+    <h3 class="modelo-nome">{{ produto.nome }}</h3>
+
+    <div class="imagens">
+      <img *ngFor="let img of produto.imagens" [src]="img" [alt]="produto.nome" class="produto-imagem" />
+    </div>
+
+    <div class="info">
+      <p>Escolha o tecido:</p>
+      <div *ngFor="let tecido of produto.tecidos">
+        <label>
+          <input
+            type="radio"
+            name="tecido-{{i}}"
+            [value]="tecido"
+            [(ngModel)]="tecidosSelecionados[i]"
+          />
+          {{ tecido }}
+        </label>
+      </div>
+
+      <button (click)="selecionar(i, produto)">Selecionar</button>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<h2>Produtos para Encomenda</h2>
+
+<div *ngFor="let produto of produtos; let i = index" class="produto-card">
+  <div class="imagens">
+    <img *ngFor="let img of produto.imagens" [src]="img" [alt]="produto.nome" class="produto-imagem" />
+  </div>
+
+  <div class="info">
+    <h3>{{ produto.nome }}</h3>
+
+    <p><strong>Escolha o tecido:</strong></p>
+    <div *ngFor="let tecido of produto.tecidos">
+      <label>
+        <input
+          type="radio"
+          name="tecido-{{i}}"
+          [value]="tecido"
+          [(ngModel)]="tecidosSelecionados[i]"
+        />
+        {{ tecido }}
+      </label>
+    </div>
+
+    <button (click)="selecionar(i, produto)">Selecionar</button>
+  </div>
+</div>
+ -->
+

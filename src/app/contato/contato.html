@@ -1,0 +1,35 @@
+<!-- Instalar npm install emailjs-com -->
+<h1>Fale conosco</h1>
+<form [formGroup]="contatoForm" (ngSubmit)="enviar()">
+    <div>
+      <label for="nome">Nome:</label><br />
+      <input id="nome" type="text" formControlName="nome" />
+      <div *ngIf="contatoForm.get('nome')?.invalid && contatoForm.get('nome')?.touched" style="color:red">
+        Nome é obrigatório.
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Email:</label><br />
+      <input id="email" type="email" formControlName="email" />
+      <div *ngIf="contatoForm.get('email')?.invalid && contatoForm.get('email')?.touched" style="color:red">
+        Digite um email válido.
+      </div>
+    </div>
+
+    <div>
+      <label for="mensagem">Mensagem:</label><br />
+      <textarea id="mensagem" rows="5" formControlName="mensagem"></textarea>
+      <div *ngIf="contatoForm.get('mensagem')?.invalid && contatoForm.get('mensagem')?.touched" style="color:red">
+        A mensagem precisa ter ao menos 10 caracteres.
+      </div>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" [disabled]="contatoForm.invalid">Enviar</button>
+        <button type="button" class="limpar" (click)="limpar()">Limpar</button>
+        <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
+      </div>
+
+  </form>
+  

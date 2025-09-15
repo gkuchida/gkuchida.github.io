@@ -1,0 +1,125 @@
+/* ===== Layout padrão ===== */
+.titulo {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+  color: #0072ce; /* Azul royal */
+}
+
+.modelos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* menor largura mínima */
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.modelo-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px; /* limita a largura máxima do card */
+  margin: auto; /* centraliza o card dentro da grid cell */
+}
+
+.modelo-imagem {
+  width: auto;       /* mantém a proporção natural */
+  max-width: 180px;  /* controla o tamanho máximo da imagem */
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto; /* centraliza a imagem horizontalmente */
+}
+
+.modelo-nome {
+  background-color: #fff3b0;
+  color: #2a3d66;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+/* Descrição com fundo cinza claro */
+.descricao {
+  background-color: #e0f7fa;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Botão */
+.btn-comprar {
+  background-color: #2b7dbf;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  margin: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 12px auto 0 auto; /* top auto bottom auto */
+  width: 50%; /* Ou use: max-width: 200px; */
+  text-align: center;
+}
+
+.btn-comprar:hover {
+  background-color: #003e80;
+}
+
+.btn-comprar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ===== Header e Footer ===== */
+.header {
+  background-color: #0072ce;
+  color: white;
+  padding: 15px 30px;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  color: #444;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .modelo-imagem {
+    width: 100%;
+  }
+
+  .btn-comprar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modelo-nome {
+    font-size: 1rem;
+  }
+
+  .descricao {
+    font-size: 0.85rem;
+  }
+
+  .btn-comprar {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

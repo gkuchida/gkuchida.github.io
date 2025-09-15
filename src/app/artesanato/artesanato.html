@@ -1,0 +1,44 @@
+<h2 class="titulo">Artesanato</h2>
+
+<div class="modelos-grid">
+  <div *ngFor="let modelo of modelos" class="modelo-card">
+    <div class="modelo-nome">{{ modelo.nome }}</div>
+      <img *ngFor="let img of modelo.imagens" [src]="img" [alt]="modelo.nome" class="modelo-imagem" />
+    <div class="descricao">
+      <p>{{ modelo.descricao }}</p>
+      <p><strong>Valor:</strong> R$ {{ modelo.preco }}</p>
+      <p><strong>Estoque:</strong> {{ modelo.estoque }}</p>
+    <button
+      class="btn-comprar"
+      [disabled]="modelo.estoque === 0"
+      (click)="comprar(modelo)">
+      {{ modelo.estoque === 0 ? 'Indisponível' : 'Comprar' }}
+    </button>
+    </div>
+  </div>
+</div>
+
+<!--
+
+<h2 class="titulo">Modelos Prontas Entrega</h2>
+<div class="modelos-grid">
+
+</div>
+<div *ngFor="let modelo of modelos" class="modelo-card">
+  <div class="imagens">
+    <img *ngFor="let img of modelo.imagens" [src]="img" [alt]="modelo.nome" class="modelo-imagem" />
+  </div>
+  <div class="info">
+    <h3>{{ modelo.nome }}</h3>
+    <p><strong>Tamanhos:</strong> {{ modelo.tamanhos.join(', ') }}</p>
+    <p>{{ modelo.descricao }}</p>
+    <p><strong>Valor:</strong> R$ {{ modelo.preco }}</p>
+    <p><strong>Estoque:</strong> {{ modelo.estoque }}</p>
+    <button
+      [disabled]="modelo.estoque === 0"
+      (click)="comprar(modelo)">
+      {{ modelo.estoque === 0 ? 'Indisponível' : 'Comprar' }}
+    </button>
+  </div>
+</div>
+-->

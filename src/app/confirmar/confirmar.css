@@ -1,0 +1,65 @@
+h2 {
+  color: #0072ce; /* azul royal */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.confirmar-container {
+  max-width: 680px;
+  margin: 0 auto 3rem auto;
+  padding: 1.8rem 2rem;
+  background-color: #e3f2fd; /* azul claro */
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #003c8f; /* azul mais escuro para texto */
+}
+
+.confirmar-container h3 {
+  background-color: #fff9c4; /* amarelo claro */
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #000080;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.confirmar-container p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+button {
+  display: block;
+  width: 140px;
+  margin: 2rem auto 0 auto;
+  padding: 0.6rem 0;
+  background-color: #0072ce;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004a99;
+}
+
+/* Responsividade */
+
+@media (max-width: 520px) {
+  .confirmar-container {
+    max-width: 90%;
+    padding: 1.2rem 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

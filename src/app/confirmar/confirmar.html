@@ -1,0 +1,12 @@
+<!-- confirmar.html -->
+<h2>Confirme seu pedido</h2>
+
+<div *ngIf="produto && medidas" class="confirmar-container">
+  <h3>{{ produto.nome }} - {{ produto.tecido }}</h3>
+  <p><strong>Pescoço:</strong> {{ medidas.pescoco }}</p>
+  <p><strong>Tórax:</strong> {{ medidas.torax }}</p>
+  <p><strong>Comprimento:</strong> {{ medidas.comprimento }}</p>
+  <p><strong>Observações:</strong> {{ medidas.observacoes || 'Nenhuma' }}</p>
+
+  <button (click)="confirmar()">Confirmar</button>
+</div>

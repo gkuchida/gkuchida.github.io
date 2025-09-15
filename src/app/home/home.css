@@ -1,0 +1,381 @@
+/* Container geral da home, para centralizar e limitar largura */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* espaçamento horizontal */
+  box-sizing: border-box;
+}
+
+/* Carrossel */
+.carousel {
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-item {
+  height: 600px; /* ou o tamanho que preferir */
+}
+
+.carousel-item img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+  background-color: rgba(100, 149, 237, 0.5); /* azul clarinho */
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #444444;
+  text-align: center;
+}
+
+/* Setas dentro do slide */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  background-color: rgba(100, 149, 237, 0.5);
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+.slide-inverno {
+  background-color: #A8D0E6;
+}
+
+.slide-verao{
+  background-color: #FFF3B0;
+}
+
+.slide-meiaest{
+  background-color: #FFD6A5;
+}
+
+.slide-festivas{
+  background-color: #D8B4E2;
+}
+
+.slide-natal{
+  background-color: #E63946;
+}
+
+.slide-bandanas{
+  background-color: #A8E6CF;
+}
+
+.slide-cc{
+  background-color: #FFB5A7;
+}
+
+.slide-whats{
+  background-color: #F5F5F5;
+}
+/* Responsividade */
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .home-container {
+    padding: 0 15px;
+  }
+}
+
+/* Container geral da home, para centralizar e limitar largura */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* espaçamento horizontal */
+  box-sizing: border-box;
+}
+
+/* Carrossel */
+.carousel {
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-item {
+  height: 600px; /* ou o tamanho que preferir */
+}
+
+.carousel-item img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+  background-color: rgba(100, 149, 237, 0.5); /* azul clarinho */
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #444444;
+  text-align: center;
+}
+
+/* Setas dentro do slide */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  background-color: rgba(100, 149, 237, 0.5);
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+.slide-inverno {
+  background-color: #A8D0E6;
+}
+
+.slide-verao{
+  background-color: #FFF3B0;
+}
+
+.slide-meiaest{
+  background-color: #FFD6A5;
+}
+
+.slide-festivas{
+  background-color: #D8B4E2;
+}
+
+.slide-natal{
+  background-color: #E63946;
+}
+
+.slide-bandanas{
+  background-color: #A8E6CF;
+}
+
+.slide-cc{
+  background-color: #FFB5A7;
+}
+
+.slide-whats{
+  background-color: #F5F5F5;
+}
+
+/*Segundo carousel */
+.slide-row {
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.product-card-wrapper {
+  flex: 0 0 18%; /* Cada card ocupa 18% da largura do container para 5 cards + espaçamento */
+  max-width: 18%;
+  box-sizing: border-box;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.imagem-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.btn-carrinho {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background-color: #004aad;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-carrinho:hover {
+  background-color: #003080;
+}
+
+.product-card h5 {
+  margin: 10px 0 6px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+  flex-grow: 1; /* para empurrar o texto para ocupar o espaço restante */
+}
+
+#vitrineCarousel {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  height: 400px;
+}
+
+h2{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Categorias */
+.categoria-bloco img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease;
+}
+
+.categoria-bloco p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.categoria-bloco:hover img {
+  transform: scale(1.05);
+  border-color: #004aad;
+}
+
+/* Responsividade */
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .home-container {
+    padding: 0 15px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 180px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+
+  .home-container {
+    padding: 0 10px;
+  }
+}
+
+
+

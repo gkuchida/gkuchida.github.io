@@ -1,0 +1,72 @@
+<div class="container">
+    <h1>Catálogo de Tecidos</h1>
+
+    <div class="tabs">
+      <div
+        *ngFor="let aba of abas; let i = index"
+        class="tab"
+        [class.active]="abaAtiva === i"
+        (click)="mudarAba(i)"
+      >
+        {{ aba }}
+      </div>
+    </div>
+
+    <div *ngIf="abaAtiva === 0" class="tab-content active">
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/20FDSPCk/S01.png" alt="S01">
+        <div class="tecido-info">
+          <div class="tecido-nome">S01 - Soft</div>
+          <div class="tecido-desc">Cor rosa bebê com desenhos de ursos amarelos e corações verdes.</div>
+        </div>
+      </div>
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/hhrnkDV/S02.png" alt="S02">
+        <div class="tecido-info">
+          <div class="tecido-nome">S02 - Soft</div>
+          <div class="tecido-desc">Cor verde com desenhos de animais amarelo, laranja, vermelho e preto.</div>
+        </div>
+      </div>
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/xtWWmDxC/S03.png" alt="S03">
+        <div class="tecido-info">
+          <div class="tecido-nome">S03 - Soft</div>
+          <div class="tecido-desc">Cor pink com desenhos de ossos e patinhas brancas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="abaAtiva === 1" class="tab-content active">
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/N6q7PknW/F06.png" alt="F06">
+        <div class="tecido-info">
+          <div class="tecido-nome">F06 - Fleece</div>
+          <div class="tecido-desc">Cor pink com desenhos de unicórnios brancos.</div>
+        </div>
+      </div>
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/gMTZgT3j/F09.png" alt="F09">
+        <div class="tecido-info">
+          <div class="tecido-nome">F09 - Fleece</div>
+          <div class="tecido-desc">Cor xadrez azul marinho, laranja e branco.</div>
+        </div>
+      </div>
+      <div class="tecido-item">
+        <img src="https://i.ibb.co/nsq2nFRH/F10.png" alt="F10">
+        <div class="tecido-info">
+          <div class="tecido-nome">F10 - Fleece</div>
+          <div class="tecido-desc">Cor verde claro com desenhos de pandas brancos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="abaAtiva === 2" class="tab-content active">
+      <div class="tecido-item">
+        <img src="https://via.placeholder.com/80" alt="Seda Luxo">
+        <div class="tecido-info">
+          <div class="tecido-nome">Seda Luxo</div>
+          <div class="tecido-desc">Vermelho rubi com brilho acetinado</div>
+        </div>
+      </div>
+    </div>
+  </div>

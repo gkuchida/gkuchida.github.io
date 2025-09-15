@@ -1,0 +1,135 @@
+<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+  </div>
+
+  <!-- Itens -->
+  <div class="carousel-inner">
+    <div class="carousel-item active slide-inverno">
+      <img src="https://i.ibb.co/s94TGJZs/IMG-6999.png" class="d-block w-100" alt="Slide 1" />
+      <div class="carousel-caption d-none d-md-block slide-inverno">
+        <h5>🧣 Moda inverno 🧣</h5>
+        <p>Aqueça seu pet com estilo no inverno!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-verao" >
+      <img src="https://i.ibb.co/bMXvPqPc/IMG-6998.png" class="d-block w-100" alt="Slide 2" />
+      <div class="carousel-caption d-none d-md-block slide-verao">
+        <h5>🌞 Verão 🌞</h5>
+        <p>Roupas e acessórios feitos para o conforto do seu pet.</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-meiaest">
+      <img src="https://i.ibb.co/vxC6sD1M/IMG-6993.png" class="d-block w-100" alt="Slide 3" />
+      <div class="carousel-caption d-none d-md-block slide-meiaest">
+        <h5>🍂 Meia estação 🍂 </h5>
+        <p>Pronta pra qualquer clima!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-festivas">
+      <img src="https://i.ibb.co/cMV008b/IMG-6996.png" class="d-block w-100" alt="Slide 4" />
+      <div class="carousel-caption d-none d-md-block slide-festivas">
+        <h5>✨ Festivas ✨</h5>
+        <p>Brilhe em ocasiões especiais!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-natal">
+      <img src="https://i.ibb.co/F4CJpd2N/IMG-6995.png" class="d-block w-100" alt="Slide 5" />
+      <div class="carousel-caption d-none d-md-block slide-natal">
+        <h5>🎄 Natal 🎄 </h5>
+        <p>Magia no seu look natalino!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-bandanas">
+      <img src="https://i.ibb.co/23dtgL5c/IMG-7002.png" class="d-block w-100" alt="Slide 6" />
+      <div class="carousel-caption d-none d-md-block slide-bandanas">
+        <h5>🧵 Bandanas 🧵 </h5>
+        <p> Um charme a mais no visual!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-cc">
+      <img src="https://i.ibb.co/F4jjskqf/Kit-Pano-Puxa.png" class="d-block w-100" alt="Slide 7" />
+      <div class="carousel-caption d-none d-md-block slide-cc">
+        <h5>🪡 Costura criativa 🪡</h5>
+        <p> Feito à mão com amor!</p>
+      </div>
+    </div>
+    <div class="carousel-item slide-whats">
+      <img src="https://i.ibb.co/vvzQQfTx/IMG-6612.png" class="d-block w-100" alt="Slide 8" />
+      <div class="carousel-caption d-none d-md-block slide-whats">
+        <h5>Artes & Focinhos</h5>
+        <p> Escolha o modelo que com seu melhor amigo e peça já pelo Whatsapp</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- Categorias -->
+<div class="categorias-home mt-5 mb-4">
+  <h2 class="text-center mb-3">Explore por categoria</h2>
+  <div class="row justify-content-center text-center">
+    <div class="col-4 col-sm-3 col-md-2" *ngFor="let item of categoriasMenu">
+      <a [routerLink]="item.link" class="categoria-bloco d-block">
+        <img [src]="item.img" [alt]="item.nome" />
+        <p>{{ item.nome }}</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Carrossel de produtos prontos -->
+ <div class="carousel-title">
+  <h2>Recomendados para você</h2>
+</div>
+
+<div id="vitrineCarousel" class="carousel slide" >
+  <div class="carousel-inner">
+    <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
+      <div class="slide-row d-flex justify-content-center">
+        <div *ngFor="let produto of slide" class="product-card-wrapper">
+          <div class="product-card">
+            <div class="imagem-container position-relative">
+              <img [src]="produto.imagem" [alt]="produto.nome" />
+              <a [routerLink]="produto.link" class="btn-carrinho" title="Ver detalhes do produto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5 …"/>
+                </svg>
+              </a>
+            </div>
+            <h5>{{ produto.nome }}</h5>
+            <p>{{ produto.descricao }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- botões prev/next padrão do bootstrap -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#vitrineCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#vitrineCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>

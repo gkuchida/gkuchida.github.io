@@ -1,0 +1,92 @@
+h1{
+    color: #1f3e91;
+    text-align: center;
+}
+/* Container do formulário */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FAFAFA; /* azul bem claro */
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+  }
+
+  /* Labels e campos */
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #2a52be; /* azul royal */
+    outline: none;
+  }
+
+  /* Botões - alinhados à esquerda */
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+
+  }
+
+  /* Estilo base dos botões */
+  button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Botão Enviar */
+  button[type="submit"] {
+    background-color: #2a52be;
+    color: white;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1f3e91;
+  }
+
+  /* Botão Limpar */
+  button.limpar {
+    background-color: #f1c40f;
+    color: #333;
+  }
+
+  button.limpar:hover {
+    background-color: #d4ac0d;
+  }
+
+  /* Botão Cancelar */
+  button.cancelar {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  button.cancelar:hover {
+    background-color: #c0392b;
+  }
+
+  /* Desabilitado */
+  button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
