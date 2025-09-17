@@ -1,8 +1,16 @@
 <body>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h2>FAQ - Perguntas Frequentes</h2>
+        <p class="card-text texto-aconchegante">
+        Aqui você encontra respostas para as perguntas mais comuns sobre nossos produtos, prazos, formas de pagamento e encomendas personalizadas.<br>
+        Não encontrou o que procurava? Entre em contato com a gente — estamos prontos para ajudar!
+        <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+          <i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
     <div class="card-container">
         <div class="faq-container">
-            <h2>FAQ - Perguntas Frequentes</h2>
-
             <div *ngFor="let duvida of duvidas; let i = index" class="faq-item">
               <div class="faq-pergunta" (click)="toggleDuvidas(i)">
                 {{ duvida.pergunta }}

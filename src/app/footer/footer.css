@@ -1,9 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* ocupa todo espaço disponível empurrando o footer para baixo */
+}
+
 /* ===== Footer padrão (desktop) ===== */
 .footer {
   background-color: #D3D3D3;
   color: #444444;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10%;
 }
 
 .footer-columns {

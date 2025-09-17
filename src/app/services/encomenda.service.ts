@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 export interface ProdutoSelecionado {
   nome: string;
-  tecido: string;
+  tecido?: string;
   imagens: string[];
 }
 

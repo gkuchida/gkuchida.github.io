@@ -64,10 +64,8 @@
       </div>
     </div>
     <div class="carousel-item slide-whats">
-      <img src="https://i.ibb.co/vvzQQfTx/IMG-6612.png" class="d-block w-100" alt="Slide 8" />
+      <img src="https://i.ibb.co/sv6x0FTG/wapp.png" class="d-block w-100" alt="Slide 8" />
       <div class="carousel-caption d-none d-md-block slide-whats">
-        <h5>Artes & Focinhos</h5>
-        <p> Escolha o modelo que com seu melhor amigo e peça já pelo Whatsapp</p>
       </div>
     </div>
   </div>
@@ -109,11 +107,12 @@
           <div class="product-card">
             <div class="imagem-container position-relative">
               <img [src]="produto.imagem" [alt]="produto.nome" />
-              <a [routerLink]="produto.link" class="btn-carrinho" title="Ver detalhes do produto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                  <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5 …"/>
+             <a [routerLink]="produto.link" class="btn-carrinho" title="Saiba mais">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                 </svg>
               </a>
+
             </div>
             <h5>{{ produto.nome }}</h5>
             <p>{{ produto.descricao }}</p>

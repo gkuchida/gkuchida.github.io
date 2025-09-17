@@ -1,5 +1,20 @@
-<!-- confirmar.html -->
-<h2>Confirme seu pedido</h2>
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2>Confirme seu pedido</h2>
+    <p class="card-text texto-aconchegante">
+    Você acabou de montar o modelo ideal para o seu pet!<br>
+    Agora, é hora de revisar as informações.<br>
+    Confira se está tudo certinho com as medidas e o modelo escolhido.<br>
+    Se estiver tudo em ordem, é só clicar no botão <strong>Confirmar</strong> — você será
+  direcionado(a) para o nosso WhatsApp.<br>
+    Em breve, entraremos em contato com o orçamento e o prazo de produção para a sua aprovação.<br>
+    Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
+      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </p>
+  </div>
+</div>
 
 <div *ngIf="produto && medidas" class="confirmar-container">
   <h3>{{ produto.nome }} - {{ produto.tecido }}</h3>

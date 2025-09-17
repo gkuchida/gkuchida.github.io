@@ -1,6 +1,23 @@
-<div class="container">
-    <h1>Catálogo de Tecidos</h1>
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2>Tecidos</h2>
+    <p class="card-text texto-aconchegante">
+      Abaixo, você confere alguns dos tecidos que temos disponíveis atualmente.<br>
+      Eles variam conforme o estoque e o tamanho da peça, por isso, nem todos os tecidos estarão sempre disponíveis para todos os modelos ou tamanhos:<br><br>
 
+      <i class="bi bi-exclamation-triangle-fill" style="color: #ffc107; margin-right: 5px;"></i>
+      <strong>Importante:</strong> A disponibilidade dos tecidos pode variar conforme o tamanho da peça e o nosso estoque no momento da produção. As estampas e cores disponíveis serão apresentadas após a confirmação do pedido, garantindo que você receba exatamente o que temos disponível no momento.<br><br>
+
+      Trabalhamos com muito carinho para oferecer conforto, estilo e qualidade em cada roupinha!<br>
+      Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
+      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
     <div class="tabs">
       <div
         *ngFor="let aba of abas; let i = index"
@@ -13,6 +30,10 @@
     </div>
 
     <div *ngIf="abaAtiva === 0" class="tab-content active">
+      <div class="card-text texto-aconchegante">
+        <p><strong>Soft</strong><br>
+        Leve, macio e aconchegante, o soft é ideal para dias fresquinhos. Proporciona conforto sem pesar, sendo ótimo para o uso diário ou passeios em climas amenos.</p>
+      </div>
       <div class="tecido-item">
         <img src="https://i.ibb.co/20FDSPCk/S01.png" alt="S01">
         <div class="tecido-info">
@@ -37,6 +58,10 @@
     </div>
 
     <div *ngIf="abaAtiva === 1" class="tab-content active">
+      <div class="card-text texto-aconchegante">
+        <p><strong>Fleece</strong><br>
+        Mais encorpado que o soft, o fleece é excelente para os dias frios. Tem toque macio e mantém o calor por mais tempo, protegendo seu pet com muito conforto no inverno.</p>
+      </div>
       <div class="tecido-item">
         <img src="https://i.ibb.co/N6q7PknW/F06.png" alt="F06">
         <div class="tecido-info">
@@ -61,10 +86,35 @@
     </div>
 
     <div *ngIf="abaAtiva === 2" class="tab-content active">
+       <div class="card-text texto-aconchegante">
+        <p><strong>Microsoft</strong><br>
+        Com textura aveludada e toque super macio, o microsoft é quentinho e flexível, oferecendo liberdade de movimento. Uma ótima escolha para os dias mais gelados. Ideal para revestimento.</p>
+      </div>
       <div class="tecido-item">
         <img src="https://via.placeholder.com/80" alt="Seda Luxo">
         <div class="tecido-info">
           <div class="tecido-nome">Seda Luxo</div>
+          <div class="tecido-desc">Vermelho rubi com brilho acetinado</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="abaAtiva === 3" class="tab-content active">
+       <div class="card-text texto-aconchegante">
+        <p><strong>Sazonais</strong></p>
+        <ul>
+          <li>Pele Carapinha</li>
+           <p>Extremamente fofa e com aparência de lã de carneiro, a pele carapinha é perfeita para o frio. Muito quentinha e estilosa, traz um charme especial e um nível extra de conforto para o seu pet. Ideal para revestimento.</p>
+           <li>Moletinho/Moletom</li>
+           <p>Leve e confortável, ideal para meia-estação. Tem um visual moderno e despojado.</p>
+           <li>Jeans</li>
+           <p>Para quem gosta de estilo com personalidade. Ótimo para looks urbanos e casuais.</p>
+        </ul>
+      </div>
+      <div class="tecido-item">
+        <img src="https://via.placeholder.com/80" alt="Seda Luxo">
+        <div class="tecido-info">
+          <div class="tecido-nome">Sazonais</div>
           <div class="tecido-desc">Vermelho rubi com brilho acetinado</div>
         </div>
       </div>

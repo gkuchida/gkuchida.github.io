@@ -1,3 +1,59 @@
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2>Informe as Medidas</h2>
+    <p class="card-text texto-aconchegante">
+    Cada peça é feita sob medida com muito carinho, especialmente para o seu pet! <br>
+    Para garantir o caimento ideal, preencha as seguintes medidas, conforme indicado na
+    imagem ilustrativa:<br>
+    - Pescoço<br>
+    - Tórax (circunferência do peito - parte mais larga)<br>
+    - Comprimento do dorso (do pescoço até o início do rabinho)<br>
+    Se quiser acrescentar alguma observação ou detalhe especial, é só escrever —
+    vamos adorar personalizar para vocês! <br>
+    Use a imagem ilustrativa como referência para medir com mais precisão.<br>
+     Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
+      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </p>
+  </div>
+</div>
+
+<div *ngIf="produto" class="medidas-container">
+  <div class="form-wrapper">
+    <h3>{{ produto.nome }}</h3>
+
+    <form (ngSubmit)="ok()">
+      <label>
+        Pescoço (cm) *:
+        <input type="text" [(ngModel)]="medidas.pescoco" name="pescoco" required />
+      </label>
+
+      <label>
+        Tórax (cm) *:
+        <input type="text" [(ngModel)]="medidas.torax" name="torax" required />
+      </label>
+
+      <label>
+        Comprimento (cm) *:
+        <input type="text" [(ngModel)]="medidas.comprimento" name="comprimento" required />
+      </label>
+      <label>
+        Observações:
+        <textarea [(ngModel)]="medidas.observacoes" name="observacoes"></textarea>
+      </label>
+
+      <button type="submit">OK</button>
+    </form>
+  </div>
+
+  <div class="imagem-ajuda">
+    <img src="https://i.ibb.co/NgzWfjX2/MEDIDAS.jpg" alt="Como medir" />
+  </div>
+</div>
+
+
+<!--
 <h2>Informe as Medidas</h2>
 
 <div *ngIf="produto" class="medidas-container">
@@ -31,11 +87,11 @@
 
   <div class="imagem-ajuda">
     <img src="https://i.ibb.co/NgzWfjX2/MEDIDAS.jpg" alt="Como medir" />
-    <!-- substitua pela url correta da sua imagem -->
+
   </div>
 </div>
 
-<!-- medidas.html
+
 <h2>Informe suas Medidas</h2>
 
 <div *ngIf="produto">

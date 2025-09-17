@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/* Garante que o body e html ocupem 100% da altura */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Container que envolve todo o conteúdo */
+.wrapper {
+  min-height: 100%;       /* ocupa toda altura disponível */
+  display: flex;
+  flex-direction: column; /* empilha header, main e footer */
+}

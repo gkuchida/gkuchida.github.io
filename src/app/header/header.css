@@ -94,6 +94,44 @@
   }
 }
 
+/* ===== Botão hamburguer ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0072ce;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0072ce;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex; /* aparece quando o botão for clicado */
+  }
+
+  .menu-toggle {
+    display: block; /* aparece só no mobile */
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+}
+
 /* ===== Responsivo para celulares ===== */
 @media (max-width: 480px) {
   .logo {

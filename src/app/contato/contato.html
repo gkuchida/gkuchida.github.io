@@ -1,5 +1,11 @@
-<!-- Instalar npm install emailjs-com -->
-<h1>Fale conosco</h1>
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2 class="titulo">Fale conosco</h2>
+    <p class="card-text texto-aconchegante">
+    Preencha o formulário abaixo com seu nome, e-mail e mensagem. Teremos o maior prazer em responder o mais breve possível!</p>
+  </div>
+</div>
+
 <form [formGroup]="contatoForm" (ngSubmit)="enviar()">
     <div>
       <label for="nome">Nome:</label><br />
@@ -30,6 +36,4 @@
         <button type="button" class="limpar" (click)="limpar()">Limpar</button>
         <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
       </div>
-
   </form>
-  
