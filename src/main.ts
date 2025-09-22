@@ -13,6 +13,7 @@ import { Artesanato } from './app/artesanato/artesanato';
 import { Sobre } from './app/sobre/sobre';
 import { Duvidas } from './app/duvidas/duvidas';
 import { Contato } from './app/contato/contato';
+import { Buscar } from './app/buscar/buscar';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'sobre', component: Sobre },
   { path: 'duvidas', component: Duvidas },
   { path: 'contato', component: Contato },
+  { path: 'buscar', component: Buscar },
 ];
 
 bootstrapApplication(App, {

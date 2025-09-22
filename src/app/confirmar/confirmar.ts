@@ -1,5 +1,5 @@
 // confirmar.ts
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { EncomendaService, ProdutoSelecionado, MedidasPedido } from '../services/encomenda.service';
@@ -69,4 +69,14 @@ export class Confirmar {
     // Navega para o carrinho
     this.router.navigate(['/carrinho']);
   }
+  showBackToTop = false;
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+    }
+
+    scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }

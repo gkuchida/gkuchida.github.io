@@ -57,6 +57,7 @@
   padding: 10px 15px;
   font-size: 0.95rem;
   color: #333;
+  white-space: pre-line;
 }
 
 /* Botão */
@@ -68,12 +69,13 @@
   margin: 10px 15px;
   font-weight: bold;
   font-size: 1rem;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: block;
   margin: 12px auto 0 auto; /* top auto bottom auto */
-  width: 30%; /* Ou use: max-width: 200px; */
+  width: 50%;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -100,7 +102,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 12px;
-  
+
 }
 
 .btn-whatsapp:hover {
@@ -125,28 +127,27 @@
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-/* ===== Responsivo ===== */
-@media (max-width: 768px) {
-  .modelo-imagem {
-    width: 100%;
-  }
-
-  .btn-comprar {
-    width: 100%;
-  }
+.back-to-top-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #4169e1; /* Azul royal */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 480px) {
-  .modelo-nome {
-    font-size: 1rem;
-  }
-
-  .descricao {
-    font-size: 0.85rem;
-  }
-
-  .btn-comprar {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
+.back-to-top-fixed:hover {
+  background-color: #3151b7;
+  transform: scale(1.1);
 }

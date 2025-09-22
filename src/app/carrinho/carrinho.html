@@ -1,4 +1,3 @@
-
   <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <h2>Meu Carrinho</h2>
@@ -34,5 +33,11 @@
     <button (click)="finalizarCompra()">Finalizar Compra</button>
     <button (click)="continuarComprando()">Continuar Comprando</button>
   </div>
-
-
+  <!-- Botão flutuante lateral direita -->
+  <button
+    class="back-to-top-fixed"
+    (click)="scrollToTop()"
+    aria-label="Voltar ao topo"
+  >
+    <i class="bi bi-arrow-up"></i>
+  </button>

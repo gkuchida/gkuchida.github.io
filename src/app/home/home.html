@@ -15,58 +15,57 @@
   <!-- Itens -->
   <div class="carousel-inner">
     <div class="carousel-item active slide-inverno">
-      <img src="https://i.ibb.co/s94TGJZs/IMG-6999.png" class="d-block w-100" alt="Slide 1" />
-      <div class="carousel-caption d-none d-md-block slide-inverno">
+      <img src="https://i.ibb.co/s94TGJZs/IMG-6999.png" class="d-block w-100" style="object-fit: cover; object-position: center 40%;" alt="Slide 1" />
+      <div class="carousel-caption esq d-none d-md-block slide-inverno">
         <h5>🧣 Moda inverno 🧣</h5>
         <p>Aqueça seu pet com estilo no inverno!</p>
       </div>
     </div>
     <div class="carousel-item slide-verao" >
-      <img src="https://i.ibb.co/bMXvPqPc/IMG-6998.png" class="d-block w-100" alt="Slide 2" />
-      <div class="carousel-caption d-none d-md-block slide-verao">
+      <img src="https://i.ibb.co/bMXvPqPc/IMG-6998.png" class="d-block w-100" style="object-fit: cover; object-position: center 50%;"alt="Slide 2" />
+      <div class="carousel-caption topo d-none d-md-block slide-verao">
         <h5>🌞 Verão 🌞</h5>
         <p>Roupas e acessórios feitos para o conforto do seu pet.</p>
       </div>
     </div>
     <div class="carousel-item slide-meiaest">
-      <img src="https://i.ibb.co/vxC6sD1M/IMG-6993.png" class="d-block w-100" alt="Slide 3" />
-      <div class="carousel-caption d-none d-md-block slide-meiaest">
+      <img src="https://i.ibb.co/vxC6sD1M/IMG-6993.png" class="d-block w-100" style="object-fit: cover; object-position: center 70%;" alt="Slide 3" />
+      <div class="carousel-caption topo d-none d-md-block slide-meiaest" style="background-color: #FFD6A5;">
         <h5>🍂 Meia estação 🍂 </h5>
         <p>Pronta pra qualquer clima!</p>
       </div>
     </div>
     <div class="carousel-item slide-festivas">
-      <img src="https://i.ibb.co/cMV008b/IMG-6996.png" class="d-block w-100" alt="Slide 4" />
-      <div class="carousel-caption d-none d-md-block slide-festivas">
+      <img src="https://i.ibb.co/cMV008b/IMG-6996.png" class="d-block w-100" style="object-fit: cover; object-position: center 60%;" alt="Slide 4" />
+      <div class="carousel-caption esq d-none d-md-block slide-festivas" style="background-color: #D8B4E2;">
         <h5>✨ Festivas ✨</h5>
         <p>Brilhe em ocasiões especiais!</p>
       </div>
     </div>
     <div class="carousel-item slide-natal">
-      <img src="https://i.ibb.co/F4CJpd2N/IMG-6995.png" class="d-block w-100" alt="Slide 5" />
-      <div class="carousel-caption d-none d-md-block slide-natal">
-        <h5>🎄 Natal 🎄 </h5>
-        <p>Magia no seu look natalino!</p>
+      <img src="https://i.ibb.co/F4CJpd2N/IMG-6995.png" class="d-block w-100" style="object-fit: cover; object-position: center 60%;" alt="Slide 5" />
+      <div class="carousel-caption esq d-none d-md-block slide-natal" style="background-color: #E63946;">
+        <h5 style="color: white;">🎄 Natal 🎄 </h5>
+        <p style="color: white;">Magia no seu look natalino!</p>
       </div>
     </div>
     <div class="carousel-item slide-bandanas">
-      <img src="https://i.ibb.co/23dtgL5c/IMG-7002.png" class="d-block w-100" alt="Slide 6" />
-      <div class="carousel-caption d-none d-md-block slide-bandanas">
+      <img src="https://i.ibb.co/23dtgL5c/IMG-7002.png" class="d-block w-100" style="object-fit: cover; object-position: center 60%;" alt="Slide 6" />
+      <div class="carousel-caption esq d-none d-md-block slide-bandanas" style="background-color: #A8E6CF;">
         <h5>🧵 Bandanas 🧵 </h5>
         <p> Um charme a mais no visual!</p>
       </div>
     </div>
     <div class="carousel-item slide-cc">
-      <img src="https://i.ibb.co/F4jjskqf/Kit-Pano-Puxa.png" class="d-block w-100" alt="Slide 7" />
-      <div class="carousel-caption d-none d-md-block slide-cc">
+      <img src="https://i.ibb.co/F4jjskqf/Kit-Pano-Puxa.png" class="d-block w-100" style="object-fit: cover; object-position: center 60%;" alt="Slide 7" />
+      <div class="carousel-caption esq d-none d-md-block slide-cc" style="background-color: #FFB5A7;">
         <h5>🪡 Costura criativa 🪡</h5>
         <p> Feito à mão com amor!</p>
       </div>
     </div>
     <div class="carousel-item slide-whats">
       <img src="https://i.ibb.co/sv6x0FTG/wapp.png" class="d-block w-100" alt="Slide 8" />
-      <div class="carousel-caption d-none d-md-block slide-whats">
-      </div>
+
     </div>
   </div>
 
@@ -87,7 +86,9 @@
   <div class="row justify-content-center text-center">
     <div class="col-4 col-sm-3 col-md-2" *ngFor="let item of categoriasMenu">
       <a [routerLink]="item.link" class="categoria-bloco d-block">
-        <img [src]="item.img" [alt]="item.nome" />
+        <div class="categoria-img-wrapper">
+          <img [src]="item.img" [alt]="item.nome" />
+        </div>
         <p>{{ item.nome }}</p>
       </a>
     </div>
@@ -98,7 +99,6 @@
  <div class="carousel-title">
   <h2>Recomendados para você</h2>
 </div>
-
 <div id="vitrineCarousel" class="carousel slide" >
   <div class="carousel-inner">
     <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
@@ -107,15 +107,13 @@
           <div class="product-card">
             <div class="imagem-container position-relative">
               <img [src]="produto.imagem" [alt]="produto.nome" />
-             <a [routerLink]="produto.link" class="btn-carrinho" title="Saiba mais">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                </svg>
+              <a [routerLink]="produto.link" class="btn-carrinho" title="Ver detalhes do produto">
+                <span class="plus-icon">+</span>
               </a>
-
             </div>
+            <div class="info-container">
             <h5>{{ produto.nome }}</h5>
-            <p>{{ produto.descricao }}</p>
+          </div>
           </div>
         </div>
       </div>
@@ -132,3 +130,151 @@
     <span class="visually-hidden">Próximo</span>
   </button>
 </div>
+
+<!-- Carrossel de Inspirações -->
+<div class="carousel-title">
+  <h2>Inspirações</h2>
+</div>
+<div id="inspiracoesCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div *ngFor="let slide of inspiracoesSlides; let i = index" class="carousel-item" [class.active]="i === 0">
+      <div class="slide-row d-flex justify-content-center">
+        <div *ngFor="let modelo of slide" class="product-card-wrapper">
+          <div class="product-card">
+            <div class="imagem-container position-relative">
+              <img [src]="modelo.imagem" [alt]="modelo.nome" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#inspiracoesCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#inspiracoesCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- Novidades -->
+<div class="novidades-section mt-5">
+  <h2>Novidades</h2>
+  <div class="row justify-content-center">
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/4MFMzp5/macacao.png" alt="Moletom com Capuz" class="img-fluid rounded" />
+          <a routerLink="/prontas" class="btn-carrinho" title="Ver detalhes">
+            <span class="plus-icon">+</span>
+          </a>
+        </div>
+        <h6 class="mt-2">Moletom com Capuz</h6>
+        <p class="small text-muted">Ideal para o friozinho</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/Q78qfjpf/IMG-6318.png" alt="Vestido Rosa Chic" class="img-fluid rounded" />
+          <a routerLink="/prontas" class="btn-carrinho" title="Ver detalhes">
+            <span class="plus-icon">+</span>
+          </a>
+        </div>
+        <h6 class="mt-2">Vestido Rosa Chic</h6>
+        <p class="small text-muted">Para arrasar nos passeios</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Container pai dos depoimentos -->
+<div class="depoimentos-chat-container d-flex flex-wrap justify-content-center gap-3 mt-5">
+  <h2 class="text-center mb-4">O que estão falando</h2>
+  <!-- Depoimento 1 -->
+  <div class="chat-container" style="max-width: 320px;">
+    <div class="chat-message received d-flex align-items-end">
+      <img src="https://i.ibb.co/0rPjNkm/pet2.jpg" alt="Cliente" class="profile-pic" />
+      <div class="message-bubble">
+        <p>Oi! A roupinha chegou hoje e ficou perfeita no Thor! Obrigada 😊</p>
+        <span class="timestamp">10:32 AM</span>
+      </div>
+    </div>
+    <div class="chat-message sent d-flex justify-content-end">
+      <div class="message-bubble">
+        <p>Que ótimo saber! Thor vai arrasar 🐶✨</p>
+        <span class="timestamp">10:33 AM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Depoimento 2 -->
+  <div class="chat-container" style="max-width: 320px;">
+    <div class="chat-message received d-flex align-items-end">
+      <img src="https://i.ibb.co/vdzQqnm/pet1.jpg" alt="Cliente 2" class="profile-pic" />
+      <div class="message-bubble">
+        <p>Minha Luna ama as roupas que vocês fazem! Atendimento top!</p>
+        <span class="timestamp">2:15 PM</span>
+      </div>
+    </div>
+    <div class="chat-message sent d-flex justify-content-end">
+      <div class="message-bubble">
+        <p>Que lindo saber disso, Luna merece mesmo ❤️</p>
+        <span class="timestamp">2:16 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Depoimento 3 -->
+  <div class="chat-container" style="max-width: 320px;">
+    <div class="chat-message received d-flex align-items-end">
+      <img src="https://i.ibb.co/3SXTkQm/pet3.jpg" alt="Cliente 3" class="profile-pic" />
+      <div class="message-bubble">
+        <p>Entrega rápida e produtos de qualidade. Recomendo muito!</p>
+        <span class="timestamp">9:45 AM</span>
+      </div>
+    </div>
+    <div class="chat-message sent d-flex justify-content-end">
+      <div class="message-bubble">
+        <p>Muito obrigado pelo carinho e confiança! 🐾</p>
+        <span class="timestamp">9:46 AM</span>
+      </div>
+    </div>
+  </div>
+  <!-- Depoimentos insta -->
+  <div class="depoimento-insta">
+    <div class="insta-header">
+      <img class="insta-avatar" src="https://i.ibb.co/0rPjNkm/pet2.jpg" alt="Avatar" />
+      <div class="insta-user">
+        <strong>thorpettop</strong><br />
+        <span class="arroba">@thor_pettop</span>
+      </div>
+      <div class="insta-heart">❤️</div>
+    </div>
+
+    <div class="insta-message">
+      <p>“A roupinha chegou e ficou perfeita! Muito amor pelo cuidado com cada detalhe. ????”</p>
+    </div>
+
+    <div class="insta-footer">
+      <span> São Paulo, Brasil</span>
+      <span> 1 dia atrás</span>
+    </div>
+  </div>
+</div>
+
+<!-- Botão flutuante lateral direita -->
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

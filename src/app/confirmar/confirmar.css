@@ -90,15 +90,7 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-/* Responsividade */
-
-@media (max-width: 520px) {
-  .confirmar-container {
-    max-width: 90%;
-    padding: 1.2rem 1rem;
-  }
-
-  button {
-    width: 100%;
-  }
+.back-to-top-fixed:hover {
+  background-color: #3151b7; /* tom mais escuro no hover */
+  transform: scale(1.1);
 }

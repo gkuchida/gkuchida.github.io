@@ -164,3 +164,17 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+.back-to-top-fixed:hover {
+  background-color: #3151b7; /* tom mais escuro no hover */
+  transform: scale(1.1);
+}
+.nome-produto {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}

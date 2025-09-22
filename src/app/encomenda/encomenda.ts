@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { EncomendaService } from '../services/encomenda.service';
@@ -14,19 +14,59 @@ import { FormsModule } from '@angular/forms';
 export class Encomenda {
   produtos = [
     {
-      nome: 'Vestido Sob Medida',
-      tecidos: ['Algodão', 'Linho', 'Seda'],
+      nome: 'Básica',
+      tecidos: ['Soft', 'Fleece', 'Moletom'],
       imagens: [
-        'https://i.ibb.co/XXXXX/vestido1-1.png',
-        'https://i.ibb.co/YYYYY/vestido1-2.png',
+        'https://i.ibb.co/FLsGfrW5/Basica-Fte.png',
+        'https://i.ibb.co/gMj637z5/Basica-Verso.png',
       ],
     },
     {
-      nome: 'Camisa Sob Medida',
-      tecidos: ['Linho', 'Algodão'],
+      nome: 'Vestido Raglan',
+      tecidos: ['Soft', 'Fleece', 'Moletom'],
       imagens: [
-        'https://i.ibb.co/ZZZZZ/camisa1-1.png',
-        'https://i.ibb.co/AAAAA/camisa1-2.png',
+        'https://i.ibb.co/9fc0Vjb/Vestido-Raglan-FTE.png',
+        'https://i.ibb.co/GfyPvzyd/Vestido-Raglan-Verso.png',
+      ],
+    },
+    {
+      nome: 'Vestido Regata',
+      tecidos: ['Soft', 'Fleece', 'Moletom'],
+      imagens: [
+        'https://i.ibb.co/cSJvgs8N/Vestido-Regata-FTE.png',
+        'https://i.ibb.co/ycTWpVrH/Vestido-Regata-Verso.png',
+      ],
+    },
+    {
+      nome: 'Blusa Raglan',
+      tecidos: ['Soft', 'Fleece', 'Moletom'],
+      imagens: [
+        'https://i.ibb.co/8DfZ0msC/Blusa-Raglan-Fte.png',
+        'https://i.ibb.co/Cs8M9q5L/Blusa-Raglan-Verso.png',
+      ],
+    },
+    {
+      nome: 'Capa Dupla Face',
+      tecidos: ['Soft + Fleece','Soft + Microsoft', 'Soft + Pele', 'Fleece + Fleece','Fleece + Pele', 'Fleece + Microsoft', 'Jeans + Soft', 'Jeans + Microsoft', 'Jeans + Fleece', 'Jeans + Pele', 'Jeans + Moletom', 'Moletom + Soft', 'Moletom + Fleece', 'Moletom + Pele'],
+      imagens: [
+        'https://i.ibb.co/FLcHXv8C/Jaqueta-Soft-Costas.png',
+        'https://i.ibb.co/7d19zCWF/Capa-DF-Verso.png',
+      ],
+    },
+    {
+      nome: 'Capa Veste Fácil',
+      tecidos: ['Soft + Fleece','Soft + Microsoft', 'Soft + Pele', 'Fleece + Fleece','Fleece + Pele', 'Fleece + Microsoft', 'Jeans + Soft', 'Jeans + Microsoft', 'Jeans + Fleece', 'Jeans + Pele', 'Jeans + Moletom', 'Moletom + Soft', 'Moletom + Fleece', 'Moletom + Pele'],
+      imagens: [
+        'https://i.ibb.co/WW9bXSbJ/Capa-VF-Fte.png',
+        'https://i.ibb.co/G3MdCjfs/Capa-VF-Verso.png',
+      ],
+    },
+    {
+      nome: 'Jaqueta Dupla Face',
+      tecidos: ['Soft + Fleece','Soft + Microsoft', 'Soft + Pele', 'Fleece + Fleece','Fleece + Pele', 'Fleece + Microsoft', 'Jeans + Soft', 'Jeans + Microsoft', 'Jeans + Fleece', 'Jeans + Pele', 'Jeans + Moletom', 'Moletom + Soft', 'Moletom + Fleece', 'Moletom + Pele'],
+      imagens: [
+        'https://i.ibb.co/NXxJHdD/Jaqueta-Fte.png',
+        'https://i.ibb.co/0yf26srW/Jaqueta-Verso.png',
       ],
     },
   ];
@@ -51,4 +91,14 @@ export class Encomenda {
 
     this.router.navigate(['/medidas']);
   }
+  showBackToTop = false;
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+    }
+
+    scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }

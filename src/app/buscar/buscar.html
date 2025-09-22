@@ -1,0 +1,24 @@
+<h2>Resultados da busca para: "{{ query }}"</h2>
+
+<div *ngIf="resultados.length > 0; else semResultados" class="grid">
+  <div class="card" *ngFor="let produto of resultados">
+    <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+    <div class="info">
+      <h3>{{ produto.nome }}</h3>
+      <p class="origem">Origem: {{ produto.origem }}</p>
+      <button (click)="irParaProduto(produto)">+</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #semResultados>
+  <p>Nenhum produto encontrado para "{{ query }}"</p>
+</ng-template>
+<!-- Botão flutuante lateral direita -->
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

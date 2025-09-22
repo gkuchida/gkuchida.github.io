@@ -17,7 +17,9 @@
 <div class="modelos-grid">
   <div *ngFor="let modelo of modelos" class="modelo-card">
     <div class="modelo-nome">{{ modelo.nome }}</div>
+    <div class="imagens-duplas">
       <img *ngFor="let img of modelo.imagens" [src]="img" [alt]="modelo.nome" class="modelo-imagem" />
+    </div>
     <div class="descricao">
       <p>{{ modelo.descricao }}</p>
       <p><strong>Valor:</strong> R$ {{ modelo.preco }}</p>
@@ -31,7 +33,14 @@
     </div>
   </div>
 </div>
-
+<!-- Botão flutuante lateral direita -->
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>
 <!--
 
 <h2 class="titulo">Modelos Prontas Entrega</h2>

@@ -10,6 +10,8 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 /* Card */
@@ -22,6 +24,7 @@
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.3s;
+  height: 100%;
 }
 
 .produto-card:hover {
@@ -43,18 +46,21 @@
   flex-wrap: wrap;
   padding: 10px;
   gap: 8px;
+  width: 350px;
+  height: 250px;
 }
 
 .produto-imagem {
-  width: 48%;
+  width: 45%;
+  height: 90%;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid #ccc;
+  background-color: #DDEAF6;
 }
 
-/* Radio group com fundo azul claro */
 .info {
-  background-color: #e3f2fd; /* Azul claro */
+  background-color: #e3f2fd;
   padding: 12px 16px;
   font-size: 0.95rem;
   flex-grow: 1;
@@ -64,16 +70,71 @@
   margin: 0 0 8px 0;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .info label {
-  display: block;
-  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
   font-weight: normal;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
+.tecido-select {
+  width: 90%;
+  max-width: 320px;
+  padding: 12px 40px 12px 16px; /* espaço maior na direita para a seta */
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  background-color: #e3f2fd;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  margin: 12px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Seta personalizada */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+
+
+.tecido-select:hover {
+  border-color: #2b7dbf;
+  box-shadow: 0 0 5px rgba(43, 125, 191, 0.5);
+}
+
+.tecido-select:focus {
+  outline: none;
+  border-color: #2b7dbf;
+  box-shadow: 0 0 8px rgba(43, 125, 191, 0.8);
+}
+
+
+/* Radio group com fundo azul claro
+.info .radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+
+*/
 /* Botão centralizado (como página prontas) */
 button {
+  margin-top: auto;
   background-color: #2b7dbf;
   color: white;
   font-weight: bold;
@@ -84,7 +145,7 @@ button {
   transition: background-color 0.3s;
   display: block;
   margin: 16px auto 8px auto;
-  width: 30%;
+  width: 50%;
   text-align: center;
 }
 
@@ -131,13 +192,27 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-/* Responsivo */
-@media (max-width: 768px) {
-  .produto-imagem {
-    width: 100%;
-  }
+.back-to-top-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #4169e1; /* Azul royal */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  button {
-    width: 80%;
-  }
+.back-to-top-fixed:hover {
+  background-color: #3151b7;
+  transform: scale(1.1);
 }

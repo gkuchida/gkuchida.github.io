@@ -21,4 +21,15 @@
             </div>
           </div>
     </div>
+<!-- Botão flutuante lateral direita -->
+<button
+  *ngIf="showBackToTop"
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>
+
 </body>
+

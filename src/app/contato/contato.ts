@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import emailjs from 'emailjs-com';
@@ -51,5 +51,14 @@ export class Contato {
   cancelar() {
     this.router.navigate(['/']);
   }
+  showBackToTop = false;
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+    }
 
+    scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, HostListener } from '@angular/core';
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
 import { Carousel } from 'bootstrap';
@@ -12,11 +12,17 @@ interface Produto {
   imagem: string;
   link: string;
 }
+interface Inspiracao {
+  nome: string;
+  descricao: string;
+  imagem: string;
+  link: string;
+}
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [RouterModule, CommonModule, Header, Footer], // descomente se necessário
+  imports: [RouterModule, CommonModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
@@ -47,7 +53,7 @@ export class Home implements OnInit, AfterViewInit {
       link: '/prontas'
     },
     {
-      nome: 'Básica Soft',
+      nome: 'Básica Fleece',
       descricao: 'Muito estilo para o seu pet',
       imagem: 'https://i.ibb.co/FLsGfrW5/Basica-Fte.png',
       link: '/prontas'
@@ -116,33 +122,202 @@ export class Home implements OnInit, AfterViewInit {
 
   slides: Produto[][] = [];
 
+   inspiracoes: Inspiracao[] = [
+    {
+      nome: 'Tequila',
+      descricao: 'Modelo que a Luna escolheu: Vestido Babadinho',
+      imagem: 'https://i.ibb.co/vvfYHVNh/q1.png',
+      link: '/encomenda'
+    },
+    {
+      nome: 'Tyron',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/LhYfV1pg/q2.png',
+      link: '/encomenda'
+    },
+     {
+      nome: 'Umi, Vic, Musashi',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/6cpHnS7N/q3.png',
+      link: '/encomenda'
+    },
+    {
+      nome: 'Lili',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/Z6tpmZ1d/q4.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Miyu',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/HLp0dNCx/q5.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Luna',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/CpGgHfDx/q6.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Toquinho',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/0yKdh7nb/q7.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Lilo',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/Q7fZHcjF/q8.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Maya',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/DPfT0MTx/q9.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Mani, Cacau, Maia',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/zTKcDWf8/q10.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Simba',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/F4MTJCV9/q11.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Pancho',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/P2yr3Gr/q12.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Belinha e Meli',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/QF7nVMmG/q13.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Floquinho',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/YFnMnF3k/q14.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Ikky',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/3mYRKzRp/q15.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Maia, Cacau e Mani',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/HpXRxHQ0/q16.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Blue',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/HDDdFyjw/q17.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Rosane',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/1fNNRwRx/q18.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Eeve',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/04RKP41/q19.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Simone',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/qFjnVLCp/q20.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Kiara',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/r2Kw4n82/q21.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Petricor',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/gL10RcwN/q22.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Gogh',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/hxVn50Mp/q23.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Ana Paula',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/N2bVNVPc/q24.png',
+      link: '/prontas'
+    },
+    {
+      nome: 'Nino',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/Gvskc5xy/q25.png',
+      link: '/prontas'
+    },
+  ]
+
+  inspiracoesSlides!: Inspiracao[][];
+
   ngOnInit(): void {
     this.slides = this.chunkArray(this.produtos, 5);
+    this.inspiracoesSlides = this.chunkArray(this.inspiracoes, 5);
   }
 
   categoriasMenu = [
-  { nome: 'Pronta Entrega', link: '/prontas', img: 'assets/icons/pronta.png' },
-  { nome: 'Monte o seu Pedido', link: '/encomenda', img: 'assets/icons/pedido.png' },
-  { nome: 'Tecidos', link: '/tecidos', img: 'assets/icons/tecidos.png' },
-  { nome: 'Artesanato', link: '/artesanato', img: 'assets/icons/artesanato.png' },
-  { nome: 'Contato', link: '/contato', img: 'assets/icons/contato.png' },
-  { nome: 'Sobre', link: '/sobre', img: 'assets/icons/sobre.png' }
+  { nome: 'Pronta Entrega', link: '/prontas', img: 'https://i.ibb.co/ksq384jm/festa.png' },
+  { nome: 'Monte o seu Pedido', link: '/encomenda', img: 'https://i.ibb.co/Q78qfjpf/IMG-6318.png'},
+  { nome: 'Tecidos', link: '/tecidos', img: 'https://i.ibb.co/hFq3QPx5/F15.png' },
+  { nome: 'Artesanato', link: '/artesanato', img: 'https://i.ibb.co/jP8JZxjD/IMG-6832-removebg-preview.png' },
+  { nome: 'Contato', link: '/contato', img: 'https://i.ibb.co/1f4Wshxt/contact-5441692.png' },
+  { nome: 'Sobre', link: '/sobre', img: 'https://i.ibb.co/35qdtH3p/sign-13604037.png' }
 ];
 
 
   ngAfterViewInit() {
-    const carouselElement = document.querySelector('#homeCarousel');
+    /*const carouselElement = document.querySelector('#homeCarousel');
     if (carouselElement) {
       new Carousel(carouselElement, {
         interval: 6000,
         ride: 'carousel'
       });
+    }*/
+    const carouselElement = document.querySelector('#homeCarousel');
+      if (carouselElement) {
+        const carousel = new Carousel(carouselElement, {
+          interval: 4000
+        });
+      carousel.cycle();
     }
 
     const vitrineCarousel = document.querySelector('#vitrineCarousel');
     if (vitrineCarousel) {
       new Carousel(vitrineCarousel, {
         ride: false
+      });
+    }
+     const inspiracoesCarousel = document.querySelector('#inspiracoesCarousel');
+    if (inspiracoesCarousel) {
+      new Carousel(inspiracoesCarousel, {
+        ride: 'carousel'
       });
     }
   }
@@ -154,4 +329,14 @@ export class Home implements OnInit, AfterViewInit {
     }
     return resultado;
   }
+   showBackToTop = false;
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+    }
+
+    scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }

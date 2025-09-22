@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -11,6 +11,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrl: './duvidas.css'
 })
 export class Duvidas {
+  showBackToTop = false; 
   duvidas : { pergunta: string; resposta: SafeHtml; aberto: boolean }[];
   constructor(private sanitizer: DomSanitizer) {
     this.duvidas = [
@@ -226,6 +227,16 @@ export class Duvidas {
 
   ];
   }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showBackToTop = scrollTop > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 
   toggleDuvidas(index: number) {
     this.duvidas.map((duvida,index)=>{
@@ -236,3 +247,4 @@ export class Duvidas {
 
 }
 const func = ()=>{};
+
