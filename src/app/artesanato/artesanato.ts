@@ -1,17 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService, CarrinhoItem } from '../services/carrinho.service';
+import { MsgSucesso } from '../msg-sucesso/msg-sucesso';
+import { MatDialog } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
-@Component({
-  standalone: true,
-  selector: 'app-artesanato',
-  templateUrl: './artesanato.html',
-  styleUrls: ['./artesanato.css'],
-  imports: [CommonModule]
-})
-export class Artesanato {
-  modelos = [
-    {
+export const artesanato = [
+  {
     nome: 'Embalagem de tecido G',
     descricao: 'Embalagem para deixar sua lembrança mais charmosa.\nTecido: Tricoline.\nMedidas:',
     preco: 20,
@@ -78,28 +73,40 @@ export class Artesanato {
     ]
     },
   ];
-
-  constructor(private carrinhoService: CarrinhoService) {}
+@Component({
+  standalone: true,
+  selector: 'app-artesanato',
+  templateUrl: './artesanato.html',
+  styleUrls: ['./artesanato.css'],
+  imports: [CommonModule, FormsModule]
+})
+export class Artesanato {
+  produtos = artesanato;
+  constructor(private carrinhoService: CarrinhoService, private dialog: MatDialog) {}
 
     comprar(modelo: { nome: string; imagens: string[] }) {
     const item: CarrinhoItem = {
       tipo: 'artesanato',
       nomeModelo: modelo.nome,
-      imagens: modelo.imagens,    //imagemUrl: modelo.imagens[0]
+      imagens: modelo.imagens,
     };
 
     this.carrinhoService.addItem(item);
-    alert(`"${modelo.nome}" adicionado ao carrinho!`);
+    //alert(`"${modelo.nome}" adicionado ao carrinho!`);
+    this.dialog.open(MsgSucesso, {
+    width: '400px',
+    data: { nome: modelo.nome },
+    panelClass: 'custom-modal'
+  });
     }
     showBackToTop = false;
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300;
     }
 
     scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
 }

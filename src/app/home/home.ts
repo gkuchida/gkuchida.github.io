@@ -273,6 +273,12 @@ export class Home implements OnInit, AfterViewInit {
       imagem: 'https://i.ibb.co/Gvskc5xy/q25.png',
       link: '/prontas'
     },
+    {
+      nome: 'Floquinho2',
+      descricao: 'Estilo retrô para brilhar',
+      imagem: 'https://i.ibb.co/ksbn2ZvY/Floquinho.png',
+      link: '/prontas'
+    },
   ]
 
   inspiracoesSlides!: Inspiracao[][];
@@ -283,10 +289,10 @@ export class Home implements OnInit, AfterViewInit {
   }
 
   categoriasMenu = [
-  { nome: 'Pronta Entrega', link: '/prontas', img: 'https://i.ibb.co/ksq384jm/festa.png' },
-  { nome: 'Monte o seu Pedido', link: '/encomenda', img: 'https://i.ibb.co/Q78qfjpf/IMG-6318.png'},
-  { nome: 'Tecidos', link: '/tecidos', img: 'https://i.ibb.co/hFq3QPx5/F15.png' },
-  { nome: 'Artesanato', link: '/artesanato', img: 'https://i.ibb.co/jP8JZxjD/IMG-6832-removebg-preview.png' },
+  { nome: 'Pronta Entrega', link: '/prontas', img: 'https://i.ibb.co/pjmDvYJb/IMG-6978.png' },
+  { nome: 'Monte o seu Pedido', link: '/encomenda', img: 'https://i.ibb.co/278jM5Y4/metrica.png' },
+  { nome: 'Tecidos', link: '/tecidos', img: 'https://i.ibb.co/nMsg8P31/tecido.png' },
+  { nome: 'Artesanato', link: '/artesanato', img: 'https://i.ibb.co/36cfYjZ/artesanato.png' },
   { nome: 'Contato', link: '/contato', img: 'https://i.ibb.co/1f4Wshxt/contact-5441692.png' },
   { nome: 'Sobre', link: '/sobre', img: 'https://i.ibb.co/35qdtH3p/sign-13604037.png' }
 ];

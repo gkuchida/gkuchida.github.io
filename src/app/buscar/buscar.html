@@ -1,24 +1,29 @@
-<h2>Resultados da busca para: "{{ query }}"</h2>
-
-<div *ngIf="resultados.length > 0; else semResultados" class="grid">
-  <div class="card" *ngFor="let produto of resultados">
-    <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
-    <div class="info">
-      <h3>{{ produto.nome }}</h3>
-      <p class="origem">Origem: {{ produto.origem }}</p>
-      <button (click)="irParaProduto(produto)">+</button>
+<div class="buscar-container">
+  <h2 style="color: #000080;">Resultado da busca</h2>
+  <div *ngIf="resultados.length === 0 && searchQuery" class="no-result">
+    Nenhum resultado encontrado.
+  </div>
+  <div class="produtos-grid">
+    <div *ngFor="let produto of resultados" class="produto-card">
+      <div class="imagem-container">
+        <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+        <!--<button class="btn btn-success btn-mais" (click)="verMais(produto.tipo)">+</button>-->
+        <button class="btn btn-success btn-mais" (click)="verMais(produto)">+</button>
+      </div>
+      <div class="produto-info">
+        <h5 class="produto-nome">{{ produto.nome }}</h5>
+        <p *ngIf="produto.tipo" class="tecidos">Você encontra este produto no menu {{ produto.tipo === 'pronta' ? 'Produto à Pronta Entrega' : (produto.tipo === 'encomenda' ? 'Produto Sob Encomenda' : produto.tipo) }} ou clicando no botão '+'.</p>
+        <p *ngIf="produto.estoque > 0 || produto.tipo === 'encomenda'" class="descricao">
+          <!--Estoque: {{ produto.tipo === 'pronta' ? produto.estoque : (produto.tipo === 'encomenda' ? 0 : '-') }}-->
+        </p>
+      </div>
     </div>
   </div>
 </div>
-
-<ng-template #semResultados>
-  <p>Nenhum produto encontrado para "{{ query }}"</p>
-</ng-template>
 <!-- Botão flutuante lateral direita -->
 <button
   class="back-to-top-fixed"
   (click)="scrollToTop()"
-  aria-label="Voltar ao topo"
->
+  aria-label="Voltar ao topo">
   <i class="bi bi-arrow-up"></i>
 </button>

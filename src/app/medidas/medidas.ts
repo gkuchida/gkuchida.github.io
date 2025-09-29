@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { EncomendaService, ProdutoSelecionado, MedidasPedido } from '../services/encomenda.service';
 import { FormsModule } from '@angular/forms';
-
+import { MsgErro } from '../msg-erro/msg-erro';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-medidas',
   standalone: true,
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./medidas.css'],
   imports: [CommonModule, FormsModule]
 })
+
 export class Medidas {
   produto?: ProdutoSelecionado;
 
@@ -22,11 +24,11 @@ export class Medidas {
     observacoes: ''
   };
 
-  constructor(private encomendaService: EncomendaService, private router: Router) {
+  constructor(private encomendaService: EncomendaService, private router: Router, private dialog: MatDialog) {
     this.produto = this.encomendaService.getProdutoSelecionado();
 
     if (!this.produto) {
-      this.router.navigate(['/encomenda']); // volta se não tiver produto selecionado
+      this.router.navigate(['/encomenda']);
     }
   }
 
@@ -36,7 +38,12 @@ export class Medidas {
 
   ok() {
     if (!this.validarCampos()) {
-      alert('Preencha os campos obrigatórios: pescoço, tórax e comprimento.');
+      //alert('Preencha os campos obrigatórios: pescoço, tórax e comprimento.');
+       this.dialog.open(MsgErro, {
+        width: '400px',
+        data: { medidas: this.medidas },
+        panelClass: 'custom-modal'
+      });
       return;
     }
     this.encomendaService.setMedidas(this.medidas);
@@ -46,7 +53,7 @@ export class Medidas {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300; 
     }
 
     scrollToTop(): void {

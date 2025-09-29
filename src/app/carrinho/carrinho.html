@@ -1,43 +1,58 @@
-  <div class="card mb-4 shadow-sm">
-      <div class="card-body">
-        <h2>Meu Carrinho</h2>
-        <p class="card-text texto-aconchegante">
-        Revise seus itens com atenção antes de finalizar a compra.
-        Você pode adicionar mais produtos, alterar quantidades ou remover itens facilmente.
-        Quando estiver pronto, siga para o checkout para concluir seu pedido com segurança.
-        <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
-          <i class="bi bi-whatsapp"></i></a>
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2>Meu Carrinho</h2>
+    <p class="card-text texto-aconchegante">
+    Revise seus itens com atenção antes de finalizar a compra.
+    Você pode adicionar mais produtos, alterar quantidades ou remover itens facilmente.
+    Quando estiver pronto, siga para o checkout para concluir seu pedido com segurança.
+    <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+    <i class="bi bi-whatsapp"></i></a>
+  </div>
+</div>
+
+<div *ngIf="items.length === 0">
+  Seu carrinho está vazio.
+  <div class="mt-3">
+    <button class="btn btn-primary" (click)="voltarAsCompras()">
+      <i class="bi bi-arrow-left"></i> Voltar às Compras
+    </button>
+  </div>
+</div>
+
+<div *ngFor="let item of items; let i = index" class="item">
+  <img [src]="item.imagens[0]" alt="{{ item.nomeModelo }}" class="imagem-produto" />
+  <div class="nome-produto">{{ item.nomeModelo }} {{ item.tecido }}
+    <div *ngIf="item.tipo === 'encomenda' && item.medidas">
+      <div class="medidas">
+        <p>Medida do pescoço: {{ item.medidas.pescoco }}cm</p>
+        <p>Medida do tórax: {{ item.medidas.torax }}cm</p>
+        <p>Comprimento: {{ item.medidas.comprimento }}cm</p>
+        <p *ngIf="item.medidas.observacoes"><strong>Observações:</strong> {{ item.medidas.observacoes }}</p>
       </div>
     </div>
-
-  <div *ngIf="items.length === 0">
-    Seu carrinho está vazio.
   </div>
-  <div *ngFor="let item of items; let i = index" class="item">
-    <img [src]="item.imagens[0]" alt="{{ item.nomeModelo }}" class="imagem-produto" />
-    <div class="nome-produto">{{ item.nomeModelo }}
+  <button class="delete-btn" (click)="openConfirmDialog(i)" title="Remover">🗑️</button>
+</div>
 
-    <div *ngIf="item.tipo === 'encomenda' && item.medidas">
-      <h4>Medidas:</h4>
-      <p>Pescoço: {{ item.medidas.pescoco }}cm</p>
-      <p>Tórax: {{ item.medidas.torax }}cm</p>
-      <p>Comprimento: {{ item.medidas.comprimento }}cm</p>
-      <p *ngIf="item.medidas.observacoes"><strong>Observações:</strong> {{ item.medidas.observacoes }}</p>
-    </div></div>
-    <button class="delete-btn" (click)="removerItem(i)" title="Remover">
-    🗑️
-  </button>
-  </div>
+<div *ngIf="items.length > 0" class="botoes">
+  <button (click)="finalizarCompra()">Finalizar Compra</button>
+  <button (click)="continuarComprando()">Continuar Comprando</button>
+</div>
 
-  <div class="botoes">
-    <button (click)="finalizarCompra()">Finalizar Compra</button>
-    <button (click)="continuarComprando()">Continuar Comprando</button>
-  </div>
+<app-msg-excluir
+  *ngIf="showConfirmDialog"
+  [title]="'Remover Item'"
+  [message]="'Tem certeza que deseja remover este item do carrinho?'"
+  (confirm)="removerItemConfirmado()"
+  (cancel)="closeConfirmDialog()">
+</app-msg-excluir>
+
   <!-- Botão flutuante lateral direita -->
-  <button
-    class="back-to-top-fixed"
-    (click)="scrollToTop()"
-    aria-label="Voltar ao topo"
-  >
-    <i class="bi bi-arrow-up"></i>
-  </button>
+<button
+  *ngIf="showBackToTop"
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

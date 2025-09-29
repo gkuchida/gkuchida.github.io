@@ -14,7 +14,7 @@ export class Sobre {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300; 
     }
 
     scrollToTop(): void {

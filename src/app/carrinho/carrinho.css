@@ -1,5 +1,9 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 h2 {
-  color: #0072ce; /* azul royal */
+  color: #0072ce;
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -7,21 +11,23 @@ h2 {
 }
 
 .item {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 1rem;
   margin-bottom: 1rem;
-  background-color: #e3f2fd; /* azul claro */
+  background-color: #e3f2fd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .imagem-produto {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 10%;
+  height: 10%;
+  object-fit: contain;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
@@ -29,8 +35,8 @@ h2 {
 }
 
 .nome-produto {
-  background-color: white;
-  color: #4B5358;
+  background-color: #F0F8FF;
+  color: #000080;
   font-weight: 700;
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
@@ -38,17 +44,17 @@ h2 {
   text-align: center;
   margin-bottom: 1rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.item > div h4 {
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 18px;
+  width: 75%;
 }
 
 .item > div p {
   margin: 0.2rem 0;
   font-size: 1rem;
+}
+
+.medidas{
+  font-size: 12px;
+  color: #444444;
 }
 
 .botoes {
@@ -72,57 +78,35 @@ button {
   min-width: 140px;
 }
 
-button:hover {
+button:not(.delete-btn):hover {
   background-color: #004a99;
 }
 
-.botoes button:last-child {
-  background-color: #a5d6a7; /* verde claro */
-  color: #004d40;
-}
-
-.botoes button:last-child:hover {
-  background-color: #81c784; /* verde mais escuro no hover */
-}
-
 .delete-btn {
-  background: none;
+  background: transparent;
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
-  color: #e53935; /* vermelho padrão */
+  color: #e53935;
   position: absolute;
   top: 10px;
   right: 10px;
   transition: color 0.3s ease;
-  border-radius: 0; /* remove arredondamento */
+  border-radius: 0;
 }
+
 .delete-btn:hover {
-  color: #c62828; /* vermelho mais forte no hover */
+  background-color: transparent;
+  color: #c62828;
 }
 
-@media (min-width: 600px) {
-  .item {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.botoes button:last-child {
+  background-color: #a5d6a7;
+  color: #004d40;
+}
 
-  .imagem-produto {
-    margin-right: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  .nome-produto {
-    flex: 1;
-    margin-bottom: 0;
-    padding: 0.5rem 1rem;
-    align-self: flex-start;
-    text-align: left;
-  }
-
-  .item > div:nth-child(3) {
-    flex: 2;
-  }
+.botoes button:last-child:hover {
+  background-color: #81c784;
 }
 
 .btn-whatsapp {
@@ -139,7 +123,6 @@ button:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 12px;
-
 }
 
 .btn-whatsapp:hover {
@@ -151,6 +134,17 @@ button:hover {
   font-size: 1.2rem;
 }
 
+.btn-primary {
+  background-color: #0072ce;
+  border-color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
 .texto-aconchegante {
   font-size: 1rem;
   color: #555;
@@ -160,21 +154,100 @@ button:hover {
   line-height: 1.4;
   background: #f9f9f9;
   padding: 12px 16px;
-  border-left: 4px solid #4169e1; /* azul royal para combinar com seu header */
+  border-left: 4px solid #4169e1;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
+.back-to-top-fixed {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .back-to-top-fixed:hover {
-  background-color: #3151b7; /* tom mais escuro no hover */
+  background-color: #3151b7;
   transform: scale(1.1);
 }
-.nome-produto {
-  color: #333;
-  font-weight: 700;
-  font-size: 1.3rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-align: center;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+/* -- RESPONSIVO -- */
+@media (max-width: 600px) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .imagem-produto {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+  }
+
+  .nome-produto {
+    width: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+
+  .item > div p {
+    font-size: 0.95rem;
+  }
+
+  .medidas {
+    font-size: 0.85rem;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    min-width: 100%;
+  }
+
+  .delete-btn {
+    top: 5px;
+    right: 5px;
+    font-size: 1.2rem;
+  }
+
+  .btn-whatsapp {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .back-to-top-fixed {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    bottom: 30px;
+    right: 15px;
+  }
+
+  .texto-aconchegante {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
 }
+/* -- FIM RESPONSIVO -- */

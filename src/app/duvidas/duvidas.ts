@@ -11,7 +11,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrl: './duvidas.css'
 })
 export class Duvidas {
-  showBackToTop = false; 
+  showBackToTop = false;
   duvidas : { pergunta: string; resposta: SafeHtml; aberto: boolean }[];
   constructor(private sanitizer: DomSanitizer) {
     this.duvidas = [
@@ -65,7 +65,7 @@ export class Duvidas {
       <li><strong>Confirme seu pedido:</strong> Após preencher as medidas, clique no botão para ir à página de confirmação.</li>
       <li><strong>Aguarde nosso contato:</strong> Ao confirmar, suas informações serão enviadas diretamente para nossa equipe via WhatsApp. Retornaremos o mais breve possível para apresentar as opções de tecidos e estampas disponíveis, um orçamento prévio e a estimativa de entrega.</li>
       </ul>
-      <p>Estamos aqui para ajudar você a criar a peça perfeita para o seu melhor amigo!</p>
+      <p>Estamos aqui para ajudar você a criar a peça perfeita para o (a) seu (sua) melhor amigo (a)!</p>
       `),
       aberto: false
     },
@@ -83,8 +83,8 @@ export class Duvidas {
       pergunta: 'Como medir meu pet?',
       resposta: this.sanitizer.bypassSecurityTrustHtml(`
       Para garantir que a roupa do seu pet tenha o melhor caimento possível, é fundamental tirar as medidas com a máxima precisão.<br>
-      Siga atentamente as instruções na imagem para medir cada parte do corpo do seu pet. Um caimento perfeito garante não apenas o conforto, mas também a segurança do seu melhor amigo.<br>
-      <img src="URL_DA_IMAGEM_AQUI" alt="Como medir meu pet" style="max-width: 100%; height: auto; border-radius: 8px;">
+      Siga atentamente as instruções na imagem para medir cada parte do corpo do seu pet. Um caimento perfeito garante não apenas o conforto, mas também a segurança do (a) seu (sua) melhor amigo (a).<br>
+      <img src="https://i.ibb.co/Rkgm8PS4/medidas.jpg" alt="Como medir meu pet" style="width: 350px; height: 350px; border-radius: 8px; display: block; margin: 0 auto;">
       `),
       aberto: false
     },
@@ -97,7 +97,7 @@ export class Duvidas {
         <li>O modelo que você gostou.</li>
         <li>As medidas do seu pet.</li>
       </ul>
-      Em seguida, nossa equipe irá retornar com as opções de tecidos e estampas disponíveis para você escolher e criar a peça perfeita para seu melhor amigo.
+      Em seguida, nossa equipe irá retornar com as opções de tecidos e estampas disponíveis para você escolher e criar a peça perfeita para seu (sua) melhor amigo (a).
       `),
       aberto: false
     },
@@ -110,7 +110,7 @@ export class Duvidas {
         <li>O modelo que você gostou.</li>
         <li>As medidas do seu pet.</li>
       </ul>
-      Em seguida, nossa equipe irá retornar com as opções de tecidos e estampas disponíveis para você escolher e criar a peça perfeita para seu melhor amigo.
+      Em seguida, nossa equipe irá retornar com as opções de tecidos e estampas disponíveis para você escolher e criar a peça perfeita para seu (sua) melhor amigo (a).
       `),
       aberto: false
     },
@@ -232,12 +232,9 @@ export class Duvidas {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.showBackToTop = scrollTop > 300;
   }
-
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-
   toggleDuvidas(index: number) {
     this.duvidas.map((duvida,index)=>{
       duvida.aberto = false
@@ -247,4 +244,3 @@ export class Duvidas {
 
 }
 const func = ()=>{};
-

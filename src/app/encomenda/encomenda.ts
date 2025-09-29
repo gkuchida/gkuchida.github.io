@@ -3,18 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { EncomendaService } from '../services/encomenda.service';
 import { FormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { MsgErro } from '../msg-erro/msg-erro';
 
-@Component({
-  selector: 'app-encomenda',
-  standalone: true,
-  templateUrl: './encomenda.html',
-  styleUrls: ['./encomenda.css'],
-  imports: [CommonModule, FormsModule]
-})
-export class Encomenda {
-  produtos = [
-    {
-      nome: 'Básica',
+export const prod_encomenda =[
+  {
+  nome: 'Básica',
       tecidos: ['Soft', 'Fleece', 'Moletom'],
       imagens: [
         'https://i.ibb.co/FLsGfrW5/Basica-Fte.png',
@@ -70,16 +64,29 @@ export class Encomenda {
       ],
     },
   ];
+@Component({
+  selector: 'app-encomenda',
+  standalone: true,
+  templateUrl: './encomenda.html',
+  styleUrls: ['./encomenda.css'],
+  imports: [CommonModule, FormsModule]
+})
+export class Encomenda {
+  produtos = prod_encomenda;
 
-  // Para armazenar o tecido escolhido por produto (índice do array)
   tecidosSelecionados: { [key: number]: string } = {};
 
-  constructor(private encomendaService: EncomendaService, private router: Router) {}
+  constructor(private encomendaService: EncomendaService, private router: Router, private dialog: MatDialog) {}
 
   selecionar(index: number, produto: { nome: string; tecidos: string[]; imagens: string[] }) {
     const tecidoEscolhido = this.tecidosSelecionados[index];
     if (!tecidoEscolhido) {
-      alert('Por favor, escolha o tecido antes de selecionar o produto.');
+      //alert('Por favor, escolha o tecido antes de selecionar o produto.');
+      this.dialog.open(MsgErro, {
+        width: '400px',
+        data: { tecido: tecidoEscolhido },
+        panelClass: 'custom-modal'
+      });
       return;
     }
 
@@ -95,9 +102,8 @@ export class Encomenda {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300;
     }
-
     scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     }

@@ -1,9 +1,12 @@
-/* ===== Layout padrão ===== */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .titulo {
   text-align: center;
   margin: 30px 0;
   font-size: 2rem;
-  color: #0072ce; /* Azul royal */
+  color: #0072ce;
 }
 
 .modelos-grid {
@@ -11,7 +14,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 0 20px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -35,13 +38,13 @@
   font-size: 1.2rem;
 }
 
-/* Imagens lado a lado */
 .imagens-duplas {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 10px;
   flex-wrap: wrap;
+  max-width: 500px;
 }
 
 .modelo-imagem {
@@ -51,32 +54,49 @@
   object-fit: cover;
 }
 
-/* Descrição com fundo cinza claro */
 .descricao {
   background-color: #e0f7fa;
   padding: 10px 15px;
   font-size: 0.95rem;
   color: #333;
   white-space: pre-line;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Botão */
+.texto-aconchegante {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 20px 0;
+  font-style: italic;
+  max-width: auto;
+  line-height: 1.4;
+  background: #f9f9f9;
+  padding: 12px 16px;
+  border-left: 4px solid #4169e1;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
 .btn-comprar {
   background-color: #2b7dbf;
   color: white;
   border: none;
   padding: 14px 24px;
-  margin: 10px 15px;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: block;
-  margin: 12px auto 0 auto; /* top auto bottom auto */
   width: 50%;
-  max-width: 200px;
   text-align: center;
+  max-width: 200px;
+  margin: 12px auto 0 auto;
+  margin-top: auto;
 }
 
 .btn-comprar:hover {
@@ -102,7 +122,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 12px;
-
 }
 
 .btn-whatsapp:hover {
@@ -114,25 +133,12 @@
   font-size: 1.2rem;
 }
 
-.texto-aconchegante {
-  font-size: 1rem;
-  color: #555;
-  margin: 0 0 20px 0;
-  font-style: italic;
-  max-width: auto;
-  line-height: 1.4;
-  background: #f9f9f9;
-  padding: 12px 16px;
-  border-left: 4px solid #4169e1; /* azul royal para combinar com seu header */
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
 .back-to-top-fixed {
   position: fixed;
   bottom: 40px;
   right: 20px;
   z-index: 1000;
-  background-color: #4169e1; /* Azul royal */
+  background-color: #4169e1;
   color: white;
   border: none;
   border-radius: 50%;
@@ -151,3 +157,70 @@
   background-color: #3151b7;
   transform: scale(1.1);
 }
+/* -- RESPONSIVO -- */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.5rem;
+    margin: 20px 10px;
+  }
+
+  .modelos-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .modelo-card {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .modelo-nome {
+    font-size: 1rem;
+    padding: 8px 6px;
+  }
+
+  .imagens-duplas {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modelo-imagem {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .descricao {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .texto-aconchegante {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+
+  .btn-comprar {
+    width: 70%;
+    max-width: none;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    margin: 12px auto 10px auto;
+  }
+
+  .btn-whatsapp {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .back-to-top-fixed {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 30px;
+    right: 15px;
+  }
+}
+/* -- FIM RESPONSIVO -- */

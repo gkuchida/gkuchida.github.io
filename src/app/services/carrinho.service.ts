@@ -31,9 +31,9 @@ export class CarrinhoService {
 
   removeItem(index: number) {
     this._items.update(itens => {
-      const novoArray = [...itens]; // cria uma cópia
-      novoArray.splice(index, 1);   // remove o item da cópia
-      return novoArray;             // retorna o novo array para atualizar o signal
+      const novoArray = [...itens];
+      novoArray.splice(index, 1);
+      return novoArray;          
     });
   }
 }

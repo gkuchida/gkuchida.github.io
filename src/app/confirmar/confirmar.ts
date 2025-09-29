@@ -1,4 +1,3 @@
-// confirmar.ts
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -25,7 +24,6 @@ export class Confirmar {
     this.medidas = this.encomendaService.getMedidas();
 
     if (!this.produto) {
-      // Produto obrigatório
       this.router.navigate(['/encomenda']);
     }
   }
@@ -44,7 +42,7 @@ export class Confirmar {
       tipo: isEncomenda ? 'encomenda' : 'pronta',
       nomeModelo: this.produto.nome,
       tecido: this.produto.tecido,
-      imagens: this.produto.imagens,//imagemUrl: this.produto.imagens[0],
+      imagens: this.produto.imagens,
       medidas: this.medidas
     };
 
@@ -73,7 +71,7 @@ export class Confirmar {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300; 
     }
 
     scrollToTop(): void {

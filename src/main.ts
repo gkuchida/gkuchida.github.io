@@ -28,6 +28,10 @@ const routes: Routes = [
   { path: 'duvidas', component: Duvidas },
   { path: 'contato', component: Contato },
   { path: 'buscar', component: Buscar },
+  { path: 'pronta/:nome', component: Prontas },
+  { path: 'encomenda/:nome', component: Encomenda },
+  { path: 'artesanato/:nome', component: Artesanato },
+
 ];
 
 bootstrapApplication(App, {

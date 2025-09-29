@@ -1,3 +1,7 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -11,10 +15,9 @@ html, body {
 }
 
 .main-content {
-  flex: 1; /* ocupa todo espaço disponível empurrando o footer para baixo */
+  flex: 1;
 }
 
-/* ===== Footer padrão (desktop) ===== */
 .footer {
   background-color: #D3D3D3;
   color: #444444;
@@ -89,3 +92,33 @@ html, body {
 .footer {
   margin-top: 50px;
 }
+
+/* -- RESPONSIVO -- */
+@media (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-column {
+    min-width: unset;
+  }
+
+  .footer-column.social a {
+    justify-content: center;
+  }
+
+  .footer-column img {
+    margin-left: 4px;
+  }
+
+  .footer-column.contato img {
+    margin-left: 4px;
+  }
+}
+/* -- FIM RESPONSIVO -- */

@@ -11,27 +11,26 @@
 </div>
 
 <div class="modelos-grid">
-  <div *ngFor="let modelo of modelos" class="modelo-card">
-    <div class="modelo-nome">{{ modelo.nome }}</div>
+  <div *ngFor="let produto of produtos" class="modelo-card">
+    <div class="modelo-nome">{{ produto.nome }}</div>
     <div class="imagens-duplas">
-      <img *ngFor="let img of modelo.imagens" [src]="img" [alt]="modelo.nome" class="modelo-imagem" />
+      <img *ngFor="let img of produto.imagens" [src]="img" [alt]="produto.nome" class="modelo-imagem" />
     </div>
     <div class="descricao">
-      <p><strong>Tamanho:</strong> {{ modelo.tamanhos.join(', ') }}</p>
-      <p class="descricao">{{ modelo.descricao }}</p>
-
-
-      <p><strong>Valor:</strong> R$ {{ modelo.preco }}</p>
-      <p><strong>Estoque:</strong> {{ modelo.estoque }}</p>
+      <p><strong>Tamanho:</strong> {{ produto.tamanhos.join(', ') }}</p>
+      <p [innerHTML]="produto.descricao | negrito"></p>
+      <p><strong>Valor:</strong> R$ {{ produto.preco }}</p>
+      <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
     <button
       class="btn-comprar"
-      [disabled]="modelo.estoque === 0"
-      (click)="comprar(modelo)">
-      {{ modelo.estoque === 0 ? 'Indisponível' : 'Comprar' }}
+      [disabled]="produto.estoque === 0"
+      (click)="comprar(produto)">
+      {{ produto.estoque === 0 ? 'Indisponível' : 'Comprar' }}
     </button>
     </div>
   </div>
 </div>
+
 <!-- Botão flutuante lateral direita -->
 <button
   *ngIf="showBackToTop"
@@ -41,25 +40,3 @@
 >
   <i class="bi bi-arrow-up"></i>
 </button>
-<!--
-<h2 class="titulo">Modelos Prontas Entrega</h2>
-<div class="modelos-grid">
-</div>
-<div *ngFor="let modelo of modelos" class="modelo-card">
-  <div class="imagens">
-    <img *ngFor="let img of modelo.imagens" [src]="img" [alt]="modelo.nome" class="modelo-imagem" />
-  </div>
-  <div class="info">
-    <h3>{{ modelo.nome }}</h3>
-    <p><strong>Tamanhos:</strong> {{ modelo.tamanhos.join(', ') }}</p>
-    <p>{{ modelo.descricao }}</p>
-    <p><strong>Valor:</strong> R$ {{ modelo.preco }}</p>
-    <p><strong>Estoque:</strong> {{ modelo.estoque }}</p>
-    <button
-      [disabled]="modelo.estoque === 0"
-      (click)="comprar(modelo)">
-      {{ modelo.estoque === 0 ? 'Indisponível' : 'Comprar' }}
-    </button>
-  </div>
-</div>
--->
