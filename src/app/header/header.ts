@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class Header {
   searchQuery: string = '';
+  menuAberto: boolean = false;
 
     constructor(private router: Router) {}
 
@@ -21,4 +22,13 @@ export class Header {
         });
       }
     }
+    toggleMenu() {
+    this.menuAberto = !this.menuAberto;
+  }
+
+  // Função para fechar o menu (chamada ao clicar no item de navegação)
+    fecharMenu() {
+    // ESSENCIAL: Define o estado como 'fechado'
+    this.menuAberto = false;
+  }
 }

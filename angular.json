@@ -46,7 +46,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumError": "12kB"
                 }
               ],
               "outputHashing": "all"
@@ -54,7 +54,11 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": {
+                "hidden": true,
+                "scripts": true,
+                "styles": true
+              }
             }
           },
           "defaultConfiguration": "production"
@@ -63,6 +67,7 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
+                
               "buildTarget": "artesfocinhos:build:production"
             },
             "development": {

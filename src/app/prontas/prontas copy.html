@@ -1,0 +1,71 @@
+<div class="box-flutuante">
+  <h2 class="titulo">Modelos Pronta Entrega</h2>
+  <p class="texto-aconchegante">
+    Esses modelos são exclusivos e, para garantir a beleza e qualidade, não são passíveis de reformas ou ajustes.
+    Se gostou de algum e deseja em outro tecido, cor ou tamanho, é só nos chamar no WhatsApp mencionando o modelo —
+    faremos um orçamento personalizado para você!
+    <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </p>
+</div>
+
+<div class="modelos-grid">
+  <div *ngFor="let produto of produtos; let idx = index" class="modelo-card">
+    <div class="modelo-nome">{{ produto.nome }}</div>
+
+    <!-- Carrossel de imagens -->
+    <div id="carousel{{idx}}" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button *ngFor="let img of produto.imagens; let i = index"
+                type="button"
+                [attr.data-bs-target]="'#carousel' + idx"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i === 0"
+                aria-current="true"
+                aria-label="Slide {{i + 1}}">
+        </button>
+      </div>
+
+      <div class="carousel-inner">
+        <div *ngFor="let img of produto.imagens; let i = index"
+             class="carousel-item" [class.active]="i === 0">
+          <img [src]="img" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
+        </div>
+      </div>
+
+      <!-- Setas -->
+      <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel' + idx" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel' + idx" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Descrição -->
+    <div class="descricao">
+      <p><strong>Tamanho:</strong> {{ produto.tamanhos.join(', ') }}</p>
+      <p [innerHTML]="produto.descricao | negrito"></p>
+      <p><strong>Valor:</strong> R$ {{ produto.preco }}</p>
+      <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+      <button
+        class="btn-comprar"
+        [disabled]="produto.estoque === 0"
+        (click)="comprar(produto)">
+        {{ produto.estoque === 0 ? 'Indisponível' : 'Comprar' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Botão flutuante lateral direita -->
+<button
+  *ngIf="showBackToTop"
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

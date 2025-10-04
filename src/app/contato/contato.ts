@@ -5,11 +5,12 @@ import emailjs from 'emailjs-com';
 import { MatDialog } from '@angular/material/dialog';
 import { MsgContatoErro } from '../msg-contato/msg-contato-erro';
 import { MsgContatoSucesso } from '../msg-contato/msg-contato-sucesso';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-fale-conosco',
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './contato.html',
   styleUrls: ['./contato.css']
 })

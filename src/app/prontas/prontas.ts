@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MsgSucesso } from '../msg-sucesso/msg-sucesso';
 import { FormsModule } from '@angular/forms';
 import { NegritoPipe } from '../pipe/pipe';
+import { RouterModule } from '@angular/router';
 
 export const modelosProntas =[
    {
@@ -193,7 +194,7 @@ export const modelosProntas =[
   standalone: true,
   templateUrl: './prontas.html',
   styleUrls: ['./prontas.css'],
-  imports: [CommonModule, NegritoPipe]
+  imports: [CommonModule, RouterModule, NegritoPipe]
 })
 export class Prontas {
   produtos = modelosProntas;
