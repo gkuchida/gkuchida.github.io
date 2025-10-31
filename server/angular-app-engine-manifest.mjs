@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/artesfocinhos',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
