@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './header.html',
   styleUrls: ['./header.css']
 })
+
 export class Header {
   searchQuery: string = '';
   menuAberto: boolean = false;
@@ -28,7 +29,6 @@ export class Header {
 
   // Função para fechar o menu (chamada ao clicar no item de navegação)
     fecharMenu() {
-    // ESSENCIAL: Define o estado como 'fechado'
     this.menuAberto = false;
   }
 }

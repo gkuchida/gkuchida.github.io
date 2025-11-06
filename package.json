@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href=/artesfocinhos/",
+    "build": "ng build",
     "ghpages": "angular-cli-ghpages --dir=dist/artesfocinhos/browser",
-    "deploy": "npm run build && npm run ghpages",
+    "deploy": "ng build --configuration=production --base-href=/ && npx angular-cli-ghpages --dir=dist/artesfocinhos/browser --repo=https://github.com/gkuchida/gkuchida.github.io.git --cname=www.artesfocinhos.com.br",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:artesfocinhos": "node dist/artesfocinhos/server/server.mjs"
@@ -39,8 +39,11 @@
     "@popperjs/core": "^2.11.8",
     "angular-cli-ghpages": "^2.0.3",
     "bootstrap": "^5.3.8",
+    "cors": "^2.8.5",
+    "counterapi": "^2.1.2",
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
+    "mysql2": "^3.15.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -60,5 +63,21 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.9.2"
-  }
+  },
+  "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkuchida/artesfocinhos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkuchida/artesfocinhos/issues"
+  },
+  "homepage": "https://github.com/gkuchida/artesfocinhos#readme"
 }

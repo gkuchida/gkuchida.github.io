@@ -2,8 +2,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
-h1{
-    color: #1f3e91;
+h2{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #004aad;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -127,9 +130,8 @@ form {
   }
 /* -- RESPONSIVO -- */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-    margin: 20px 0;
+  h2 {
+    font-size: 1.6rem;
   }
 
   form {

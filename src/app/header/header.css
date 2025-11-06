@@ -36,19 +36,19 @@
 }
 
 .social-links .bi-instagram {
-  color: #C13584; /* Roxo/Magenta */
+  color: #C13584;
 }
 
 .social-links .bi-facebook {
-  color: #3b5998; /* Azul Facebook */
+  color: #3b5998;
 }
 
 .social-links .bi-whatsapp {
-  color: #25D366; /* Verde WhatsApp */
+  color: #25D366;
 }
 
 .social-links a i:hover {
-  transform: scale(1.1); /* Ícone cresce um pouco */
+  transform: scale(1.1);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -75,13 +75,13 @@
   color: #fff;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 
 .nav-menu a:hover {
   text-decoration: underline;
 }
 
-/* ===== Botão hamburguer ===== */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -108,43 +108,108 @@
   box-shadow: none;
 }
 
+.link-home {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-home h3 {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
 /* -- RESPONSIVO -- */
 @media (max-width: 768px) {
+  .social-links {
+    display: none !important;
+  }
+
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    order: 1;
+  }
+
   .menu-toggle {
     display: block;
   }
 
   .nav-menu {
-    display: none;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 50%;
+    height: calc(100vh - 60px);
+    background-color: #0072ce;
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
   }
 
   .nav-menu.active {
-    display: flex;
+    right: 0;
   }
 
   .nav-menu ul {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-menu li {
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-menu a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0072ce;
+    z-index: 1000;
   }
 
   .input-group {
     width: 100%;
     margin: 10px 0;
+    padding: 0 15px;
+    order: 2;
   }
 
-  .social-links {
-    margin: 10px 0;
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0072ce;
+  }
+
+  .logo h3 {
+    color: #000080;
+    font-size: 1rem;
+    padding-left: 0;
+    margin: 0;
+    margin-left: 80px;
   }
 }
 /* -- FIM RESPONSIVO -- */

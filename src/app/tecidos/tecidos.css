@@ -20,9 +20,12 @@
   font-weight: 600;
 }
 
-.descricao-card h2{
-  color: #1E88E5;
-  font-size: 20px;
+h2{
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #004aad;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 body {
@@ -135,8 +138,16 @@ h1 {
   justify-content: center;
   gap: 16px;
   margin: 20px 0;
-}
 
+}
+.imagens-wrapper figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  margin: 0;
+  padding: 75px;
+}
 .imagens-wrapper img {
   width: 150px;
   height: 150px;
@@ -148,6 +159,12 @@ h1 {
 
 .imagens-wrapper img:hover {
   transform: scale(1.05);
+}
+.imagens-wrapper figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
 }
 
 .btn-whatsapp {
@@ -213,8 +230,8 @@ h1 {
     margin-bottom: 12px;
   }
 
-  .descricao-card h2 {
-    font-size: 18px;
+  h2 {
+    font-size: 1.6rem;
   }
 
   .container {

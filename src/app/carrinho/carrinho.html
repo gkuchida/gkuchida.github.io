@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div *ngIf="items.length === 0">
+<div *ngIf="items.length === 0" style="text-align: center;">
   Seu carrinho está vazio.
   <div class="mt-3">
     <button class="btn btn-primary" (click)="voltarAsCompras()">
@@ -21,12 +21,16 @@
 
 <div *ngFor="let item of items; let i = index" class="item">
   <img [src]="item.imagens[0]" alt="{{ item.nomeModelo }}" class="imagem-produto" />
-  <div class="nome-produto">{{ item.nomeModelo }} {{ item.tecido }}
+  <div class="nome-produto">{{ item.nomeModelo }} {{ item.tecido }} {{ item.acabamento}}
+    <p *ngIf="item.tamanho">Tamanho: {{ item.tamanho }}</p>
     <div *ngIf="item.tipo === 'encomenda' && item.medidas">
       <div class="medidas">
         <p>Medida do pescoço: {{ item.medidas.pescoco }}cm</p>
         <p>Medida do tórax: {{ item.medidas.torax }}cm</p>
         <p>Comprimento: {{ item.medidas.comprimento }}cm</p>
+        <p *ngIf="item.acabamento">
+          <strong>Acabamento:</strong> {{ item.acabamento }}
+        </p>
         <p *ngIf="item.medidas.observacoes"><strong>Observações:</strong> {{ item.medidas.observacoes }}</p>
       </div>
     </div>
@@ -49,7 +53,6 @@
 
   <!-- Botão flutuante lateral direita -->
 <button
-  *ngIf="showBackToTop"
   class="back-to-top-fixed"
   (click)="scrollToTop()"
   aria-label="Voltar ao topo"

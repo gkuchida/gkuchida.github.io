@@ -1,161 +1,88 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
-.buscar-container {
-  display: flex;
-  gap: 10px;
-  width: 80%;
-  top: 50%;
-}
-
-.produtos-grid {
+.grid-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 40px 20px 60px;
-  width: 100%;
+  padding: 20px;
   max-width: 1200px;
-}
-
-.produto-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-  position: relative;
-  padding: 10px 15px;
-}
-
-.produto-card:hover {
-  transform: translateY(-4px);
-}
-
-.imagem-container {
-  position: relative;
-  padding: 10px;
-  text-align: center;
-}
-
-.imagem-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.btn-mais {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border-radius: 50%;
-  font-size: 18px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
 }
-
-.produto-nome {
-  font-size: 20px;
-  margin: 5px 0;
-  font-weight: 600;
-  color: #FF6F00;
-  text-align: center;
+.grid-produtos:has(.card:only-child) {
+  max-width: 320px;
+  justify-content: center;
 }
-
-.tecidos, .descricao {
-  font-size: 16px;
-  color: #444;
-  margin: 5px 0;
+.card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px;
   color: #000080;
   text-align: center;
 }
-
-.preco {
-  margin-top: 10px;
+.card p {
+  font-size: 0.9rem;
+  margin: 0 10px 10px;
+  color: #555;
+  text-align: center;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-}
-
-.buscar-container {
-  display: flex;
-  flex-direction: column;
+.btn-carrinho {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
-  width: 100%;
-  margin-top: 60px;
-  padding: 0 20px;
-}
-
-.back-to-top-fixed {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #4169e1;
-  color: white;
+  background-color: #004aad;
+  color: #fff;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 10px auto;
+  transition: background-color 0.2s ease;
 }
-
-.back-to-top-fixed:hover {
-  background-color: #3151b7;
-  transform: scale(1.1);
+.btn-carrinho:hover {
+  background-color: #0055c7;
 }
-/* -- RESPONSIVO -- */
-@media (max-width: 600px) {
-  .buscar-container {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 10px;
-    margin-top: 30px;
-  }
-
-  .produtos-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 20px 10px 40px;
-  }
-
-  .produto-card {
+.plus-icon {
+  display: inline-block;
+  font-weight: bold;
+}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     padding: 10px;
   }
-
-  .produto-nome {
-    font-size: 18px;
+  .grid-produtos:has(.card:only-child) {
+    max-width: 220px;
   }
-
-  .tecidos,
-  .descricao {
-    font-size: 14px;
+  .card h3 {
+    font-size: 1rem;
   }
-
-  .btn-mais {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+  .card p {
+    font-size: 0.85rem;
   }
-
-  .back-to-top-fixed {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 15px;
+  .btn-carrinho {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
   }
 }
-/* -- FIM RESPONSIVO -- */

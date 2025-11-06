@@ -1,51 +1,98 @@
-<div class="card mb-4 shadow-sm">
-  <div class="card-body">
-    <h2 class="titulo">Produtos sob Encomenda/ sob Medida</h2>
-    <p class="card-text texto-aconchegante">
-      Escolha o modelo que você deseja e selecione o tecido de sua preferência.<BR>
-      Em seguida, clique no botão <strong>"Selecionar"</strong> para ser direcionado à página onde
-    você poderá inserir suas medidas. <br>
-      As fotos dos modelos são meramente ilustrativas e os tecidos disponíveis serão enviados por
-    WhatsApp após a confirmação da encomenda. <br>
-      Se quiser conhecer os tipos de tecidos disponíveis, acesse a seção <strong>Tecidos</strong>.<br>
-      Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
-      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
-        <i class="bi bi-whatsapp"></i>
+<div class="box-flutuante">
+  <div class="box-inner">
+    <h1 class="titulo">Modelos sob Encomenda/ sob Medida</h1>
+    <ul class="texto-aconchegante">
+      <li>Escolha o modelo que você deseja e clique em <strong>"Selecionar"</strong> para ver os detalhes e tecidos disponíveis. </li>
+      <li>Em seguida, escolha o tecido e clique em <strong>"Selecionar e Ir para Medidas"</strong> para finalizar o pedido sob medida.</li>
+    </ul>
+
+    <div class="box-cta">
+      <p>Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
+      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp-grande">
+        <i class="bi bi-whatsapp"></i> Fale Conosco
       </a>
-    </p>
+    </div>
   </div>
 </div>
 
-<div class="produto-grid">
-  <div *ngFor="let produto of produtos; let i = index" class="produto-card">
-    <h3 class="modelo-nome">{{ produto.nome }}</h3>
-    <div class="imagens">
-      <img *ngFor="let img of produto.imagens" [src]="img" [alt]="produto.nome" class="produto-imagem" />
-    </div>
-    <div class="info">
-      <p>Escolha o tecido:</p>
-      <select [(ngModel)]="tecidosSelecionados[i]" class="tecido-select">
-        <option *ngFor="let tecido of produto.tecidos" [value]="tecido">{{ tecido }}</option>
-      </select>
-      <!--<div class="radio-group">
-        <div *ngFor="let tecido of produto.tecidos">
-          <label>
-            <input
-              type="radio"
-              name="tecido-{{i}}"
-              [value]="tecido"
-              [(ngModel)]="tecidosSelecionados[i]"
-            />
-            {{ tecido }}
-          </label>
+<div class="grid-produtos-wrapper" *ngIf="!produtoEmDetalhe">
+  <div class="grid-produtos">
+    <div *ngFor="let produto of produtos" class="card-produto-link">
+      <div class="card-produto">
+        <h3 class="modelo-nome">{{ produto.nome }}</h3>
+        <div class="img-wrapper" (click)="abrirDetalhes(produto)">
+          <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
         </div>
-      </div> -->
+        <div class="produto-info">
+        </div>
+        <button (click)="abrirDetalhes(produto)" class="btn-selecionar-encomenda">Selecionar Modelo</button>
+      </div>
     </div>
-    <button (click)="selecionar(i, produto)">Selecionar</button>
   </div>
 </div>
 
-<!-- Botão flutuante lateral direita -->
+<div class="produto-info-detalhe" *ngIf="produtoEmDetalhe">
+  <button class="btn-voltar" (click)="voltarALista()">← Voltar</button>
+  <h2 class="titulo-detalhe">{{ produtoEmDetalhe.nome }}</h2>
+  <div id="carouselDetalhesEncomenda" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+        type="button"
+        data-bs-target="#carouselDetalhesEncomenda"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        aria-current="true"
+        aria-label="Slide {{ i + 1 }}">
+      </button>
+    </div>
+
+    <div class="carousel-inner">
+      <div *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+        class="carousel-item"
+        [class.active]="i === 0">
+        <img [src]="img" class="d-block w-100 modelo-imagem" [alt]="produtoEmDetalhe.nome">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhesEncomenda" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhesEncomenda" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <div class="produto-descricao">
+    <h3>Detalhes do Modelo:</h3>
+    <p *ngFor="let paragrafo of produtoEmDetalhe.descricao" [innerHTML]="paragrafo"></p>
+  </div>
+
+  <div class="opcoes-selecao">
+    <h4>Escolha o Tecido:</h4>
+    <select [(ngModel)]="tecidoParaMedidas" class="tecido-select-detalhe">
+      <option value="" disabled selected>-- Selecione um Tecido --</option>
+      <option *ngFor="let tecido of produtoEmDetalhe.tecidos" [value]="tecido">{{ tecido }}</option>
+    </select>
+
+    <div *ngIf="produtoEmDetalhe.acabamento && produtoEmDetalhe.acabamento.length > 0">
+        <h4 style="margin-top: 20px;">Escolha o Acabamento:</h4>
+        <select [(ngModel)]="acabamentoParaMedidas" class="tecido-select-detalhe">
+          <option value="" disabled selected>-- Selecione um Acabamento --</option>
+          <option *ngFor="let opc of produtoEmDetalhe.acabamento" [value]="opc">{{ opc }}</option>
+        </select>
+    </div>
+</div>
+<p class="aviso-tecido">
+      *As fotos dos modelos são meramente ilustrativas. Os tecidos disponíveis serão confirmados após a seleção.
+    </p>
+
+    <button
+      (click)="selecionarENavegar()"
+      [disabled]="!tecidoParaMedidas"
+      class="btn-selecionar-final"
+    >
+      Selecionar e Ir para Medidas
+    </button>
+</div>
 <button
   *ngIf="showBackToTop"
   class="back-to-top-fixed"

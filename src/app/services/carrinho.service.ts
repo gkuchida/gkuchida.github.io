@@ -4,6 +4,7 @@ export interface CarrinhoItem {
   tipo: 'pronta' | 'encomenda' | 'artesanato';
   nomeModelo: string;
   tecido?: string;
+  acabamento?: string;
   medidas?: {
     pescoco: string;
     torax: string;
@@ -11,6 +12,7 @@ export interface CarrinhoItem {
     observacoes?: string;
   };
   imagens: string[];
+  tamanho?: string;
 }
 
 @Injectable({
@@ -33,7 +35,7 @@ export class CarrinhoService {
     this._items.update(itens => {
       const novoArray = [...itens];
       novoArray.splice(index, 1);
-      return novoArray;          
+      return novoArray;
     });
   }
 }

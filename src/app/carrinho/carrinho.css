@@ -1,7 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
-
 h2 {
   color: #0072ce;
   text-align: center;
@@ -9,7 +8,6 @@ h2 {
   font-weight: 700;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .item {
   display: flex;
   align-items: flex-start;
@@ -23,7 +21,6 @@ h2 {
   background-color: #e3f2fd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .imagem-produto {
   width: 10%;
   height: 10%;
@@ -33,7 +30,6 @@ h2 {
   margin-bottom: 1rem;
   align-self: center;
 }
-
 .nome-produto {
   background-color: #F0F8FF;
   color: #000080;
@@ -46,17 +42,14 @@ h2 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   width: 75%;
 }
-
 .item > div p {
   margin: 0.2rem 0;
   font-size: 1rem;
 }
-
 .medidas{
   font-size: 12px;
   color: #444444;
 }
-
 .botoes {
   display: flex;
   justify-content: center;
@@ -64,7 +57,6 @@ h2 {
   margin-top: 2rem;
   flex-wrap: wrap;
 }
-
 button {
   background-color: #0072ce;
   color: white;
@@ -77,11 +69,9 @@ button {
   transition: background-color 0.3s ease;
   min-width: 140px;
 }
-
 button:not(.delete-btn):hover {
   background-color: #004a99;
 }
-
 .delete-btn {
   background: transparent;
   border: none;
@@ -94,21 +84,17 @@ button:not(.delete-btn):hover {
   transition: color 0.3s ease;
   border-radius: 0;
 }
-
 .delete-btn:hover {
   background-color: transparent;
   color: #c62828;
 }
-
 .botoes button:last-child {
   background-color: #a5d6a7;
   color: #004d40;
 }
-
 .botoes button:last-child:hover {
   background-color: #81c784;
 }
-
 .btn-whatsapp {
   display: inline-flex;
   justify-content: center;
@@ -124,27 +110,22 @@ button:not(.delete-btn):hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 12px;
 }
-
 .btn-whatsapp:hover {
   background-color: #1ebe57;
   box-shadow: 0 4px 8px rgba(30, 190, 87, 0.6);
 }
-
 .btn-whatsapp i {
   font-size: 1.2rem;
 }
-
 .btn-primary {
   background-color: #0072ce;
   border-color: #007bff;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-
 .btn-primary:hover {
   background-color: #0056b3;
 }
-
 .texto-aconchegante {
   font-size: 1rem;
   color: #555;
@@ -158,96 +139,149 @@ button:not(.delete-btn):hover {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-
-.back-to-top-fixed {
+button.back-to-top-fixed {
+  all: unset;
   position: fixed;
   bottom: 40px;
   right: 20px;
   z-index: 1000;
   background-color: #4169e1;
   color: white;
-  border: none;
   border-radius: 50%;
   width: 48px;
   height: 48px;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.back-to-top-fixed:hover {
+button.back-to-top-fixed:hover {
   background-color: #3151b7;
   transform: scale(1.1);
 }
-/* -- RESPONSIVO -- */
+/* -- RESPONSIVO (mesmo estilo das telas grandes) -- */
 @media (max-width: 600px) {
   .item {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 1rem;
   }
-
   .imagem-produto {
-    width: 100px;
+    width: 110px;
     height: auto;
     margin: 0 auto 1rem auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
   }
-
   .nome-produto {
     width: 100%;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
     padding: 0.5rem;
   }
-
   .item > div p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
-
   .medidas {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
-
   .botoes {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 12px;
     margin-top: 1.5rem;
   }
-
-  button {
+  .botoes button {
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.6rem;
+    border-radius: 25px;
     font-size: 1rem;
-    padding: 0.5rem 1.2rem;
-    min-width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    max-width: 260px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
-
+  .botoes button:hover {
+    background-color: #004a99;
+  }
+  .botoes button:last-child {
+    background-color: #a5d6a7;
+    color: #004d40;
+  }
+  .botoes button:last-child:hover {
+    background-color: #81c784;
+  }
   .delete-btn {
-    top: 5px;
-    right: 5px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     font-size: 1.2rem;
   }
-
   .btn-whatsapp {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     font-size: 1.2rem;
   }
-
   .back-to-top-fixed {
     width: 44px;
     height: 44px;
     font-size: 18px;
-    bottom: 30px;
+    bottom: 25px;
     right: 15px;
+    border-radius: 50%;
+    background-color: #4169e1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
-
+  .back-to-top-fixed:hover {
+    background-color: #3151b7;
+    transform: scale(1.1);
+  }
   .texto-aconchegante {
     font-size: 0.95rem;
     padding: 10px 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  button.back-to-top-fixed {
+    all: unset;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #4169e1;
+    color: white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  button.back-to-top-fixed:hover {
+    background-color: #3151b7;
+    transform: scale(1.1);
   }
 }
 /* -- FIM RESPONSIVO -- */

@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contato.html',
   styleUrls: ['./contato.css']
 })
+
 export class Contato {
   contatoForm: FormGroup;
 
@@ -41,7 +42,6 @@ export class Contato {
         templateParams,
         'Gxhd3YDu7ljHfc8gy' //public
       ).then(() => {
-        //alert('Mensagem enviada com sucesso!');
         this.dialog.open(MsgContatoSucesso, {
           width: '400px',
           panelClass: 'custom-modal'
@@ -49,7 +49,6 @@ export class Contato {
         this.contatoForm.reset();
       }).catch((error) => {
         console.error('Erro ao enviar', error);
-        //alert('Ocorreu um erro ao enviar. Tente novamente mais tarde.');
         this.dialog.open(MsgContatoErro, {
           width: '400px',
           panelClass: 'custom-modal'
@@ -69,7 +68,7 @@ export class Contato {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
+      this.showBackToTop = scrollTop > 300; 
     }
 
     scrollToTop(): void {

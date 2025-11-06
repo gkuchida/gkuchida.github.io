@@ -1,29 +1,41 @@
-<div class="buscar-container">
-  <h2 style="color: #000080;">Resultado da busca</h2>
-  <div *ngIf="resultados.length === 0 && searchQuery" class="no-result">
-    Nenhum resultado encontrado.
-  </div>
-  <div class="produtos-grid">
-    <div *ngFor="let produto of resultados" class="produto-card">
-      <div class="imagem-container">
-        <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
-        <!--<button class="btn btn-success btn-mais" (click)="verMais(produto.tipo)">+</button>-->
-        <button class="btn btn-success btn-mais" (click)="verMais(produto)">+</button>
-      </div>
-      <div class="produto-info">
-        <h5 class="produto-nome">{{ produto.nome }}</h5>
-        <p *ngIf="produto.tipo" class="tecidos">Você encontra este produto no menu {{ produto.tipo === 'pronta' ? 'Produto à Pronta Entrega' : (produto.tipo === 'encomenda' ? 'Produto Sob Encomenda' : produto.tipo) }} ou clicando no botão '+'.</p>
-        <p *ngIf="produto.estoque > 0 || produto.tipo === 'encomenda'" class="descricao">
-          <!--Estoque: {{ produto.tipo === 'pronta' ? produto.estoque : (produto.tipo === 'encomenda' ? 0 : '-') }}-->
-        </p>
-      </div>
+<div class="grid-produtos">
+  <div class="card" *ngFor="let produto of resultados">
+    <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+    <div class="produto-info">
+      <h3>{{ produto.nome }}</h3>
+      <!-- Exibir preço apenas se houver valor e estoque > 0 -->
+      <p class="produto-preco" *ngIf="produto.preco && produto.estoque > 0">
+        R$ {{ produto.preco }}
+      </p>
+      <!-- Caso não tenha preço ou estoque zerado -->
+      <p class="produto-preco" *ngIf="!produto.preco || produto.estoque === 0">
+        Sob encomenda
+      </p>
     </div>
+
+    <!-- Botões de navegação -->
+    <a
+      *ngIf="produto.tipo === 'pronta'"
+      [routerLink]="['/produto-detalhes', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
+
+    <a
+      *ngIf="produto.tipo === 'encomenda'"
+      [routerLink]="['/encomenda', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
+
+    <a
+      *ngIf="produto.tipo === 'artesanato'"
+      [routerLink]="['/artesanato-detalhes', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
   </div>
 </div>
-<!-- Botão flutuante lateral direita -->
-<button
-  class="back-to-top-fixed"
-  (click)="scrollToTop()"
-  aria-label="Voltar ao topo">
-  <i class="bi bi-arrow-up"></i>
-</button>

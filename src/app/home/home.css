@@ -576,12 +576,25 @@ h2{
   }
 
   .carousel-caption.esq {
-    left: 50% !important;
-    top: 65% !important;
-    width: 90% !important;
-    transform: translateX(-50%) !important;
+    left: 5% !important; /* Começa bem na esquerda */
+    transform: translateX(0) !important; /* Impede a centralização */
+    top: 50% !important;
+    width: 50% !important; /* Dá espaço para o texto */
+    height: auto;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    text-align: center !important;
+    margin-bottom: 30px;
   }
-
+  .carousel-caption.topo {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 90%;
+    height: 30%; /* Isso pode ser um problema de corte */
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
   .carousel-caption h5 {
     font-size: 1.1rem;
   }
@@ -594,8 +607,11 @@ h2{
   .slide-natal img,
   .slide-cc img {
     height: 220px;
+    object-fit: contain;
   }
-
+  .slide-whats img {
+    height: 200px;
+  }
   /* Carrossel vitrine */
   #vitrineCarousel,
   #inspiracoesCarousel {

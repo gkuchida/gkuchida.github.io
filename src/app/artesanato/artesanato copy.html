@@ -1,0 +1,50 @@
+<!-- Texto explicativo -->
+<div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <h2 class="titulo">Artesanato</h2>
+    <p class="card-text texto-aconchegante">
+    Leve para sua casa um toque de carinho e originalidade com nossos produtos de costura criativa. Cada peça une beleza e funcionalidade, pensada para transformar o seu dia a dia e tornar o cotidiano mais especial.<br>
+    Além dos produtos disponíveis, também fazemos produtos sob encomenda, com estampas, tamanhos e modelos personalizados especialmente para você.<br>
+    Fale com a gente para criar peças exclusivas que combinem perfeitamente com o seu estilo e necessidades!<br>
+    <span><i class="bi bi-exclamation-triangle-fill text-danger"></i> Produto indisponível?</span><br>
+    Se o produto que você gostou estiver esgotado, não se preocupe!<br>
+    Entre em contato com a gente e mencione o nome ou a foto do item — vamos verificar a possibilidade de produzir um igual especialmente para você.
+    <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
+    <i class="bi bi-whatsapp"></i></a>
+    </p>
+  </div>
+</div>
+<!-- Corpo -->
+<div class="modelos-grid">
+  <div class="modelo-card" *ngFor="let produto of produtos">
+    <div class="modelo-nome">{{ produto.nome }}</div>
+
+    <div class="modelo-imagens">
+      <img *ngFor="let img of produto.imagens" [src]="img" [alt]="produto.nome" class="modelo-imagem" />
+    </div>
+
+    <div class="descricao">
+      <div class="descricao-texto">
+        <p>{{ produto.descricao }}</p>
+        <p><strong>Valor:</strong> R$ {{ produto.preco }}</p>
+        <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+      </div>
+
+      <button
+        class="btn-comprar"
+        [disabled]="produto.estoque === 0"
+        (click)="comprar(produto)">
+        {{ produto.estoque === 0 ? 'Indisponível' : 'Comprar' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Botão flutuante lateral direita -->
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

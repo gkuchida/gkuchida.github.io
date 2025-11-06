@@ -102,55 +102,85 @@
 </div>
 
 <!-- Novidades -->
-<div class="carousel-title">
+<div class="novidades-section mt-5">
   <h2>Novidades</h2>
-</div>
-<div id="carouselNovidades" class="carousel slideSecundario" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div *ngFor="let slide of slidesNovidades; let i = index"
-      class="carousel-item"
-      [class.active]="i === 0">
-      <div class="d-flex justify-content-around align-items-stretch">
-        <div *ngFor="let produto of slide"
-          class="product-card">
-          <div class="imagem-container position-relative">
-            <img [src]="produto.imagens[0].url" [alt]="produto.nome" class="img-fluid rounded" />
-            <a [routerLink]="['/produto-detalhes', produto.nome]" class="btn-carrinho" title="Ver detalhes">
+  <div class="row justify-content-center">
+    <!-- Produto 1 -->
+    <div class="col-12 col-lg-4 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/HjSKcJz/Capa-Bagun-FTE.png" alt="Capa de chuva Bagun" class="img-fluid rounded" />
+          <a [routerLink]="['/produto-detalhes', 'Capa de chuva Bagun G']" class="btn-carrinho" title="Ver detalhes">
             <span class="plus-icon">+</span>
-            </a>
-          </div>
-          <h6 class="mt-2">{{ produto.nome }}</h6>
+          </a>
         </div>
+        <h6 class="mt-2">Capa de chuva Bagun G</h6>
+        <p class="small text-muted">Nem a chuva impede o passeio</p>
+      </div>
+    </div>
+    <!-- Produto 2 -->
+    <div class="col-12 col-lg-4 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/cXsVFZJv/Capa-Nylon-Transpasse-FTE.png" alt="Capa Nylon Transpasse" class="img-fluid rounded" />
+          <a [routerLink]="['/produto-detalhes', 'Capa de chuva transpasse G']" class="btn-carrinho" title="Ver detalhes">
+            <span class="plus-icon">+</span>
+          </a>
+        </div>
+        <h6 class="mt-2">Capa de chuva transpasse G</h6>
+        <p class="small text-muted">Para arrasar nos passeios</p>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="col-12 col-lg-4 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/Y7mFJLnm/Capa-Nylon-Costas.png" alt="Capa Nylon Costas" class="img-fluid rounded" />
+          <a [routerLink]="['/produto-detalhes', 'Capa de chuva G']" class="btn-carrinho" title="Ver detalhes">
+            <span class="plus-icon">+</span>
+          </a>
+        </div>
+        <h6 class="mt-2">Capa de chuva G</h6>
+        <p class="small text-muted">Charme até no tempo feio</p>
+      </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="col-12 col-lg-4 mb-4">
+      <div class="product-card text-center">
+        <div class="imagem-container position-relative">
+          <img src="https://i.ibb.co/fzDb0X3n/Capa-Vermelha-M-Fte.png" alt="Capa Vermelha Fte" class="img-fluid rounded" />
+          <a [routerLink]="['/produto-detalhes', 'Capa de chuva M']" class="btn-carrinho" title="Ver detalhes">
+            <span class="plus-icon">+</span>
+          </a>
+        </div>
+        <h6 class="mt-2">Capa de chuva M</h6>
+        <p class="small text-muted">Sua princesa arrasando no tempo chuvoso!</p>
       </div>
     </div>
   </div>
-  <!-- botões prev/next padrão do bootstrap -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselNovidades" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselNovidades" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Próximo</span>
-  </button>
 </div>
 
-<!-- Carrossel de Recomendados -->
+<!-- Carrossel de produtos prontos -->
 <div class="carousel-title">
   <h2>Recomendados para você</h2>
 </div>
-<div id="vitrineCarousel" class="carousel slideSecundario">
+<div id="vitrineCarousel" class="carousel slide" >
   <div class="carousel-inner">
     <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
-      <div class="carousel-row-wrapper d-flex justify-content-center"  style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-        <div *ngFor="let produto of slide" class="product-card-wrapper">
+      <div class="carousel-row-wrapper d-flex justify-content-center">
+        <div *ngFor="let produto of slide" class="product-card-wrapper col-lg-4">
           <div class="product-card">
-            <div class="imagem-container position-relative">
-              <img [src]="produto.imagem" [alt]="produto.nome" class="img-fluid rounded"/>
-            </div>
+              <div class="imagem-container position-relative">
+                <img [src]="produto.imagem" [alt]="produto.nome" />
+                <!--<a [routerLink]="produto.link" class="btn-carrinho" title="Ver detalhes do produto">
+                  <span class="plus-icon">+</span>
+                </a>-->
+              </div>
             <div class="info-container">
-              <h5>{{ produto.nome }}</h5>
-            </div>
+            <h5>{{ produto.nome }}</h5>
+          </div>
           </div>
         </div>
       </div>
@@ -172,10 +202,10 @@
 <div class="carousel-title">
   <h2>Inspirações</h2>
 </div>
-<div id="inspiracoesCarousel" class="carousel slideSecundario">
+<div id="inspiracoesCarousel" class="carousel slide">
   <div class="carousel-inner">
     <div *ngFor="let slide of inspiracoesSlides; let i = index" class="carousel-item" [class.active]="i === 0">
-      <div class="inspiracao-row d-flex justify-content-center"  style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+       <div class="inspiracao-row d-flex justify-content-center">
         <div *ngFor="let modelo of slide" class="product-card-wrapper col-12 col-lg-4">
           <div class="product-card">
             <div class="imagem-container position-relative">
@@ -199,8 +229,8 @@
 </div>
 
 <!-- Depoimentos -->
-<div id="carouselDepoimentos" class="carousel slideSecundario" data-bs-ride="carousel" data-bs-interval="3000">
-<h2>Resultados Comprovados: Veja o que nossos clientes dizem</h2>
+<div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<!--<div id="carouselDepoimentos" class="carousel slide" data-bs-ride="false">-->
   <div class="carousel-inner">
     <!-- Slide 1: Cards 1, 2, 3 -->
     <div class="carousel-item active">
@@ -676,7 +706,6 @@
   <span style="font-weight: bold;">Nota:</span>
   <span style="font-style: italic;"> Alguns depoimentos exibidos nesta página foram adaptados com pequenas alterações para preservar a identidade e a privacidade dos envolvidos, sem comprometer a veracidade ou o conteúdo essencial da experiência relatada.</span>
 </p>
-
 
 <!-- Botão flutuante lateral direita -->
 <button

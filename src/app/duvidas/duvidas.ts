@@ -10,6 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   templateUrl: './duvidas.html',
   styleUrl: './duvidas.css'
 })
+
 export class Duvidas {
   showBackToTop = false;
   duvidas : { pergunta: string; resposta: SafeHtml; aberto: boolean }[];

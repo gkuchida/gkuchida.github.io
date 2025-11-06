@@ -172,7 +172,6 @@ button[type="submit"]:hover {
 }
 /* -- RESPONSIVO -- */
 @media (max-width: 600px) {
-  /* Container geral das medidas/form */
   .medidas-container {
     flex-direction: column;
     align-items: center;
@@ -181,7 +180,6 @@ button[type="submit"]:hover {
     max-width: 100%;
   }
 
-  /* Formulário */
   .form-wrapper {
     flex: 1 1 100%;
     min-width: auto;
@@ -215,7 +213,6 @@ button[type="submit"]:hover {
     padding: 0.55rem 0;
   }
 
-  /* Imagem de ajuda */
   .imagem-ajuda {
     flex: 1 1 100%;
     min-width: auto;
@@ -228,14 +225,12 @@ button[type="submit"]:hover {
     border-radius: 10px;
   }
 
-  /* Texto aconchegante */
   .texto-aconchegante {
     font-size: 0.9rem;
     margin: 0 0 16px 0;
     padding: 10px 14px;
   }
 
-  /* Botão WhatsApp */
   .btn-whatsapp {
     width: 44px;
     height: 44px;
@@ -247,7 +242,6 @@ button[type="submit"]:hover {
     font-size: 1rem;
   }
 
-  /* Botão voltar ao topo fixo */
   .back-to-top-fixed {
     width: 44px;
     height: 44px;

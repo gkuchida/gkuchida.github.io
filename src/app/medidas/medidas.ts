@@ -38,7 +38,6 @@ export class Medidas {
 
   ok() {
     if (!this.validarCampos()) {
-      //alert('Preencha os campos obrigatórios: pescoço, tórax e comprimento.');
        this.dialog.open(MsgErro, {
         width: '400px',
         data: { medidas: this.medidas },
@@ -53,7 +52,7 @@ export class Medidas {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; 
+      this.showBackToTop = scrollTop > 300;
     }
 
     scrollToTop(): void {

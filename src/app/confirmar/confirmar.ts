@@ -11,6 +11,7 @@ import { CarrinhoService, CarrinhoItem } from '../services/carrinho.service';
   styleUrls: ['./confirmar.css'],
   imports: [CommonModule]
 })
+
 export class Confirmar {
   produto?: ProdutoSelecionado;
   medidas?: MedidasPedido;
@@ -42,6 +43,7 @@ export class Confirmar {
       tipo: isEncomenda ? 'encomenda' : 'pronta',
       nomeModelo: this.produto.nome,
       tecido: this.produto.tecido,
+      acabamento: this.produto.acabamento,
       imagens: this.produto.imagens,
       medidas: this.medidas
     };
@@ -53,7 +55,7 @@ export class Confirmar {
     this.carrinhoService.addItem(item);
 
     // Monta mensagem para WhatsApp
-    let mensagem = `*Novo pedido:*\nProduto: ${item.nomeModelo}\nTecido: ${item.tecido}\n`;
+    let mensagem = `*Novo pedido:*\nProduto: ${item.nomeModelo}\nTecido: ${item.tecido}\nAcabamento: &{item.acabamento}`;
 
     if (isEncomenda && this.medidas) {
       mensagem += `Medidas:\n- Pescoço: ${this.medidas.pescoco}\n- Tórax: ${this.medidas.torax}\n- Comprimento: ${this.medidas.comprimento}\n`;
@@ -71,7 +73,7 @@ export class Confirmar {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; 
+      this.showBackToTop = scrollTop > 300;
     }
 
     scrollToTop(): void {

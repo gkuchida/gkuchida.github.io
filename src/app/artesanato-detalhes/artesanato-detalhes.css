@@ -1,3 +1,4 @@
+/* --- CONTAINER E LAYOUT GERAL --- */
 .produto-detalhes-container {
     max-width: 900px;
     margin: 40px auto;
@@ -7,7 +8,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
+/* --- BOTÃO VOLTAR --- */
 .btn-voltar {
     background-color: #6c757d;
     color: white;
@@ -21,13 +22,16 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    position: absolute;
+    top:20px;
+    left: 20px;
+    z-index: 10;
+    margin-bottom: 0;
 }
-
 .btn-voltar:hover {
     color: #212121;
 }
-
-
+/* --- TÍTULO DO PRODUTO --- */
 .produto-detalhes-container .titulo {
     font-size: 2.5rem;
     font-weight: 700;
@@ -36,8 +40,7 @@
     margin-bottom: 25px;
     text-align: center;
 }
-
-
+/* --- CARROSSEL DE IMAGENS --- */
 #carouselDetalhes {
     margin-bottom: 30px;
     border-radius: 8px;
@@ -47,7 +50,6 @@
     position: relative;
     height: auto;
 }
-
 .carousel-inner {
     height: 100%;
     position: absolute;
@@ -55,24 +57,23 @@
     left: 0;
     width: 100%;
 }
-
 .carousel-item {
     height: 100%;
 }
-
 .modelo-imagem {
     width: 100%;
     height: 100%;
     object-fit: contain;
     background-color: #f8f9fa;
 }
-
+/* Indicadores do Carrossel */
 .carousel-indicators button {
     background-color: #004aad;
 }
 .carousel-indicators .active {
     background-color: #ff6f61;
 }
+/* Controles de Navegação (Setas) */
 #carouselDetalhes .carousel-control-prev,
 #carouselDetalhes .carousel-control-next {
     width: 40px;
@@ -84,50 +85,46 @@
     transform: translateY(-50%);
     transition: background-color 0.3s ease;
 }
-
 #carouselDetalhes .carousel-control-prev:hover,
 #carouselDetalhes .carousel-control-next:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
-
+/* Posicionamento Lateral */
 #carouselDetalhes .carousel-control-prev {
     left: 10px;
 }
-
 #carouselDetalhes .carousel-control-next {
     right: 10px;
 }
-
+/* Ícones das Setas */
 #carouselDetalhes .carousel-control-prev-icon,
 #carouselDetalhes .carousel-control-next-icon {
     width: 20px;
     height: 20px;
 }
-
+/* Mantenha esta regra da resposta anterior para o carrossel */
 .carousel-inner {
     height: 450px;
 }
+/* --- SEÇÃO DE DESCRIÇÃO E COMPRA --- */
 .descricao {
     padding: 20px;
     border-top: 2px solid #f0f0f0;
 }
-
 .descricao p {
     font-size: 1.1rem;
     color: #333;
     line-height: 1.6;
     margin-bottom: 10px;
 }
-
 .descricao strong {
     font-weight: 700;
 }
-
 .descricao [style*="color:red"] {
     font-weight: 600;
     font-size: 1.1rem;
 }
-
+/* --- BOTÃO COMPRAR --- */
 .btn-comprar {
     display: block;
     width: 150px;
@@ -137,48 +134,43 @@
     border: none;
     border-radius: 20px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 0 auto;
     margin-top: 50px;
 }
-
 .btn-comprar:hover:not(:disabled) {
-    background-color: #008fad;
+    background-color: #003b96;
 }
-
 .btn-comprar:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
-.seletor-variacao {
-  margin: 15px 0;
+/* Botão voltar ao topo */
+  .back-to-top-fixed {
+    position: fixed;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.seletor-variacao label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.back-to-top-fixed:hover {
+  background-color: #0055c7;
 }
-
-.seletor-variacao select {
-  width: 100%;
-  max-width: 250px;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-.legenda-below {
-  text-align: right;
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 10px;
-  margin-bottom: 0;
-  margin-left: 450px;
-}
-/* --- RESPONSIVIDADE --- */
+/* --- RESPONSIVIDADE (Mobile) --- */
 @media (max-width: 768px) {
     .produto-detalhes-container {
         margin: 0 auto;
@@ -186,39 +178,25 @@
         border-radius: 0;
         box-shadow: none;
     }
-
     .produto-detalhes-container .titulo {
         font-size: 2rem;
         margin-top: 40px;
         margin-bottom: 15px;
     }
-
     .btn-voltar {
-    background-color: #6c757d;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+        top: 15px;
+        left: 15px;
     }
-
     .carousel-inner {
         height: 350px;
     }
-
     .descricao p {
         font-size: 1rem;
     }
     .carousel-inner {
         height: 350px;
     }
-
+    /* Diminui o tamanho das setas em mobile */
     #carouselDetalhes .carousel-control-prev,
     #carouselDetalhes .carousel-control-next {
         width: 30px;
@@ -231,14 +209,5 @@
     }
      #carouselDetalhes {
         padding-bottom: 100%;
-    }
-    .legenda-below {
-      position: absolute;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #333;
-      bottom: 0;
-      margin-left: 10%;
-      max-width: 50%;
     }
 }

@@ -1,7 +1,6 @@
-<div *ngIf="produto" class="produto-detalhes-container">
+<div class="produto-detalhes-container" *ngIf="produto">
   <button class="btn-voltar" (click)="voltar()">← Voltar</button>
   <div class="titulo">{{ produto.nome }}</div>
-
   <!-- Carrossel -->
   <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -19,10 +18,7 @@
       <div *ngFor="let img of produto.imagens; let i = index"
         class="carousel-item"
         [class.active]="i === 0">
-        <img [src]="img.url" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
-        <div *ngIf="img.legenda" class="carousel-caption legenda-below">
-          {{ img.legenda }}
-        </div>
+        <img [src]="img" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
       </div>
     </div>
 
@@ -36,23 +32,24 @@
 
   <div class="descricao">
     <p [innerHTML]="produto.descricao | negrito"></p>
-    <p><strong>Tamanho:</strong> {{ produto.tamanhos.join(', ') }}</p>
     <p><strong>Valor:</strong> R$ {{ produto.preco }}</p>
     <p *ngIf="produto.estoque > 0"><strong>Estoque:</strong> {{ produto.estoque }}</p>
     <p *ngIf="produto.estoque === 0" style="color:red"><strong>Esgotado</strong></p>
     <p [innerHTML]= " produto.observacao | negrito"></p>
-    <div class="seletor-variacao" *ngIf="produto?.tamanhos?.length > 1">
-      <label for="tamanho">Selecione o modelo:</label>
-      <select [(ngModel)]="tamanhoSelecionado[produto.nome]" name="tamanho">
-        <option value="" disabled selected>Escolha...</option>
-        <option *ngFor="let t of produto.tamanhos" [value]="t">{{ t }}</option>
-      </select>
-    </div>
     <button class="btn-comprar"
-      [disabled]="produto.estoque === 0 || (produto.tamanhos.length > 1 && !tamanhoSelecionado[produto.nome])"
+      [disabled]="produto.estoque === 0"
       (click)="comprar(produto)">
       {{ produto.estoque === 0 ? 'Indisponível' : 'Comprar' }}
     </button>
   </div>
+
 </div>
 
+<button
+  *ngIf="showBackToTop"
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

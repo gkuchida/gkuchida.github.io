@@ -13,7 +13,7 @@ export class Tecidos {
   constructor() {
     console.log('📦 TecidosComponent carregado');
   }
-  abas = ['Soft', 'Fleece', 'Microsoft', 'Sazonais'];
+  abas = ['Soft', 'Fleece', 'Microsoft', 'Sazonais','Ribanas'];
   abaAtiva = 0;
 
   mudarAba(index: number) {
@@ -23,7 +23,7 @@ export class Tecidos {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; 
+      this.showBackToTop = scrollTop > 300;
     }
 
     scrollToTop(): void {
