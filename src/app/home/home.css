@@ -1,21 +1,13 @@
-/* =========================
-   PALETA HARMÔNICA
-   ========================= */
-:root{
-  --bege:#FFF8E1;        /* fundo suave */
-  --rosa-claro:#FDEEEB;  /* detalhe */
-  --rosa:#F8C9C4;        /* detalhes e badges */
-  --marrom:#4E3B31;      /* texto principal */
-  --marrom-claro:#C4A484;/* micro detalhes */
-  --azul-menu:#0072CE;   /* usado em botões/controlos se necessário */
-  --branco:#FFFFFF;
-  --sombra: rgba(0,0,0,0.08);
-}
-
+/*ARRUMAR ALTURA DE TODOS*/
 /* Reset/ajuste base */
 *{box-sizing:border-box;}
 body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-serif; margin:0;}
-
+h5{
+  color: #3B5998;
+  text-align: center;
+  top: 10px;
+  font-size: 1.1rem;
+}
 /* =========================
    Regras gerais de carrossel (escopo amplo, seguro)
    ========================= */
@@ -26,18 +18,19 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   font-weight: 700;
   font-size: 2rem;
   color: #000080;
-
+  margin-bottom: 30px;
 }
 .carousel, .slideSecundario {
   border-radius: 12px;
-  overflow: visible; /* permite controles aparecerem */
+  overflow: visible;
   margin: 1.25rem 0;
 }
 
 /* controles (setas) padrão - contraste legível sobre fundos claros */
 .carousel-control-prev, .carousel-control-next {
   width:44px; height:44px; border-radius:50%;
-  background: rgba(0,0,0,0.35);
+  /*background: rgba(0,0,0,0.35);*/
+  background: #5D78B4;
   display:flex; align-items:center; justify-content:center;
   top:50%; transform:translateY(-50%);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
@@ -58,10 +51,20 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   background: var(--marrom-claro); opacity:0.6;
 }
 .carousel-indicators .active { background: var(--rosa); opacity:1; }
+#carouselNovidades .carousel-control-prev,
+#carouselNovidades .carousel-control-next,
+#mainCarousel .carousel-control-next,
+#mainCarousel .carousel-control-prev{
+  background: #5D78B4;
+}
 
 /* =========================
    CARROSSEL PRINCIPAL
    ========================= */
+   #mainCarousel{
+    /*background: #FFD0D0;*/
+    background: #E8F1FF;
+   }
 .carousel .carousel-item {
   height: 70vh;
   min-height: 400px;
@@ -101,7 +104,7 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   gap: 1rem;
   height: 70vh; /* garante altura igual ao slide principal */
   padding: 3rem;
-  background: #FFF9F2;
+  /*background: #FFF9F2;*/
   border-radius: 16px;
 }
 /* Slide com várias imagens */
@@ -175,7 +178,6 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   margin: 0.3rem 0 0;
 }
 
-
 .bottom-left-caption {
   position: absolute;
   bottom: 0px;
@@ -199,7 +201,61 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   color: #f1f1f1;
   font-size: 1.1rem;
 }
+/* === SLIDE 5 CONFIG === */
+#slide5 .carousel-caption {
+  position: relative !important;
+  width: 40% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: auto !important;
+  right: auto !important;
+  transform: none !important;
+  text-align: left !important;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 2;
+}
 
+/* LAYOUT DO SLIDE */
+.carousel-item {
+    height: 100%;
+}
+
+.multi-image-slide {
+    min-height: 400px;
+    padding: 10px 4%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex; /* Garante que o texto e fotos fiquem lado a lado */
+    align-items: center; /* Alinha itens ao centro verticalmente */
+    gap: 5px;
+}
+
+/* --- SEÇÃO DE TEXTO (ESQUERDA) --- */
+.slide5-card {
+    flex: 0 0 300px;
+    padding: 30px;
+    text-align: left;
+    color: #fff;
+    background-color: #9b7272;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 250px;
+}
+
+.slide5-card h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/*
 #slide2.multi-image-slide{
   background: #ffb3b3;
 }
@@ -208,6 +264,97 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 }
 #slide4.multi-image-slide{
   background: #00BFA6;
+}*/
+/* Sobre */
+.sobre-home {
+  background: #D0E3FF;
+  padding: 60px 20px;
+  margin: 50px 0;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.sobre-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://i.ibb.co/vvzQQfTx/IMG-6612.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 600px;
+  max-height: 600px;
+  opacity: 0.15;
+  z-index: 0;
+  margin: auto;
+  right: 250px;
+}
+
+.sobre-home > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sobre-texto h2 {
+  color: #000080;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.sobre-texto .sub {
+  color: #1A1A80;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sobre-texto .desc {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.sobre-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.sobre-lista li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.sobre-botao {
+  background: #FFA726;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.sobre-botao:hover {
+  background: #FF9100;
+}
+
+/* Imagem */
+.sobre-imagem img {
+  width: 330px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* =========================
@@ -215,14 +362,18 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
    - area de vitrine compacta
    ========================= */
 #carouselNovidades {
-  background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);
+  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);*/
+  /*background: #E1F5FE;*/
+  background: #AFCBFF;
   border-radius: 12px;
   padding: 14px;
   box-shadow: 0 6px 18px var(--sombra);
 }
 
 /* controla altura e overflow (slides horizontais internos) */
-#carouselNovidades .carousel-inner { min-height: 280px; }
+#carouselNovidades .carousel-inner {
+  height: 350px;
+}
 
 /* produto dentro do carrossel de novidades */
 #carouselNovidades .product-card {
@@ -237,11 +388,16 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   gap:8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   transition: transform .2s ease;
+  /*background: #FFC86F;*/
+  background: #D4E4FF;
 }
 #carouselNovidades .product-card:hover { transform: translateY(-6px); }
 
 /* imagem do produto bem contida */
-#carouselNovidades .imagem-container { height: 190px; display:flex; align-items:center; justify-content:center; background:#fbfbfb; border-radius:10px; overflow:hidden; }
+#carouselNovidades .imagem-container { height: 190px; display:flex; align-items:center; justify-content:center;
+  background:#fbfbfb;
+
+   border-radius:10px; overflow:hidden; }
 #carouselNovidades .imagem-container img { max-width:100%; max-height:100%; object-fit: contain; }
 
 /* botão carrinho */
@@ -262,8 +418,6 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 }
 #carouselNovidades .btn-carrinho:hover { background:#005fa3; }
 
-/* título do produto */
-#carouselNovidades h6 { margin: 6px 0 0; font-size: 0.95rem; color: var(--marrom); }
 
 /* =========================
    CARROSSEL INSPIRAÇÕES (desktop e mobile)
@@ -272,7 +426,10 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
    ========================= */
 
 /* container geral de inspirações já tem sua classe; vamos harmonizar */
-.inspiracoes-container { background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%); padding: 0; margin-top: 1rem; }
+.inspiracoes-container {
+  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+  padding: 0;
+  margin-top: 1rem; }
 
 /* desktop: cards-wrapper já definido no HTML, ajusta espaçamento */
 #carouselDesktop .cards-wrapper { display:flex; gap: 1rem; justify-content:center; padding: 1.2rem; }
@@ -298,47 +455,65 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 
 /* corpo do card */
 .card-body { padding: 0.8rem 1rem; text-align:center; background: var(--rosa-claro); }
-.card-body h5{ margin:0.25rem 0; color:var(--marrom); font-weight:700; }
+.card-body h5{
+  margin:0.25rem 0;
+  color: wheat;
+  font-weight:700;
+}
 .card-body p { margin:0; color:#6b4e3d; font-size:0.95rem; }
 
-/* controles específicos das inspirações (visíveis sobre o fundo) */
-#carouselDesktop .carousel-control-prev, #carouselDesktop .carousel-control-next,
-#carouselMobile .carousel-control-prev, #carouselMobile .carousel-control-next {
-  background: rgba(0,0,0,0.45);
-}
-
-/* mobile: cards verticalizados */
-@media (max-width:768px){
-  #carouselDesktop { display:none; }
-  #carouselMobile { display:block; }
-  #carouselMobile .card { width: 86%; margin: 0 auto; }
-  #carouselMobile .card-img-top { height: 180px; }
-}
 
 /* =========================
    CARROSSEL RECOMENDADOS (#carouselRecomendados)
    - estilo de grid (mantém sua classe slide-theme-X)
    ========================= */
 #carouselRecomendados {
-  padding: 1.25rem 0;
-  background: linear-gradient(180deg, #F3E5F5 0%, #E1BEE7 100%);
+  padding: 2rem 20px;
+  /*background: linear-gradient(180deg, #F3E5F5 0%, #E1BEE7 100%);*/
+  /*background: #FFD0D0;*/
+  background: #8AB3F5;
   border-radius: 12px;
   box-shadow: 0 6px 18px var(--sombra);
 }
 
-.carousel-section.recomendados .carousel-row { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; padding:1rem; }
+#carouselRecomendados .carousel-item,
+#carouselRecomendados .carousel-row{
+  /*background: #FFD0D0;*/
+  background: transparent !important;
+  border-radius: 0;
+  height: 900px;
+}
+#carouselRecomendados .carousel-inner{
+  height: 350px;
+}
+.carousel-section.recomendados .carousel-row {
+  display:flex; gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:1rem 20px;
+
+}
 
 /* produto recomendado (maior que o de novidades) */
 .carousel-section.recomendados .product-card {
-  width: 220px;
-  height: 340px;
-  padding-bottom: 12px;
+  width: 240px;
+  height: 310px;
   border-radius: 12px;
-  overflow: hidden;
-  background: var(--branco);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  padding: 8px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform .2s ease;
+  /*background: #FFC86F;*/
+  background: #C7D8FF;
+  position: relative;
 }
-.carousel-section.recomendados .imagem-container { height: 230px; background:#f9f9f9; border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
+
+.carousel-section.recomendados .imagem-container {
+  height: 200px;
+  /*background:#f9f9f9;*/
+   border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
 .carousel-section.recomendados .imagem-container img { max-width:100%; max-height:100%; object-fit:contain; }
 
 /* cores por categoria (use as classes que passar no produto.categoria) */
@@ -355,7 +530,7 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 
 /* ver-mais button (círculo central) */
 .ver-mais-btn {
-   background: #1e40af;
+  background: #1e40af;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -367,43 +542,173 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   transition: background 0.3s ease;
   text-decoration: none;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
 
+/* --- Clientes --- */
+.marquee-clientes {
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.marquee-clientes h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000080;
+}
+
+.marquee-clientes p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  color: #1A1A80;
+}
+
+/* ÁREA ROLANTE */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  background: #5D78B4;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 25px;
+  animation: marquee 22s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ITENS */
+.cliente-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: white;
+  border: 4px solid #5d9f9a;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.cliente-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#carouselRecomendados .carousel-control-next,
+#carouselRecomendados .carousel-control-prev {
+  background: #E1E8FF;
 }
 
 /* =========================
-   AVALIAÇÕES (#avaliacoesCarousel)
+   CARROSSEL DE AVALIAÇÕES
    ========================= */
-#avaliacoesCarousel {
-  background: linear-gradient(180deg, #F9F5FB 0%, #F3E5F5 100%);
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 6px 18px var(--sombra);
-  height: 300px;
+.avaliacoes-container {
+  margin-top: 20px;
+  padding-top: 10px !important;  /* reduz o “respiro” interno */
+  padding-bottom: 10px !important;
+}
+
+.avaliacoes-container h2 {
+  color: #000080;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.avaliacoes-container p {
+  color: #1A1A80;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+#carouselAvaliacoes {
+  background: #4B639A;
+  padding: 18px 0;
+  border-radius: 16px;
+  max-width: 1700px;
+  height: 250px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  align-items: center;   /* 👈 centraliza verticalmente */
+  justify-content: center;
+}
+
+#carouselAvaliacoes .carousel-inner {
+  display: flex;
+  align-items: center;
 }
 
 .avaliacao-card {
-  background: #fffaf6;
-  border-radius: 12px;
-  padding: 22px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  max-width: 720px;
+  background: #C7D8FF;
+  padding: 20px 28px;
+  border-radius: 14px;
+  width: 40%;
   margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
   text-align: center;
-  margin-top: 40px;
+  margin-top:30px;
 }
-.avaliacao-card .estrelas { color: #ffb400; font-size:1.2rem; margin-bottom:8px; }
-.avaliacao-card p { font-size:1.05rem; color:#444; margin-bottom:8px; }
-.avaliacao-card span { color:#6b6b6b; }
+
+.avaliacao-card p {
+  margin: 8px 0 6px;
+  font-size: 1rem;
+  color: #000080;
+}
+
+.avaliacao-card span {
+  font-size: 0.85rem;
+  color: #3b4260;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: #5D78B4 !important;
+  border-radius: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #344a87 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+
 
 /* =========================
    SLIDE THEME (mantém sua lógica, só suaviza)
    para slides que usam .slide-theme-X no HTML
    ========================= */
-.slide-theme-0 { background: linear-gradient(180deg, rgba(255,250,245,0.55), rgba(255,255,255,0.25)); padding: 1rem; border-radius:12px; }
-.slide-theme-1 { background: linear-gradient(180deg, rgba(255,245,247,0.55), rgba(255,250,250,0.25)); padding:1rem; border-radius:12px; }
+/*.slide-theme-0 { background: linear-gradient(180deg, rgba(255,250,245,0.55), rgba(255,255,255,0.25)); padding: 1rem; border-radius:12px; }
+.slide-theme-1 { background: linear-gradient(180deg, rgba(255,245,247,0.55), rgba(255,250,250,0.25)); padding:1rem; border-radius:12px; }*/
+.slide-theme-0,
+.slide-theme-1,
+.slide-theme-2,
+.slide-theme-3,
+.slide-theme-4 {
+  background: transparent !important;
+}
 
 /* =========================
    Ajustes de imagens (evita deformar em carrosséis menores)
@@ -421,8 +726,15 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 /* =========================
    Categorias (mantém seu estilo)
    ========================= */
-.categorias-home { background: linear-gradient(180deg, #FFF8E1 0%, #FFF3E0 100%);
- border-radius: 12px; padding: 2rem 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.categorias-home {
+  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFF3E0 100%);*/
+  /*background: #3B5998;*/
+  background: #5D78B4;
+
+ border-radius: 12px;
+ padding: 2rem 1rem;
+ box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
 .categoria-circulo { color: var(--marrom); text-decoration:none; display:block; }
 .img-circle-wrapper { width:80px; height:80px; border-radius:50%; background:#f3f3f3; display:flex; align-items:center; justify-content:center; margin:0 auto; transition:all .18s ease; }
 .img-circle-wrapper img { width:72%; height:72%; object-fit:contain; }
@@ -433,23 +745,189 @@ body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-se
 .back-to-top-fixed { position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
 .back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
 
-/* =========================
-   RESPONSIVO (respeitando suas regras)
-   ========================= */
+
+/* ===========================================================
+   RESPONSIVO — AJUSTES SOMENTE PARA CELULAR (max-width: 600px)
+   NÃO ALTERA NADA DO DESKTOP
+   =========================================================== */
+
 @media (max-width: 600px) {
-  #carouselNovidades .product-card {
-    width:70%;
-    height:auto;
-    margin:0 auto;
+  /* ----------- PRIMEIRO CARROSSEL ----------- */
+  /* Permite que as legendas apareçam */
+  #mainCarousel,
+  #mainCarousel .carousel-item {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 400px !important;
+    padding-bottom: 20px !important;
   }
-  .carousel-caption {
-    max-width: 90%;
-    padding:10px;
-    bottom:10px;
+
+  /* Mantém IMAGENS lado a lado no mobile */
+  .single-image-slide,
+  .multi-image-slide {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 12px !important;
+    height: auto !important;
   }
-  .img-circle-wrapper {
-    width: 20px;
-    height:20px; }
-  .imagem-container { height:auto; }
+  /* ----------- LEGENDAS (TODAS) ----------- */
+
+  /* Todas as legendas ficam centralizadas e visíveis */
+  .carousel-caption,
+  .top-left-caption,
+  .bottom-left-caption {
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    padding: 10px 12px !important;
+    bottom: 10px !important;
+    top: auto !important;
+    height: auto !important;
+    background: rgba(0,0,0,0.45) !important;
+    z-index: 99 !important;
+  }
+
+  .carousel-caption p,
+  .top-left-caption p,
+  .bottom-left-caption p{
+    display: block !important;
+    line-height: 1.3 !important;
+    font-size: 0.95rem !important;
+  }
+
+   #slide5 .carousel-caption.slide5-card {
+    position: absolute !important;
+    bottom: auto !important; /* cancelando o padrão do Bootstrap */
+    top: 3% !important;      /* agora sobe mesmo */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    background: rgba(0,0,0,0.45) !important;
+    padding: 0.7rem 1rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    z-index: 20 !important;
+  }
+
+  /* desce os cards para não bater na faixa */
+  #slide5 .slide5-right {
+    margin-top: 100px !important;
+  }
+
+  #slide5 .cliente-card {
+    width: 30% !important;
+  }
+
+  #mainCarousel .carousel-caption h2,
+  #slide2 .carousel-caption h2,
+  #slide3 .carousel-caption h2,
+  #slide4 .carousel-caption h2,
+  #slide5 .carousel-caption h2{
+    font-size: 1.8rem;
+  }
+  /* ----------- SETAS ----------- */
+
+  #mainCarousel .carousel-control-prev,
+  #mainCarousel .carousel-control-next {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 200 !important;
+  }
+
+  /* ----------- SOBRE ----------- */
+.sobre-home {
+    padding: 40px 18px;
+    margin: 30px 0;
+  }
+
+  /* Ajusta a marca d’água */
+  .sobre-home::before {
+    background-position: top center;
+    top: -120px; /* ajusta a altura da marca d’água só no mobile */
+    right: 0;    /* centraliza melhor para telas pequenas */
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  /* Container vira coluna */
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  /* Textos menores */
+ .sobre-texto h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
+.sobre-texto .sub {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: .75;
+}
+
+.sobre-texto .desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+  .sobre-lista li {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  /* Botão centralizado */
+  .sobre-botao {
+    padding: 10px 20px;
+    font-size: 1.05em;
+  }
+
+  /* Imagem reduzida e centralizada */
+  .sobre-imagem img {
+    width: 220px;
+    margin: 0 auto;
+  }
+/* ----------- NOVIDADES ----------- */
+
+  #carouselNovidades .carousel-inner {
+    height: 300px !important;
+  }
+
+  #carouselNovidades .product-card {
+    width: 180px !important;
+    height: auto !important;
+  }
+/* ----------- MARQUEE (CLIENTES) ----------- */
+  .cliente-item { width: 90px !important; height: 90px !important; }
+  /* ----------- AVALIAÇÕES ----------- */
+
+  #carouselAvaliacoes {
+    height: 200px !important;
+    padding: 20px 12px !important;
+  }
+
+  #carouselAvaliacoes .carousel-inner {
+    height: auto !important;
+    align-items: center !important;
+  }
+
+  .avaliacao-card {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 16px !important;
+    max-width: 100% !important;
+  }
+
+
+
+
+}
