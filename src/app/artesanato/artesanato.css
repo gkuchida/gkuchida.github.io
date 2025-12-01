@@ -180,6 +180,9 @@ body {
 }
 /* Botão voltar ao topo */
 .back-to-top-fixed {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   position: fixed;
   background-color: #004aad;
   color: white;

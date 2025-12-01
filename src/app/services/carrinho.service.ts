@@ -11,8 +11,9 @@ export interface CarrinhoItem {
     comprimento: string;
     observacoes?: string;
   };
-  imagens: string[];
+  imagens: string [];
   tamanho?: string;
+  preco?:number;
 }
 
 @Injectable({

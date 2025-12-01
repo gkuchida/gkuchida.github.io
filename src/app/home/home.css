@@ -2,6 +2,10 @@
 /* Reset/ajuste base */
 *{box-sizing:border-box;}
 body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-serif; margin:0;}
+h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
 h5{
   color: #3B5998;
   text-align: center;
@@ -15,14 +19,13 @@ h5{
   border-radius: 8px;
 }
 .carousel-title h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2rem;
   color: #000080;
   margin-bottom: 30px;
 }
 .carousel, .slideSecundario {
   border-radius: 12px;
-  overflow: visible;
   margin: 1.25rem 0;
 }
 
@@ -59,200 +62,88 @@ h5{
 }
 
 /* =========================
-   CARROSSEL PRINCIPAL
-   ========================= */
-   #mainCarousel{
-    /*background: #FFD0D0;*/
-    background: #E8F1FF;
-   }
-.carousel .carousel-item {
-  height: 70vh;
-  min-height: 400px;
-  overflow: hidden;
-  position: relative;
-  padding: 1rem 0;
-}
-
-.carousel .carousel-item img {
-  object-fit: cover;
-  height: 100%;
+3. CARROSSEL PRINCIPAL (#mainCarousel) - CORREÇÃO PARA "IMAGENS GRUDADAS"
+=========================
+*/
+#mainCarousel {
   width: 100%;
-}
-
-/* Legenda principal */
-.carousel-caption {
-  bottom: 20%;
-  left: 10%;
-  right: 50%;
-  padding: 1rem 2rem;
-  background: rgba(0,0,0,0.4);
-  border-radius: 8px;
-}
-
-.carousel-caption h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.carousel-caption p {
-  font-size: 1.2rem;
-}
-.single-image-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  height: 70vh; /* garante altura igual ao slide principal */
-  padding: 3rem;
-  /*background: #FFF9F2;*/
-  border-radius: 16px;
-}
-/* Slide com várias imagens */
-.multi-image-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  height: 70vh; /* garante altura igual ao slide principal */
-  padding: 3rem;
-  border-radius: 16px;
+  height: 65vh;
+  min-height: 360px;
+  position: relative;
   overflow: hidden;
+  background: #5D78B4;
 }
 
-.multi-image-slide img {
-  width: 30%;
-  max-width: 380px;
-  border-radius: 12px;
+#mainCarousel .carousel-inner {
+  height: 100%;
+}
+#mainCarousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.image-slides-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  min-height: 100px;
+}
+
+.image-slides-container .pet {
+  width: calc(100% / 3);
+  height: 100%;
+  min-height: 180px;
+  max-width: none;
+  max-height: none;
   object-fit: cover;
-  height: 90%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
+  flex-shrink: 0;
+  position: static !important;
+  display: block;
 }
-
-.top-left-caption {
+#slide3 .pet:nth-child(3),
+#slide5 .pet:nth-child(3) {
+object-fit: cover; /* Garante que preencha */
+  object-position: 50% 70%;
+}
+/* ÁREA DA DESCRIÇÃO — PARTE INFERIOR (25% de altura) */
+.description-bar {
   position: absolute;
-  top: 5%;
-  left: 4%;
-  background: rgba(0,0,0,0.45);
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  text-align: left;
-  width: 440px;
-  height: 130px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 20px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.top-left-caption h2 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
+.description-bar h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #444;
+}
+.description-bar p {
   margin: 0;
+  font-size: 1rem;
+  color: #555;
 }
 
-.top-left-caption p {
-  color: #f8f8f8;
-  font-size: 1.1rem;
-  margin: 0.3rem 0 0;
-}
-
-.top-center-caption {
-  position: absolute;
-  top: 6%;
-  left: 25%;
-  background: rgba(0,0,0,0.45);
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  text-align: left;
-  width: 600px;
-  height: 130px;
-}
-
-.top-center-caption h2 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.top-center-caption p {
-  color: #f8f8f8;
-  font-size: 1.1rem;
-  margin: 0.3rem 0 0;
-}
-
-.bottom-left-caption {
-  position: absolute;
-  bottom: 0px;
-  left: 30px;
-  text-align: left;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  max-width: 550px;
-  height: 120px;
-}
-
-.bottom-left-caption h2 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.bottom-left-caption p {
-  color: #f1f1f1;
-  font-size: 1.1rem;
-}
-/* === SLIDE 5 CONFIG === */
-#slide5 .carousel-caption {
-  position: relative !important;
-  width: 40% !important;
-  left: 0 !important;
-  top: 0 !important;
-  bottom: auto !important;
-  right: auto !important;
-  transform: none !important;
-  text-align: left !important;
-  background: rgba(0,0,0,0.4);
-  border-radius: 12px;
-  padding: 20px;
-  z-index: 2;
-}
-
-/* LAYOUT DO SLIDE */
-.carousel-item {
-    height: 100%;
-}
-
-.multi-image-slide {
-    min-height: 400px;
-    padding: 10px 4%;
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex; /* Garante que o texto e fotos fiquem lado a lado */
-    align-items: center; /* Alinha itens ao centro verticalmente */
-    gap: 5px;
-}
-
-/* --- SEÇÃO DE TEXTO (ESQUERDA) --- */
-.slide5-card {
-    flex: 0 0 300px;
-    padding: 30px;
-    text-align: left;
-    color: #fff;
-    background-color: #9b7272;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 250px;
-}
-
-.slide5-card h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
+/* SETAS */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 50;
 }
 
 /*
@@ -308,13 +199,15 @@ h5{
   color: #000080;
   font-size: 2rem;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 500;
+  text-align: center;
 }
 
 .sobre-texto .sub {
   color: #1A1A80;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .sobre-texto .desc {
@@ -342,7 +235,7 @@ h5{
   padding: 12px 22px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.2s;
 }
 
@@ -356,68 +249,6 @@ h5{
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-
-/* =========================
-   CARROSSEL NOVIDADES (#carouselNovidades)
-   - area de vitrine compacta
-   ========================= */
-#carouselNovidades {
-  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);*/
-  /*background: #E1F5FE;*/
-  background: #AFCBFF;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 6px 18px var(--sombra);
-}
-
-/* controla altura e overflow (slides horizontais internos) */
-#carouselNovidades .carousel-inner {
-  height: 350px;
-}
-
-/* produto dentro do carrossel de novidades */
-#carouselNovidades .product-card {
-  width: 220px;
-  height: 300px;
-  background: var(--branco);
-  border-radius: 12px;
-  padding: 10px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  gap:8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform .2s ease;
-  /*background: #FFC86F;*/
-  background: #D4E4FF;
-}
-#carouselNovidades .product-card:hover { transform: translateY(-6px); }
-
-/* imagem do produto bem contida */
-#carouselNovidades .imagem-container { height: 190px; display:flex; align-items:center; justify-content:center;
-  background:#fbfbfb;
-
-   border-radius:10px; overflow:hidden; }
-#carouselNovidades .imagem-container img { max-width:100%; max-height:100%; object-fit: contain; }
-
-/* botão carrinho */
-#carouselNovidades .btn-carrinho {
-  background: #005fa3;
-  color:#fff;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.12);
-  text-decoration: none;
-}
-#carouselNovidades .btn-carrinho:hover { background:#005fa3; }
-
 
 /* =========================
    CARROSSEL INSPIRAÇÕES (desktop e mobile)
@@ -464,38 +295,46 @@ h5{
 
 
 /* =========================
-   CARROSSEL RECOMENDADOS (#carouselRecomendados)
-   - estilo de grid (mantém sua classe slide-theme-X)
-   ========================= */
-#carouselRecomendados {
-  padding: 2rem 20px;
-  /*background: linear-gradient(180deg, #F3E5F5 0%, #E1BEE7 100%);*/
-  /*background: #FFD0D0;*/
+  CARROSEL NOVIDADES (#carouselNovidades)
+  CARROSSEL RECOMENDADOS (#carouselRecomendados)
+========================= */
+#carouselNovidades{
+  background: #AFCBFF;
+}
+#carouselRecomendados{
   background: #8AB3F5;
+}
+#carouselRecomendados,
+#carouselNovidades {
+  padding: 2rem 20px;
   border-radius: 12px;
   box-shadow: 0 6px 18px var(--sombra);
 }
 
 #carouselRecomendados .carousel-item,
-#carouselRecomendados .carousel-row{
+#carouselNovidades .carousel-item,
+#carouselRecomendados .carousel-row,
+#carouselNovidades .carousel-row{
   /*background: #FFD0D0;*/
   background: transparent !important;
   border-radius: 0;
   height: 900px;
 }
-#carouselRecomendados .carousel-inner{
+#carouselRecomendados .carousel-inner,
+#carouselNovidades .carousel-inner{
   height: 350px;
 }
-.carousel-section.recomendados .carousel-row {
+.carousel-section.recomendados .carousel-row,
+.carousel-section.novidades .carousel-row{
   display:flex; gap:20px;
   flex-wrap:wrap;
   justify-content:center;
   padding:1rem 20px;
-
 }
 
 /* produto recomendado (maior que o de novidades) */
-.carousel-section.recomendados .product-card {
+.carousel-section.recomendados .product-card,
+.carousel-section.novidades .product-card {
   width: 240px;
   height: 310px;
   border-radius: 12px;
@@ -510,11 +349,14 @@ h5{
   position: relative;
 }
 
-.carousel-section.recomendados .imagem-container {
+.carousel-section.recomendados .imagem-container,
+.carousel-section.novidades .imagem-container {
   height: 200px;
   /*background:#f9f9f9;*/
    border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
-.carousel-section.recomendados .imagem-container img { max-width:100%; max-height:100%; object-fit:contain; }
+.carousel-section.recomendados .imagem-container img,
+.carousel-section.novidades .imagem-container img {
+  max-width:100%; max-height:100%; object-fit:contain; }
 
 /* cores por categoria (use as classes que passar no produto.categoria) */
 .badge-custom { position:absolute; top:10px; left:10px; padding:6px 10px; border-radius:10px; font-weight:700; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.08); font-size:0.78rem; }
@@ -545,8 +387,8 @@ h5{
   transition: background 0.3s ease;
   text-decoration: none;
   position: absolute;
-  top: 270px;
-  left: 50%;
+  top: 5%;
+  left: 90%;
   transform: translateX(-50%);
   margin: 0;
 }
@@ -562,7 +404,7 @@ h5{
 
 .marquee-clientes h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 10px;
   color: #000080;
 }
@@ -628,7 +470,7 @@ h5{
 .avaliacoes-container h2 {
   color: #000080;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .avaliacoes-container p {
@@ -727,23 +569,105 @@ h5{
    Categorias (mantém seu estilo)
    ========================= */
 .categorias-home {
-  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFF3E0 100%);*/
-  /*background: #3B5998;*/
-  background: #5D78B4;
-
- border-radius: 12px;
- padding: 2rem 1rem;
- box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    background: #5D78B4;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    /* Garante que o container principal não seja flexível */
+    display: block;
 }
-.categoria-circulo { color: var(--marrom); text-decoration:none; display:block; }
-.img-circle-wrapper { width:80px; height:80px; border-radius:50%; background:#f3f3f3; display:flex; align-items:center; justify-content:center; margin:0 auto; transition:all .18s ease; }
-.img-circle-wrapper img { width:72%; height:72%; object-fit:contain; }
+
+/* 2. TITULO (Mantém o tamanho original de desktop) */
+.categorias-home h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px; /* Adiciona espaçamento após o título */
+}
+
+/* 3. FAIXA DE CATEGORIAS (Simula o ROW com Wrap e Espaçamento) */
+.categorias-faixa-mobile {
+    /* Ativa o Flexbox para organizar os itens */
+    display: flex;
+    /* 💡 Permite que os itens quebrem para a próxima linha (Layout de colunas) */
+    flex-wrap: wrap;
+    /* Centraliza e distribui o espaço ao redor dos itens */
+    justify-content: center;
+    /* Adiciona espaçamento entre as linhas e colunas */
+    gap: 20px 10px; /* 20px entre as linhas, 10px entre as colunas */
+}
+
+/* 4. CADA ITEM DE CATEGORIA (.categoria-item substitui o col-md-2) */
+.categoria-item {
+    /* Define o tamanho para caberem 6 ou mais itens por linha, ou no máximo 150px */
+    width: 120px;
+    /* Permite que o item cresça, se necessário, e não encolha */
+    flex-grow: 1;
+    flex-shrink: 0;
+    /* Alinhamento de texto (Nome da categoria) */
+    text-align: center;
+}
+
+/* 5. CÍRCULO E IMAGEM (Mantém o tamanho original de desktop) */
+.img-circle-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px; /* Centraliza e adiciona margem inferior */
+}
+.img-circle-wrapper img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+}
+
+/* 6. NOME DA CATEGORIA */
+.categoria-nome{
+    font-size: 1rem;
+    display: block;
+    text-decoration:none;
+}
 
 /* =========================
    Back to top button (mantém)
    ========================= */
-.back-to-top-fixed { position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+.back-to-top-fixed * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.back-to-top-fixed::before,
+.back-to-top-fixed::after {
+  content: none !important;
+  display: none !important;
+}
+
+.back-to-top-fixed {
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  }
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
 
 
 /* ===========================================================
@@ -751,31 +675,23 @@ h5{
    NÃO ALTERA NADA DO DESKTOP
    =========================================================== */
 
-@media (max-width: 600px) {
-  /* ----------- PRIMEIRO CARROSSEL ----------- */
-  /* Permite que as legendas apareçam */
-  #mainCarousel,
-  #mainCarousel .carousel-item {
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 400px !important;
-    padding-bottom: 20px !important;
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .carousel-title h2,
+  .marquee-clientes h2,
+  .avaliacoes-container h2{
+    font-size: 1.5rem;
+    font-weight: 500;
   }
-
-  /* Mantém IMAGENS lado a lado no mobile */
-  .single-image-slide,
-  .multi-image-slide {
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 12px !important;
-    height: auto !important;
+  h5{
+    font-size: 1rem;
+  }
+  .marquee-clientes p,
+  .avaliacoes-container p{
+    font-size: 0.9rem;
   }
   /* ----------- LEGENDAS (TODAS) ----------- */
-
-  /* Todas as legendas ficam centralizadas e visíveis */
-  .carousel-caption,
+.carousel-caption,
   .top-left-caption,
   .bottom-left-caption {
     width: 90% !important;
@@ -797,49 +713,98 @@ h5{
     line-height: 1.3 !important;
     font-size: 0.95rem !important;
   }
+/* ----------- PRIMEIRO CARROSSEL ----------- */
+/* 1. Ajuste a altura do container principal para que o conteúdo caiba melhor */
+    #mainCarousel {
+        /* Reduz a altura da tela, mas mantém o min-height para não quebrar */
+        height: 50vh;
+        min-height: 250px;
+    }
 
-   #slide5 .carousel-caption.slide5-card {
-    position: absolute !important;
-    bottom: auto !important; /* cancelando o padrão do Bootstrap */
-    top: 3% !important;      /* agora sobe mesmo */
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 90% !important;
-    background: rgba(0,0,0,0.45) !important;
-    padding: 0.7rem 1rem !important;
-    border-radius: 12px !important;
-    text-align: center !important;
-    z-index: 20 !important;
-  }
+    /* 2. Ajuste o container das imagens */
+    .image-slides-container {
+        /* Reduz a altura para dar espaço para a descrição */
+        height: 75%;
+        min-height: 150px;
+    }
 
-  /* desce os cards para não bater na faixa */
-  #slide5 .slide5-right {
-    margin-top: 100px !important;
-  }
+    /* 3. Ajuste as imagens individuais */
+    .image-slides-container .pet {
+        /* Mantém a largura de 1/3 para que todas caibam lado a lado */
+        width: calc(100% / 3);
+        /* Reduz o min-height para se ajustar melhor à nova altura do container */
+        min-height: 100px;
+        /* Garante que a imagem preencha a área designada, importante para telas pequenas */
+        object-fit: cover;
+    }
 
-  #slide5 .cliente-card {
-    width: 30% !important;
-  }
+    /* 4. Ajuste a área de descrição */
+    .description-bar {
+        /* Aumenta a altura para que o texto não fique muito apertado */
+        height: 25%;
+        padding: 10px 10px; /* Reduz o padding */
+    }
 
-  #mainCarousel .carousel-caption h2,
-  #slide2 .carousel-caption h2,
-  #slide3 .carousel-caption h2,
-  #slide4 .carousel-caption h2,
-  #slide5 .carousel-caption h2{
-    font-size: 1.8rem;
-  }
-  /* ----------- SETAS ----------- */
+    /* 5. Ajuste o tamanho da fonte */
+    .description-bar h2 {
+        font-size: 1rem; /* Fonte menor para caber */
+        margin: 0 0 4px;
+    }
 
-  #mainCarousel .carousel-control-prev,
-  #mainCarousel .carousel-control-next {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 200 !important;
+    .description-bar p {
+        font-size: 0.8rem; /* Fonte menor para caber */
+    }
+  /* 5. GARANTE QUE O AJUSTE DE POSIÇÃO DO PET NÃO ATRAPALHE (Se aplicável) */
+  /* Remove o ajuste de posição agressivo, pois a imagem agora tem mais espaço */
+  #slide3 .pet:nth-child(3),
+  #slide5 .pet:nth-child(3){
+    object-position: 50% 50%; /* Volta a centralizar a imagem única */
   }
+#slide5 .pet:nth-child(1) {
+    object-position: 80% 10%; /* Foca nos 10% superiores, puxando a imagem para cima */
+}
+  /*CATEGORIA*/
+
+    .categorias-faixa-mobile {
+        display: flex; /* Ativa o Flexbox */
+        flex-wrap: nowrap; /* 💡 CRÍTICO: Impede a quebra de linha do Bootstrap/Row */
+        justify-content: space-between; /* Distribui os 6 itens uniformemente */
+        overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+        padding: 0 5px; /* Padding lateral */
+    }
+    .categorias-faixa-mobile::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 2. CADA ITEM (SUBSTITUINDO O col-*) */
+    .categoria-item {
+        /* Garante que o item ocupe 1/6 da largura e não encolha */
+        width: 13%;
+        max-width: 55px;
+        flex-shrink: 0;
+        text-align: center;
+        padding: 0 1px; /* Espaçamento mínimo entre os itens */
+    }
+
+    /* 3. TÍTULO E OUTROS AJUSTES (para comprimir o espaço vertical) */
+    .categorias-home h2 {
+        font-size: 1.3rem;
+        top: 0;
+        margin-bottom: 15px; /* Espaçamento entre Título e Faixa */
+    }
+
+    .img-circle-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px !important; /* Reduz margem inferior do círculo */
+    }
+
+    .categoria-nome {
+        font-size: 0.65rem; /* Fonte pequena */
+        margin-top: 0;
+        line-height: 1.1;
+    }
+
 
   /* ----------- SOBRE ----------- */
 .sobre-home {
@@ -865,23 +830,23 @@ h5{
 
   /* Textos menores */
  .sobre-texto h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 500;
   letter-spacing: -0.5px;
 }
 
 .sobre-texto .sub {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   opacity: .75;
 }
 
 .sobre-texto .desc {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   line-height: 1.65;
 }
   .sobre-lista li {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 
@@ -896,22 +861,65 @@ h5{
     width: 220px;
     margin: 0 auto;
   }
-/* ----------- NOVIDADES ----------- */
+/* ----------- NOVIDADES
+RECOMENDADOS----------- */
+#carouselRecomendados .carousel-inner,
+    #carouselNovidades .carousel-inner {
+        /* Reduz a altura da área visível do carrossel */
+        height: 300px; /* De 350px para 280px */
+    }
 
-  #carouselNovidades .carousel-inner {
-    height: 300px !important;
-  }
+    /* 2. Ajusta o card e o container da imagem */
+    .carousel-section.recomendados .product-card,
+    .carousel-section.novidades .product-card {
+        /* Reduz ligeiramente a largura e altura do card se necessário
+           (exemplo, de 240px/310px para 220px/280px) */
+        width: 45%;
+        height: 280px;
+        padding: 5px; /* Ajusta o padding interno */
+        padding-bottom: 15px;
+    }
 
-  #carouselNovidades .product-card {
-    width: 180px !important;
-    height: auto !important;
-  }
+    .carousel-section.recomendados .imagem-container,
+    .carousel-section.novidades .imagem-container {
+        /* Reduz a altura do container da imagem para que o card caiba */
+        height: 180px; /* De 200px para 180px */
+        margin-top: 35px;
+    }
+
+    /* 3. Ajusta o padding da seção */
+    #carouselRecomendados,
+    #carouselNovidades {
+        /* Reduz o padding da seção para economizar espaço */
+        padding: 1.5rem 10px;
+    }
+
+    /* Opcional: Se a altura de 900px do .carousel-item estiver causando problemas no mobile, ajuste-a. */
+    #carouselRecomendados .carousel-item,
+    #carouselNovidades .carousel-item,
+    #carouselRecomendados .carousel-row,
+    #carouselNovidades .carousel-row {
+        height: auto; /* Ou um valor menor como 400px, dependendo da necessidade */
+    }
+.badge-custom {
+  top:-10px;
+   left:10px;
+}
+
+#carouselNovidades .carousel-control-prev,
+#carouselRecomendados .carousel-control-prev,
+#carouselNovidades .carousel-control-next,
+#carouselRecomendados .carousel-control-next {
+  z-index: 5 !important;
+}
+
 /* ----------- MARQUEE (CLIENTES) ----------- */
   .cliente-item { width: 90px !important; height: 90px !important; }
+
   /* ----------- AVALIAÇÕES ----------- */
 
   #carouselAvaliacoes {
-    height: 200px !important;
+    height: 180px !important;
     padding: 20px 12px !important;
   }
 
@@ -926,8 +934,4 @@ h5{
     padding: 16px !important;
     max-width: 100% !important;
   }
-
-
-
-
 }

@@ -1,287 +1,240 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
-h2 {
-  color: #0072ce;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.item {
+.carrinho-vazio {
+  min-height: 50vh;        /* deixa a área maior */
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem 0;
-  position: relative;
-  border-bottom: 1px solid #e0e0e0;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  background-color: #e3f2fd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-.imagem-produto {
-  width: 10%;
-  height: 10%;
-  object-fit: contain;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 1rem;
-  align-self: center;
-}
-.nome-produto {
-  background-color: #F0F8FF;
-  color: #000080;
-  font-weight: 700;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
   font-size: 1.3rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  color: #444;
+}
+.promo-brinde {
+  background: #D0E3FF;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  width: 75%;
+  color: #003366;
 }
-.item > div p {
-  margin: 0.2rem 0;
-  font-size: 1rem;
+
+/* --- ESTILOS GERAIS DO CARRINHO --- */
+.card.mb-4 {
+    /* 1. Remove a borda padrão do Bootstrap/Tailwind card */
+    border: none !important;
+    padding: 0;
+    margin-bottom: 20px !important;
 }
-.medidas{
-  font-size: 12px;
-  color: #444444;
+
+.carrinho-layout {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
 }
-.botoes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-button {
-  background-color: #0072ce;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.6rem;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  min-width: 140px;
-}
-button:not(.delete-btn):hover {
-  background-color: #004a99;
-}
-.delete-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: #e53935;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  transition: color 0.3s ease;
-  border-radius: 0;
-}
-.delete-btn:hover {
-  background-color: transparent;
-  color: #c62828;
-}
-.botoes button:last-child {
-  background-color: #a5d6a7;
-  color: #004d40;
-}
-.botoes button:last-child:hover {
-  background-color: #81c784;
-}
-.btn-whatsapp {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 12px;
-}
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
-  box-shadow: 0 4px 8px rgba(30, 190, 87, 0.6);
-}
-.btn-whatsapp i {
-  font-size: 1.2rem;
-}
-.btn-primary {
-  background-color: #0072ce;
-  border-color: #007bff;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-.texto-aconchegante {
-  font-size: 1rem;
-  color: #555;
-  margin: 0 0 20px 0;
-  font-style: italic;
-  max-width: auto;
-  line-height: 1.4;
-  background: #f9f9f9;
-  padding: 12px 16px;
-  border-left: 4px solid #4169e1;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-button.back-to-top-fixed {
-  all: unset;
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #4169e1;
-  color: white;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-button.back-to-top-fixed:hover {
-  background-color: #3151b7;
-  transform: scale(1.1);
-}
-/* -- RESPONSIVO (mesmo estilo das telas grandes) -- */
-@media (max-width: 600px) {
-  .item {
-    display: flex;
-    flex-direction: column;
+
+/* --- LAYOUT GRID (Cabeçalho e Itens) --- */
+.carrinho-header,
+.carrinho-item {
+    display: grid;
+    /* Define 3 colunas: Produto (Grande), Preço (Médio), Excluir (Pequeno) */
+    grid-template-columns: 2fr 1fr 0.8fr;
+    gap: 10px;
     align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-  .imagem-produto {
-    width: 110px;
-    height: auto;
-    margin: 0 auto 1rem auto;
+    padding: 10px 0;
+}
+
+.carrinho-header {
+    font-weight: bold;
+    color: #444;
+    border-bottom: 2px solid #5D78B4; /* Linha de separação do cabeçalho */
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+.header-produto {
+  padding-left: 10px;
+}
+
+.header-preco,
+.header-excluir {
+  text-align: center;
+}
+.carrinho-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrinho-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+/* --- Coluna Produto (3) --- */
+.item-produto {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto no topo */
+    gap: 15px;
+}
+
+.imagem-pequena {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  .nome-produto {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
-    padding: 0.5rem;
-  }
-  .item > div p {
-    font-size: 0.9rem;
-  }
-  .medidas {
-    font-size: 0.8rem;
-  }
-  .botoes {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.item-detalhes {
+    font-size: 0.95rem;
+}
+
+.nome-produto {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-adicional {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 2px 0;
+}
+
+/* --- Coluna Preço (4) --- */
+.item-preco {
+    font-weight: 600;
+    color: #0072CE;
+}
+
+/* Preço "A definir" */
+.item-preco .text-danger {
+    color: #E74C3C;
+    font-weight: normal;
+}
+
+/* --- Coluna Excluir (5) --- */
+.item-excluir {
+    /* Alinhamento já está no grid */
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #A93226; /* Vermelho sutil para excluir */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    color: #E74C3C;
+}
+
+/* --- Botoes de Ação Final --- */
+.botoes {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-top: 1.5rem;
-  }
-  .botoes button {
-    background-color: #0072ce;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.botoes button:first-child { /* Finalizar Compra */
+    background-color: #5D78B4;
+    color: #fff;
+    border: none;
+}
+
+.botoes button:first-child:hover {
+    background-color: #4a6396;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.botoes button:last-child { /* Continuar Comprando */
+    background-color: #fff;
+    color: #5D78B4;
+    border: 1px solid #5D78B4;
+}
+
+.botoes button:last-child:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* --- Responsividade (Para telas menores) --- */
+@media (max-width: 768px) {
+    .carrinho-header {
+        display: none; /* Esconde o cabeçalho em mobile */
+    }
+
+    .carrinho-item {
+        /* Ajusta o layout para mobile (empilha Preço e Excluir) */
+        grid-template-columns: 1fr 80px;
+        grid-template-areas:
+            "produto produto"
+            "preco excluir";
+        border: 1px solid #eee;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .item-produto {
+        grid-area: produto;
+    }
+    .item-preco {
+        grid-area: preco;
+        text-align: left !important;
+        font-size: 1rem;
+        padding-left: 75px; /* Alinha o preço com a descrição */
+    }
+    .item-excluir {
+        grid-area: excluir;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .botoes button {
+        width: 100%;
+        margin-top: 10px;
+    }
+    /* Botão voltar ao topo */
+  .back-to-top-fixed {
+    border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+    position: fixed;
+    background-color: #004aad;
     color: white;
     border: none;
-    padding: 0.6rem 1.6rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 700;
+    border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
     transition: background-color 0.3s ease;
-    width: 80%;
-    max-width: 260px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-  .botoes button:hover {
-    background-color: #004a99;
-  }
-  .botoes button:last-child {
-    background-color: #a5d6a7;
-    color: #004d40;
-  }
-  .botoes button:last-child:hover {
-    background-color: #81c784;
-  }
-  .delete-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    font-size: 1.2rem;
-  }
-  .btn-whatsapp {
-    width: 46px;
-    height: 46px;
-    font-size: 1.2rem;
-  }
-  .back-to-top-fixed {
     width: 44px;
     height: 44px;
     font-size: 18px;
-    bottom: 25px;
-    right: 15px;
-    border-radius: 50%;
-    background-color: #4169e1;
-    color: white;
+    bottom: 30px;
+    right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  .back-to-top-fixed:hover {
-    background-color: #3151b7;
-    transform: scale(1.1);
-  }
-  .texto-aconchegante {
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
-  h2 {
-    font-size: 1.25rem;
-    text-align: center;
-  }
-  button.back-to-top-fixed {
-    all: unset;
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #4169e1;
-    color: white;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  button.back-to-top-fixed:hover {
-    background-color: #3151b7;
-    transform: scale(1.1);
-  }
 }
-/* -- FIM RESPONSIVO -- */
+.back-to-top-fixed:hover {
+  background-color: #0055c7;
+}
+}

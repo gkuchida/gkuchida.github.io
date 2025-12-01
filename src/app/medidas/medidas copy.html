@@ -3,18 +3,12 @@
     <i class="bi bi-arrow-left"></i> Voltar
   </button>
 </div>
-
 <div *ngIf="produto" class="medidas-container">
 
   <div class="form-wrapper">
     <p class="subtitulo">ARTES & FOCINHOS</p>
     <h3 class="titulo-produto">{{ produto.nome }}</h3>
     <div class="linha-amarela"></div>
-
-    <button (click)="alternarAjuda()" class="btn-ajuda-medidas">
-      <i class="bi bi-question-circle"></i> Como medir
-      <i class="bi" [ngClass]="{'bi-chevron-up': mostrarImagemAjuda, 'bi-chevron-down': !mostrarImagemAjuda}"></i>
-    </button>
 
     <form (ngSubmit)="ok()">
       <label>
@@ -43,9 +37,18 @@
     </form>
   </div>
 
-  <div *ngIf="mostrarImagemAjuda" class="imagem-ajuda-toggle">
+  <div class="imagem-ajuda">
     <div class="ajuda-card">
       <img src="https://i.ibb.co/NgzWfjX2/MEDIDAS.jpg" alt="Como medir" />
     </div>
   </div>
 </div>
+
+<!-- Botão flutuante lateral direita -->
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+>
+  <i class="bi bi-arrow-up"></i>
+</button>

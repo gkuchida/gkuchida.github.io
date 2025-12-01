@@ -1,103 +1,120 @@
-<div class="box-flutuante">
-  <div class="box-inner">
-    <h1 class="titulo">Modelos sob Encomenda/ sob Medida</h1>
-    <ul class="texto-aconchegante">
-      <li>Escolha o modelo que você deseja e clique em <strong>"Selecionar"</strong> para ver os detalhes e tecidos disponíveis. </li>
-      <li>Em seguida, escolha o tecido e clique em <strong>"Selecionar e Ir para Medidas"</strong> para finalizar o pedido sob medida.</li>
-    </ul>
+<!-- LISTA DE PRODUTOS (quando NÃO está nos detalhes) -->
+<div class="encomenda-lista" *ngIf="!produtoEmDetalhe">
+  <div class="encomenda-card"
+       *ngFor="let p of produtos"
+       (click)="abrirDetalhes(p)">
 
-    <div class="box-cta">
-      <p>Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
-      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp-grande">
-        <i class="bi bi-whatsapp"></i> Fale Conosco
-      </a>
-    </div>
+    <img [src]="p.imagens[0]" alt="{{ p.nome }}">
+    <h3>{{ p.nome }}</h3>
+
+    <div class="btn-ver-detalhes"></div>
+
+
   </div>
 </div>
-
-<div class="grid-produtos-wrapper" *ngIf="!produtoEmDetalhe">
-  <div class="grid-produtos">
-    <div *ngFor="let produto of produtos" class="card-produto-link">
-      <div class="card-produto">
-        <h3 class="modelo-nome">{{ produto.nome }}</h3>
-        <div class="img-wrapper" (click)="abrirDetalhes(produto)">
-          <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
-        </div>
-        <div class="produto-info">
-        </div>
-        <button (click)="abrirDetalhes(produto)" class="btn-selecionar-encomenda">Selecionar Modelo</button>
-      </div>
-    </div>
+<div class="encomenda-lista" *ngIf="!produtoEmDetalhe">
   </div>
+
+<div class="voltar-pill" *ngIf="produtoEmDetalhe">
+  <button (click)="voltarALista()">
+    <i class="bi bi-arrow-left"></i> Voltar
+  </button>
 </div>
 
-<div class="produto-info-detalhe" *ngIf="produtoEmDetalhe">
-  <button class="btn-voltar" (click)="voltarALista()">← Voltar</button>
-  <h2 class="titulo-detalhe">{{ produtoEmDetalhe.nome }}</h2>
-  <div id="carouselDetalhesEncomenda" class="carousel slide" data-bs-ride="carousel">
+<div class="encomenda-grid" *ngIf="produtoEmDetalhe">
+  </div>
+<!-- GRID PRINCIPAL (DETALHES DO PRODUTO) -->
+<div class="encomenda-grid" *ngIf="produtoEmDetalhe">
+
+  <div class="encomenda-col-esquerda">
+
+  <div id="carouselEncomendaDetalhes" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- INDICATORS -->
     <div class="carousel-indicators">
-      <button *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+      <button
+        *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
         type="button"
-        data-bs-target="#carouselDetalhesEncomenda"
+        data-bs-target="#carouselEncomendaDetalhes"
         [attr.data-bs-slide-to]="i"
-        [class.active]="i === 0"
-        aria-current="true"
-        aria-label="Slide {{ i + 1 }}">
+        [class.active]="i === 0">
       </button>
     </div>
 
+    <!-- SLIDES -->
     <div class="carousel-inner">
-      <div *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+      <div
+        *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
         class="carousel-item"
         [class.active]="i === 0">
-        <img [src]="img" class="d-block w-100 modelo-imagem" [alt]="produtoEmDetalhe.nome">
+        <img [src]="img" class="d-block w-100" />
       </div>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhesEncomenda" data-bs-slide="prev">
+    <!-- CONTROLES -->
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhesEncomenda" data-bs-slide="next">
+
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
     </button>
-  </div>
-  <div class="produto-descricao">
-    <h3>Detalhes do Modelo:</h3>
-    <p *ngFor="let paragrafo of produtoEmDetalhe.descricao" [innerHTML]="paragrafo"></p>
+
   </div>
 
-  <div class="opcoes-selecao">
-    <h4>Escolha o Tecido:</h4>
-    <select [(ngModel)]="tecidoParaMedidas" class="tecido-select-detalhe">
-      <option value="" disabled selected>-- Selecione um Tecido --</option>
-      <option *ngFor="let tecido of produtoEmDetalhe.tecidos" [value]="tecido">{{ tecido }}</option>
-    </select>
-
-    <div *ngIf="produtoEmDetalhe.acabamento && produtoEmDetalhe.acabamento.length > 0">
-        <h4 style="margin-top: 20px;">Escolha o Acabamento:</h4>
-        <select [(ngModel)]="acabamentoParaMedidas" class="tecido-select-detalhe">
-          <option value="" disabled selected>-- Selecione um Acabamento --</option>
-          <option *ngFor="let opc of produtoEmDetalhe.acabamento" [value]="opc">{{ opc }}</option>
-        </select>
-    </div>
 </div>
-<p class="aviso-tecido">
-      *As fotos dos modelos são meramente ilustrativas. Os tecidos disponíveis serão confirmados após a seleção.
+
+
+  <!-- COLUNA DIREITA -->
+  <div class="encomenda-col-direita">
+
+    <div class="marca-agua">Artes & Focinhos</div>
+    <h1 class="titulo-produto">{{ produtoEmDetalhe.nome }}</h1>
+    <!-- SELECT TECIDO -->
+     <div class="seletor-variacao">
+     <label for="tamanho">Selecione o tecido:</label>
+    <select class="encomenda-select" [(ngModel)]="tecidoParaMedidas">
+      <option value="" disabled selected>-- Selecione --</option>
+      <option *ngFor="let t of produtoEmDetalhe.tecidos">{{ t }}</option>
+    </select>
+    </div>
+
+    <!-- SELECT ACABAMENTO -->
+    <div class="seletor-variacao" *ngIf="produtoEmDetalhe.acabamento && produtoEmDetalhe.acabamento.length > 0">
+      <label for="tamanho">Selecione o acabamento:</label>
+      <select class="encomenda-select" [(ngModel)]="acabamentoParaMedidas">
+        <option value="" disabled selected>-- Selecione --</option>
+        <option *ngFor="let a of produtoEmDetalhe.acabamento">{{ a }}</option>
+      </select>
+    </div>
+
+    <p class="aviso-tecido">
+      *As fotos são ilustrativas. Os tecidos disponíveis serão confirmados após a escolha.
     </p>
 
-    <button
-      (click)="selecionarENavegar()"
-      [disabled]="!tecidoParaMedidas"
-      class="btn-selecionar-final"
-    >
-      Selecionar e Ir para Medidas
+    <button class="btn-selecionar-encomenda-detalhe"
+            [disabled]="!tecidoParaMedidas"
+            (click)="selecionarENavegar()">
+      Selecionar e ir para medidas
     </button>
+
+  </div>
 </div>
+
+<!-- DESCRIÇÃO -->
+
+<h2 class="titulo-descricao" *ngIf="produtoEmDetalhe">Descrição</h2>
+<div class="descricao-central" *ngIf="produtoEmDetalhe">
+  <p *ngFor="let p of produtoEmDetalhe.descricao" [innerHTML]="p"></p>
+</div>
+
+
+<!-- BOTÃO VOLTAR AO TOPO -->
 <button
   *ngIf="showBackToTop"
   class="back-to-top-fixed"
-  (click)="scrollToTop()"
-  aria-label="Voltar ao topo"
->
+  (click)="scrollToTop()">
   <i class="bi bi-arrow-up"></i>
 </button>

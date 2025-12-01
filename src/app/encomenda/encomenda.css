@@ -1,445 +1,379 @@
-body {
-    background-color: #f7f9fc;
-    font-family: 'Roboto', sans-serif;
-}
-h4{
-  font-size: 20px;
-}
-.box-flutuante {
-    background: linear-gradient(135deg, #f0f8ff, #e6eef5);
-    border: 2px solid #b0c4de;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 40px auto;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 1100px;
+.carousel,
+.carousel-inner,
+.carousel-item {
+  transform: none !important;
 }
 
-.box-inner {
-    max-width: 800px;
-    margin: 0 auto;
+/* ===== LISTA DE PRODUTOS ===== */
+.encomenda-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px 10px 40px;
 }
 
-.box-flutuante .titulo {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #004aad;
-    margin-bottom: 15px;
-}
-.box-flutuante ul.texto-aconchegante {
-  list-style-position: outside;
-  padding-left: 1.5rem;
-  margin: 0 auto;
-  text-align: left;
-  display: inline-block;
-}
-
-.box-flutuante ul.texto-aconchegante li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.box-inner .texto-aconchegante {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  color: #333;
-}
-
-.box-cta {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    margin-top: 25px;
-}
-
-.box-cta p {
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Botão WhatsApp Grande */
-.btn-whatsapp-grande {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25d366;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.btn-whatsapp-grande:hover {
-    background-color: #1fac5d;
-    transform: translateY(-2px);
-}
-
-/* --- GRID DE PRODUTOS (LISTA) --- */
-.grid-produtos-wrapper {
-    max-width: 1100px;
-    margin: 0 auto 50px;
-}
-
-.grid-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-}
-
-.card-produto-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-/* Card Individual do Produto */
-.card-produto {
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-produto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.modelo-nome {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    padding: 15px 15px 5px;
-    text-align: center;
-}
-
-.img-wrapper {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-produto {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-}
-
-.card-produto:hover .img-produto {
-    transform: scale(1.05);
-}
-
-.produto-info {
-    padding: 5px 15px 10px;
-    text-align: center;
-    flex-grow: 1;
-}
-
-/* Botão Selecionar Modelo na Lista */
-.btn-selecionar-encomenda {
-    width: 100%;
-    padding: 10px 0;
-    background-color: #004aad;
-    color: white;
-    font-weight: 500;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-selecionar-encomenda:hover {
-    background-color: #0055c7;
-}
-
-/* --- SEÇÃO DE DETALHES DO PRODUTO  --- */
-.produto-info-detalhe {
-    max-width: 900px;
-    margin: 30px auto 50px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.titulo-detalhe {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #004aad;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-/* --- CARROSSEL --- */
-#carouselDetalhesEncomenda {
-    max-width: 500px;
-    margin: 0 auto 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.modelo-imagem {
-    max-height: 450px;
-    object-fit: contain;
-    background-color: white;
-}
-
-#carouselDetalhesEncomenda .carousel-control-prev,
-#carouselDetalhesEncomenda .carousel-control-next {
-    width: 40px;
-    height: 40px;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease;
-}
-
-#carouselDetalhesEncomenda .carousel-control-prev:hover,
-#carouselDetalhesEncomenda .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-#carouselDetalhesEncomenda .carousel-control-prev {
-    left: 10px;
-}
-
-#carouselDetalhesEncomenda .carousel-control-next {
-    right: 10px;
-}
-
-#carouselDetalhesEncomenda .carousel-control-prev-icon,
-#carouselDetalhesEncomenda .carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: #004aad;
-}
-
-.produto-descricao {
-    padding: 20px;
-    border-top: 1px solid #eee;
-}
-
-.produto-descricao h3 {
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.produto-descricao p {
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.opcoes-selecao {
-  background: #fafafa;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 500px;
-  margin: 2rem auto;
-  transition: all 0.3s ease;
-}
-
-.campo-selecao {
-  margin-bottom: 1.5rem;
-}
-
-.label-selecao {
-  display: block;
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.select-suave {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #333;
-  transition: 0.3s;
-  outline: none;
+/* ===== CARD DE PRODUTO ===== */
+.encomenda-card {
+  background: #DCE6FF;
+  /*border: 3px solid #0E2270;     */
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
   cursor: pointer;
-  appearance: none; /* remove setinha padrão (opcional) */
-  background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.6, 0.7);
 }
 
-.select-suave:hover {
-  border-color: #c9a7eb;
-  box-shadow: 0 0 5px rgba(201, 167, 235, 0.4);
+.encomenda-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
 }
 
-.select-suave:focus {
-  border-color: #b589d6;
-  box-shadow: 0 0 6px rgba(181, 137, 214, 0.5);
+/* imagem do card */
+.encomenda-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* nome do produto */
+.encomenda-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0E2270;     /* marinho */
+  margin-bottom: 15px;
+}
+
+/* botão com símbolo + */
+
+.btn-ver-detalhes {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 45px;
+  height: 45px;
+  background: #2196F3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  top: 5px;
+}
+
+.btn-ver-detalhes:hover {
+  background: #1976D2;
+}
+
+.btn-ver-detalhes::after {
+  content: "+";
+  margin-top: -2px;
+}
+/* ==== GRID DOS DETALHES (continua funcionando igual) ==== */
+.encomenda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 10px 15px;
+}
+
+.encomenda-col-esquerda img {
+  border-radius: 10px;
+}
+
+/* GRID PRINCIPAL */
+.encomenda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 10px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* COLUNA ESQUERDA — CARD AZUL */
+.encomenda-col-esquerda {
+  background: #DCE6FF; /* azul da loja */
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   transform: none !important;
+
+}
+
+/* CAROUSEL */
+.encomenda-col-esquerda .carousel {
+  width: 100%;
+}
+
+.encomenda-col-esquerda img {
+  border-radius: 15px;
+  object-fit: contain;
+  max-height: 420px;
+  padding: 0;       /* remove espaço */
+  background: none; /* remove moldura */
+}
+
+
+/* CONTROLES DO CAROUSEL */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* deixa branco */
+  opacity: 0.9;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+}
+
+/* INDICATORS */
+.carousel-indicators [data-bs-target] {
   background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
-.option {
+/* COLUNA DIREITA */
+.marca-agua {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.titulo-produto {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0E2270;
+  margin-bottom: 15px;
+}
+
+/* SELECTS */
+.seletor-variacao {
+  margin: 15px 0;
+}
+
+.seletor-variacao label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.seletor-variacao select {
+  width: 100%;
+  max-width: 250px;
   padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.tecido-select-detalhe {
-    width: 100%;
-    max-width: 350px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.encomenda-select {
+  width: 100%;
+  max-width: 250px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
+.encomenda-select:focus {
+  border-color: #5D78B4;
+}
+
+/* AVISO */
 .aviso-tecido {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 25px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
-.btn-selecionar-final {
-    background-color: #004aad;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 400px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 20px auto 0 auto;
+/* BOTÃO SELECIONAR */
+.btn-selecionar-encomenda-detalhe {
+  background: #0E2270;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.25s ease;
+  justify-content: center;
 }
 
-.btn-selecionar-final:hover {
-    background-color: #0055c7;
+.btn-selecionar-encomenda-detalhe:hover {
+  filter: brightness(1.15);
 }
 
-.btn-selecionar-final:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+/* DESCRIÇÃO */
+.descricao-central {
+  width: 100% !important;      /* ocupa toda a largura */
+  max-width: 1200px !important; /* mesma largura do grid */
+  margin: 40px auto 0 auto !important;  /* separa do topo */
+  display: block !important;   /* força linha inteira */
+  flex-direction: column !important;
+  align-items: center;
 }
 
-.btn-voltar {
-    background-color: #6c757d;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+.titulo-descricao {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFD54F;
+  margin: 50px auto 10px auto;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  padding-bottom: 6px;
 }
 
-.btn-voltar:hover {
-    background-color: #5a6268;
+/* Faixa fina embaixo */
+.titulo-descricao::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* tamanho da linha */
+  height: 3px; /* espessura */
+  background-color: #FFF3C1; /* amarelo do header */
+  border-radius: 10px;
 }
 
-/* Botão voltar ao topo */
-  .back-to-top-fixed {
-    position: fixed;
-    background-color: #004aad;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* BOTÃO VOLTAR */
+.voltar-pill {
+  position: relative;
+  margin: 15px 0 10px 20px; /* abaixo do header e levemente à esquerda */
 }
 
-.back-to-top-fixed:hover {
-    background-color: #0055c7;
+.voltar-pill button {
+  background: #5D78B4;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 30px;  /* estilo pílula */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
 }
 
-/* ---  RESPONSIVOS --- */
-@media (max-width: 768px) {
-  .opcoes-selecao {
-    padding: 1rem;
+.voltar-pill button:hover {
+  background: #4b6394;
+}
+.back-to-top-fixed {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+
+.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+
+/*
+ * RESPONSIVO PARA LISTA DE PRODUTOS (CELULAR)
+ * Garante 2 cards por linha
+ */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .titulo-produto {
+    font-size: 1.2rem;
   }
-    .box-flutuante {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    .box-flutuante .titulo {
-        font-size: 1.6rem;
-    }
-    .btn-whatsapp-grande {
-        padding: 8px 20px;
-        font-size: 1rem;
+  .seletor-variacao select{
+    font-size: 0.8rem;
+  }
+  .seletor-variacao label {
+    font-size: 0.9rem;
+  }
+  .aviso-tecido{
+    font-size: 0.7rem;
+  }
+  .voltar-pill {
+  position: relative;
+  /* CORREÇÃO AQUI: O valor de 10px (margem inferior) foi mudado para 0px.
+     Sintaxe: 15px (topo) 0 (direita) 0 (baixo) 20px (esquerda) */
+}
+    .encomenda-lista {
+        /* Muda o grid para 2 colunas de tamanho igual (1fr cada) */
+        grid-template-columns: 1fr 1fr;
+
+        /* Aumenta o padding lateral para não ficar muito grudado nas bordas */
+        padding-left: 15px;
+        padding-right: 15px;
+
+        /* Reduz um pouco o gap entre os cards se necessário (opcional) */
+        /* gap: 15px; */
     }
 
-    .grid-produtos {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-        padding: 0 10px;
+    /* Para telas muito pequenas, garante que a imagem não seja muito alta */
+    .encomenda-card img {
+        height: 150px; /* Altura reduzida para caber melhor na tela */
     }
 
-    .img-wrapper {
-        height: 180px;
+    /* Reduz o tamanho da fonte do título para não quebrar */
+    .encomenda-card h3 {
+        font-size: 0.9rem;
     }
 
-    .produto-info-detalhe {
-        margin: 10px auto 30px;
-        padding: 10px;
+    /* Ajusta o botão de detalhes (opcional) */
+    .btn-ver-detalhes {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+        top: 5px;
     }
-    .titulo-detalhe {
-        font-size: 1.8rem;
+
+    .btn-selecionar-encomenda-detalhe{
+      font-size: 1rem;
+      padding: 10px 10px;
     }
-    .modelo-imagem {
-        max-height: 300px;
+
+    .carousel-control-prev,
+    .carousel-control-next {
+       width: 40px !important; /* Ajuste este valor se precisar de uma área maior/menor */
+    /* Zera os paddings padrão para não empurrar os ícones */
+    padding: 0 !important;
     }
-    .btn-selecionar-final {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-    h4{
-      font-size: 18px;
+
+
+/* Ajuste dos Controles (Setas) */
+.encomenda-col-esquerda .carousel-control-prev,
+.encomenda-col-esquerda .carousel-control-next {
+    /* Define uma largura pequena para a área clicável */
+    width: 40px !important; /* Ajuste este valor se precisar de uma área maior/menor */
+
+    /* Zera os paddings padrão para não empurrar os ícones */
+    padding: 0 !important;
+}
+
+/* Alinha as setas na borda, afastando-as da imagem */
+.encomenda-col-esquerda .carousel-control-prev {
+    left: -30px !important; /* Move o controle para a esquerda da borda do container */
+}
+
+.encomenda-col-esquerda .carousel-control-next {
+    right: -30px !important; /* Move o controle para a direita da borda do container */
+}
+
+    .encomenda-col-esquerda .carousel .carousel-indicators  {
+        bottom: -30px !important;
     }
 }
-/* ---  FIM RESPONSIVO --- */

@@ -1,39 +1,30 @@
-<div class="card mb-4 shadow-sm">
-  <div class="card-body">
-    <h2>Confirme seu pedido</h2>
-    <p class="card-text texto-aconchegante">
-    Você acabou de montar o modelo ideal para o seu pet!<br>
-    Agora, é hora de revisar as informações.<br>
-    Confira se está tudo certinho com as medidas e o modelo escolhido.<br>
-    Se estiver tudo em ordem, é só clicar no botão <strong>Confirmar</strong> — você será
-  direcionado(a) para o nosso WhatsApp.<br>
-    Em breve, entraremos em contato com o orçamento e o prazo de produção para a sua aprovação.<br>
-    Em caso de dúvidas, entre em contato pelo WhatsApp ou acesse a seção <strong>Dúvidas</strong>.
-    <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-    </a>
+<div *ngIf="produto && medidas" class="medidas-wrapper">
+  <!-- Lado Esquerdo — Imagem -->
+   <div class="imagem-produto">
+      <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+    </div>
+
+  <!-- Lado Direito — Card com marca d’água -->
+  <div class="medidas-form-card">
+    <div class="marca-agua">Artes & Focinhos</div>
+    <p class="textoEscolhido">Modelo escolhido: </p>
+    <h1 class="titulo-produto">{{ produto.nome }}</h1>
+    <p><strong>Pescoço:</strong> {{ medidas.pescoco }} cm</p>
+    <p><strong>Tórax:</strong> {{ medidas.torax }} cm</p>
+    <p><strong>Comprimento:</strong> {{ medidas.comprimento }} cm</p>
+    <p *ngIf="produto.acabamento">
+    <strong>Acabamento:</strong> {{ produto.acabamento }}
     </p>
+    <p><strong>Observações:</strong> {{ medidas.observacoes || 'Nenhuma' }}</p>
+     <button class="btn-comprar"
+        (click)="confirmar()">
+        <i class="bi bi-cart4"></i>
+        Comprar
+      </button>
   </div>
 </div>
 
-<div *ngIf="produto && medidas" class="confirmar-container">
-  <h3>{{ produto.nome }} - {{ produto.tecido }}</h3>
-  <p><strong>Pescoço:</strong> {{ medidas.pescoco }}</p>
-  <p><strong>Tórax:</strong> {{ medidas.torax }}</p>
-  <p><strong>Comprimento:</strong> {{ medidas.comprimento }}</p>
-  <p *ngIf="produto.acabamento">
-    <strong>Acabamento:</strong> {{ produto.acabamento }}
-  </p>
-  <p><strong>Observações:</strong> {{ medidas.observacoes || 'Nenhuma' }}</p>
-  <button (click)="confirmar()">Confirmar</button>
-</div>
-
-<!-- Botão flutuante lateral direita -->
-<button
-  *ngIf="showBackToTop"
-  class="back-to-top-fixed"
-  (click)="scrollToTop()"
-  aria-label="Voltar ao topo"
->
+<!-- Botão flutuante -->
+<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
   <i class="bi bi-arrow-up"></i>
 </button>

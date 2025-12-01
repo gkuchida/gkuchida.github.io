@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService, CarrinhoItem } from '../services/carrinho.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -6,6 +6,7 @@ import { MsgSucesso } from '../msg-sucesso/msg-sucesso';
 import { FormsModule } from '@angular/forms';
 import { NegritoPipe } from '../pipe/pipe';
 import { RouterModule } from '@angular/router';
+import { MatTabsModule } from '@angular/material/tabs';
 
 export interface ProdutoPronto {
     nome: string;
@@ -13,9 +14,11 @@ export interface ProdutoPronto {
     descricao: string;
     preco: number;
     estoque: number;
-    imagens: { url: string; legenda: string }[];
+    imagens: string [];
     observacao?: string;
     isNovidade?: boolean;
+    tipo?: 'inverno'|'verao'|'chuva'|'acessorios'|string;
+    genero?:string;
 }
 
 export const modelosProntas =[
@@ -26,12 +29,14 @@ export const modelosProntas =[
     preco: 40,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/9H1Q3QjC/Vestido-Jeans-Fte-removebg-preview.png', legenda: '' },
-      { url: 'https://i.ibb.co/tp0Pm9hk/IMG-7036.png', legenda: '' },
-      { url: 'https://i.ibb.co/jkxS2Vh4/Vestido-jeans-IA.png', legenda: 'Imagem gerada por inteligência artificial para fins ilustrativos.' }
+      'https://i.ibb.co/9H1Q3QjC/Vestido-Jeans-Fte-removebg-preview.png',
+      'https://i.ibb.co/tp0Pm9hk/IMG-7036.png',
+      'https://i.ibb.co/jkxS2Vh4/Vestido-jeans-IA.png'
     ],
     observacao:'',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Vestido Babadinho P',
@@ -40,11 +45,13 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/Gv0TwX2f/Vestido-Babado-Fte-removebg-preview.png', legenda: ''},
-      { url: 'https://i.ibb.co/Z6ndjTrD/IMG-7037.png', legenda: ''},
-      { url: 'https://i.ibb.co/b5Wg3hcy/Vestido-Babado-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/Gv0TwX2f/Vestido-Babado-Fte-removebg-preview.png',
+      'https://i.ibb.co/Z6ndjTrD/IMG-7037.png',
+      'https://i.ibb.co/b5Wg3hcy/Vestido-Babado-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Capa Dupla Face G',
@@ -53,11 +60,13 @@ export const modelosProntas =[
     preco: 35,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/8nbDNnZQ/IMG-6574.png', legenda:''},
-      { url: 'https://i.ibb.co/Z1fkn1hr/IMG-6710.png', legenda: ''},
-      { url: 'https://i.ibb.co/PvS1XC0G/Capa-DF-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/8nbDNnZQ/IMG-6574.png',
+      'https://i.ibb.co/Z1fkn1hr/IMG-6710.png',
+      'https://i.ibb.co/PvS1XC0G/Capa-DF-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Básica P',
@@ -66,11 +75,13 @@ export const modelosProntas =[
     preco: 20,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/qYVJ8595/IMG-6841.png', legenda:''},
-      { url: 'https://i.ibb.co/mFBhFW5v/IMG-6448.png', legenda:''},
-      { url: 'https://i.ibb.co/tTSwCByy/Basica-PP-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/qYVJ8595/IMG-6841.png',
+      'https://i.ibb.co/mFBhFW5v/IMG-6448.png',
+      'https://i.ibb.co/tTSwCByy/Basica-PP-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Básica GG',
@@ -79,11 +90,13 @@ export const modelosProntas =[
     preco: 40,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/BHR80ZRj/IMG-6044.png', legenda: ''},
-      { url:'https://i.ibb.co/PvFd9cTr/IMG-6045.png', legenda:''},
-      { url: 'https://i.ibb.co/279LXZ65/Basica-GG-IA.png', legenda: 'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/BHR80ZRj/IMG-6044.png',
+      'https://i.ibb.co/PvFd9cTr/IMG-6045.png',
+      'https://i.ibb.co/279LXZ65/Basica-GG-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Básica G',
@@ -92,11 +105,13 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/JRC5kzHt/IMG-5682.png',legenda:''},
-      { url: 'https://i.ibb.co/qYBWsDLb/IMG-5681.png',legenda:''},
-      { url: 'https://i.ibb.co/Kxncn8Fs/Basica-M-IA.png', legenda: 'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/JRC5kzHt/IMG-5682.png',
+      'https://i.ibb.co/qYBWsDLb/IMG-5681.png',
+      'https://i.ibb.co/Kxncn8Fs/Basica-M-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Básica Azul PP',
@@ -105,11 +120,13 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/8DRKM884/IMG-6948.png',legenda:''},
-      { url:'https://i.ibb.co/X0c07nq/IMG-6721.png',legenda:''},
-      { url: 'https://i.ibb.co/8LQPcCjK/Basica-PP-IA.png',legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/8DRKM884/IMG-6948.png',
+      'https://i.ibb.co/X0c07nq/IMG-6721.png',
+      'https://i.ibb.co/8LQPcCjK/Basica-PP-IA.png'
     ],
-    isNovidade: false
+    isNovidade: false,
+    tipo:'inverno',
+    genero:'menino'
   },
   {
     nome: 'Blusa Raglan M',
@@ -118,10 +135,12 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/8DfZ0msC/Blusa-Raglan-Fte.png', legenda:''},
-      { url:'https://i.ibb.co/Cs8M9q5L/Blusa-Raglan-Verso.png',legenda:''},
-      { url: 'https://i.ibb.co/7Nj1p6pk/Raglan-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
-    ]
+      'https://i.ibb.co/8DfZ0msC/Blusa-Raglan-Fte.png',
+      'https://i.ibb.co/Cs8M9q5L/Blusa-Raglan-Verso.png',
+      'https://i.ibb.co/7Nj1p6pk/Raglan-IA.png'
+    ],
+    tipo:'inverno',
+    genero:'menino'
   },
   {
     nome: 'Básica Vermelha PP',
@@ -130,10 +149,12 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/G4n31LzC/IMG-6722.png', legenda:''},
-      { url:'https://i.ibb.co/HLD43J8K/Abelhinha-Fte.png', legenda:''},
-      { url: 'https://i.ibb.co/3ycJW3j7/Basica-PP-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
-    ]
+      'https://i.ibb.co/G4n31LzC/IMG-6722.png',
+      'https://i.ibb.co/HLD43J8K/Abelhinha-Fte.png',
+      'https://i.ibb.co/3ycJW3j7/Basica-PP-IA.png'
+    ],
+    tipo:'inverno',
+    genero:'menina'
   },
   {
     nome: 'Capa de chuva Bagun G',
@@ -142,12 +163,14 @@ export const modelosProntas =[
     preco: 40,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/7Jyx4wWc/Capa-Bagun-Costas.png', legenda:''},
-      { url: 'https://i.ibb.co/HjSKcJz/Capa-Bagun-FTE.png',legenda:''},
-      { url:'https://i.ibb.co/fY8gDWvr/Bagun-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/7Jyx4wWc/Capa-Bagun-Costas.png',
+      'https://i.ibb.co/HjSKcJz/Capa-Bagun-FTE.png',
+      'https://i.ibb.co/fY8gDWvr/Bagun-IA.png'
     ],
     observacao: '',
-    isNovidade: true
+    isNovidade: true,
+    tipo:'chuva',
+    genero:'menino'
   },
   {
     nome: 'Capa de chuva transpasse G',
@@ -156,12 +179,14 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/cXsVFZJv/Capa-Nylon-Transpasse-FTE.png', legenda:''},
-      { url: 'https://i.ibb.co/FZ2x3mt/Capa-Nylon-Transpasse-Costas.png', legenda:''},
-      { url: 'https://i.ibb.co/FbNZjDpT/Capa-G-IA.png',  legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/cXsVFZJv/Capa-Nylon-Transpasse-FTE.png',
+      'https://i.ibb.co/FZ2x3mt/Capa-Nylon-Transpasse-Costas.png',
+      'https://i.ibb.co/FbNZjDpT/Capa-G-IA.png'
     ],
     observacao: '',
-    isNovidade: true
+    isNovidade: true,
+    tipo:'chuva',
+    genero:'menino'
   },
   {
     nome: 'Capa de chuva G',
@@ -170,12 +195,14 @@ export const modelosProntas =[
     preco: 30,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/rKFNFnrF/Capa-Nylon-FTE.png', legenda:''},
-      { url: 'https://i.ibb.co/Y7mFJLnm/Capa-Nylon-Costas.png', legenda:''},
-      { url: 'https://i.ibb.co/FbNZjDpT/Capa-G-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'},
+      'https://i.ibb.co/rKFNFnrF/Capa-Nylon-FTE.png',
+      'https://i.ibb.co/Y7mFJLnm/Capa-Nylon-Costas.png',
+      'https://i.ibb.co/FbNZjDpT/Capa-G-IA.png',
     ],
     observacao: '',
-    isNovidade: true
+    isNovidade: true,
+    tipo:'chuva',
+    genero:'menino'
   },
   {
     nome: 'Capa de chuva M',
@@ -184,12 +211,14 @@ export const modelosProntas =[
     preco: 25,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/fzDb0X3n/Capa-Vermelha-M-Fte.png',legenda:''},
-      { url: 'https://i.ibb.co/C3KCBwWR/Capa-Vermelha-M-Costas.png', legenda:''},
-      { url: 'https://i.ibb.co/M5sYPf4f/Capa-M-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/fzDb0X3n/Capa-Vermelha-M-Fte.png',
+      'https://i.ibb.co/C3KCBwWR/Capa-Vermelha-M-Costas.png',
+      'https://i.ibb.co/M5sYPf4f/Capa-M-IA.png'
     ],
     observacao: '',
-    isNovidade: true
+    isNovidade: true,
+    tipo:'chuva',
+    genero:'menina'
   },
   {
     nome: 'Gorro de Natal',
@@ -203,14 +232,16 @@ export const modelosProntas =[
     preco: 10,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/LXk4stDX/Gorro-G-deitado.png', legenda:''},
-      { url: 'https://i.ibb.co/QjMGD1G6/Gorro-P-Desenho-Leg.png', legenda:''},
-      { url: 'https://i.ibb.co/DHF1Bp9M/Gorro-M-Desenho.png',legenda:''},
-      { url: 'https://i.ibb.co/fd8Wm08C/Gorro-G-M.png', legenda:''},
-      { url: 'https://i.ibb.co/GfkH7V2T/Miyu-Gorro.png', legenda:''}
+      'https://i.ibb.co/LXk4stDX/Gorro-G-deitado.png',
+      'https://i.ibb.co/QjMGD1G6/Gorro-P-Desenho-Leg.png',
+      'https://i.ibb.co/DHF1Bp9M/Gorro-M-Desenho.png',
+      'https://i.ibb.co/fd8Wm08C/Gorro-G-M.png',
+      'https://i.ibb.co/GfkH7V2T/Miyu-Gorro.png'
     ],
     observacao: 'Garanta o seu, pois a produção é limitada!',
-    isNovidade: true
+    isNovidade: true,
+    tipo:'acessorios',
+    genero: 'unissex'
   },
   {
     nome: 'Bandana com elástico Pets Verde P',
@@ -219,12 +250,14 @@ export const modelosProntas =[
     preco: 15,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/HLcsB12f/Bandana-El-stico-Verde-Fte.png',legenda:''},
-      { url: 'https://i.ibb.co/wFdv2XgZ/Bandana-El-stico-Verde-Costas.png', legenda:''},
-      { url: 'https://i.ibb.co/6R7HtRPJ/Bandana-Elastico-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/HLcsB12f/Bandana-El-stico-Verde-Fte.png',
+      'https://i.ibb.co/wFdv2XgZ/Bandana-El-stico-Verde-Costas.png',
+      'https://i.ibb.co/6R7HtRPJ/Bandana-Elastico-IA.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'acessorios',
+    genero: 'unissex'
   },
   {
     nome: 'Bandana Flamingos P',
@@ -233,13 +266,15 @@ export const modelosProntas =[
     preco: 15,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/jvCg57Qp/BPink-Fte-removebg-preview.png', legenda:''},
-      { url: 'https://i.ibb.co/Kz5ZM3jL/BPink-Vers-removebg-preview.png', legenda:''},
-      { url: 'https://i.ibb.co/JRsqyrdc/BPink-Tras-removebg-preview.png', legenda:''},
-      { url: 'https://i.ibb.co/WNvxFkVw/Bandana-Fla-Pink-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/jvCg57Qp/BPink-Fte-removebg-preview.png',
+      'https://i.ibb.co/Kz5ZM3jL/BPink-Vers-removebg-preview.png',
+      'https://i.ibb.co/JRsqyrdc/BPink-Tras-removebg-preview.png',
+      'https://i.ibb.co/WNvxFkVw/Bandana-Fla-Pink-IA.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'acessorios',
+    genero:'unissex'
   },
   {
     nome: 'Bandana Safari M',
@@ -248,13 +283,15 @@ export const modelosProntas =[
     preco: 15,
     estoque: 1,
     imagens: [
-      { url:'https://i.ibb.co/DgSwqwjg/BVer-fte-removebg-preview.png', legenda:''},
-      { url: 'https://i.ibb.co/svWrz5Jq/BVer-costas-removebg-preview.png',legenda:''},
-      { url: 'https://i.ibb.co/hJPQD58F/BVer-tras-removebg-preview.png',legenda:''},
-      { url: 'https://i.ibb.co/fVDV8S14/Bandana-Safari-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/DgSwqwjg/BVer-fte-removebg-preview.png',
+      'https://i.ibb.co/svWrz5Jq/BVer-costas-removebg-preview.png',
+      'https://i.ibb.co/hJPQD58F/BVer-tras-removebg-preview.png',
+      'https://i.ibb.co/fVDV8S14/Bandana-Safari-IA.png'
     ],
      observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'acessorios',
+    genero:'menino'
   },
   {
     nome: 'Bandana Flamingos M',
@@ -263,13 +300,15 @@ export const modelosProntas =[
     preco: 15,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/SXqzWSp7/Blar-Fte-removebg-preview.png',legenda:''},
-      { url: 'https://i.ibb.co/wFvTjLVq/blar-removebg-preview.png',legenda:''},
-      { url:'https://i.ibb.co/d4zRMd8H/blar-tras-removebg-preview.png',legenda:''},
-      { url:'https://i.ibb.co/R49Zch1Z/Banda-Flamingo-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/SXqzWSp7/Blar-Fte-removebg-preview.png',
+      'https://i.ibb.co/wFvTjLVq/blar-removebg-preview.png',
+      'https://i.ibb.co/d4zRMd8H/blar-tras-removebg-preview.png',
+      'https://i.ibb.co/R49Zch1Z/Banda-Flamingo-IA.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'acessorios',
+    genero:'menina'
   },
   {
     nome: 'Vestido Tigre Jeans GG',
@@ -278,12 +317,14 @@ export const modelosProntas =[
     preco: 45,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/CpQp70wv/IMG-7589.png',legenda:''},
-      { url: 'https://i.ibb.co/4ZtLtvZd/IMG-7590.png',legenda:''},
-      { url: 'https://i.ibb.co/fdSVF6nd/Vestido-Jeans-IA.png',legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/CpQp70wv/IMG-7589.png',
+      'https://i.ibb.co/4ZtLtvZd/IMG-7590.png',
+      'https://i.ibb.co/fdSVF6nd/Vestido-Jeans-IA.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Safári Rosa GG',
@@ -292,12 +333,14 @@ export const modelosProntas =[
     preco: 45,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/JFgDQBwG/IMG-7593.png', legenda:''},
-      { url: 'https://i.ibb.co/W4mmyJr0/IMG-7594.png',legenda:''},
-      { url: 'https://i.ibb.co/DfbJLQSh/RP-Festa-Zoo-Miyu.png', legenda:''}
+      'https://i.ibb.co/JFgDQBwG/IMG-7593.png',
+      'https://i.ibb.co/W4mmyJr0/IMG-7594.png',
+      'https://i.ibb.co/DfbJLQSh/RP-Festa-Zoo-Miyu.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Marinheiro GG',
@@ -306,12 +349,14 @@ export const modelosProntas =[
     preco: 45,
     estoque: 1,
     imagens: [
-      { url:'https://i.ibb.co/SXpz0q86/IMG-7591.png',legenda:''},
-      { url: 'https://i.ibb.co/rGpmnWFH/IMG-7592.png',legenda:''},
-      { url: 'https://i.ibb.co/WvZSrKyq/Miyu-Marinheira.png', legenda:''}
+      'https://i.ibb.co/SXpz0q86/IMG-7591.png',
+      'https://i.ibb.co/rGpmnWFH/IMG-7592.png',
+      'https://i.ibb.co/WvZSrKyq/Miyu-Marinheira.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Pink GG',
@@ -320,12 +365,14 @@ export const modelosProntas =[
     preco: 40,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/B2614dzx/IMG-7585.png',legenda:''},
-      { url: 'https://i.ibb.co/h1K2bvC8/IMG-7586.png',legenda:''},
-      { url: 'https://i.ibb.co/R8fTZP3/Miyu-Renda.png',legenda:''}
+      'https://i.ibb.co/B2614dzx/IMG-7585.png',
+      'https://i.ibb.co/h1K2bvC8/IMG-7586.png',
+      'https://i.ibb.co/R8fTZP3/Miyu-Renda.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Floral Lilás GG',
@@ -334,12 +381,14 @@ export const modelosProntas =[
     preco: 50,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/CSCdmsz/IMG-7587.png',legenda:''},
-      { url: 'https://i.ibb.co/1tm3KGP9/IMG-7588.png',legenda:''},
-      { url: 'https://i.ibb.co/hJ5NDXmT/RP-Glamour-Lilas-Miyu.png', legenda:''},
+      'https://i.ibb.co/CSCdmsz/IMG-7587.png',
+      'https://i.ibb.co/1tm3KGP9/IMG-7588.png',
+      'https://i.ibb.co/hJ5NDXmT/RP-Glamour-Lilas-Miyu.png',
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Floral Rosa e Vermelho GG',
@@ -348,12 +397,14 @@ export const modelosProntas =[
     preco: 50,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/ccvhC3Pq/IMG-7595.png',legenda:''},
-      { url: 'https://i.ibb.co/cStsXHJn/IMG-7596.png',legenda:''},
-      { url: 'https://i.ibb.co/gFrr4Bx8/RP-Rosinha-Miyu.png', legenda:''}
+      'https://i.ibb.co/ccvhC3Pq/IMG-7595.png',
+      'https://i.ibb.co/cStsXHJn/IMG-7596.png',
+      'https://i.ibb.co/gFrr4Bx8/RP-Rosinha-Miyu.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Natalino Rena Encantada GG',
@@ -362,12 +413,14 @@ export const modelosProntas =[
     preco: 55,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/rfwd8hY3/IMG-7581.png',legenda:''},
-      { url: 'https://i.ibb.co/LDJByrZH/IMG-7582.png',legenda:''},
-      { url: 'https://i.ibb.co/PsNp1YLn/RP-Natal-Renas-Miyu.png', legenda:''}
+      'https://i.ibb.co/rfwd8hY3/IMG-7581.png',
+      'https://i.ibb.co/LDJByrZH/IMG-7582.png',
+      'https://i.ibb.co/PsNp1YLn/RP-Natal-Renas-Miyu.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Vestido Natalino Flocos de Neve GG',
@@ -376,12 +429,14 @@ export const modelosProntas =[
     preco: 45,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/7N1XrHGL/IMG-7583.png',legenda:''},
-      { url: 'https://i.ibb.co/7JTs9QsH/IMG-7584.png',legenda:''},
-      { url: 'https://i.ibb.co/JRkQ10T0/RP-Festa-Verde-Miyu.png',legenda:''}
+      'https://i.ibb.co/7N1XrHGL/IMG-7583.png',
+      'https://i.ibb.co/7JTs9QsH/IMG-7584.png',
+      'https://i.ibb.co/JRkQ10T0/RP-Festa-Verde-Miyu.png'
     ],
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
-    isNovidade: false
+    isNovidade: false,
+    tipo:'verao',
+    genero:'menina'
   },
   {
     nome: 'Colete Natal P',
@@ -390,11 +445,12 @@ export const modelosProntas =[
     preco: 50,
     estoque: 1,
     imagens: [
-      { url: 'https://i.ibb.co/JjtmtvJ6/Colete-Natal-Fte.png',legenda:''},
-      { url: 'https://i.ibb.co/q3LmzS2r/COlete-Natal.png',legenda:''},
-      { url: 'https://i.ibb.co/PsYbPTLZ/Colete-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'}
+      'https://i.ibb.co/JjtmtvJ6/Colete-Natal-Fte.png',
+      'https://i.ibb.co/q3LmzS2r/COlete-Natal.png',
+      'https://i.ibb.co/PsYbPTLZ/Colete-IA.png'
     ],
-    observacao:''
+    tipo:'verao',
+    genero:'menino'
   },
   {
     nome: 'Básica Moletinho P',
@@ -403,11 +459,13 @@ export const modelosProntas =[
     preco: 30,
     estoque: 0,
     imagens: [
-      { url: 'https://i.ibb.co/SwkK7ygQ/IMG-7038.png',legenda:''},
-      { url: 'https://i.ibb.co/bgnCMfTc/IMG-6635.png',legenda:''},
-      { url: 'https://i.ibb.co/5WHJL5cG/Moletinho-IA.png', legenda:'Imagem gerada por inteligência artificial para fins ilustrativos.'},
+      'https://i.ibb.co/SwkK7ygQ/IMG-7038.png',
+      'https://i.ibb.co/bgnCMfTc/IMG-6635.png',
+      'https://i.ibb.co/5WHJL5cG/Moletinho-IA.png',
     ],
-    observacao:'Atenção: Este modelo está ESGOTADO, mas não se preocupe, fazemos Sob Encomenda! Você pode solicitar o seu modelo em outras estampas e tecidos.\n<i>Entre em Contato</i> para ver as opções de estampas disponíveis e fazer seu pedido personalizado, chame-nos agora mesmo no<i> WhatsApp</i>!'
+    observacao:'Atenção: Este modelo está ESGOTADO, mas não se preocupe, fazemos Sob Encomenda! Você pode solicitar o seu modelo em outras estampas e tecidos.\n<i>Entre em Contato</i> para ver as opções de estampas disponíveis e fazer seu pedido personalizado, chame-nos agora mesmo no<i> WhatsApp</i>!',
+    tipo:'inverno',
+    genero:'unissex'
   },
 ];
 @Component({
@@ -415,7 +473,7 @@ export const modelosProntas =[
   standalone: true,
   templateUrl: './prontas.html',
   styleUrls: ['./prontas.css'],
-  imports: [CommonModule, RouterModule, NegritoPipe, FormsModule]
+  imports: [CommonModule, RouterModule, MatTabsModule, FormsModule]
 })
 
 export class Prontas {
@@ -423,14 +481,19 @@ export class Prontas {
   showBackToTop = true;
   tamanhoSelecionado: { [key: string]: string } = {};
   constructor(private carrinhoService: CarrinhoService, private dialog: MatDialog) {}
+  abas = ["Inverno ❄️", "Verão ☀️", "Capa de Chuva 🌧️", "Acessórios 🎀"];
+  abaAtiva = 0;
 
-  comprar(modelo: { nome: string; imagens: string[] }) {
+  mudarAba(i: number) {
+    this.abaAtiva = i;
+  }
+  comprar(modelo: { nome: string; imagens: string[]; preco: number }) {
     const tamanho = this.tamanhoSelecionado[modelo.nome];
-
     const item: CarrinhoItem = {
       tipo: 'pronta',
       nomeModelo: `${modelo.nome} - ${tamanho}`,
       imagens: modelo.imagens,
+      preco: modelo.preco,
     };
 
     this.carrinhoService.addItem(item);

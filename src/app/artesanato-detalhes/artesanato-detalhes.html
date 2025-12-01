@@ -18,7 +18,8 @@
       <div *ngFor="let img of produto.imagens; let i = index"
         class="carousel-item"
         [class.active]="i === 0">
-        <img [src]="img" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
+
+        <img [src]="img.url" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
       </div>
     </div>
 

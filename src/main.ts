@@ -15,12 +15,10 @@ import { Duvidas } from './app/duvidas/duvidas';
 import { Contato } from './app/contato/contato';
 import { Buscar } from './app/buscar/buscar';
 import { ProdutoDetalhes } from './app/produto-detalhes/produto-detalhes';
-import { ArtesanatoDetalhes } from './app/artesanato-detalhes/artesanato-detalhes';
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'encomenda/:nome', component: Encomenda },
-  { path: 'artesanato-detalhes/:nome', component: ArtesanatoDetalhes },
   { path: 'produto-detalhes/:nome', component: ProdutoDetalhes },
   { path: 'prontas', component: Prontas },
   { path: 'carrinho', component: Carrinho },

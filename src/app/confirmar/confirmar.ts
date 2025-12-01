@@ -37,7 +37,7 @@ export class Confirmar {
     }
 
     const isEncomenda = !!this.medidas;
-
+    
     // Monta o item do carrinho dependendo do tipo
     const item: CarrinhoItem = {
       tipo: isEncomenda ? 'encomenda' : 'pronta',

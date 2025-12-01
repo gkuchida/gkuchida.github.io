@@ -1,48 +1,95 @@
-<div class="card mb-4 shadow-sm">
-  <div class="card-body">
-    <h2>Meu Carrinho</h2>
-    <p class="card-text texto-aconchegante">
-    Revise seus itens com atenção antes de finalizar a compra.
-    Você pode adicionar mais produtos, alterar quantidades ou remover itens facilmente.
-    Quando estiver pronto, siga para o checkout para concluir seu pedido com segurança.
-    <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp" title="Fale conosco pelo WhatsApp">
-    <i class="bi bi-whatsapp"></i></a>
-  </div>
-</div>
-
-<div *ngIf="items.length === 0" style="text-align: center;">
+<div *ngIf="items.length === 0" class="carrinho-vazio">
   Seu carrinho está vazio.
   <div class="mt-3">
     <button class="btn btn-primary" (click)="voltarAsCompras()">
-      <i class="bi bi-arrow-left"></i> Voltar às Compras
+      <i class="bi bi-arrow-left"></i> Ir às Compras
     </button>
   </div>
 </div>
+<div *ngIf="items.length === 1" class="promo-brinde">
+  Compre mais 1 item e ganhe um brinde.
+</div>
 
-<div *ngFor="let item of items; let i = index" class="item">
-  <img [src]="item.imagens[0]" alt="{{ item.nomeModelo }}" class="imagem-produto" />
-  <div class="nome-produto">{{ item.nomeModelo }} {{ item.tecido }} {{ item.acabamento}}
-    <p *ngIf="item.tamanho">Tamanho: {{ item.tamanho }}</p>
-    <div *ngIf="item.tipo === 'encomenda' && item.medidas">
-      <div class="medidas">
-        <p>Medida do pescoço: {{ item.medidas.pescoco }}cm</p>
-        <p>Medida do tórax: {{ item.medidas.torax }}cm</p>
-        <p>Comprimento: {{ item.medidas.comprimento }}cm</p>
-        <p *ngIf="item.acabamento">
-          <strong>Acabamento:</strong> {{ item.acabamento }}
-        </p>
-        <p *ngIf="item.medidas.observacoes"><strong>Observações:</strong> {{ item.medidas.observacoes }}</p>
-      </div>
+<div *ngIf="items.length >= 2" class="promo-brinde">
+  Parabéns! Por ter adquirido mais que 2 produtos, você receberá um brinde surpresa.
+</div>
+
+<div class="card mb-4" *ngIf="items.length > 0">
+  <h2>
+    <span style="color: #0072ce;">Meu Carrinho</span>
+    Clique em finalizar compra para efetuar seu pedido.
+  </h2>
+<!-- 2. Cabeçalho -->
+<div class="carrinho-header">
+    <div class="header-produto">Produto</div>
+    <div class="header-preco text-center">Preço</div>
+    <div class="header-excluir text-center">Excluir</div>
+</div>
+
+<!-- 3. Itens -->
+<div *ngFor="let item of items; let i = index" class="carrinho-item">
+    <!-- COLUNA 1 — PRODUTO -->
+    <div class="item-produto">
+        <img
+  *ngIf="item.imagens?.length"
+  [src]="item.imagens[0]"
+  [alt]="item.nomeModelo"
+  class="carrinho-img"
+/>
+
+
+
+        <div class="item-detalhes">
+            <div class="nome-produto">
+                {{ item.nomeModelo }} {{ item.tecido }} {{ item.acabamento }}
+            </div>
+
+            <p *ngIf="item.tamanho" class="info-adicional">
+                Tamanho: {{ item.tamanho }}
+            </p>
+
+            <!-- Medidas Encomenda -->
+            <div *ngIf="item.tipo === 'encomenda' && item.medidas">
+                <p class="info-adicional">Pescoço: {{ item.medidas.pescoco }} cm</p>
+                <p class="info-adicional">Tórax: {{ item.medidas.torax }} cm</p>
+                <p class="info-adicional">Comprimento: {{ item.medidas.comprimento }} cm</p>
+                <p *ngIf="item.acabamento" class="info-adicional">
+                    <strong>Acabamento:</strong> {{ item.acabamento }}
+                </p>
+                <p *ngIf="item.medidas.observacoes" class="info-adicional">
+                    <strong>Obs:</strong> {{ item.medidas.observacoes }}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <button class="delete-btn" (click)="openConfirmDialog(i)" title="Remover">🗑️</button>
+
+    <!-- COLUNA 2 — PREÇO -->
+    <div class="item-preco text-center">
+        <ng-container *ngIf="item.preco !== undefined && item.preco !== null; else semPreco">
+            <strong>R$ {{ item.preco | number:'1.2-2' }}</strong>
+        </ng-container>
+
+        <ng-template #semPreco>
+            <span class="sem-preco">Aguarde orçamento</span>
+        </ng-template>
+    </div>
+
+    <!-- COLUNA 3 — EXCLUIR -->
+    <div class="item-excluir text-center">
+        <button class="delete-btn" (click)="openConfirmDialog(i)">
+            <i class="bi bi-trash"></i>
+        </button>
+    </div>
+
 </div>
 
-<div *ngIf="items.length > 0" class="botoes">
-  <button (click)="finalizarCompra()">Finalizar Compra</button>
-  <button (click)="continuarComprando()">Continuar Comprando</button>
-</div>
 
+<!-- Botoes de Ação Final -->
+<div class="botoes mt-4">
+    <button (click)="finalizarCompra()">Finalizar Compra</button>
+    <button (click)="continuarComprando()">Continuar Comprando</button>
+</div>
+</div>
 <app-msg-excluir
   *ngIf="showConfirmDialog"
   [title]="'Remover Item'"
@@ -53,6 +100,7 @@
 
   <!-- Botão flutuante lateral direita -->
 <button
+  *ngIf="showBackToTop"
   class="back-to-top-fixed"
   (click)="scrollToTop()"
   aria-label="Voltar ao topo"

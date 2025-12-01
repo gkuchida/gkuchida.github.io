@@ -1,49 +1,120 @@
-<div class="box-flutuante">
-  <div class="box-inner">
-    <h1 class="titulo">Modelos Pronta Entrega</h1>
-    <p class="texto-aconchegante">
-      Esses modelos são únicos! Para garantir a beleza e qualidade, não são passíveis de reformas ou ajustes.
-    </p>
-    <div class="box-cta">
-      <p>Quer em outro tecido, cor ou tamanho? Chame-nos no WhatsApp e solicite um orçamento personalizado!</p>
-      <a href="https://wa.me/5541999218178" target="_blank" rel="noopener" class="btn-whatsapp-grande">
-        <i class="bi bi-whatsapp"></i> Fale Conosco
-      </a>
+<div class="tabs">
+  <div *ngFor="let aba of abas; let i = index"
+       class="tab"
+       [class.active]="abaAtiva === i"
+       (click)="mudarAba(i)">
+    {{ aba }}
+  </div>
+</div>
+
+<div class="container-cards">
+
+  <!-- Aba 0 — Inverno -->
+  <div *ngIf="abaAtiva === 0" class="tab-content active">
+    <div class="grid-produtos">
+      <ng-container *ngFor="let produto of produtos">
+        <a *ngIf="produto.tipo === 'inverno' && produto.estoque > 0"
+           [routerLink]="['/produto-detalhes', produto.nome]"
+           class="card-produto-link card-inverno">
+
+          <div class="card-produto">
+            <span class="price-tag">R$ {{ produto.preco }}</span>
+
+            <div class="produto-info">
+              <h3>{{ produto.nome }}</h3>
+            </div>
+
+            <div class="img-wrapper">
+              <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
+            </div>
+
+            <div class="btn-ver-detalhes"></div>
+          </div>
+
+        </a>
+      </ng-container>
     </div>
   </div>
-</div>
 
-<div class="grid-produtos-wrapper">
-  <div class="grid-produtos">
-    <a [routerLink]="['/produto-detalhes', produto.nome]" class="card-produto-link"
-      *ngFor="let produto of produtos">
-      <div class="card-produto">
-      <!--<span class="badge-exclusivo">Exclusivo!</span> -->
-        <div class="img-wrapper">
-          
-          <img [src]="produto.imagens[0].url" [alt]="produto.nome" class="img-produto" />
+  <!-- Aba 1 — Verão -->
+  <div *ngIf="abaAtiva === 1" class="tab-content active">
+    <div class="grid-produtos">
+      <ng-container *ngFor="let produto of produtos">
+        <a *ngIf="produto.tipo === 'verao' && produto.estoque > 0"
+           [routerLink]="['/produto-detalhes', produto.nome]"
+           class="card-produto-link card-verao">
 
-          <span class="badge-esgotado" *ngIf="produto.estoque === 0">Esgotado</span>
-        </div>
+          <div class="card-produto">
+            <span class="price-tag">R$ {{ produto.preco }}</span>
 
-        <div class="produto-info">
-          <h3>{{ produto.nome }}</h3>
-          <p class="produto-preco">R$ {{ produto.preco }}</p>
-        </div>
+            <div class="produto-info">
+              <h3>{{ produto.nome }}</h3>
+            </div>
 
-        <div class="btn-ver-detalhes">
-          Ver Detalhes
-        </div>
-      </div>
-    </a>
+            <div class="img-wrapper">
+              <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
+            </div>
+
+            <div class="btn-ver-detalhes"></div>
+          </div>
+
+        </a>
+      </ng-container>
+    </div>
   </div>
-</div>
 
-<!-- Botão flutuante lateral direita -->
-<button
-  class="back-to-top-fixed"
-  (click)="scrollToTop()"
-  aria-label="Voltar ao topo"
->
+  <!-- Aba 2 — Acessórios -->
+  <div *ngIf="abaAtiva === 2" class="tab-content active">
+    <div class="grid-produtos">
+      <ng-container *ngFor="let produto of produtos">
+        <a *ngIf="produto.tipo === 'acessorios' && produto.estoque > 0"
+           [routerLink]="['/produto-detalhes', produto.nome]"
+           class="card-produto-link card-acessorios">
+
+          <div class="card-produto">
+            <span class="price-tag">R$ {{ produto.preco }}</span>
+
+            <div class="img-wrapper">
+              <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
+            </div>
+
+            <div class="btn-ver-detalhes"></div>
+          </div>
+
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Aba 3 — Artesanato -->
+  <div *ngIf="abaAtiva === 3" class="tab-content active">
+    <div class="grid-produtos">
+      <ng-container *ngFor="let produto of produtos">
+        <a *ngIf="produto.tipo === 'artesanato' && produto.estoque > 0"
+           [routerLink]="['/produto-detalhes', produto.nome]"
+           class="card-produto-link card-chuva">
+
+          <div class="card-produto">
+            <span class="price-tag">R$ {{ produto.preco }}</span>
+
+            <div class="produto-info">
+              <h3>{{ produto.nome }}</h3>
+            </div>
+
+            <div class="img-wrapper">
+              <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
+            </div>
+
+            <div class="btn-ver-detalhes"></div>
+          </div>
+
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+</div>
+<!-- Botão flutuante -->
+<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
   <i class="bi bi-arrow-up"></i>
 </button>

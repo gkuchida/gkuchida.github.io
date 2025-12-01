@@ -16,7 +16,8 @@ export const artesanato = [
       'https://i.ibb.co/tpcvNgTq/Saco-GG-Aberto.png',
       'https://i.ibb.co/M5yJshgf/Saquinho-G-IA.png'
     ],
-    observacao: '<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n<strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas:</strong> Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.\n'
+    observacao: '<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n<strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas:</strong> Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.\n',
+    tipo:'artesanato'
   },
   {
     nome: 'Saquinho Multiuso Artesanal tamanho P',
@@ -28,7 +29,8 @@ export const artesanato = [
       'https://i.ibb.co/gZnKH3Ts/IMG-6833-removebg-preview.png',
       'https://i.ibb.co/Mynbp6h0/Saquinho-P-IA.png'
     ],
-    observacao:'<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas: </strong>Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.'
+    observacao:'<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas: </strong>Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.',
+    tipo:'artesanato'
   },
   {
     nome: 'Pano Multiuso - Estampa Cerejas',
@@ -41,7 +43,8 @@ export const artesanato = [
       'https://i.ibb.co/KcXYcKy6/Pano-Cobrir-IA.png'
 
     ],
-    observacao:'\n<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.'
+    observacao:'\n<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
+    tipo:'artesanato'
   },
   {
     nome: 'Pano Multiuso - Clássico Poá Vermelho',
@@ -53,7 +56,8 @@ export const artesanato = [
     'https://i.ibb.co/tpGfMKZX/Pano-Cobrir-Poa-removebg-preview.png',
     'https://i.ibb.co/3Yc5zfwc/Pano-Cobrir-V-IA.png'
     ],
-    observacao:'<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.'
+    observacao:'<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
+    tipo:'artesanato'
   },
   {
     nome: 'Kit pano de prato + puxa-saco',
@@ -65,7 +69,8 @@ export const artesanato = [
       'https://i.ibb.co/Zzjh4DMZ/PuxaSaco.png',
       'https://i.ibb.co/0pPq9tnV/Pano-Doces.png'
     ],
-    observacao:''
+    observacao:'',
+    tipo:'artesanato'
   },
   {
     nome: 'Kit com 2 Panos de prato',
@@ -77,7 +82,8 @@ export const artesanato = [
       'https://i.ibb.co/G4LxwR0x/Pano-Galinha.png',
       'https://i.ibb.co/xKHLbvgk/Pano-Mistico.png'
     ],
-    observacao:''
+    observacao:'',
+    tipo:'artesanato'
   },
 ];
 

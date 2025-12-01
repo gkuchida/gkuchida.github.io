@@ -24,6 +24,8 @@ export class Medidas {
     observacoes: ''
   };
 
+  mostrarImagemAjuda: boolean = false;
+
   constructor(private encomendaService: EncomendaService, private router: Router, private dialog: MatDialog) {
     this.produto = this.encomendaService.getProdutoSelecionado();
 
@@ -48,6 +50,11 @@ export class Medidas {
     this.encomendaService.setMedidas(this.medidas);
     this.router.navigate(['/confirmar']);
   }
+
+  alternarAjuda(): void {
+    this.mostrarImagemAjuda = !this.mostrarImagemAjuda;
+  }
+
   showBackToTop = false;
     @HostListener('window:scroll', [])
     onWindowScroll() {
@@ -58,4 +65,8 @@ export class Medidas {
     scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    voltar(): void {
+    this.router.navigate(['/encomenda']);
+  }
 }

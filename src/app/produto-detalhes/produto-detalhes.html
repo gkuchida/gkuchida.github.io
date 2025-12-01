@@ -1,58 +1,86 @@
-<div *ngIf="produto" class="produto-detalhes-container">
-  <button class="btn-voltar" (click)="voltar()">← Voltar</button>
-  <div class="titulo">{{ produto.nome }}</div>
-
-  <!-- Carrossel -->
-  <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button *ngFor="let img of produto.imagens; let i = index"
-        type="button"
-        data-bs-target="#carouselDetalhes"
-        [attr.data-bs-slide-to]="i"
-        [class.active]="i === 0"
-        aria-current="true"
-        aria-label="Slide {{ i + 1 }}">
-      </button>
-    </div>
-
-    <div class="carousel-inner">
-      <div *ngFor="let img of produto.imagens; let i = index"
-        class="carousel-item"
-        [class.active]="i === 0">
-        <img [src]="img.url" class="d-block w-100 modelo-imagem" [alt]="produto.nome">
-        <div *ngIf="img.legenda" class="carousel-caption legenda-below">
-          {{ img.legenda }}
-        </div>
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-  <div class="descricao">
-    <p [innerHTML]="produto.descricao | negrito"></p>
-    <p><strong>Tamanho:</strong> {{ produto.tamanhos.join(', ') }}</p>
-    <p><strong>Valor:</strong> R$ {{ produto.preco }}</p>
-    <p *ngIf="produto.estoque > 0"><strong>Estoque:</strong> {{ produto.estoque }}</p>
-    <p *ngIf="produto.estoque === 0" style="color:red"><strong>Esgotado</strong></p>
-    <p [innerHTML]= " produto.observacao | negrito"></p>
-    <div class="seletor-variacao" *ngIf="produto?.tamanhos?.length > 1">
-      <label for="tamanho">Selecione o modelo:</label>
-      <select [(ngModel)]="tamanhoSelecionado[produto.nome]" name="tamanho">
-        <option value="" disabled selected>Escolha...</option>
-        <option *ngFor="let t of produto.tamanhos" [value]="t">{{ t }}</option>
-      </select>
-    </div>
-    <button class="btn-comprar"
-      [disabled]="produto.estoque === 0 || (produto.tamanhos.length > 1 && !tamanhoSelecionado[produto.nome])"
-      (click)="comprar(produto)">
-      {{ produto.estoque === 0 ? 'Indisponível' : 'Comprar' }}
-    </button>
-  </div>
+<div class="voltar-pill">
+  <button (click)="voltar()">
+    <i class="bi bi-arrow-left"></i> Voltar
+  </button>
 </div>
 
+<div *ngIf="produto" class="detalhes-wrapper">
+
+  <!-- GRID ESQUERDA + DIREITA -->
+  <div class="detalhes-grid">
+
+    <!-- COLUNA ESQUERDA -->
+    <div class="col-esquerda" [ngClass]="categoriaAba">
+      <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" *ngFor="let img of produto.imagens; let i = index" [class.active]="i === 0">
+
+            <img [src]="img" [alt]="produto.nome" class="img-produto" />
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- COLUNA DIREITA -->
+    <div class="col-direita">
+
+      <div class="marca-agua">Artes & Focinhos</div>
+      <h1 class="titulo-produto">{{ produto.nome }}</h1>
+      <div class="preco">R$ {{ produto.preco }}</div>
+      <div class="formas-pagamento-titulo">Formas de pagamento</div>
+      <div class="pagamento-opcoes">
+        <div class="opcao">
+          <img src="https://i.ibb.co/gFbpF10z/IMG-6976.png" alt="Pix">
+          <span>PIX</span>
+        </div>
+
+        <div class="opcao">
+          <img src="https://i.ibb.co/HDBWDhK3/IMG-6977.png" alt="Dinheiro">
+          <span>Dinheiro</span>
+        </div>
+      </div>
+      <div class="seletor-variacao" *ngIf="produto?.tamanhos?.length > 1">
+        <label for="tamanho">Selecione o modelo:</label>
+        <select [(ngModel)]="tamanhoSelecionado[produto.nome]" name="tamanho">
+          <option value="" disabled selected>Escolha...</option>
+          <option *ngFor="let t of produto.tamanhos" [value]="t">{{ t }}</option>
+        </select>
+      </div>
+      <button class="btn-comprar"
+        [disabled]="produto.estoque === 0"
+        (click)="comprar(produto)">
+        <i class="bi bi-cart4"></i>
+        Comprar
+      </button>
+
+      <div class="estoque">
+        Estoque: {{ produto.estoque }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- Descrição do produto -->
+<h2 class="titulo-descricao">Descrição</h2>
+<div class="descricao-central">
+  <p><strong>Tamanho:</strong> {{ produto.tamanhos.join(', ') }}</p>
+  <p [innerHTML]="produto.descricao | negrito"></p>
+  <p [innerHTML]="produto.observacao | negrito"></p>
+
+</div>
+<!-- Botão flutuante -->
+<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>

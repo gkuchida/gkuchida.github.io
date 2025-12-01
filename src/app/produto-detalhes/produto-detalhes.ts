@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { NegritoPipe } from '../pipe/pipe';
 import { modelosProntas } from '../prontas/prontas';
 import { CarrinhoService, CarrinhoItem } from '../services/carrinho.service';
@@ -23,19 +23,25 @@ export class ProdutoDetalhes implements OnInit {
 
   tamanhoSelecionado: { [key: string]: string } = {};
 
+  categoriaAba: string = '';
+
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
   private carrinhoService = inject(CarrinhoService);
   private dialog = inject(MatDialog);
   private location = inject(Location);
 
-  comprar(modelo: { nome: string; imagens: string[] }) {
+  comprar(modelo: { nome: string; imagens: string[], preco: number }) {
     const tamanho = this.tamanhoSelecionado[modelo.nome];
+    
     const item: CarrinhoItem = {
       tipo: 'pronta',
       nomeModelo: modelo.nome,
       imagens: modelo.imagens,
-      tamanho: tamanho
+      tamanho: tamanho,
+      preco: modelo.preco
     };
+
 
     this.carrinhoService.addItem(item);
 
@@ -72,11 +78,16 @@ export class ProdutoDetalhes implements OnInit {
        .trim();
 
     this.produto = modelosProntas.find(p => normalize(p.nome) === nomeNormalizado);
-
+    this.categoriaAba = localStorage.getItem('abaCategoria') ?? '';
     console.log('Produto encontrado:', this.produto);
   }
 
-  voltar(): void {
+  /*voltar(): void {
     this.location.back();
-  }
+  }*/
+  voltar(): void {
+  const aba = localStorage.getItem('abaAtiva') ?? '0';
+  this.router.navigate(['/prontas'], { queryParams: { aba } });
+}
+
 }

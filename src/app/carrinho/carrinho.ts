@@ -54,6 +54,9 @@ export class Carrinho {
       if (item.acabamento) {
         mensagem += `Acabamento: ${item.acabamento}%0A`;
       }
+      if (item.preco){
+        mensagem +=`Valor: ${item.preco}%0A`;
+      }
       // Se for encomenda, adiciona medidas e observações
       if (item.tipo === 'encomenda' && item.medidas) {
         mensagem += `   - Pescoço: ${item.medidas.pescoco}%0A`;

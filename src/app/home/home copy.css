@@ -1,695 +1,802 @@
-* {
-  font-family: 'Roboto', sans-serif;
+/*ARRUMAR ALTURA DE TODOS*/
+/* Reset/ajuste base */
+*{box-sizing:border-box;}
+body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-serif; margin:0;}
+h5{
+  color: #3B5998;
+  text-align: center;
+  top: 10px;
+  font-size: 1.1rem;
+}
+/* =========================
+   Regras gerais de carrossel (escopo amplo, seguro)
+   ========================= */
+.carousel-inner {
+  border-radius: 8px;
+}
+.carousel-title h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000080;
+  margin-bottom: 30px;
+}
+.carousel, .slideSecundario {
+  border-radius: 12px;
+  margin: 1.25rem 0;
 }
 
-h2 {
-  font-size: 1.5rem !important;
-  text-align: center !important;
-  width: 100% !important;
-  margin-bottom: 1.5rem !important;
-  font-weight: 600 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+/* controles (setas) padrão - contraste legível sobre fundos claros */
+.carousel-control-prev, .carousel-control-next {
+  width:44px; height:44px; border-radius:50%;
+  /*background: rgba(0,0,0,0.35);*/
+  background: #5D78B4;
+  display:flex; align-items:center; justify-content:center;
+  top:50%; transform:translateY(-50%);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: transform .15s ease, background .15s ease;
+  z-index: 12;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover { transform: translateY(-50%) scale(1.04); background: rgba(0,0,0,0.55); }
+
+/* ícones das setas */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(1) brightness(1.8);
+  width: 20px; height:20px;
+}
+
+/* indicadores (bolinhas) */
+.carousel-indicators [data-bs-target] {
+  width:10px; height:10px; border-radius:50%;
+  background: var(--marrom-claro); opacity:0.6;
+}
+.carousel-indicators .active { background: var(--rosa); opacity:1; }
+#carouselNovidades .carousel-control-prev,
+#carouselNovidades .carousel-control-next,
+#mainCarousel .carousel-control-next,
+#mainCarousel .carousel-control-prev{
+  background: #5D78B4;
+}
+
+/* =========================
+   CARROSSEL PRINCIPAL
+   ========================= */
+/* ÁREA PRINCIPAL DO CARROSSEL */
+/* ÁREA PRINCIPAL DO CARROSSEL */
+/* ÁREA PRINCIPAL DO CARROSSEL */
+#mainCarousel,
+#mainCarousel .carousel-inner,
+#mainCarousel .carousel-item {
+  width: 100%;
+  height: 65vh;
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+  background: #5D78B4;
+}
+
+/* ÁREA DAS IMAGENS NO TOPO */
+.image-slides-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* TODAS AS IMAGENS IGUAIS */
+.image-slides-container img {
+  height: 100%;        /* altura fixa = todas ficam iguais */
+  width: 100%;           /* controla o tamanho horizontal */
+  object-fit: cover;    /* corta só o necessário sem distorcer */
+  border-radius: 8px;
+}
+
+/* ÁREA DA DESCRIÇÃO — PARTE INFERIOR */
+.description-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;        /* completa o espaço total */
+  background: rgba(255, 255, 255, 0.55);
+  padding: 20px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TEXTO */
+.description-bar h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #444;        /* cinza chumbo */
+}
+.description-bar p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* SETAS */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 50;
+}
+
+/*
+#slide2.multi-image-slide{
+  background: #ffb3b3;
+}
+#slide3.multi-image-slide{
+  background: #1E3A8A;
+}
+#slide4.multi-image-slide{
+  background: #00BFA6;
+}*/
+/* Sobre */
+.sobre-home {
+  background: #D0E3FF;
+  padding: 60px 20px;
+  margin: 50px 0;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.sobre-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://i.ibb.co/vvzQQfTx/IMG-6612.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 600px;
+  max-height: 600px;
+  opacity: 0.15;
+  z-index: 0;
+  margin: auto;
+  right: 250px;
+}
+
+.sobre-home > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sobre-texto h2 {
+  color: #000080;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.sobre-texto .sub {
+  color: #1A1A80;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sobre-texto .desc {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.sobre-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.sobre-lista li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.sobre-botao {
+  background: #FFA726;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.sobre-botao:hover {
+  background: #FF9100;
+}
+
+/* Imagem */
+.sobre-imagem img {
+  width: 330px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   CARROSSEL NOVIDADES (#carouselNovidades)
+   - area de vitrine compacta
+   ========================= */
+#carouselNovidades {
+  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);*/
+  /*background: #E1F5FE;*/
+  background: #AFCBFF;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px var(--sombra);
+}
+
+/* controla altura e overflow (slides horizontais internos) */
+#carouselNovidades .carousel-inner {
+  height: 350px;
+}
+
+/* produto dentro do carrossel de novidades */
+#carouselNovidades .product-card {
+  width: 220px;
+  height: 300px;
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform .2s ease;
+  /*background: #FFC86F;*/
+  background: #D4E4FF;
+}
+#carouselNovidades .product-card:hover { transform: translateY(-6px); }
+
+/* imagem do produto bem contida */
+#carouselNovidades .imagem-container { height: 190px; display:flex; align-items:center; justify-content:center;
+  background:#fbfbfb;
+
+   border-radius:10px; overflow:hidden; }
+#carouselNovidades .imagem-container img { max-width:100%; max-height:100%; object-fit: contain; }
+
+/* botão carrinho */
+#carouselNovidades .btn-carrinho {
+  background: #005fa3;
+  color:#fff;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+#carouselNovidades .btn-carrinho:hover { background:#005fa3; }
+
+
+/* =========================
+   CARROSSEL INSPIRAÇÕES (desktop e mobile)
+   - #carouselDesktop (grid de cards)
+   - #carouselMobile (cards individuais)
+   ========================= */
+
+/* container geral de inspirações já tem sua classe; vamos harmonizar */
+.inspiracoes-container {
+  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+  padding: 0;
+  margin-top: 1rem; }
+
+/* desktop: cards-wrapper já definido no HTML, ajusta espaçamento */
+#carouselDesktop .cards-wrapper { display:flex; gap: 1rem; justify-content:center; padding: 1.2rem; }
+
+/* card visual */
+#carouselDesktop .card, #carouselMobile .card {
+  border-radius: 14px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+  transition: transform .2s ease;
+}
+#carouselDesktop .card:hover, #carouselMobile .card:hover { transform: translateY(-6px); }
+
+/* imagem dos cards: manter proporção e não esticar */
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* mostra o pet por inteiro sem cortar */
+  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+/* corpo do card */
+.card-body { padding: 0.8rem 1rem; text-align:center; background: var(--rosa-claro); }
+.card-body h5{
+  margin:0.25rem 0;
+  color: wheat;
+  font-weight:700;
+}
+.card-body p { margin:0; color:#6b4e3d; font-size:0.95rem; }
+
+
+/* =========================
+   CARROSSEL RECOMENDADOS (#carouselRecomendados)
+   - estilo de grid (mantém sua classe slide-theme-X)
+   ========================= */
+#carouselRecomendados {
+  padding: 2rem 20px;
+  /*background: linear-gradient(180deg, #F3E5F5 0%, #E1BEE7 100%);*/
+  /*background: #FFD0D0;*/
+  background: #8AB3F5;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--sombra);
+}
+
+#carouselRecomendados .carousel-item,
+#carouselRecomendados .carousel-row{
+  /*background: #FFD0D0;*/
+  background: transparent !important;
+  border-radius: 0;
+  height: 900px;
+}
+#carouselRecomendados .carousel-inner{
+  height: 350px;
+}
+.carousel-section.recomendados .carousel-row {
+  display:flex; gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:1rem 20px;
+
+}
+
+/* produto recomendado (maior que o de novidades) */
+.carousel-section.recomendados .product-card {
+  width: 240px;
+  height: 310px;
+  border-radius: 12px;
+  padding: 8px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform .2s ease;
+  /*background: #FFC86F;*/
+  background: #C7D8FF;
+  position: relative;
+}
+
+.carousel-section.recomendados .imagem-container {
+  height: 200px;
+  /*background:#f9f9f9;*/
+   border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
+.carousel-section.recomendados .imagem-container img { max-width:100%; max-height:100%; object-fit:contain; }
+
+/* cores por categoria (use as classes que passar no produto.categoria) */
+.badge-custom { position:absolute; top:10px; left:10px; padding:6px 10px; border-radius:10px; font-weight:700; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.08); font-size:0.78rem; }
+.badge-custom.verao { background: linear-gradient(90deg,#f6a83b,#f37f2a); }
+.badge-custom.verao { background: linear-gradient(90deg,#ffb703,#ff6f00); }
+.badge-custom.inverno { background: linear-gradient(90deg,#2b3a67,#4b6cb7); }
+.badge-custom.meia-estacao { background: linear-gradient(90deg,#4caf50,#8bc34a); }
+.badge-custom.chuva { background: linear-gradient(90deg,#0077b6,#0096c7); }
+.badge-custom.festiva { background: linear-gradient(90deg,#b71c1c,#f44336); }
+.badge-custom.acessorio { background: linear-gradient(90deg,#8e24aa,#ba68c8); }
+.product-card .badge-custom.artesanato { background: linear-gradient(90deg,#e91e63,#ff80ab);
+}
+
+/* ver-mais button (círculo central) */
+.ver-mais-btn {
+  background: #1e40af;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* --- Clientes --- */
+.marquee-clientes {
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.marquee-clientes h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
   color: #000080;
 }
 
-.home-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+.marquee-clientes p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  color: #1A1A80;
 }
 
-/* Carrossel */
-.carousel {
-  margin: 20px auto;
+/* ÁREA ROLANTE */
+.marquee {
+  overflow: hidden;
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-height: 600px;
+  background: #5D78B4;
 }
 
-.carousel-item {
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-caption h5{
-  font-size: 35px;
-}
-
-.carousel-caption {
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  bottom: auto;
-  position: absolute;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 8px;
-  width: 450px;
-  font-size: 30px;
-}
-
-.carousel-caption.esq{
-  top: 60%;
-  left: 20%;
-  transform: translate(-50%);
-  bottom: auto;
-  position: absolute;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 8px;
-  width: 380px;
-}
-
-.carousel-caption.topo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 8px;
+.marquee-track {
+  display: flex;
+  gap: 25px;
+  animation: marquee 22s linear infinite;
   width: max-content;
-  max-width: 90%;
-  z-index: 10;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ITENS */
+.cliente-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: white;
+  border: 4px solid #5d9f9a;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.cliente-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#carouselRecomendados .carousel-control-next,
+#carouselRecomendados .carousel-control-prev {
+  background: #E1E8FF;
+}
+
+/* =========================
+   CARROSSEL DE AVALIAÇÕES
+   ========================= */
+.avaliacoes-container {
+  margin-top: 20px;
+  padding-top: 10px !important;  /* reduz o “respiro” interno */
+  padding-bottom: 10px !important;
+}
+
+.avaliacoes-container h2 {
+  color: #000080;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.avaliacoes-container p {
+  color: #1A1A80;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+#carouselAvaliacoes {
+  background: #4B639A;
+  padding: 18px 0;
+  border-radius: 16px;
+  max-width: 1700px;
+  height: 250px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  align-items: center;   /* 👈 centraliza verticalmente */
+  justify-content: center;
+}
+
+#carouselAvaliacoes .carousel-inner {
+  display: flex;
+  align-items: center;
+}
+
+.avaliacao-card {
+  background: #C7D8FF;
+  padding: 20px 28px;
+  border-radius: 14px;
+  width: 40%;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  text-align: center;
+  margin-top:30px;
+}
+
+.avaliacao-card p {
+  margin: 8px 0 6px;
+  font-size: 1rem;
+  color: #000080;
+}
+
+.avaliacao-card span {
+  font-size: 0.85rem;
+  color: #3b4260;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
   width: 40px;
   height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.7;
-  background-color: rgba(100, 149, 237, 0.5);
+  background: #5D78B4 !important;
   border-radius: 50%;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.carousel-control-prev {
-  left: 15px;
-}
-
-.carousel-control-next {
-  right: 15px;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  opacity: 1;
-  background-color: rgba(0,0,0,0.6);
+  background: #344a87 !important;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
-  width: 20px;
-  height: 20px;
 }
 
-.slide-inverno {
-  background-color: #A8D0E6;
+
+
+/* =========================
+   SLIDE THEME (mantém sua lógica, só suaviza)
+   para slides que usam .slide-theme-X no HTML
+   ========================= */
+/*.slide-theme-0 { background: linear-gradient(180deg, rgba(255,250,245,0.55), rgba(255,255,255,0.25)); padding: 1rem; border-radius:12px; }
+.slide-theme-1 { background: linear-gradient(180deg, rgba(255,245,247,0.55), rgba(255,250,250,0.25)); padding:1rem; border-radius:12px; }*/
+.slide-theme-0,
+.slide-theme-1,
+.slide-theme-2,
+.slide-theme-3,
+.slide-theme-4 {
+  background: transparent !important;
 }
 
-.slide-verao{
-  background-color: #FFF3B0;
-}
-
-.slide-meiaest{
-  background-color: #FFD6A5;
-}
-
-.slide-festivas{
-  background-color: #D8B4E2;
-}
-
-.slide-natal{
-  background-color: #E63946;
-}
-
-.slide-bandanas{
-  background-color: #A8E6CF;
-}
-
-.slide-cc{
-  background-color: #FFB5A7;
-}
-
-.slide-inverno img,
-.slide-verao img,
-.slide-meiaest img,
-.slide-bandanas img,
-.slide-festivas img,
-.slide-natal img,
-.slide-cc img{
-  height: 500px;
-}
-
-.slide-whats img{
-  height: 400px;
+/* =========================
+   Ajustes de imagens (evita deformar em carrosséis menores)
+   ========================= */
+.carousel-item img, .card-img-top, .product-card img, .imagem-container img {
+  image-rendering: auto;
+  -o-object-fit: contain;
   object-fit: contain;
+  object-position: center;
 }
 
-/*Segundo carousel */
-.slide-row {
-  gap: 15px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 10px 0;
-}
+/* quando quiser que a imagem cubra o background (use com parcimônia) */
+.carousel-cover .carousel-item img { object-fit: cover; width:100%; height:100%; }
 
-.product-card-wrapper {
-  flex: 0 0 18%; /* Cada card ocupa 18% da largura do container para 5 cards + espaçamento */
-  max-width: 18%;
-  box-sizing: border-box;
-}
+/* =========================
+   Categorias (mantém seu estilo)
+   ========================= */
+.categorias-home {
+  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFF3E0 100%);*/
+  /*background: #3B5998;*/
+  background: #5D78B4;
 
-.product-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  padding: 10px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  height: 260px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+ border-radius: 12px;
+ padding: 2rem 1rem;
+ box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
+.categoria-circulo { color: var(--marrom); text-decoration:none; display:block; }
+.img-circle-wrapper { width:80px; height:80px; border-radius:50%; background:#f3f3f3; display:flex; align-items:center; justify-content:center; margin:0 auto; transition:all .18s ease; }
+.img-circle-wrapper img { width:72%; height:72%; object-fit:contain; }
 
-.imagem-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+/* =========================
+   Back to top button (mantém)
+   ========================= */
+.back-to-top-fixed { position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
 
-.imagem-container img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-}
 
-.info-container {
-  margin-top: 10px;
-  background-color: #fffbea;
-  border-radius: 8px;
-  width: 100%;
-  border: 1px solid #f2eac2;
-}
+/* ===========================================================
+   RESPONSIVO — AJUSTES SOMENTE PARA CELULAR (max-width: 600px)
+   NÃO ALTERA NADA DO DESKTOP
+   =========================================================== */
 
-.btn-carrinho {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background-color: #0072ce;
-  color: white;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.btn-carrinho:hover {
-  background-color: #003080;
-}
-
-.product-card h5 {
-  margin: 5px 0 3px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.product-card p {
-  font-size: 0.85rem;
-  color: #555;
-  margin: 0;
-}
-
-#vitrineCarousel {
-  margin-bottom: 80px;
-  position: relative;
-  z-index: 1;
-  height: 300px;
-}
-
-#inspiracoesCarousel {
-  margin-bottom: 80px;
-  position: relative;
-  z-index: 1;
-  height: 350px;
-}
-
-h2{
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/*Avaliações dos clientes*/
-.depoimentos-chat-container {
-  max-width: 1000px;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-
-.chat-container {
-  background: #e5ddd5;
-  padding: 12px;
-  border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-  ;
-}
-
-.chat-message {
-  margin-bottom: 12px;
-}
-
-.profile-pic {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  margin-right: 8px;
-  object-fit: cover;
-  border: 2px solid #25d366;
-}
-
-.message-bubble {
-  max-width: 70%;
-  padding: 8px 12px;
-  border-radius: 16px;
-  font-size: 0.9rem;
-  line-height: 1.3;
-  background-color: white;
-  border-bottom-left-radius: 0;
-}
-
-.chat-message.sent .message-bubble {
-  background-color: #dcf8c6;
-  border-bottom-right-radius: 0;
-}
-
-.timestamp {
-  font-size: 0.7rem;
-  color: #999;
-  display: block;
-  margin-top: 4px;
-  text-align: right;
-}
-
-.chat-message.received {
-  display: flex;
-  align-items: flex-end;
-}
-
-.chat-message.sent {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.depoimentos-chat-container h2 {
-  width: 100%;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.depoimento-insta {
-  width: 320px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  padding: 16px;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.insta-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.insta-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.insta-user {
-  flex-grow: 1;
-  font-size: 14px;
-}
-
-.insta-user .arroba {
-  color: #888;
-  font-size: 12px;
-}
-
-.insta-heart {
-  font-size: 18px;
-}
-
-.insta-message p {
-  font-size: 15px;
-  line-height: 1.4;
-  margin: 0;
-  font-style: italic;
-}
-
-.insta-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: #999;
-}
-/* Categorias */
-.categoria-img-wrapper {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #f2f2f2;
-  border: 1px solid #ddd;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.categoria-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.categoria-bloco p {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.categoria-bloco:hover .categoria-img-wrapper {
-  transform: scale(1.05);
-  border-color: #004aad;
-  transition: transform 0.2s ease;
-}
-
-.img-circle-wrapper {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #f3f3f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease;
-}
-
-.img-circle-wrapper img {
-  width: 90%;
-  height: 60%;
-  object-fit: contain;
-}
-
-.categoria-circulo {
-  color: #333;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.categoria-circulo:hover .img-circle-wrapper {
-  background-color: #e0e0e0;
-}
-
-.categoria-circulo:hover {
-  transform: translateY(-3px);
-}
-
-.categoria-nome {
-  display: block;
-  font-size: 0.95rem;
-  margin-top: 4px;
-  font-weight: 500;
-}
-/*Depoimentos*/
-.depoimentos-chat-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 40px;
-}
-
-.chat-container {
-  flex: 0 1 320px;
-  min-height: 320px;
-  background-color: #e5ddd5; /* cor semelhante ao fundo do WhatsApp */
-  border-radius: 8px;
-  padding: 12px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.chat-message {
-  margin-bottom: 10px;
-}
-
-.chat-message.received {
-  justify-content: flex-start;
-}
-
-.chat-message.sent {
-  justify-content: flex-end;
-}
-
-.profile-pic {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 6px;
-}
-
-.message-bubble {
-  max-width: 75%;
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-size: 14px;
-  position: relative;
-  background-color: #ffffff; /* recebido */
-  color: #000;
-  text-align: left;
-  word-wrap: break-word;
-  line-height: 1.4;
-}
-
-.chat-message.sent .message-bubble {
-  background-color: #dcf8c6;
-}
-
-.timestamp {
-  display: block;
-  font-size: 10px;
-  color: #888;
-  margin-top: 4px;
-  text-align: right;
-}
-/*Botões voltar ao topo*/
-.back-to-top-fixed {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #4169e1;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.back-to-top-fixed:hover {
-  background-color: #3151b7;
-  transform: scale(1.1);
-}
-/* -- RESPONSIVO -- */
 @media (max-width: 600px) {
-  /* Títulos */
-  h2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 1rem !important;
+  /* ----------- PRIMEIRO CARROSSEL ----------- */
+  /* Permite que as legendas apareçam */
+  #mainCarousel,
+  #mainCarousel .carousel-item {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 400px !important;
+    padding-bottom: 20px !important;
   }
 
-  .home-container {
-    padding: 0 12px;
+  /* Mantém IMAGENS lado a lado no mobile */
+  .single-image-slide,
+  .multi-image-slide {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 12px !important;
+    height: auto !important;
   }
+  /* ----------- LEGENDAS (TODAS) ----------- */
 
-  /* Carrossel principal */
-  .carousel {
-    max-height: 300px;
-  }
-
-  .carousel-item {
-    height: 220px;
-  }
-
-  .carousel-caption {
-    font-size: 1rem;
-    width: 90%;
-    padding: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .carousel-caption.esq {
-    left: 5% !important; /* Começa bem na esquerda */
-    transform: translateX(0) !important; /* Impede a centralização */
-    top: 50% !important;
-    width: 50% !important; /* Dá espaço para o texto */
-    height: auto;
-    padding: 8px 10px;
-    font-size: 0.9rem;
+  /* Todas as legendas ficam centralizadas e visíveis */
+  .carousel-caption,
+  .top-left-caption,
+  .bottom-left-caption {
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     text-align: center !important;
-    margin-bottom: 30px;
-  }
-  .carousel-caption.topo {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    width: 90%;
-    height: 30%; /* Isso pode ser um problema de corte */
-    padding: 8px 10px;
-    font-size: 0.9rem;
-  }
-  .carousel-caption h5 {
-    font-size: 1.1rem;
+    padding: 10px 12px !important;
+    bottom: 10px !important;
+    top: auto !important;
+    height: auto !important;
+    background: rgba(0,0,0,0.45) !important;
+    z-index: 99 !important;
   }
 
-  .slide-inverno img,
-  .slide-verao img,
-  .slide-meiaest img,
-  .slide-bandanas img,
-  .slide-festivas img,
-  .slide-natal img,
-  .slide-cc img {
-    height: 220px;
-    object-fit: contain;
-  }
-  .slide-whats img {
-    height: 200px;
-  }
-  /* Carrossel vitrine */
-  #vitrineCarousel,
-  #inspiracoesCarousel {
-    height: auto;
-    margin-bottom: 40px;
+  .carousel-caption p,
+  .top-left-caption p,
+  .bottom-left-caption p{
+    display: block !important;
+    line-height: 1.3 !important;
+    font-size: 0.95rem !important;
   }
 
-  .product-card-wrapper {
-    flex: 0 0 70%;
-    max-width: 70%;
+   #slide5 .carousel-caption.slide5-card {
+    position: absolute !important;
+    bottom: auto !important; /* cancelando o padrão do Bootstrap */
+    top: 3% !important;      /* agora sobe mesmo */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    background: rgba(0,0,0,0.45) !important;
+    padding: 0.7rem 1rem !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    z-index: 20 !important;
   }
 
-  .product-card {
-    height: auto;
-    padding: 12px;
+  /* desce os cards para não bater na faixa */
+  #slide5 .slide5-right {
+    margin-top: 100px !important;
   }
 
-  .imagem-container img {
-    max-height: 150px;
+  #slide5 .cliente-card {
+    width: 30% !important;
   }
 
-  /* Categorias */
-  .categoria-img-wrapper {
-    width: 100px;
-    height: 100px;
+  #mainCarousel .carousel-caption h2,
+  #slide2 .carousel-caption h2,
+  #slide3 .carousel-caption h2,
+  #slide4 .carousel-caption h2,
+  #slide5 .carousel-caption h2{
+    font-size: 1.8rem;
+  }
+  /* ----------- SETAS ----------- */
+
+  #mainCarousel .carousel-control-prev,
+  #mainCarousel .carousel-control-next {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 200 !important;
   }
 
-  .categoria-bloco p {
-    font-size: 0.8rem;
+  /* ----------- SOBRE ----------- */
+.sobre-home {
+    padding: 40px 18px;
+    margin: 30px 0;
   }
 
-  .img-circle-wrapper {
-    width: 60px;
-    height: 60px;
+  /* Ajusta a marca d’água */
+  .sobre-home::before {
+    background-position: top center;
+    top: -120px; /* ajusta a altura da marca d’água só no mobile */
+    right: 0;    /* centraliza melhor para telas pequenas */
+    max-width: 400px;
+    max-height: 400px;
   }
 
-  .img-circle-wrapper img {
-    height: 50%;
-  }
-
-  .categoria-nome {
-    font-size: 0.8rem;
-  }
-
-  /* Depoimentos (WhatsApp) */
-  .depoimentos-chat-container {
+  /* Container vira coluna */
+  .sobre-container {
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    text-align: center;
+    gap: 25px;
   }
 
-  .chat-container {
-    width: 90%;
-    min-height: auto;
+  /* Textos menores */
+ .sobre-texto h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.sobre-texto .sub {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: .75;
+}
+
+.sobre-texto .desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+  .sobre-lista li {
+    font-size: 1.05rem;
+    line-height: 1.65;
   }
 
-  .message-bubble {
-    font-size: 0.85rem;
-    max-width: 85%;
+  /* Botão centralizado */
+  .sobre-botao {
+    padding: 10px 20px;
+    font-size: 1.05em;
   }
 
-  .profile-pic {
-    width: 28px;
-    height: 28px;
+  /* Imagem reduzida e centralizada */
+  .sobre-imagem img {
+    width: 220px;
+    margin: 0 auto;
+  }
+/* ----------- NOVIDADES ----------- */
+
+  #carouselNovidades .carousel-inner {
+    height: 300px !important;
   }
 
-  /* Depoimentos Instagram */
-  .depoimento-insta {
-    width: 90%;
+  #carouselNovidades .product-card {
+    width: 180px !important;
+    height: auto !important;
+  }
+/* ----------- MARQUEE (CLIENTES) ----------- */
+  .cliente-item { width: 90px !important; height: 90px !important; }
+  /* ----------- AVALIAÇÕES ----------- */
+
+  #carouselAvaliacoes {
+    height: 200px !important;
+    padding: 20px 12px !important;
   }
 
-  /* Botão voltar ao topo */
-  .back-to-top-fixed {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 15px;
+  #carouselAvaliacoes .carousel-inner {
+    height: auto !important;
+    align-items: center !important;
+  }
+
+  .avaliacao-card {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 16px !important;
+    max-width: 100% !important;
   }
 }
-/* -- FIM RESPONSIVO -- */
