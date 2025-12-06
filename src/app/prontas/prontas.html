@@ -74,6 +74,10 @@
           <div class="card-produto">
             <span class="price-tag">R$ {{ produto.preco }}</span>
 
+            <div class="produto-info">
+              <h3>{{ produto.nome }}</h3>
+            </div>
+            
             <div class="img-wrapper">
               <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
             </div>

@@ -32,10 +32,14 @@
 
     <a
       *ngIf="produto.tipo === 'artesanato'"
-      [routerLink]="['/artesanato-detalhes', produto.nome]"
+      [routerLink]="['/produto-detalhes', produto.nome]"
       class="btn-carrinho"
     >
       <span class="plus-icon">+</span>
     </a>
   </div>
 </div>
+<!-- Botão flutuante -->
+<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>

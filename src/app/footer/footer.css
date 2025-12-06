@@ -1,132 +1,127 @@
-/* ----------------------------------------------------------------
-   ESTILOS DO FOOTER (RODAPÉ)
-   ---------------------------------------------------------------- */
-
 .footer {
-    background-color: #FFE8C6;
-    color: #444444;
-    padding: 30px 20px 10px;
-    font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 15px 20px; /* reduzido */
 }
 
-/* Container principal para as colunas */
 .footer-columns {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
+  row-gap: 5px;
+  align-items: start;
 }
 
-/* Lista de Definição (DL) para estruturar Termo/Descrição */
-.footer-list {
-    display: grid;
-    /* Padrão para telas grandes: 3 colunas iguais */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.footer-col {
+  flex: 1;
+  min-width: 180px;
+}
+.col-localizacao {
+  grid-column: 2; /* mesma coluna do pagamento */
+  grid-row: 2;    /* fica exatamente embaixo */
+  margin-top: -65px;
+}
+/* Grupo para reorganizar no mobile */
+.footer-col-group {
+  display: flex;
+  gap: 40px;
+  flex: 2;
 }
 
-/* Títulos das Seções */
-.footer-list dt {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #4B4B4B; /* Cor azul para destacar os títulos */
-    margin-bottom: 10px;
-    padding-top: 5px;
+.footer-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000080;
 }
 
-/* Itens da Lista (Links/Textos) */
-.footer-list dd {
-    margin: 0;
-    font-size: 0.95rem;
-    margin-bottom: 5px;
+.list-item {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
 }
 
-.footer-list dd img {
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
+.list-item img {
+  width: 16px;
+  height: 16px;
 }
 
-.footer-list dd a {
-    color: #444444;
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.list-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.footer-list dd a:hover {
-    color: #3498db;
+.footer-menu {
+  font-size: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Direitos Autorais */
+.footer-menu li {
+  margin: 4px 0;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-menu a:hover {
+  color: #000080;
+  text-decoration: underline;
+}
+
 .footer-copyright {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.75rem;
-    color: #444444;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 0.7rem;
+  color: #444;
 }
 
 .footer-copyright p {
-    margin: 5px 0;
+  margin: 3px 0;
 }
 
-/* ----------------------------------------------------------------
-   MEDIA QUERY: TELAS PEQUENAS (Layout de Duas Colunas - Termo/Descrição)
-   ---------------------------------------------------------------- */
-@media (max-width: 768px) {
+/* =========================== */
+/*         RESPONSIVO          */
+/* =========================== */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+ .footer-columns {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    grid-auto-rows: auto;
+    gap: 12px;
+    align-items: start;
+    width: 100%;
+  }
 
-    .footer {
-        padding: 20px 15px 10px;
-    }
+  /* SELTORES: use as classes do seu HTML */
+  .col-atendimento {
+    grid-column: 1 / 2; /* coluna da esquerda */
+    grid-row: 1;
+  }
 
-    .footer-list {
-        /* Define o layout de GRID de 2 colunas para o rodapé inteiro */
-        grid-template-columns: 150px 1fr; /* Coluna 1 (Termo) tem 100px, Coluna 2 (Descrição) preenche o resto */
-        gap: 0; /* Remove o espaçamento grande entre as "colunas" que agora são linhas */
-    }
+  .col-pagamento {
+    grid-column: 1 / 2; /* coluna da direita, linha 1 */
+    grid-row: 2;
+  }
 
-    /* Títulos (Colunas 1) */
-    .footer-list dt {
-        /* Define DT para começar na linha 1 e ocupar 1 coluna (100px) */
-        grid-column: 1 / 2;
-        margin-bottom: 0; /* Remove margem inferior para alinhamento */
-        padding-top: 15px; /* Espaçamento entre os grupos */
-        padding-bottom: 0;
-    }
+  .col-categorias {
+    grid-column: 2 / 3; /* mesma coluna da direita, linha 2 (embaixo do pagamento) */
+    grid-row: 1;
+    margin-top: 0;      /* garante que não haja espaço extra */
+  }
 
-    /* Itens (Colunas 2 - Facebook, WhatsApp, PIX, etc.) */
-    .footer-list dd {
-        /* Define DD para começar na linha 2 e ocupar 1 coluna (o resto) */
-        grid-column: 2 / 3;
-        padding-top: 0; /* Remove espaçamento para que os itens fiquem alinhados */
-        padding-bottom: 5px;
-        margin-bottom: 0;
-    }
-
-    /* Regras específicas para alinhar os primeiros itens após cada DT (Título) */
-    .footer-list dt + dd {
-        padding-top: 15px; /* Adiciona padding na primeira DD para alinhar com a DT */
-    }
-
-    /* Regras para alinhar o primeiro DD da lista */
-    .footer-list dd:first-of-type {
-        /* O primeiro item do rodapé precisa de um padding superior menor ou 0 */
-        padding-top: 15px;
-    }
-
-    /* Garante que o espaçamento entre itens do mesmo grupo seja pequeno */
-    .list-item:nth-of-type(3), /* Primeiro item do Contato */
-    .list-item:nth-of-type(5) { /* Primeiro item de Pagamento */
-        padding-top: 15px;
-    }
-
-    /* Corrige o item de e-mail */
-    .footer-list dd:last-of-type {
-        padding-bottom: 15px; /* Adiciona espaçamento final */
-    }
+  .col-localizacao{
+    grid-column: 2 / 3; /* coluna da direita, linha 1 */
+    grid-row: 2;
+    margin-top: -10px;
+  }
+  /* pequenas proteções para evitar largura indesejada */
+  .footer-col {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }

@@ -1,223 +1,277 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
+/* ===========================
+   HERO FOFINHO
+=========================== */
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-    border-radius: 8px;
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-  }
-
-  .section {
-    background-color: #f9f9f9;
-  }
-
-  .section.alt {
-    background-color: #fff;
-  }
-
-  h1, h2 {
-    color: #37474F;
-    margin-bottom: 20px;
-  }
-
-  .hero {
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-  }
-
-  .hero-content {
-    background-color: #f0f5ff;
-    padding: 40px;
-    border-radius: 10px;
-    display: inline-block;
-    border: 2px solid #e6f0ff;
-    color: #000080;
-  }
-
-  .text-image {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .text-image .text {
-    flex: 1 1 50%;
-  }
-
-  .text-image .image {
-    flex: 1 1 40%;
-  }
-
-  .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-  list-style: none;
-  margin: 0 auto;
+.hero.fofinho {
+  background: linear-gradient(180deg, #ffd28f, #ffe0b3);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 15px;
   max-width: 900px;
+  margin: 0 auto;
+  margin-top: 10px !important;
+}
+
+.hero.fofinho::after {
+  content: "🐾";
+  font-size: 70px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0.08;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0E2270;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #444;
+}
+
+
+/* ===========================
+   SEÇÕES BASE
+=========================== */
+
+.section {
+  padding: 60px 20px;
+}
+
+.section.alt {
+  background: #FFF7EB;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ===========================
+   NOSSA HISTÓRIA
+=========================== */
+
+.section.historia {
+  /*background: #fff9f4;*/
+  background: linear-gradient(180deg,
+    #FFB84D 0%,
+    #FFA835 45%,
+    #609FE3 80%,
+    #0E6CD2 100%
+  );
+  border-radius: 22px;
+  margin: 40px 15px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.text-image {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text-image .text {
+  flex: 1 1 350px;
+}
+
+.text-image .text h2{
+  color: #0E2270;
+}
+
+.text-image .image img {
+  max-width: 70%;      /* diminui o tamanho da imagem */
+  display: block;
+  margin: 0 auto;      /* centraliza */
+}
+.text-image .image {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* deixa ela no topo da coluna */
+  margin-top: -20px;       /* sobe a imagem */
+}
+
+.section.historia img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+
+/* ===========================
+   O QUE NOS MOVE
+=========================== */
+.container h2{
+  color: #0E2270;;
+}
+.features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 0;
+  margin-top: 30px;
 }
 
 .features li {
-  flex: 1 1 180px;
-  max-width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #FFF7EB;
+  padding: 25px;
+  border-radius: 25px;
   text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  transition: 0.2s;
+}
+
+.features li:hover {
+  transform: translateY(-4px);
 }
 
 .features li img {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 80px;
+  height: 80px;        /* força mesma altura */
+  object-fit: contain; /* mantém proporção sem cortar */
+  display: block;
+  margin: 0 auto 10px;
 }
 
-.highlight {
-  font-size: 1.2rem;
-  background-color: #fff8e1;
-  padding: 20px;
-  border-left: 5px solid #f4c542;
-  border-radius: 8px;
-  margin-top: 20px;
+.features li p {
+  font-size: 0.95rem;
 }
+
+
+/* ===========================
+   NOSSA PROPOSTA
+=========================== */
+
+.highlight {
+  background: #E8F1FF;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+
+/* ===========================
+   CTA
+=========================== */
 
 .cta {
   text-align: center;
-  background-color: #f4c542;
-  padding: 40px 20px;
+  margin: 10px 0;
 }
 
-.btn {
-  background-color: #0057B7;
+.cta .btn {
+  background: #0E2270;
   color: white;
-  padding: 12px 30px;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  margin-top: -60px !important;
 }
 
-.btn:hover {
-  background-color: #555;
+.cta .btn:hover {
+  filter: brightness(1.08);
 }
 
-.back-to-top-fixed {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #4169e1;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.back-to-top-fixed:hover {
-  background-color: #3151b7;
-  transform: scale(1.1);
-}
-/* -- RESPONSIVO --*/
-@media (max-width: 600px) {
-  .container {
-    padding: 20px 10px;
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .hero-content h1 {
+    font-size: 1.3rem;
   }
 
-  .hero {
-    padding: 40px 10px;
-  }
-
-  .hero-content {
-    padding: 20px;
-    border-width: 1px;
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .text-image {
     flex-direction: column;
-    gap: 20px;
+    text-align: center;
+    gap: 10px;
   }
 
-  .text-image .text,
-  .text-image .image {
-    flex: 1 1 100%;
+  .section.historia {
+    margin: 20px;
+    padding: 10px 5px;
+    height: 30%;
   }
 
   .features {
-    gap: 15px;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .features li {
-    flex: 1 1 100%;
-    max-width: none;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
   .features li img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
   }
 
-  .highlight {
+  h2{
+    font-size: 1.2rem;
+  }
+  .text-image .image {
+    flex: 1 1 350px;
+  }
+
+  .text-image .image {
+    margin-top: -90px;       /* sobe a imagem */
+  }
+
+  .highlight{
     font-size: 1rem;
-    padding: 15px;
-    margin-top: 15px;
   }
 
   .cta {
-    padding: 25px 10px;
+    margin: 5px 20px !important;     /* diminui altura total da seção */
+    padding: 0 !important;          /* remove qualquer padding extra */
   }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .cta .btn {
+    margin-top: -60px !important;       /* impede distância do topo */
+    margin-bottom: 0 !important;    /* impede distância do conteúdo abaixo */
+    padding: 12px 26px;             /* mantém o botão bonito */
   }
 
-  .back-to-top-fixed {
-    border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 15px;
-  }
 }
-/* -- FIM RESPONSIVO --*/
+/* Botão flutuante */
+.back-to-top-fixed {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #4169e1;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
+

@@ -237,11 +237,8 @@ export class Duvidas {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   toggleDuvidas(index: number) {
-    this.duvidas.map((duvida,index)=>{
-      duvida.aberto = false
-    });
-    this.duvidas[index].aberto = !this.duvidas[index].aberto;
-  }
+  this.duvidas[index].aberto = !this.duvidas[index].aberto;
+}
 
 }
 const func = ()=>{};

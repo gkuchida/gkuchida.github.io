@@ -1,310 +1,134 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
-
-.descricao-card {
-  border: 1px solid #d3d3d3;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 0 20px 20px 60px;
-  font-size: 16px;
-  width: calc(100% - 80px);
-  box-sizing: border-box;
-}
-
-.descricao-card h1 {
-  font-size: 30px;
-  color: #000080;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-h2{
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #004aad;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
-
-.container {
+.tecidos-container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1 {
+.titulo-pagina {
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.tabs {
-  display: flex;
-  border-bottom: 2px solid #ddd;
-  margin-bottom: 20px;
-  color: #2c3a6f;
-}
-
-.tab {
-  flex: 1;
-  text-align: center;
-  padding: 12px;
-  cursor: pointer;
-  background: #7a9cd9;
-  transition: background 0.3s;
-  border-radius: 5px 5px 0 0;
-}
-
-.tab.active {
-  background: #7a9cd9;
-  color: white;
-  font-weight: bold;
-  border-bottom: 2px solid white;
-}
-
-.tab:hover {
-  background: #5e7cc3;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.tecido-item {
-  color: #2c3a6f;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.tecido-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-}
-
-.tecido-info {
-  flex: 1;
-}
-
-.tecido-nome {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #2c3a6f;
-  margin-bottom: 4px;
+  color: #000080;
 }
 
-.tecido-desc {
-  font-size: 14px;
-  color: #666;
-}
-
-.texto-aconchegante {
+.titulo-pagina .sub {
+  display: block;
   font-size: 1rem;
-  color: #555;
-  margin: 0 0 20px 0;
-  font-style: italic;
-  max-width: auto;
-  line-height: 1.4;
-  background: #f9f9f9;
-  padding: 12px 16px;
-  border-left: 4px solid #4169e1;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #777;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
-.imagens-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin: 20px 0;
-
-}
-.imagens-wrapper figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  margin: 0;
-  padding: 75px;
-}
-.imagens-wrapper img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.cards-tecidos {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
 }
 
-.imagens-wrapper img:hover {
-  transform: scale(1.05);
-}
-.imagens-wrapper figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
+.card-tecido {
+  background: #EAF2F8;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
   text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform .2s ease;
 }
 
-.btn-whatsapp {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.card-tecido:hover {
+  transform: translateY(-4px);
+}
+
+.card-tecido img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-tecido h3 {
   margin-top: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
 }
 
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
-  box-shadow: 0 4px 8px rgba(30, 190, 87, 0.6);
+/* Botão de ajuda */
+.botao-ajuda {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #0a3d62;
+  border: none;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
 }
 
-.btn-whatsapp i {
-  font-size: 1.2rem;
+.botao-ajuda:hover {
+  background: #5ab2ff;
 }
 
+/* Caixa de descrição */
+.descricao-ajuda {
+  background: #0a3d62;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #4169e1;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
 
-.back-to-top-fixed:hover {
-  background-color: #3151b7;
-  transform: scale(1.1);
-}
-/* -- RESPONSIVO -- */
-@media (max-width: 600px) {
-  .descricao-card {
-    margin: 0 15px 20px 15px;
-    width: auto;
-    padding: 12px;
+.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .titulo-pagina {
+    font-size: 1.3rem;
+  }
+
+  .titulo-pagina .sub {
+    font-size: 0.8rem;
+  }
+
+  .cards-tecidos {
+    grid-template-columns: repeat(2, 1fr); /* sempre 2 cards */
+    gap: 14px; /* diminui o espaçamento pra caber bonito */
+  }
+
+  .card-tecido {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .card-tecido img {
+    height: 100px; /* reduz a altura da imagem */
+    border-radius: 10px;
+  }
+
+  .card-tecido h3 {
     font-size: 14px;
-  }
-
-  .descricao-card h1 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  .container {
-    margin: 20px 10px;
-    padding: 15px;
-  }
-
-  .tabs {
-    flex-wrap: wrap;
-  }
-
-  .tab {
-    flex: 1 1 45%;
-    margin: 5px 2.5%;
-    padding: 10px 5px;
-    font-size: 0.9rem;
-  }
-
-  .tecido-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .tecido-item img {
-    width: 60px;
-    height: 60px;
-    border-width: 1.5px;
-  }
-
-  .tecido-info {
-    width: 100%;
-  }
-
-  .tecido-nome {
-    font-size: 16px;
-  }
-
-  .tecido-desc {
-    font-size: 13px;
-  }
-
-  .texto-aconchegante {
-    font-size: 0.9rem;
-    padding: 10px 12px;
-  }
-
-  .imagens-wrapper {
-    gap: 12px;
-    justify-content: center;
-  }
-
-  .imagens-wrapper img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .btn-whatsapp {
-    width: 44px;
-    height: 44px;
-    font-size: 1.2rem;
     margin-top: 8px;
   }
 
-  .back-to-top-fixed {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 15px;
+  .botao-ajuda {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+  }
+
+  .descricao-ajuda {
+    font-size: 12px;
+    padding: 8px;
   }
 }
-/* -- FIM RESPONSIVO -- */

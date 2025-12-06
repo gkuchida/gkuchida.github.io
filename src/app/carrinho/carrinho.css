@@ -12,9 +12,15 @@
   padding: 12px 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   color: #003366;
+  width: 100%;
+  margin-top: -18px;
+}
+
+h2{
+  font-size: 1.4rem;
 }
 
 /* --- ESTILOS GERAIS DO CARRINHO --- */
@@ -142,7 +148,7 @@
 .botoes button {
     padding: 10px 20px;
     border-radius: 20px;
-    font-weight: bold;
+
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
 }
@@ -167,74 +173,78 @@
 .botoes button:last-child:hover {
     background-color: #f0f0f0;
 }
-
-
-/* --- Responsividade (Para telas menores) --- */
-@media (max-width: 768px) {
-    .carrinho-header {
-        display: none; /* Esconde o cabeçalho em mobile */
-    }
-
-    .carrinho-item {
-        /* Ajusta o layout para mobile (empilha Preço e Excluir) */
-        grid-template-columns: 1fr 80px;
-        grid-template-areas:
-            "produto produto"
-            "preco excluir";
-        border: 1px solid #eee;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .item-produto {
-        grid-area: produto;
-    }
-    .item-preco {
-        grid-area: preco;
-        text-align: left !important;
-        font-size: 1rem;
-        padding-left: 75px; /* Alinha o preço com a descrição */
-    }
-    .item-excluir {
-        grid-area: excluir;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .botoes {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .botoes button {
-        width: 100%;
-        margin-top: 10px;
-    }
-    /* Botão voltar ao topo */
-  .back-to-top-fixed {
-    border: none !important;
+.back-to-top-fixed {
+  border: none !important;
   outline: none !important;
   box-shadow: none !important;
-    position: fixed;
-    background-color: #004aad;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 30px;
+  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+
+/* --- Responsividade (Para telas menores) --- */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .carrinho-vazio{
+    font-size: 1rem;
+  }
+  .promo-brinde{
+    font-size: 0.8rem;
+  }
+
+  h2{
+    font-size: 1rem;
+  }
+  .carrinho-header{
+    font-size: 0.8rem;
+  }
+    .carrinho-item {
     display: flex;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    justify-content: center;
-}
-.back-to-top-fixed:hover {
-  background-color: #0055c7;
-}
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+
+  /* Produto: imagem em cima, nome abaixo */
+  .item-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagem-pequena {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+  }
+
+  .item-detalhes {
+    font-size: 0.9rem;
+  }
+
+  /* Preço */
+  .item-preco {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  /* Excluir */
+  .item-excluir {
+    text-align: center;
+  }
+
+  /* Botões no final da lista */
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .botoes button {
+    width: 100%;
+  }
 }

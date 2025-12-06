@@ -11,12 +11,12 @@
 </div>
 
 <div *ngIf="items.length >= 2" class="promo-brinde">
-  Parabéns! Por ter adquirido mais que 2 produtos, você receberá um brinde surpresa.
+  Parabéns! Você ganhou um brinde surpresa por comprar 2 ou mais produtos.
 </div>
 
 <div class="card mb-4" *ngIf="items.length > 0">
   <h2>
-    <span style="color: #0072ce;">Meu Carrinho</span>
+    <span style="color: #0072ce;">Meu Carrinho -</span>
     Clique em finalizar compra para efetuar seu pedido.
   </h2>
 <!-- 2. Cabeçalho -->
@@ -41,7 +41,7 @@
 
         <div class="item-detalhes">
             <div class="nome-produto">
-                {{ item.nomeModelo }} {{ item.tecido }} {{ item.acabamento }}
+                {{ item.nomeModelo }} {{ item.tecido }} 
             </div>
 
             <p *ngIf="item.tamanho" class="info-adicional">

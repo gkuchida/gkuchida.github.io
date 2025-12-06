@@ -49,7 +49,7 @@ export class Home implements OnInit, AfterViewInit {
       { nome: 'Capa de Chuva M', imagem: 'https://i.ibb.co/fzDb0X3n/Capa-Vermelha-M-Fte.png', badge: 'Chuva', categoria: 'inverno', origem: 'prontas' },
     ],
     [
-      { nome: 'Vestido Natalino Rena Encantada GG', imagem: 'https://i.ibb.co/rfwd8hY3/IMG-7581.png', badge: 'Natal', categoria: 'festiva', origem: 'prontas' },
+      { nome: 'Vestido Rena Encantada GG', imagem: 'https://i.ibb.co/rfwd8hY3/IMG-7581.png', badge: 'Natal', categoria: 'festiva', origem: 'prontas' },
       { nome: 'Gorro de Natal', imagem: 'https://i.ibb.co/6J1QLySS/Gorro-M-Desenho.png', badge: 'Natal', categoria: 'festiva', origem: 'prontas' },
       { nome: 'Bandana com elástico Pets Verde P', imagem: 'https://i.ibb.co/HLcsB12f/Bandana-El-stico-Verde-Fte.png', badge: 'Acessório', categoria: 'acessorio', origem: 'prontas' },
       { nome: 'Kit com 2 Panos de prato', imagem: 'https://i.ibb.co/DHvNnsqG/Kit-Panos.png', badge: 'Artesanato', categoria: 'artesanato', origem: 'artesanato' },

@@ -10,14 +10,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 export interface ProdutoPronto {
     nome: string;
-    tamanhos: string[];
+    tamanhos?: string[];
     descricao: string;
     preco: number;
     estoque: number;
     imagens: string [];
     observacao?: string;
     isNovidade?: boolean;
-    tipo?: 'inverno'|'verao'|'chuva'|'acessorios'|string;
+    tipo?: 'inverno'|'verao'|'acessorios'|'artesanato'|string;
     genero?:string;
 }
 
@@ -169,11 +169,11 @@ export const modelosProntas =[
     ],
     observacao: '',
     isNovidade: true,
-    tipo:'chuva',
+    tipo:'acessorios',
     genero:'menino'
   },
   {
-    nome: 'Capa de chuva transpasse G',
+    nome: 'Capa de chuva lateral G',
     tamanhos: ['G'],
     descricao: 'Mantenha seu pet seco com uma capa que oferece proteção de qualidade e é super prática para os passeios!\n Esta capa é confeccionada em Nylon 70, um tecido conhecido por sua leveza, resistência a rasgos e por ser o mesmo material utilizado em guarda-chuvas, garantindo sua eficácia como impermeável. \nO design funcional conta com capuz para proteger a cabeça e as orelhas e uma passagem para coleira/guia na região do pescoço, facilitando o uso sem comprometer a proteção. \nAlém disso, ela possui fechamento em velcro tanto no pescoço quanto na barriga, assegurando um ajuste rápido, seguro e muito confortável.\n Garanta já esta capa indispensável para que a chuva nunca mais cancele o passeio!\n*Atenção:* Este modelo oferece ótima proteção contra a maioria das chuvas, mas não é projetado para enfrentar temporais fortes.\n\n*Tecido:* Nylon 70.\n*Cor:* Azul claro. \n*Medidas:*\n- Pescoço: 50 a 55 cm.\n- Tórax: 54 a 62 cm.\n- Comprimento: 36 cm.',
     preco: 30,
@@ -185,7 +185,7 @@ export const modelosProntas =[
     ],
     observacao: '',
     isNovidade: true,
-    tipo:'chuva',
+    tipo:'acessorios',
     genero:'menino'
   },
   {
@@ -201,7 +201,7 @@ export const modelosProntas =[
     ],
     observacao: '',
     isNovidade: true,
-    tipo:'chuva',
+    tipo:'acessorios',
     genero:'menino'
   },
   {
@@ -217,7 +217,7 @@ export const modelosProntas =[
     ],
     observacao: '',
     isNovidade: true,
-    tipo:'chuva',
+    tipo:'acessorios',
     genero:'menina'
   },
   {
@@ -244,7 +244,7 @@ export const modelosProntas =[
     genero: 'unissex'
   },
   {
-    nome: 'Bandana com elástico Pets Verde P',
+    nome: 'Bandana Pets P',
     tamanhos: ['P'],
     descricao: 'Quer renovar o visual do seu pet com praticidade e muito estilo? \n Conheça a nossa Bandana Pet com Elástico, a peça perfeita para o seu amiguinho!\n<strong>Características e Estilo:</strong>\n- <i>Design Divertido e Dupla Face:</i> Com uma estampa principal de cachorrinhos fofos, casinhas e patinhas (ver imagem 1), e um verso liso em poá bege discreto (ver imagem 2), você tem duas opções de estilo em uma só peça!\n- <i>Ajuste Perfeito com Elástico:</i> Diga adeus aos nós! O acabamento em elástico (ver imagem 2) garante um vestir fácil, seguro e super confortável, adaptando-se suavemente ao pescoço do seu pet sem apertar.\n- <i>Qualidade e Durabilidade:</i> Feita com tecidos macios e resistentes, nossa bandana é ideal para o uso diário e aguenta as aventuras do seu amigão.\nEstilo e praticidade juntos? Só com a nossa Bandana Pet Duo! Garanta já a do seu pet!\n*Medidas:*\n- Pescoço: 41 a 50 cm.\n- Comprimento: 15 cm.',
     preco: 15,
@@ -391,7 +391,7 @@ export const modelosProntas =[
     genero:'menina'
   },
   {
-    nome: 'Vestido Floral Rosa e Vermelho GG',
+    nome: 'Vestido Floral GG',
     tamanhos: ['GG'],
     descricao: 'Sua pet vai desfilar com um visual cheio de energia e cor!\n Este vestido combina a doçura do floral pink com a intensidade do vermelho, criando um look vibrante e inesquecível.\nIdeal para pets que amam chamar a atenção e esbanjar alegria em todos os passeios!\n<strong>Combinação de Cores Marcante:</Strong>\n- <i>Estampa do Corpo:</i> O corpo e o babado superior são feitos em tecido de algodão com uma charmosa estampa de florzinhas em diversos tons de pink e vinho sobre um fundo rosa mais claro. Uma composição visual rica e feminina.\n- <i>Toque de Paixão:</i> O contraste fica por conta do babado inferior em tecido vermelho vivo, que adiciona profundidade, volume e uma dose extra de ousadia ao look.\n- <i>Modelo com Movimento:</i> A saia é confeccionada com babados em camadas, garantindo um caimento rodado e muito movimento a cada passo da sua pet.\n- <i>Conforto Descomplicado:</i> O design de alças/frente única garante que a peça seja prática de vestir e super confortável, permitindo que sua pet brinque e se divirta com liberdade.\nSe a sua pet é pura alegria e adora um look de impacto, este vestido é a escolha perfeita!\nLeve já o poder do pink e vermelho para o guarda-roupa da sua amiguinha!\n*Medidas:*\n- Pescoço: 46 a 62 cm.\n- Tórax: 64 a 72 cm.\n- Comprimento: 51 cm.',
     preco: 50,
@@ -407,7 +407,7 @@ export const modelosProntas =[
     genero:'menina'
   },
   {
-    nome: 'Vestido Natalino Rena Encantada GG',
+    nome: 'Vestido Rena Encantada GG',
     tamanhos: ['GG'],
     descricao: 'Sua pet pronta para brilhar na Noite Feliz! \nEste vestido é o look perfeito para celebrar o Natal com muito estilo, alegria e o espírito festivo.\nIdeal para fotos de família, ceia natalina e para quem quer deixar a pet com um visual temático inesquecível!\n<strong>Detalhes Festivos e Charmosos:</strong>\n - <i>Estampa Natalina Exclusiva:</i> O corpo do vestido é feito em tecido verde-escuro (tom pinho) e conta com uma estampa adorável de renas fofas, guirlandas, presentes e bengalas doces. Um verdadeiro charme natalino!\n- <i>Babados em Tom Neutro:</i> A saia em camadas (babados) utiliza um tom bege/creme suave, que proporciona um contraste elegante com o verde da estampa, remetendo ao aconchego das festas.\n- <i>Laços de Presente:</i> A cintura é decorada com laços de fita de cetim - um laço vermelho vibrante e um laço amarelo - que imitam os embrulhos de Natal, dando um toque final divertido e festivo.\n- <i>Conforto na Celebração:</i> O modelo de alças/frente única é prático de vestir e foi desenhado para garantir o máximo de conforto e liberdade para sua pet aproveitar as festividades.\nPrepare a câmera! Com este vestido, sua pet será a estrela mais fofa da sua decoração de Natal.\nGaranta este look natalino exclusivo para sua amiguinha!\n*Medidas:*\n- Pescoço: 52 a 60 cm.\n- Tórax: 58 a 70 cm.\n- Comprimento: 48 cm.',
     preco: 55,
@@ -423,7 +423,7 @@ export const modelosProntas =[
     genero:'menina'
   },
   {
-    nome: 'Vestido Natalino Flocos de Neve GG',
+    nome: 'Vestido Flocos de Neve GG',
     tamanhos: ['GG'],
     descricao: 'Celebre a magia do Natal com muito brilho e sofisticação!\n Este vestido é a escolha perfeita para sua pet entrar no espírito natalino com um toque de elegância invernal.\nIdeal para fotos temáticas, confraternizações de fim de ano ou para quem busca um visual festivo e charmoso para sua amiguinha!\n<strong>Detalhes que Encantam:</strong>\n- <i>Estampa Festiva e Delicada:</i> O corpo e a parte superior da saia são confeccionados em tecido verde-esmeralda com uma delicada estampa de flocos de neve dourados, que evoca a beleza de um Natal branco e brilhante.\n- <i>Saia de Tule Brilhante:</i> A saia inferior é feita de tule verde-água com glitter ou brilho, adicionando um toque de magia, leveza e um suave cintilar que fará sua pet deslumbrar.\n- <i>Caimento em Camadas:</i> A saia em babados e camadas proporciona um movimento gracioso e um volume que remete aos vestidos de festa, garantindo um visual encantador.\n- <i>Conforto na Celebração:</i> O design de frente única é prático, fácil de vestir e projetado para oferecer o máximo de conforto, permitindo que sua pet celebre sem restrições.\nSua pet estará pronta para ser a estrela mais brilhante da sua celebração de Natal!\nGaranta este vestido mágico e elegante para as festas de fim de ano da sua companheira!\n*Medidas:*\n- Pescoço: 44 a 54 cm.\n- Tórax: 64 a 72 cm.\n- Comprimento: 54 cm.',
     preco: 45,
@@ -467,6 +467,91 @@ export const modelosProntas =[
     tipo:'inverno',
     genero:'unissex'
   },
+  {
+    nome: 'Saquinho Multiuso G',
+    tamanhos: ['G'],
+    descricao: '<strong>Ideal para:</strong> Presentes especiais, lembrancinhas, necessaires improvisadas, organização de pequenas peças.\n<strong>Características:</strong>\n - <i>Material de Qualidade:</i> Confeccionado em tricoline 100% algodão, um tecido leve, macio e resistente, que garante um toque agradável e maior durabilidade.\n - <i>Estampa Delicada:</i> O corpo do saquinho exibe uma linda estampa floral, combinando flores vermelhas e amarelas sobre um fundo claro, adicionando um toque de charme e delicadeza. A barra superior e o interior possui um tecido de composição discreta, em poá bege, criando um contraste sutil e elegante.\n - <i>Fecho Prático:</i> Possui um fecho em cordão vermelho vibrante, que não só proporciona um fechamento seguro e rápido, mas também adiciona um ponto de cor marcante. As pontas do cordão são arrematadas com miçangas coloridas (amarelas, laranjas e peroladas), dando um toque artesanal e divertido.\n - <i>Multiuso:</i> Ideal como embalagem de presente reutilizável, saquinho organizador para viagens, porta-bijuterias, ou para guardar itens pessoais.\n - <i>Acabamento Artesanal:</i> Peça com acabamento cuidadoso, feita à mão, garantindo exclusividade e atenção aos detalhes.\n<strong>Medidas:</strong>',
+    preco: 20,
+    estoque: 1,
+    imagens: [
+      'https://i.ibb.co/fsfcFDQ/Saco-GG-Fte.png',
+      'https://i.ibb.co/tpcvNgTq/Saco-GG-Aberto.png',
+      'https://i.ibb.co/M5yJshgf/Saquinho-G-IA.png'
+    ],
+    observacao: '<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n<strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas:</strong> Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.\n',
+    tipo:'artesanato'
+  },
+  {
+    nome: 'Saquinho Multiuso P',
+    tamanhos: ['P'],
+    descricao: '<strong>Ideal para:</strong> Presentes especiais, lembrancinhas, necessaires improvisadas, organização de pequenas peças.\n<strong>Características:</strong>\n- <i>Material de Qualidade:</i> Confeccionado em tricoline 100% algodão, um tecido leve, macio e resistente, que garante um toque agradável e maior durabilidade.\n- <i>Estampa Romântica:</i> O saquinho combina duas estampas harmoniosas: a parte inferior apresenta uma linda padronagem floral, com pequenas rosas em tons de vermelho e verde sobre um fundo rosa-claro (coral). A barra superior e o interior utilizam uma estampa de poás discretos no mesmo tom de rosa, criando uma composição doce e romântica.\n- <i>Fecho Prático:</i> Possui um fecho em cordão branco que contrasta elegantemente com o tecido, garantindo um fechamento seguro e rápido. As pontas do cordão são arrematadas com miçangas coloridas (verdes, laranjas e vermelhas), adicionando um charme artesanal e vibrante.\n - <i>Multiuso:</i> Ideal como embalagem de presente reutilizável, saquinho organizador para viagens, porta-bijuterias, ou para guardar itens pessoais.\n- <i>Acabamento Artesanal:</i> Peça com acabamento cuidadoso, feita à mão, garantindo exclusividade e atenção aos detalhes.\n<strong>Medidas:</strong>',
+    preco: 10,
+    estoque: 1,
+    imagens: [
+      'https://i.ibb.co/jP8JZxjD/IMG-6832-removebg-preview.png',
+      'https://i.ibb.co/gZnKH3Ts/IMG-6833-removebg-preview.png',
+      'https://i.ibb.co/Mynbp6h0/Saquinho-P-IA.png'
+    ],
+    observacao:'<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas: </strong>Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.',
+    tipo:'artesanato'
+  },
+  {
+    nome: 'Pano Multiuso Cerejas',
+    tamanhos: ['U'],
+    descricao: 'Adicione um charme retrô e divertido à sua cozinha com nosso pano artesanal. Perfeito para manter seus alimentos frescos e protegidos com um toque de delicadeza.\n<strong>Características e Uso Ideal:</strong>\n<i>Estampa Vibrante:</i> O tecido do barrado apresenta um padrão alegre de quadriculado amarelo e branco, com charmosas cerejas vermelhas e hastes verdes. Uma estampa clássica que ilumina qualquer ambiente!\n<i>Função Principal:</i> Devido à trama do tecido, este pano é perfeito para cobrir e proteger alimentos, como bolos, pães, frutas e massas que estão crescendo. Ajuda a manter a umidade e a afastar insetos de forma higiênica e estilosa.\n<i>Decoração e Detalhes:</i> Ideal para forrar cestas de pães, bandejas de piquenique ou simplesmente decorar sua mesa e bancada.\n<i>Presente Prático:</i> Embalado com carinho em celofane e finalizado com um laço de fita verde, é uma excelente opção para presentear com bom gosto e utilidade.\n<strong>Medidas:</strong>\n- 45 x 66 cm.',
+    preco: 15,
+    estoque: 1,
+    imagens: [
+      'https://i.ibb.co/60htw4jK/Pano-Cereja.png',
+      'https://i.ibb.co/wZsKcZ2W/Pano-Cobrir-Cerejas-removebg-preview.png',
+      'https://i.ibb.co/KcXYcKy6/Pano-Cobrir-IA.png'
+
+    ],
+    observacao:'\n<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
+    tipo:'artesanato'
+  },
+  {
+    nome: 'Pano Multiuso Poá Vermelho',
+    tamanhos: ['U'],
+    descricao: 'Adicione um toque vibrante e atemporal à sua cozinha com nosso pano artesanal. Perfeito para manter seus alimentos frescos e protegidos com o charme do design clássico.\n<strong>Características e Uso Ideal:</strong>\n<i>Estampa Clássica e Vibrante:</i> O tecido do barrado apresenta um charmoso padrão de Poá (bolinhas) brancas sobre um fundo vermelho intenso. Um visual clássico que traz alegria e destaque para qualquer mesa.\n<i>Função Principal:</i> Devido à trama do tecido, este pano é perfeito para cobrir e proteger alimentos, como bolos, pães, frutas e massas que estão crescendo. Ajuda a manter a umidade e a afastar insetos de forma higiênica e estilosa.\n<i>Decoração e Detalhes:</i> Ideal para forrar cestas de pães, bandejas de piquenique ou simplesmente decorar sua mesa e bancada.\n<i>Presente Prático:<i> Embalado cuidadosamente em celofane, finalizado com um laço de fita vermelha, é uma excelente opção para presentear com bom gosto e utilidade.\n<strong>Medidas:</strong>\n- 45 x 66 cm.',
+    preco: 15,
+    estoque: 1,
+    imagens: [
+    'https://i.ibb.co/1G05Qn6p/Pano-Bolinhas.png',
+    'https://i.ibb.co/tpGfMKZX/Pano-Cobrir-Poa-removebg-preview.png',
+    'https://i.ibb.co/3Yc5zfwc/Pano-Cobrir-V-IA.png'
+    ],
+    observacao:'<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
+    tipo:'artesanato'
+  },
+  {
+    nome: 'Kit pano de prato e puxa saco',
+    tamanhos: ['U'],
+    descricao: 'Transforme sua cozinha com este kit charmoso e funcional, que combina eficiência na secagem de louças e organização elegante. Um conjunto artesanal perfeito para presentear ou para você!\n<i>Itens do Kit:</i>\n<strong> Pano de Prato:</strong>\n- <i>Qualidade Comprovada:</i> Confeccionado com o legítimo tecido "Pé de Galinha", conhecido pela sua trama superior que garante a máxima absorção. É a escolha ideal para enxugar louças perfeitamente, sem soltar fiapos.\n- <i>Acabamento:</i> Possui uma barra decorativa em tecido estampado com doces coloridos, trazendo um visual divertido e encantador — perfeito para quem ama uma cozinha viva e cheia de personalidade.\n<strong>Puxa-Saco:</strong>\n- <i>Estampa Alegre:</i> Produzido em tecido tricoline 100% algodão com estampa de doces e balas coloridas, que adiciona um toque de descontração e charme ao ambiente.\n- <i>Funcionalidade:</i> Ideal para manter suas sacolas plásticas organizadas de forma discreta e elegante. Possui elásticos nas aberturas para facilitar tanto a colocação quanto a retirada das sacolas.\n<strong>Charme e Praticidade em Conjunto:</strong>\nEste kit não só otimiza suas tarefas na cozinha, mas também adiciona um toque campestre e romântico à decoração. Os tecidos combinam perfeitamente, criando uma harmonia visual única.\n<strong>Medidas:</strong>\n-Pano de prato: 45 x 66 cm.\n- Puxa-saco: 21 x 52 cm.',
+    preco: 30,
+    estoque: 1,
+    imagens: [
+      'https://i.ibb.co/NdGQT1N7/Kit.png',
+      'https://i.ibb.co/Zzjh4DMZ/PuxaSaco.png',
+      'https://i.ibb.co/0pPq9tnV/Pano-Doces.png'
+    ],
+    observacao:'',
+    tipo:'artesanato'
+  },
+  {
+    nome: 'Kit com 2 Panos de prato',
+    tamanhos: ['U'],
+    descricao: 'Confeccionados com o autêntico tecido pé de galinha, conhecido por sua excelente qualidade, alta absorção e durabilidade, esses panos são ideais para secar louças, enxugar as mãos e auxiliar em todas as tarefas do dia a dia. Esqueça aqueles panos que não secam de verdade e soltam fiapos!\n<strong>Características do Produto:</strong>\n- <i>Pano Legítimo Pé de Galinha:</i> 100% algodão, alvejado (super branco) e com a trama tradicional que garante a melhor absorção.\n- <i>Detalhes que Encantam:</i> Cada pano é cuidadosamente finalizado com barrados em tecido de tricoline 100% algodão, trazendo estampas vivas e cheias de personalidade:\n- Um pano com divertida estampa de galinhas pretas e brancas - perfeito para quem ama um toque campestre e alegre.\n- Um pano com vibrante estampa de flores e mandalas em tons de amarelo e vermelho - que ilumina e moderniza o ambiente.\n- <i>Qualidade e Praticidade:</i> Além de lindos, são resistentes e podem ser lavados com frequência, mantendo a maciez e o poder de secagem.\nSeja para uso próprio, para presentear alguém especial ou para complementar a decoração da sua casa, este kit é a união perfeita de beleza artesanal e utilidade imbatível.\nLeve já para casa o charme e a qualidade que a sua cozinha merece!\n<strong>Medidas:</strong>\n- 45 x 66 cm.',
+    preco: 30,
+    estoque: 1,
+    imagens: [
+      'https://i.ibb.co/DHvNnsqG/Kit-Panos.png',
+      'https://i.ibb.co/G4LxwR0x/Pano-Galinha.png',
+      'https://i.ibb.co/xKHLbvgk/Pano-Mistico.png'
+    ],
+    observacao:'',
+    tipo:'artesanato'
+  },
 ];
 @Component({
   selector: 'app-prontas',
@@ -481,7 +566,7 @@ export class Prontas {
   showBackToTop = true;
   tamanhoSelecionado: { [key: string]: string } = {};
   constructor(private carrinhoService: CarrinhoService, private dialog: MatDialog) {}
-  abas = ["Inverno ❄️", "Verão ☀️", "Capa de Chuva 🌧️", "Acessórios 🎀"];
+  abas = ["Inverno ❄️", "Verão ☀️", "Acessórios 🎀", "Artesanato 🧵"];
   abaAtiva = 0;
 
   mudarAba(i: number) {
