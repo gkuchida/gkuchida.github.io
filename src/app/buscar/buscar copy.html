@@ -1,0 +1,45 @@
+<div class="grid-produtos">
+  <div class="card" *ngFor="let produto of resultados">
+    <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+    <div class="produto-info">
+      <h3>{{ produto.nome }}</h3>
+      <!-- Exibir preço apenas se houver valor e estoque > 0 -->
+      <p class="produto-preco" *ngIf="produto.preco && produto.estoque > 0">
+        R$ {{ produto.preco }}
+      </p>
+      <!-- Caso não tenha preço ou estoque zerado -->
+      <p class="produto-preco" *ngIf="!produto.preco || produto.estoque === 0">
+        Sob encomenda
+      </p>
+    </div>
+
+    <!-- Botões de navegação -->
+    <a
+      *ngIf="produto.tipo === 'pronta'"
+      [routerLink]="['/produto-detalhes', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
+
+    <a
+      *ngIf="produto.tipo === 'encomenda'"
+      [routerLink]="['/encomenda', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
+
+    <a
+      *ngIf="produto.tipo === 'artesanato'"
+      [routerLink]="['/produto-detalhes', produto.nome]"
+      class="btn-carrinho"
+    >
+      <span class="plus-icon">+</span>
+    </a>
+  </div>
+</div>
+<!-- Botão flutuante -->
+<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>

@@ -1,5 +1,4 @@
 import { Injectable, signal, Signal } from '@angular/core';
-
 export interface CarrinhoItem {
   tipo: 'pronta' | 'encomenda' | 'artesanato';
   nomeModelo: string;

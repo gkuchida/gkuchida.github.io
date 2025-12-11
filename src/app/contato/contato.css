@@ -1,170 +1,310 @@
-* {
-  font-family: 'Roboto', sans-serif;
+.contato-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: -20px;
 }
 
-h2{
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #004aad;
-    margin-bottom: 15px;
-    text-align: center;
+/* =========================
+      COLUNA ESQUERDA
+========================= */
+.lado-contatos {
+  flex: 1;
+  min-width: 300px;
+  /*background: #fff6e9;*/
+  padding: 25px;
+  border-radius: 22px;
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.08);*/
+  animation: deslizar 0.6s ease forwards;
 }
 
-form {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #FAFAFA;
-    border-radius: 12px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-  }
+@keyframes deslizar {
+  from { transform: translateX(-20px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
 
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #333;
-  }
+.titulo-fofo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000080;
+  margin-bottom: 10px;
+}
 
-  input, textarea {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
+.subtexto {
+  color: #6a4e3b;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
 
-  input:focus, textarea:focus {
-    border-color: #2a52be;
-    outline: none;
-  }
+.lista-contatos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .form-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 10px;
-  }
+.lista-contatos li {
+  margin: 10px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-  .texto-aconchegante {
-    font-size: 1rem;
-    color: #555;
-    margin: 0 0 20px 0;
-    font-style: italic;
-    max-width: auto;
-    line-height: 1.4;
-    background: #f9f9f9;
-    padding: 12px 16px;
-    border-left: 4px solid #4169e1;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
+.lista-contatos i {
+  font-size: 1rem;
+  color: #ff8800;
+}
 
-  button {
-    padding: 10px 18px;
-    font-size: 0.95rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+.lista-contatos a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
 
-  button[type="submit"] {
-    background-color: #2a52be;
-    color: white;
-  }
+.lista-contatos a:hover {
+  color: #ff5500;
+}
 
-  button[type="submit"]:hover {
-    background-color: #1f3e91;
-  }
+/* Ilustração */
+.localizacao-fofa {
+  background: #fff7ea;
+  padding: 25px 20px;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  margin: 25px auto;
+  max-width: 650px;
+  border: 2px solid #ffd8b0;
+}
 
-  button.limpar {
-    background-color: #f1c40f;
-    color: #333;
-  }
+.loc-titulo {
+  font-size: 1.3rem;
+  color: #000080;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
 
-  button.limpar:hover {
-    background-color: #d4ac0d;
-  }
+.loc-sub {
+  font-size: 1rem;
+  color: #6a4e3b;
+  margin-bottom: 18px;
+}
 
-  button.cancelar {
-    background-color: #e74c3c;
-    color: white;
-  }
+.mapa-container-fofo {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #ffddb8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  background: #fff;
+}
 
-  button.cancelar:hover {
-    background-color: #c0392b;
-  }
+.mapa-container-fofo iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
 
-  button:disabled {
-    background-color: #bbb;
-    cursor: not-allowed;
-  }
+/* PATINHAS */
+.patinhas {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.8;
+  z-index: 10;
+}
 
-  .back-to-top-fixed {
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #4169e1;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.patinha1 {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-15deg);
+}
 
-  .back-to-top-fixed:hover {
-    background-color: #3151b7;
-    transform: scale(1.1);
-  }
-/* -- RESPONSIVO -- */
-@media (max-width: 600px) {
-  h2 {
-    font-size: 1.6rem;
-  }
+.patinha2 {
+  bottom: 10px;
+  right: 15px;
+  transform: rotate(10deg);
+}
 
-  form {
-    margin: 20px 1rem;
-    padding: 20px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  }
+/* =========================
+      COLUNA DIREITA
+========================= */
+.lado-form {
+  flex: 1;
+  min-width: 300px;
+  animation: deslizar2 0.6s ease forwards;
+}
 
-  input, textarea {
-    font-size: 0.95rem;
-    padding: 8px 10px;
-  }
+@keyframes deslizar2 {
+  from { transform: translateX(20px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
 
-  .form-buttons {
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  font-weight: 500;
+  color: #4A4A4A;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #d8c6a9;
+  background: #fffaf2;
+  outline: none;
+  color: #5A5A68;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #ff9e3f;
+  box-shadow: 0 0 4px rgba(255,150,50,0.5);
+}
+
+.erro {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* BOTÕES */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-buttons button[type="submit"] {
+  background: #ff8b2c;
+  color: white;
+}
+
+.limpar {
+  background: #ffd8a8;
+}
+
+.cancelar {
+  background: #e7e7e7;
+}
+
+/* BOTÃO FLUTUANTE */
+.back-to-top-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4169e1;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+}
+.faq-aviso {
+  background: #fff3df;
+  border: 1px solid #ff9d3d;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.faq-titulo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0014A8;
+  margin-bottom: 10px;
+}
+
+.faq-texto {
+  font-size: 1rem;
+  color: #5b3e1d;
+  margin-bottom: 8px;
+}
+
+.faq-texto a {
+  color: #0022CC;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.faq-texto a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+/* RESPONSIVIDADE */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+        (min-width: 601px) and (max-width: 1024px)  /* CONDIÇÃO B: Tablet */{
+
+  /* 1. MUDAR A DIREÇÃO DO FLEXBOX PARA COLUNA */
+  .contato-container {
+    /* Faz com que os itens fiquem empilhados verticalmente */
     flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
+    /* Reduz o padding nas laterais em telas muito pequenas */
+    padding: 15px;
+    gap: 20px; /* Ajusta o espaçamento vertical entre os itens */
+    margin-top: -50px;
   }
 
-  button {
+  /* 2. REORDENAR AS COLUNAS COM A PROPRIEDADE 'ORDER' */
+
+  /* Coluna Esquerda (.lado-contatos): Fica em cima (order: 1) */
+  .lado-contatos {
+    /* Um valor menor (1) faz com que ele apareça primeiro na pilha vertical */
+    order: 1;
+    /* Garante que ocupe a largura total, embora o flex-direction: column já ajude */
     width: 100%;
-    font-size: 1rem;
+    min-width: auto; /* Remove a restrição de largura mínima */
   }
 
-  .back-to-top-fixed {
-    border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 15px;
+  /* Coluna Direita (.lado-form): Fica embaixo (order: 2) */
+  .lado-form {
+    /* Um valor maior (2) faz com que ele apareça depois na pilha vertical */
+    order: 2;
+    width: 100%;
+    min-width: auto;
+    margin-top: -20px;
+  }
+
+  /* AJUSTES ADICIONAIS PARA MÓVEL */
+
+  /* Remove a animação de deslizar no carregamento em telas menores */
+  @keyframes deslizar {
+    from { transform: none; opacity: 1; }
+    to { transform: none; opacity: 1; }
+  }
+
+  @keyframes deslizar2 {
+    from { transform: none; opacity: 1; }
+    to { transform: none; opacity: 1; }
+  }
+
+  /* Ajuste no padding do container de localização/mapa */
+  .localizacao-fofa {
+      padding: 20px 15px;
+      margin: 15px auto;
+  }
+
+  /* Reduz o tamanho da fonte para melhor visualização em telas pequenas */
+  .titulo-fofo, .loc-titulo, .faq-titulo {
+      font-size: 1.1rem;
+  }
+  .subtexto, .lista-contatos, .lista-contatos a, .faq-texto{
+    font-size: 0.9rem;
   }
 }
-/* -- FIM RESPONSIVO -- */

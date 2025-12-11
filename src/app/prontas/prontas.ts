@@ -1,4 +1,4 @@
-import { Component, HostListener  } from '@angular/core';
+import { Component, HostListener, Input, Output, EventEmitter  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService, CarrinhoItem } from '../services/carrinho.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -19,11 +19,12 @@ export interface ProdutoPronto {
     isNovidade?: boolean;
     tipo?: 'inverno'|'verao'|'acessorios'|'artesanato'|string;
     genero?:string;
+    sobMedida?:boolean;
 }
 
 export const modelosProntas =[
    {
-    nome: 'Vestido Soft + Jeans M',
+    nome: 'Vestido Soft com Jeans M',
     tamanhos: ['M'],
     descricao: 'Deixe sua pet quentinha e estilosa com esta roupinha super fofa! \nA parte superior em soft peludinho apresenta estampas divertidas de animais marinhos sorridentes, garantindo charme e alegria.\nA parte inferior em jeans dá um toque de modernidade e praticidade.\n\n*Tecidos:* Soft, Jeans, Microsoft e Pele.\n*Cor*: Branco com desenhos de animais marinhos, jeans, amarelo.\n*Medidas:*\n- Pescoço: 44cm.\n- Tórax: 54cm.\n- Comprimento: 48cm.',
     preco: 40,
@@ -36,7 +37,8 @@ export const modelosProntas =[
     observacao:'',
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Vestido Babadinho P',
@@ -51,7 +53,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Capa Dupla Face G',
@@ -66,7 +69,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Básica P',
@@ -81,7 +85,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Básica GG',
@@ -96,7 +101,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Básica G',
@@ -111,7 +117,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Básica Azul PP',
@@ -126,7 +133,8 @@ export const modelosProntas =[
     ],
     isNovidade: false,
     tipo:'inverno',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: true
   },
   {
     nome: 'Blusa Raglan M',
@@ -140,7 +148,8 @@ export const modelosProntas =[
       'https://i.ibb.co/7Nj1p6pk/Raglan-IA.png'
     ],
     tipo:'inverno',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: true
   },
   {
     nome: 'Básica Vermelha PP',
@@ -154,7 +163,8 @@ export const modelosProntas =[
       'https://i.ibb.co/3ycJW3j7/Basica-PP-IA.png'
     ],
     tipo:'inverno',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Capa de chuva Bagun G',
@@ -170,7 +180,8 @@ export const modelosProntas =[
     observacao: '',
     isNovidade: true,
     tipo:'acessorios',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: false
   },
   {
     nome: 'Capa de chuva lateral G',
@@ -186,7 +197,8 @@ export const modelosProntas =[
     observacao: '',
     isNovidade: true,
     tipo:'acessorios',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: false
   },
   {
     nome: 'Capa de chuva G',
@@ -202,7 +214,8 @@ export const modelosProntas =[
     observacao: '',
     isNovidade: true,
     tipo:'acessorios',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: true
   },
   {
     nome: 'Capa de chuva M',
@@ -218,7 +231,8 @@ export const modelosProntas =[
     observacao: '',
     isNovidade: true,
     tipo:'acessorios',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Gorro de Natal',
@@ -241,10 +255,11 @@ export const modelosProntas =[
     observacao: 'Garanta o seu, pois a produção é limitada!',
     isNovidade: true,
     tipo:'acessorios',
-    genero: 'unissex'
+    genero: 'unissex',
+    sobMedida: false
   },
   {
-    nome: 'Bandana Pets P',
+    nome: 'Bandana Elástico P',
     tamanhos: ['P'],
     descricao: 'Quer renovar o visual do seu pet com praticidade e muito estilo? \n Conheça a nossa Bandana Pet com Elástico, a peça perfeita para o seu amiguinho!\n<strong>Características e Estilo:</strong>\n- <i>Design Divertido e Dupla Face:</i> Com uma estampa principal de cachorrinhos fofos, casinhas e patinhas (ver imagem 1), e um verso liso em poá bege discreto (ver imagem 2), você tem duas opções de estilo em uma só peça!\n- <i>Ajuste Perfeito com Elástico:</i> Diga adeus aos nós! O acabamento em elástico (ver imagem 2) garante um vestir fácil, seguro e super confortável, adaptando-se suavemente ao pescoço do seu pet sem apertar.\n- <i>Qualidade e Durabilidade:</i> Feita com tecidos macios e resistentes, nossa bandana é ideal para o uso diário e aguenta as aventuras do seu amigão.\nEstilo e praticidade juntos? Só com a nossa Bandana Pet Duo! Garanta já a do seu pet!\n*Medidas:*\n- Pescoço: 41 a 50 cm.\n- Comprimento: 15 cm.',
     preco: 15,
@@ -257,10 +272,11 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'acessorios',
-    genero: 'unissex'
+    genero: 'unissex',
+    sobMedida: true
   },
   {
-    nome: 'Bandana Flamingos P',
+    nome: 'Bandana Botão P',
     tamanhos: ['P'],
     descricao: 'Adicione um toque de estilo e personalidade com esta bandana dupla face! Uma peça versátil que oferece duas opções de look em uma só.\n<strong>Características e Estilo:</strong>\n- <i>Dupla Face e Versátil:</i> Oferece duas estampas, permitindo mudar o visual em segundos.\n<i>- Lado 1 (Estampado):</i> Apresenta uma estampa divertida e moderna com tema tropical, incluindo flamingos, flores coloridas e detalhes como óculos de sol, tudo sobre um fundo claro/rosa pálido. É o lado perfeito para um visual alegre e descontraído.\n- <i>Lado 2 (Cor Sólida):</i> Confeccionado em tricoline pink vibrante, este lado é ideal para um look mais marcante e estiloso.\n- <i>Material de Qualidade:</i> Feita em tricoline 100% algodão, o tecido é macio e confortável, ideal para uso prolongado.\n- <i>Fecho Prático e Seguro:</i> Possui um fecho de botões de pressão (dois botões pink), que garante um ajuste fácil, rápido e seguro, sem risco de desamarrar.\n*Medidas:*\n- Pescoço: 23 a 30 cm.\n- Comprimento: 15 cm.',
     preco: 15,
@@ -274,7 +290,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'acessorios',
-    genero:'unissex'
+    genero:'unissex',
+    sobMedida: true
   },
   {
     nome: 'Bandana Safari M',
@@ -291,7 +308,8 @@ export const modelosProntas =[
      observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'acessorios',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: false
   },
   {
     nome: 'Bandana Flamingos M',
@@ -308,7 +326,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'acessorios',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Tigre Jeans GG',
@@ -324,7 +343,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
   },
   {
     nome: 'Vestido Safári Rosa GG',
@@ -340,7 +360,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Marinheiro GG',
@@ -356,7 +377,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Pink GG',
@@ -372,7 +394,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Floral Lilás GG',
@@ -388,7 +411,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Floral GG',
@@ -420,7 +444,8 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: false
   },
   {
     nome: 'Vestido Flocos de Neve GG',
@@ -436,7 +461,9 @@ export const modelosProntas =[
     observacao:'Este modelo pode ser feito em outras estampas e tamanhos!\nPara ver as opções e fazer sua encomenda personalizada, basta nos chamar no <i>WhatsApp</i>!',
     isNovidade: false,
     tipo:'verao',
-    genero:'menina'
+    genero:'menina',
+    sobMedida: true
+
   },
   {
     nome: 'Colete Natal P',
@@ -450,7 +477,8 @@ export const modelosProntas =[
       'https://i.ibb.co/PsYbPTLZ/Colete-IA.png'
     ],
     tipo:'verao',
-    genero:'menino'
+    genero:'menino',
+    sobMedida: true
   },
   {
     nome: 'Básica Moletinho P',
@@ -465,7 +493,8 @@ export const modelosProntas =[
     ],
     observacao:'Atenção: Este modelo está ESGOTADO, mas não se preocupe, fazemos Sob Encomenda! Você pode solicitar o seu modelo em outras estampas e tecidos.\n<i>Entre em Contato</i> para ver as opções de estampas disponíveis e fazer seu pedido personalizado, chame-nos agora mesmo no<i> WhatsApp</i>!',
     tipo:'inverno',
-    genero:'unissex'
+    genero:'unissex',
+    sobMedida: true
   },
   {
     nome: 'Saquinho Multiuso G',
@@ -479,7 +508,8 @@ export const modelosProntas =[
       'https://i.ibb.co/M5yJshgf/Saquinho-G-IA.png'
     ],
     observacao: '<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n<strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas:</strong> Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.\n',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
   {
     nome: 'Saquinho Multiuso P',
@@ -493,7 +523,8 @@ export const modelosProntas =[
       'https://i.ibb.co/Mynbp6h0/Saquinho-P-IA.png'
     ],
     observacao:'<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho é personalizável!\n <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimensões para atender à sua necessidade.\n<strong>Estampas: </strong>Disponibilizamos um catálogo variado de estampas em tricoline.\nEntre em Contato para ver as opções de estampas, tamanhos e solicitar um orçamento, chame-nos no WhatsApp! Será um prazer criar uma peça única para você.',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
   {
     nome: 'Pano Multiuso Cerejas',
@@ -508,7 +539,8 @@ export const modelosProntas =[
 
     ],
     observacao:'\n<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
   {
     nome: 'Pano Multiuso Poá Vermelho',
@@ -522,7 +554,8 @@ export const modelosProntas =[
     'https://i.ibb.co/3Yc5zfwc/Pano-Cobrir-V-IA.png'
     ],
     observacao:'<i>Importante:</i> Este pano é especificamente indicado para cobrir e forrar, não sendo ideal para secar louças devido à sua trama.',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
   {
     nome: 'Kit pano de prato e puxa saco',
@@ -536,7 +569,8 @@ export const modelosProntas =[
       'https://i.ibb.co/0pPq9tnV/Pano-Doces.png'
     ],
     observacao:'',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
   {
     nome: 'Kit com 2 Panos de prato',
@@ -550,7 +584,8 @@ export const modelosProntas =[
       'https://i.ibb.co/xKHLbvgk/Pano-Mistico.png'
     ],
     observacao:'',
-    tipo:'artesanato'
+    tipo:'artesanato',
+    sobMedida: false
   },
 ];
 @Component({
@@ -568,6 +603,8 @@ export class Prontas {
   constructor(private carrinhoService: CarrinhoService, private dialog: MatDialog) {}
   abas = ["Inverno ❄️", "Verão ☀️", "Acessórios 🎀", "Artesanato 🧵"];
   abaAtiva = 0;
+  isMenuOpen: boolean = false;
+
 
   mudarAba(i: number) {
     this.abaAtiva = i;
@@ -590,6 +627,7 @@ export class Prontas {
     }
 
     @HostListener('window:scroll', [])
+
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       this.showBackToTop = scrollTop > 300;
@@ -597,4 +635,30 @@ export class Prontas {
     scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+  ordenacao: string = "";
+
+ordenarProdutos() {
+  switch (this.ordenacao) {
+    case "nomeAsc":
+      this.produtos.sort((a, b) => a.nome.localeCompare(b.nome));
+      break;
+
+    case "nomeDesc":
+      this.produtos.sort((a, b) => b.nome.localeCompare(a.nome));
+      break;
+
+    case "maiorValor":
+      this.produtos.sort((a, b) => b.preco - a.preco);
+      break;
+
+    case "menorValor":
+      this.produtos.sort((a, b) => a.preco - b.preco);
+      break;
+
+    default:
+      break;
+  }
+}
+
 }

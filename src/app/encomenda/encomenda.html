@@ -1,5 +1,14 @@
 <!-- LISTA DE PRODUTOS (quando NÃO está nos detalhes) -->
 <div class="encomenda-lista" *ngIf="!produtoEmDetalhe">
+  <div class="filtro-ordenacao">
+  <i class="bi bi-funnel-fill icon-filtro"></i>
+
+  <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
+    <option value="">Ordenar...</option>
+    <option value="nomeAsc">Nome (A → Z)</option>
+    <option value="nomeDesc">Nome (Z → A)</option>
+  </select>
+</div>
   <div class="encomenda-card"
        *ngFor="let p of produtos"
        (click)="abrirDetalhes(p)">

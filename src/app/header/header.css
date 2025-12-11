@@ -167,6 +167,26 @@
   text-decoration: underline;
 }
 
+.carrinho-wrapper {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #d72638; /* vermelho bonito */
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
 /* ===========================
    RESPONSIVO — TABLET
 =========================== */

@@ -1,3 +1,15 @@
+<div class="filtro-ordenacao">
+  <i class="bi bi-funnel-fill icon-filtro"></i>
+
+  <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
+    <option value="">Ordenar...</option>
+    <option value="nomeAsc">Nome (A → Z)</option>
+    <option value="nomeDesc">Nome (Z → A)</option>
+    <option value="maiorValor">Maior valor</option>
+    <option value="menorValor">Menor valor</option>
+  </select>
+</div>
+
 <div class="tabs">
   <div *ngFor="let aba of abas; let i = index"
        class="tab"
@@ -77,7 +89,7 @@
             <div class="produto-info">
               <h3>{{ produto.nome }}</h3>
             </div>
-            
+
             <div class="img-wrapper">
               <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
             </div>

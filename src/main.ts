@@ -18,11 +18,11 @@ import { ProdutoDetalhes } from './app/produto-detalhes/produto-detalhes';
 
 const routes: Routes = [
   { path: '', component: Home },
-  { path: 'encomenda/:nome', component: Encomenda },
   { path: 'produto-detalhes/:nome', component: ProdutoDetalhes },
   { path: 'prontas', component: Prontas },
   { path: 'carrinho', component: Carrinho },
   { path: 'encomenda', component: Encomenda },
+  { path: 'encomenda/:nome', component: Encomenda },
   { path: 'medidas', component: Medidas },
   { path: 'confirmar', component: Confirmar },
   { path: 'tecidos', component: Tecidos },

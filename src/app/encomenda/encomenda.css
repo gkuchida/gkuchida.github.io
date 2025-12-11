@@ -1,3 +1,71 @@
+/* ===== FILTRO DE ORDENAÇÃO ===== */
+
+/* Seleciona apenas o filtro que é filho direto e força layout de linha inteira */
+/* cobre casos onde .encomenda-lista usa grid ou flex */
+.encomenda-lista > .filtro-ordenacao {
+  display: flex !important;
+  flex-wrap: nowrap;
+  align-items: center !important;
+  justify-content: flex-end !important; /* joga pro lado direito */
+  gap: 8px;
+
+  width: 100% !important;      /* ocupa a linha inteira */
+  padding: 0 12px 12px 12px;   /* separação do conteúdo */
+  margin: 0;                   /* evita margem que pareça card */
+
+  /* remove aparência de "card" (sombas, bordas, fundo) */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  /* se o pai for grid, garante que ocupe toda a linha */
+  grid-column: 1 / -1;
+}
+
+/* Ícone */
+.encomenda-lista > .filtro-ordenacao .icon-filtro {
+  color: #000080;              /* seu azul */
+  font-size: 1.2rem;
+  margin-right: 6px;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Select — linha azul sempre visível, sem fundo e sem hover */
+.encomenda-lista > .filtro-ordenacao select {
+  -webkit-appearance: none; /* remove aparência nativa em alguns navegadores */
+  appearance: none;
+  border: none !important;
+  background: transparent !important;
+  font-size: 0.95rem;
+  color: #333;
+  padding: 4px 6px;
+  font-weight: 400;
+
+  border-bottom: 2px solid #000080 !important; /* linha azul sempre visível */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* remove fundo no hover (mesmo se houver regra global) */
+.encomenda-lista > .filtro-ordenacao select:hover,
+.encomenda-lista > .filtro-ordenacao select:active {
+  background: transparent !important;
+}
+
+/* foco: sem outline feio, manter a linha */
+.encomenda-lista > .filtro-ordenacao select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid #000080 !important;
+}
+
+/* garante que os cards comecem visualmente abaixo do filtro */
+.encomenda-lista > .encomenda-card {
+  margin-top: 10px; /* ajuste se quiser mais espaço */
+}
+
 .carousel,
 .carousel-inner,
 .carousel-item {
@@ -6,6 +74,8 @@
 
 /* ===== LISTA DE PRODUTOS ===== */
 .encomenda-lista {
+  position: relative;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -150,8 +220,7 @@
 #carouselEncomendaDetalhes .carousel-indicators{
   position: absolute;
   bottom: 0 !important;
-  margin-bottom: 0 !important;
-  margin-bottom: -10x !important;
+  margin-bottom: -30px !important;
 }
 .carousel-indicators [data-bs-target] {
   background-color: #0057ff;
@@ -389,15 +458,8 @@
   }
 
 
-  /* Indicadores mais discretos */
-  .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #0057ff  !important;      /* cor escura */
-    opacity: 0.5;                            /* leve transparência */
-    margin-bottom: -10x !important;
-  }
+
+
   .carousel-control-prev {
     left: -15px;   /* antes era 0 — agora fica mais longe da borda */
   }
@@ -405,6 +467,12 @@
   .carousel-control-next {
     right: 0;  /* antes era 0 — agora também afasta */
   }
+  .encomenda-lista > .filtro-ordenacao select {
+    font-size: 0.9rem;
+  }
+   .encomenda-lista > .filtro-ordenacao .icon-filtro {
+    font-size: 1rem;
+   }
 }
 
 

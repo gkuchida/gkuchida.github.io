@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   standalone: true,
@@ -13,8 +14,9 @@ import { FormsModule } from '@angular/forms';
 export class Header {
   searchQuery: string = '';
   menuAberto: boolean = false;
+  quantidadeCarrinho = 0;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private carrinhoService: CarrinhoService) {}
 
     onSearch() {
       if (this.searchQuery.trim()) {
@@ -26,7 +28,7 @@ export class Header {
     toggleMenu() {
     this.menuAberto = !this.menuAberto;
   }
-
+  
   // Função para fechar o menu (chamada ao clicar no item de navegação)
     fecharMenu() {
     this.menuAberto = false;

@@ -1,0 +1,89 @@
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.grid-produtos:has(.card:only-child) {
+  max-width: 320px;
+  justify-content: center;
+}
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #000080;
+  text-align: center;
+}
+.card p {
+  font-size: 0.9rem;
+  margin: 0 10px 10px;
+  color: #555;
+  text-align: center;
+}
+.btn-carrinho {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 10px auto;
+  transition: background-color 0.2s ease;
+}
+.btn-carrinho:hover {
+  background-color: #0055c7;
+}
+.plus-icon {
+  display: inline-block;
+  font-weight: bold;
+}
+.back-to-top-fixed {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+/* RESPONSIVO */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+    gap: 12px; 
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}

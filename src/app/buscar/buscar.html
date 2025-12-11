@@ -1,45 +1,72 @@
-<div class="grid-produtos">
-  <div class="card" *ngFor="let produto of resultados">
-    <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
-    <div class="produto-info">
-      <h3>{{ produto.nome }}</h3>
-      <!-- Exibir preço apenas se houver valor e estoque > 0 -->
-      <p class="produto-preco" *ngIf="produto.preco && produto.estoque > 0">
-        R$ {{ produto.preco }}
-      </p>
-      <!-- Caso não tenha preço ou estoque zerado -->
-      <p class="produto-preco" *ngIf="!produto.preco || produto.estoque === 0">
-        Sob encomenda
-      </p>
-    </div>
+  <div class="busca-resumo" *ngIf="todosOsResultados.length > 0">
+    <p class="resultado-mensagem" *ngIf="resultadosExibidos.length > 0">
+      🎉 Encontramos
+      <strong>{{ resultadosExibidos.length }}</strong>
+      produto{{ resultadosExibidos.length !== 1 ? 's' : '' }} com o termo:
+      <span class="termo-buscado">"{{ searchQuery }}"</span>.
+    </p>
 
-    <!-- Botões de navegação -->
-    <a
-      *ngIf="produto.tipo === 'pronta'"
-      [routerLink]="['/produto-detalhes', produto.nome]"
-      class="btn-carrinho"
-    >
-      <span class="plus-icon">+</span>
-    </a>
+    <p class="resultado-mensagem" *ngIf="resultadosExibidos.length === 0 && todosOsResultados.length > 0">
+      🥺 Nenhum produto corresponde aos filtros atuais. Tente desmarcar algumas opções.
+    </p>
 
-    <a
-      *ngIf="produto.tipo === 'encomenda'"
-      [routerLink]="['/encomenda', produto.nome]"
-      class="btn-carrinho"
-    >
-      <span class="plus-icon">+</span>
-    </a>
-
-    <a
-      *ngIf="produto.tipo === 'artesanato'"
-      [routerLink]="['/produto-detalhes', produto.nome]"
-      class="btn-carrinho"
-    >
-      <span class="plus-icon">+</span>
-    </a>
+    <p class="instrucao-mensagem" *ngIf="resultadosExibidos.length > 0">
+        Clique no card para ver detalhes e opções de compra.
+    </p>
   </div>
+
+  <div class="busca-resumo sem-resultados" *ngIf="todosOsResultados.length === 0 && searchQuery.trim()">
+      <p class="resultado-mensagem">
+          😢 Não encontramos resultados para o termo:
+          <span class="termo-buscado">"{{ searchQuery }}"</span>.
+      </p>
+      <p class="instrucao-mensagem">Tente novamente com palavras-chave diferentes.</p>
+  </div>
+  <h2 class="grid-titulo" *ngIf="resultadosExibidos.length > 0">Grid de Produtos</h2>
+<div class="filtro-ordenacao">
+  <i class="bi bi-funnel-fill icon-filtro"></i>
+
+  <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
+    <option value="">Ordenar...</option>
+    <option value="nomeAsc">Nome (A → Z)</option>
+    <option value="nomeDesc">Nome (Z → A)</option>
+    <option value="maiorValor">Maior valor</option>
+    <option value="menorValor">Menor valor</option>
+    <option value="comEstoque">Em estoque</option>
+    <option value="sobEncomenda">Sob encomenda</option>
+  </select>
 </div>
-<!-- Botão flutuante -->
-<button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
+  <div class="grid-produtos">
+
+    <div class="card" *ngFor="let produto of resultadosExibidos" (click)="navegarDetalhes(produto)">
+      <div class="card-img-container">
+        <img [src]="produto.imagens[0]" alt="{{ produto.nome }}" />
+      </div>
+
+      <div class="produto-info">
+        <h3 class="produto-nome">{{ produto.nome }}</h3>
+
+        <p class="produto-status">
+          <span *ngIf="produto.preco && produto.estoque && produto.estoque > 0">R$ {{ produto.preco }}</span>
+          <span *ngIf="!produto.preco || !produto.estoque || produto.estoque === 0">Sob Encomenda</span>
+        </p>
+
+        <div class="produto-tags">
+            <span class="tag tag-pronta" *ngIf="produto.tipo === 'pronta'">
+                ✨ Pronta Entrega
+            </span>
+            <span class="tag tag-encomenda" *ngIf="produto.tipo === 'encomenda'">
+                📦 Encomenda
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<button
+  class="back-to-top-fixed"
+  (click)="scrollToTop()"
+  aria-label="Voltar ao topo"
+  *ngIf="showBackToTop"
+>
   <i class="bi bi-arrow-up"></i>
 </button>
