@@ -127,7 +127,7 @@ Deixe sua pet super confort\xE1vel e pronta para qualquer aventura com essa pe\x
 *Medidas:*
 - Pesco\xE7o: 22cm.
 - T\xF3rax: 48cm.
-- Comprimento: 35cm.`,preco:20,estoque:1,imagens:["https://i.ibb.co/tTSwCByy/Basica-PP-IA.png","https://i.ibb.co/qYVJ8595/IMG-6841.png","https://i.ibb.co/mFBhFW5v/IMG-6448.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica GG",tamanhos:["GG"],descricao:`C\xE3es grandes sente frio?
+- Comprimento: 35cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/tTSwCByy/Basica-PP-IA.png","https://i.ibb.co/qYVJ8595/IMG-6841.png","https://i.ibb.co/mFBhFW5v/IMG-6448.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica GG",tamanhos:["GG"],descricao:`C\xE3es grandes sente frio?
  Sim, eles tamb\xE9m sentem! 
 E encontrar roupas fofas para eles pode ser um desafio. 
 Esta pe\xE7a \xE9 a solu\xE7\xE3o perfeita!
