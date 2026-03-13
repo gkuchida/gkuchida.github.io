@@ -15,7 +15,7 @@ O modelo conta ainda com um lindo aplique bordado na saia, trazendo um detalhe e
 *Medidas:*
 Pesco\xE7o: 36 cm
 T\xF3rax: 42 cm
-Comprimento: 31 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/G4nRDvxk/Matelasse-Jeans-IA.png","https://i.ibb.co/B2Xcc9zD/Matelasse-Jeans-Costas.png","https://i.ibb.co/xS8JN4LZ/Matelasse-Jeans-Ladp.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Amarelo P",tamanhos:["P"],descricao:`*Novidade!* 
+Comprimento: 31 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/dwDqsmDz/Matelasse-Jeans-IA.png","https://i.ibb.co/hxtxZB15/Matelasse-Jeans-Costas.png","https://i.ibb.co/rRm9jxtt/Matelasse-Jeans-Ladp.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Amarelo P",tamanhos:["P"],descricao:`*Novidade!* 
 Conforto, praticidade e muito estilo para os dias mais fresquinhos! Esta blusa b\xE1sica para pets \xE9 confeccionada em soft amarelo estampado com avi\xF5ezinhos, um tecido macio, leve e quentinho, perfeito para manter seu pet confort\xE1vel no dia a dia.
 O modelo possui ribanas vermelhas no pesco\xE7o e nas cavas, que ajudam no ajuste ao corpinho e d\xE3o um toque alegre \xE0 pe\xE7a. Al\xE9m disso, conta com abertura nas costas para passagem da guia, permitindo usar com peitoral sem precisar tirar a roupinha na hora do passeio.
 
@@ -25,7 +25,7 @@ O modelo possui ribanas vermelhas no pesco\xE7o e nas cavas, que ajudam no ajust
 *Medidas:*
 Pesco\xE7o: 30 cm
 T\xF3rax: 50 cm
-Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/spVrS3d0/Basica-Amarela-IA.png","https://i.ibb.co/kVXysPmt/Basica-Amarela-P-Costas.png","https://i.ibb.co/fzVyY8Q3/Basica-Amarela-P-Fte.png","https://i.ibb.co/SXRst9R4/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa VF Fleece P",tamanhos:["P"],descricao:`*Novidade!* 
+Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/qY8hdysP/Basica-Amarela-IA.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Costas.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Fte.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa VF Fleece P",tamanhos:["P"],descricao:`*Novidade!* 
 Conforto, praticidade e muito charme para o seu pet! Esta capa \xE9 confeccionada em fleece macio e quentinho, ideal para proteger do frio sem pesar ou incomodar.
 O modelo tipo capa \xE9 perfeito para pets que n\xE3o gostam de levantar as patinhas na hora de se vestir, pois basta colocar sobre as costas e ajustar. Possui fechamento pr\xE1tico com ajuste no pesco\xE7o, garantindo melhor encaixe e conforto.
 A estampa fofa de pandas, nuvens e estrelinhas deixa a pe\xE7a ainda mais charmosa, enquanto o fleece mant\xE9m seu pet aquecido nos dias frios.
@@ -35,7 +35,7 @@ A estampa fofa de pandas, nuvens e estrelinhas deixa a pe\xE7a ainda mais charmo
 *Medidas:*
 Pesco\xE7o: 35 a 38 cm
 T\xF3rax: 44 a 54 cm
-Comprimento: 35 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/VWQLb7cw/Capa-VF-P-IA.png","https://i.ibb.co/8gZ9rLCw/Capa-VF-P-Costas.png","https://i.ibb.co/XQr12pQ/Capa-VF-P-Fte.png","https://i.ibb.co/20jQWHrS/Capa-VF-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Branco P",tamanhos:["P"],descricao:`*Novidade!* 
+Comprimento: 35 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/1GjhVGtP/Capa-VF-P-IA.png","https://i.ibb.co/pjhYWLWs/Capa-VF-P-Costas.png","https://i.ibb.co/v6SxLTPg/Capa-VF-P-Fte.png","https://i.ibb.co/RT6pfW8C/Capa-VF-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Branco P",tamanhos:["P"],descricao:`*Novidade!* 
 Uma pe\xE7a quentinha e cheia de fofura para deixar seu pet confort\xE1vel nos dias mais fresquinhos! Esta blusa b\xE1sica \xE9 confeccionada em soft macio, um tecido leve e aconchegante que ajuda a manter seu pet aquecido sem atrapalhar os movimentos.
 A estampa divertida traz desenhos inspirados no fundo do mar, com \xE1guas-vivas, peixinhos e elementos marinhos em tons suaves, deixando a roupinha ainda mais charmosa. Al\xE9m disso, conta com abertura nas costas para passagem da guia, permitindo usar com peitoral sem precisar tirar a roupinha na hora do passeio.
 
@@ -45,7 +45,7 @@ A estampa divertida traz desenhos inspirados no fundo do mar, com \xE1guas-vivas
 *Medidas:*
 Pesco\xE7o: 36 cm
 T\xF3rax: 50 cm
-Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/5XzGc7kq/Basica-Branca-P-IA.png","https://i.ibb.co/hJGGrDjk/Basica-Branca-P-Costas.png","https://i.ibb.co/MD63WyzW/Basica-Branca-P-Fte.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa VF Soft M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/KzDG8tgm/Basica-Branca-P-IA.png","https://i.ibb.co/SD6wYRpn/Basica-Branca-P-Costas.png","https://i.ibb.co/k63TJkC8/Basica-Branca-P-Fte.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa VF Soft M",tamanhos:["M"],descricao:`*Novidade!* 
 Pr\xE1tica, quentinha e cheia de estilo! Esta capa para pets \xE9 confeccionada em soft e aconchegante, perfeita para manter seu pet aquecido nos dias mais frios.
 O modelo tipo capa facilita muito na hora de vestir, sendo ideal para c\xE3es que n\xE3o gostam de dar as patinhas ao colocar roupas. Basta posicionar sobre as costas e ajustar.
 Possui regulagem no pesco\xE7o, permitindo um encaixe confort\xE1vel e seguro no corpo do pet. A estampa divertida de patinhas e ossinhos deixa a pe\xE7a ainda mais charmosa e alegre.
@@ -97,7 +97,7 @@ O modelo possui ribanas vermelhas no pesco\xE7o e nas cavas, que ajudam no ajust
 *Medidas:*
 Pesco\xE7o: 35 cm
 T\xF3rax: 54 cm
-Comprimento: 42 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/spVrS3d0/Basica-Amarela-IA.png","https://i.ibb.co/kVXysPmt/Basica-Amarela-P-Costas.png","https://i.ibb.co/FLLqx5xC/Basica-Amarela-M-Fte.png","https://i.ibb.co/SXRst9R4/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Vestido com Cachecol M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 42 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/qY8hdysP/Basica-Amarela-IA.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Costas.png","https://i.ibb.co/M5pGX8gy/Basica-Amarela-M-Fte.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Vestido com Cachecol M",tamanhos:["M"],descricao:`*Novidade!* 
 Deixe sua pet quentinha e ainda mais encantadora com esse vestido em soft super confort\xE1vel
 O modelo combina estampa divertida e delicada na parte superior com saia lisa em tom pink vibrante, criando um visual alegre e cheio de personalidade. O charme extra fica por conta do cachecol integrado, que d\xE1 um toque especial e deixa a produ\xE7\xE3o ainda mais fofa.
 Confeccionado em soft, \xE9 macio, leve e ideal para os dias mais fresquinhos, mantendo sua pet aquecida sem abrir m\xE3o do conforto. O grande diferencial \xE9 o pesco\xE7o ajust\xE1vel, que permite melhor adapta\xE7\xE3o ao corpinho, garantindo encaixe confort\xE1vel e seguro.
