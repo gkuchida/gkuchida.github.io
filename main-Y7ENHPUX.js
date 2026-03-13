@@ -55,7 +55,7 @@ Possui regulagem no pesco\xE7o, permitindo um encaixe confort\xE1vel e seguro no
 *Medidas:*
 Pesco\xE7o: 30 a 40 cm
 T\xF3rax: 63 a 70 cm
-Comprimento: 40 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/0jjSLXmH/Capa-VF-M-IA.png","https://i.ibb.co/m5dRrrkt/Capa-VF-M-Costas.png","https://i.ibb.co/21RP5zbv/Capa-VF-M-Fte.png","https://i.ibb.co/wZmB285Z/Capa-VF-M-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 40 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/N2Phv77T/Capa-VF-M-IA.png","https://i.ibb.co/gb2frvYY/Capa-VF-M-Costas.png","https://i.ibb.co/35LSHTkm/Capa-VF-M-Fte.png","https://i.ibb.co/jvYcvrR2/Capa-VF-M-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
 A blusa raglan em moletom foi pensada para manter seu pet quentinho sem abrir m\xE3o da liberdade de movimento.
 Produzida em moletom macio e aconchegante, ela oferece um toque suave e confort\xE1vel no corpo do pet. O capuz com forro estampado d\xE1 um charme especial \xE0 pe\xE7a, enquanto o detalhe aplicado nas costas deixa o visual ainda mais fofo e divertido.
 O modelo raglan proporciona melhor ajuste no corpo e mais mobilidade, sendo ideal para passeios, momentos de descanso ou para deixar seu pet estiloso em qualquer ocasi\xE3o.
@@ -65,7 +65,7 @@ O modelo raglan proporciona melhor ajuste no corpo e mais mobilidade, sendo idea
 *Medidas:*
 Pesco\xE7o: 43 cm
 T\xF3rax: 58 cm
-Comprimento: 43 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/jvhvDkpN/Moletom-Vinho-IA.png","https://i.ibb.co/XfZBXsWb/Moletom-Vinho-Costas.png","https://i.ibb.co/gF36nYnb/Moletom-Vinho-Fte.png","https://i.ibb.co/bjqcynYf/Moletom-Vinho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Colete Azul M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 43 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/dJmrjyWD/Moletom-Vinho-IA.png","https://i.ibb.co/qLMdQJ9x/Moletom-Vinho-Costas.png","https://i.ibb.co/9LdJm7c/Moletom-Vinho-Fte.png","https://i.ibb.co/dsfXFWJD/Moletom-Vinho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Colete Azul M",tamanhos:["M"],descricao:`*Novidade!* 
 Deixe seu pet quentinho e cheio de estilo com esse colete super elegante
 Confeccionado em tecido matelassado azul, com costuras geom\xE9tricas que trazem um toque moderno e sofisticado, ele \xE9 perfeito para os dias mais fresquinhos.
 O modelo possui gola estruturada que protege o pescocinho e fechamento em velcro na parte frontal, facilitando na hora de vestir e garantindo ajuste confort\xE1vel ao corpinho do seu pet. A parte interna \xE9 macia e aconchegante, proporcionando muito conforto durante o uso.
@@ -131,7 +131,7 @@ Seu design simples e elegante combina com qualquer ocasi\xE3o, sendo perfeita pa
 *Medidas:*
 Pesco\xE7o: 38 cm
 T\xF3rax: 38 cm
-Comprimento: 27 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/ZpGpbZZZ/Jaqueta-Azul-IA.png","https://i.ibb.co/Kj716Fv1/Jaqueta-Azul-Costas.png","https://i.ibb.co/VcCT4LQY/Jaqueta-Azul-Fte.png","https://i.ibb.co/B5njG31H/Jaqueta-Azul-Lado.png","https://i.ibb.co/tt7GSqy/Jaqueta-Azul-Velcro.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Jaqueta Moletom Vermelho PP",tamanhos:["PP"],descricao:`*Novidade!* 
+Comprimento: 27 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/LDhyYnbY/Jaqueta-Azul-IA.png","https://i.ibb.co/wZcSg20C/Jaqueta-Azul-Costas.png","https://i.ibb.co/ZpZqbT79/Jaqueta-Azul-Fte.png","https://i.ibb.co/Zpq4s1qr/Jaqueta-Azul-Lado.png","https://i.ibb.co/35dxr3qg/Jaqueta-Azul-Velcro.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Jaqueta Moletom Vermelho PP",tamanhos:["PP"],descricao:`*Novidade!* 
 A jaqueta Minnie \xE9 perfeita para deixar seu companheiro protegido nos dias mais fresquinhos, com um toque divertido e cheio de personalidade.
 
 
@@ -141,7 +141,7 @@ A jaqueta Minnie \xE9 perfeita para deixar seu companheiro protegido nos dias ma
 *Medidas:*
 Pesco\xE7o: 34 cm
 T\xF3rax: 46 cm
-Comprimento: 31 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/ksk3bNgL/Jaqueta-Minnie-IA.jpg","https://i.ibb.co/svvV8pFX/Jaqueta-Minnie-Costas.png","https://i.ibb.co/twSV58r0/Jaqueta-Minnie-Fte.png","https://i.ibb.co/JR4tmBhb/Jaqueta-Minnie-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Soft Verde G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 31 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/dstsmBX4/Jaqueta-Minnie-IA.jpg","https://i.ibb.co/Pzf574h4/Jaqueta-Minnie-Costas.png","https://i.ibb.co/vvc9gg0G/Jaqueta-Minnie-Fte.png","https://i.ibb.co/Df87Bd26/Jaqueta-Minnie-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Soft Verde G",tamanhos:["G"],descricao:`*Novidade!* 
 A blusa b\xE1sica em soft \xE9 perfeita para proteger do frio leve, mantendo seu companheiro sempre quentinho e confort\xE1vel.
 Confeccionada em tecido soft macio e leve, a pe\xE7a proporciona um toque suave e agrad\xE1vel, ideal para uso di\xE1rio. A modelagem simples e confort\xE1vel permite liberdade de movimento, deixando seu pet \xE0 vontade para brincar, descansar ou passear.
 Com estampa divertida e acabamento delicado, \xE9 uma pe\xE7a pr\xE1tica que combina conforto e charme.
