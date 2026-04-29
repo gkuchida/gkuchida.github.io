@@ -211,7 +211,46 @@ Acabamento Superior: Gola alta para proteger o pesco\xE7o e bordado de alta defi
 *Medidas:*
 Pesco\xE7o: 44 cm
 T\xF3rax: 58 cm
-Comprimento: 43 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/RGYx9Kvr/Jaqueta-IA.jpg","https://i.ibb.co/jcXNGYw/Jaqueta-Costas.png","https://i.ibb.co/LhCC225f/Jaqueta-fte.png","https://i.ibb.co/nNZfS4hv/Jaqueta-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Camiseta Brasil G",tamanhos:["G"],descricao:`\u{1F1E7}\u{1F1F7} Rumo ao Hexa com Estilo \xDAnico! \u{1F43E}\u26BD
+Comprimento: 43 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/RGYx9Kvr/Jaqueta-IA.jpg","https://i.ibb.co/jcXNGYw/Jaqueta-Costas.png","https://i.ibb.co/LhCC225f/Jaqueta-fte.png","https://i.ibb.co/nNZfS4hv/Jaqueta-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Vestido Brasil P",tamanhos:["P"],descricao:`\u{1F1E7}\u{1F1F7} Vestido Pet Brasil - Estilo e Conforto para sua Torcedora!
+
+Seu pet tamb\xE9m merece entrar no clima da torcida com muito charme! Este vestido exclusivo combina o orgulho de ser Brasil com materiais de alta qualidade, garantindo que sua pet fique linda sem perder o conforto.
+\u2728 Diferenciais do Produto:
+Pe\xE7a \xDAnica: Design exclusivo, voc\xEA n\xE3o encontrar\xE1 outro igual!
+Conforto T\xE9rmico: Peitoral feito em malha de algod\xE3o, macia e respir\xE1vel.
+Estilo Moderno: Saia em jeans com elastano e acabamento desfiado (destroyed), dando um toque fashionista.
+Ajuste Perfeito: Possui regulador no pesco\xE7o, permitindo adaptar melhor ao corpinho da sua pet.
+Detalhes: Inclui bolsinhos charmosos na saia e o escudo da CBF em destaque.
+
+\u{1F4CF} Medidas da Pe\xE7a:
+Pesco\xE7o: At\xE9 41 cm (ajust\xE1vel).
+T\xF3rax: 45 cm.
+Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/0VFN6LdX/8d384123-0e29-4c04-9d30-7ae52a94e584.jpg","https://i.ibb.co/N2xHz3kw/Vestido-Brasil-Fte.png","https://i.ibb.co/kgw4wBfR/Vestido-Brasil-Costas.png","https://i.ibb.co/x8tdj729/Vestido-BR-Lat.png"],observacao:"D\xEA um show de estilo no passeio! Garanta a camiseta do seu pet agora mesmo. \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil P",tamanhos:["P"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil com Listras - Estilo Camisa 10!
+
+Seu pet vai marcar um gola\xE7o com esse visual! Esta vers\xE3o traz um detalhe esportivo com listras verticais verdes, perfeita para os pequenos torcedores que t\xEAm muita energia e estilo.
+
+\u2728 Diferenciais do Produto:
+Design Esportivo: Detalhe exclusivo de listras verdes que d\xE3o um toque moderno e din\xE2mico \xE0 pe\xE7a.
+Malha Premium: Produzida em algod\xE3o, oferecendo frescor e conforto para o pet n\xE3o se sentir incomodado.
+Leveza e Praticidade: F\xE1cil de vestir e ideal para climas tropicais, mantendo a liberdade total de movimentos.
+Acabamento de Qualidade: Gola e barras em ribana verde para maior durabilidade e ajuste.
+
+\u{1F4CF} Medidas:
+Pesco\xE7o: 32 cm.
+T\xF3rax: 42 cm.
+Comprimento: 30 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/bMtNfVZK/BR-P.jpg","https://i.ibb.co/rfx7W2S2/Camiseta-BR-Fte-P.png","https://i.ibb.co/1JR7cyBz/Camiseta-BR-Fte.png","https://i.ibb.co/0pYHbf2B/Camiseta-BR-Lat-P.png"],observacao:"Deixe seu pequeno torcedor pronto para a festa! Garanta a dele agora. \u{1F43E}\u{1F49B}\u{1F49A}",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil M",tamanhos:["M"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil - Conforto de Craque!
+
+Para os pets que torcem com garra e estilo! Essa camiseta \xE9 a escolha perfeita para deixar seu melhor amigo pronto para vibrar em todos os momentos, com a leveza que ele precisa para brincar \xE0 vontade.
+
+\u2728 Diferenciais do Produto:
+Conforto Total: Confeccionada em malha de algod\xE3o, garantindo um toque suave na pele e excelente respirabilidade.
+Liberdade de Movimento: Modelagem cavada que n\xE3o aperta e permite que o pet se movimente naturalmente.
+Design Oficial: Estampa ic\xF4nica com as cores da nossa sele\xE7\xE3o e acabamentos em ribana verde.
+Durabilidade: Tecido resistente e de f\xE1cil lavagem, ideal para o dia a dia.
+
+\u{1F4CF} Medidas:
+Pesco\xE7o: 34 cm.
+T\xF3rax: 48 cm.
+Comprimento: 43 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/1kQzWhT/BR-M.jpg","https://i.ibb.co/DDJL6tTk/Camiseta-BR-Ftet.png","https://i.ibb.co/tp5Yg5z2/Camiseta-BR-Costas-M.png","https://i.ibb.co/Zp9CKLDQ/Camiseta-BR-Lat-M.png"],observacao:"Garanta j\xE1 esse modelo exclusivo e deixe sua pet pronta para o pr\xF3ximo jogo! \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil G",tamanhos:["G"],descricao:`\u{1F1E7}\u{1F1F7} Rumo ao Hexa com Estilo \xDAnico! \u{1F43E}\u26BD
 
 A Copa est\xE1 chegando e o seu pet n\xE3o pode ficar fora dessa torcida! Apresentamos nossa Camiseta Brasil \u2013 Modelo Exclusivo, desenvolvida para quem quer torcer com conforto e originalidade.
 
@@ -225,7 +264,7 @@ Destaques do Modelo:
 \u{1F4CF} Medidas:
 Pesco\xE7o: Ajust\xE1vel at\xE9 46cm
 T\xF3rax: 50cm
-Comprimento: 43cm`,preco:30,estoque:1,imagens:["https://i.ibb.co/7cvcG53/Camiseta-BR-IA.jpg","https://i.ibb.co/7Jf1GHc7/Camiseta-BR-Costas.png","https://i.ibb.co/6cS3t0rT/Camiseta-BR-Zoom.png","https://i.ibb.co/93cC8MYQ/Camiseta-BR-Fte.png","https://i.ibb.co/DgCdpcDx/Camiseta-BR-Lado.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!0},{nome:"B\xE1sica Azul M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 43cm`,preco:30,estoque:1,imagens:["https://i.ibb.co/7cvcG53/Camiseta-BR-IA.jpg","https://i.ibb.co/7Jf1GHc7/Camiseta-BR-Costas.png","https://i.ibb.co/6cS3t0rT/Camiseta-BR-Zoom.png","https://i.ibb.co/93cC8MYQ/Camiseta-BR-Fte.png","https://i.ibb.co/DgCdpcDx/Camiseta-BR-Lado.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"B\xE1sica Azul M",tamanhos:["M"],descricao:`*Novidade!* 
 Roupa com regulagem no pesco\xE7o, garantindo ajuste perfeito e muito mais conforto para o seu pet.
 A pe\xE7a ideal para aquecer com estilo e conforto!
 Esta linda roupinha \xE9 confeccionada em moletinho, oferecendo o equil\xEDbrio perfeito entre leveza e aconchego, sem superaquecer o seu pet.
