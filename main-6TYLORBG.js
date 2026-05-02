@@ -176,7 +176,7 @@ Uma pe\xE7a b\xE1sica, vers\xE1til e indispens\xE1vel no guarda-roupa do seu pet
 *Medidas:*
 Pesco\xE7o: 36 cm
 T\xF3rax: 47 cm
-Comprimento: 31 cm.`,preco:25,estoque:1,imagens:["https://i.postimg.cc/pr4HmpPH/Basica_Xadrez_IA.png","https://i.postimg.cc/qqSTNzpf/Basica_P_xadrez_Fte.png","https://i.postimg.cc/brWhZsp7/Basica_P_xadrez_Costas.png","https://i.postimg.cc/5yTVX6fd/Basica_P_xadrez_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Fleece Unic\xF3rnios M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 31 cm.`,preco:25,estoque:0,imagens:["https://i.postimg.cc/pr4HmpPH/Basica_Xadrez_IA.png","https://i.postimg.cc/qqSTNzpf/Basica_P_xadrez_Fte.png","https://i.postimg.cc/brWhZsp7/Basica_P_xadrez_Costas.png","https://i.postimg.cc/5yTVX6fd/Basica_P_xadrez_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Fleece Unic\xF3rnios M",tamanhos:["M"],descricao:`*Novidade!* 
 Sabe aquele dia geladinho em que tudo o que a gente quer \xE9 ficar enrolado no cobertor? Com a nossa Blusa Soft Fleece, seu pet leva esse aconchego para onde for. Feita com um tecido ultra macio e t\xE9rmico, ela mant\xE9m o calor corporal sem prender os movimentos.
 Estampa: Unic\xF3rnios e nuvens para deixar o passeio mais m\xE1gico.
 Conforto: Acabamento em ribana que n\xE3o aperta.
@@ -406,21 +406,25 @@ Por que escolher a nossa Cama M?
 \u2728 Base em Courino: Protege contra a umidade do ch\xE3o e traz muito mais durabilidade.
 \u{1F4CF} Medidas:
 Parte Interna: 55x55cm
-Parte Externa: 70x70cm`,preco:150,estoque:1,imagens:["https://i.ibb.co/Sw08MJfv/Cama-M.jpg","https://i.ibb.co/k65CszGQ/Cama-M-Deitada.png","https://i.ibb.co/whcv68C6/Cama-M-Verso.png","https://i.ibb.co/B5StHHDy/Cama-M-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Rosa Brilha no Escuro M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
-Se voc\xEA achou que essa manta era apenas linda e quentinha, prepare-se para se surpreender: ela brilha no escuro! \u{1F929}
-Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
+Parte Externa: 70x70cm`,preco:150,estoque:1,imagens:["https://i.ibb.co/Sw08MJfv/Cama-M.jpg","https://i.ibb.co/k65CszGQ/Cama-M-Deitada.png","https://i.ibb.co/whcv68C6/Cama-M-Verso.png","https://i.ibb.co/B5StHHDy/Cama-M-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Rosa M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
+
+Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. 
+Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
+
 Por que ela \xE9 incr\xEDvel?
-\u{1F31F} Efeito Glow: Os desenhos brilham suavemente no escuro, criando um clima m\xE1gico e aconchegante.
 \u{1F31F} Toque de Nuvem: Feita em fleece ultra macio, que mant\xE9m o calor sem pesar.
-\u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.\u{1F31F} Estampa Encantadora: Unic\xF3rnios, luas e estrelas em um rosa vibrante e maravilhoso.
-\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:25,estoque:1,imagens:["https://i.ibb.co/ds3pT3Qc/Manta-Rosa-IA.jpg","https://i.ibb.co/5XWkT8wQ/Manta-Rosa-Aberta.png","https://i.ibb.co/YFs8JJ4j/Manta-Rosa-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Azul Brilha no Escuro M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
-Se voc\xEA achou que essa manta era apenas linda e quentinha, prepare-se para se surpreender: ela brilha no escuro! \u{1F929}
-Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
+\u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.
+\u{1F31F} Estampa Encantadora: Unic\xF3rnios, luas e estrelas em um rosa vibrante e maravilhoso.
+\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:35,estoque:1,imagens:["https://i.ibb.co/ds3pT3Qc/Manta-Rosa-IA.jpg","https://i.ibb.co/5XWkT8wQ/Manta-Rosa-Aberta.png","https://i.ibb.co/YFs8JJ4j/Manta-Rosa-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Azul M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
+
+Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. 
+Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
+
 Por que ela \xE9 incr\xEDvel?
-\u{1F31F} Efeito Glow: Os desenhos brilham suavemente no escuro, criando um clima m\xE1gico e aconchegante.
 \u{1F31F} Toque de Nuvem: Feita em fleece ultra macio, que mant\xE9m o calor sem pesar.
-\u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.\u{1F31F} Estampa Encantadora: Dinossauros.
-\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:25,estoque:2,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
+\u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.
+\u{1F31F} Estampa Encantadora: Dinossauros.
+\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:35,estoque:2,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
 Esta capa \xE9 confeccionada em Nylon Bagun, um tecido t\xE9cnico de alta resist\xEAncia e maior rigidez, que confere um caimento estruturado \xE0 pe\xE7a, al\xE9m de ser totalmente imperme\xE1vel, protegendo seu companheiro da umidade.
 O design funcional conta com capuz para proteger a cabe\xE7a e as orelhas e um fechamento pr\xE1tico e seguro em velcro na barriga e no pesco\xE7o, permitindo um ajuste r\xE1pido e perfeito na hora de sair.
  O charme final fica por conta do acabamento em vi\xE9s de algod\xE3o (amarelo), que confere um toque moderno e sofisticado.
