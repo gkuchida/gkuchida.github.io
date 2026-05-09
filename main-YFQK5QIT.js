@@ -25,7 +25,7 @@ O modelo possui ribanas vermelhas no pesco\xE7o e nas cavas, que ajudam no ajust
 *Medidas:*
 Pesco\xE7o: 30 cm
 T\xF3rax: 50 cm
-Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/qY8hdysP/Basica-Amarela-IA.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Costas.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Fte.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa VF Fleece P",tamanhos:["P"],descricao:`*Novidade!* 
+Comprimento: 33 cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/qY8hdysP/Basica-Amarela-IA.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Costas.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Fte.png","https://i.ibb.co/hRwzFzLn/Basica-Amarela-P-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa VF Fleece P",tamanhos:["P"],descricao:`*Novidade!* 
 Conforto, praticidade e muito charme para o seu pet! Esta capa \xE9 confeccionada em fleece macio e quentinho, ideal para proteger do frio sem pesar ou incomodar.
 O modelo tipo capa \xE9 perfeito para pets que n\xE3o gostam de levantar as patinhas na hora de se vestir, pois basta colocar sobre as costas e ajustar. Possui fechamento pr\xE1tico com ajuste no pesco\xE7o, garantindo melhor encaixe e conforto.
 A estampa fofa de pandas, nuvens e estrelinhas deixa a pe\xE7a ainda mais charmosa, enquanto o fleece mant\xE9m seu pet aquecido nos dias frios.
@@ -55,7 +55,7 @@ Possui regulagem no pesco\xE7o, permitindo um encaixe confort\xE1vel e seguro no
 *Medidas:*
 Pesco\xE7o: 30 a 40 cm
 T\xF3rax: 63 a 70 cm
-Comprimento: 40 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/N2Phv77T/Capa-VF-M-IA.png","https://i.ibb.co/gb2frvYY/Capa-VF-M-Costas.png","https://i.ibb.co/35LSHTkm/Capa-VF-M-Fte.png","https://i.ibb.co/jvYcvrR2/Capa-VF-M-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 40 cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/N2Phv77T/Capa-VF-M-IA.png","https://i.ibb.co/gb2frvYY/Capa-VF-M-Costas.png","https://i.ibb.co/35LSHTkm/Capa-VF-M-Fte.png","https://i.ibb.co/jvYcvrR2/Capa-VF-M-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
 A blusa raglan em moletom foi pensada para manter seu pet quentinho sem abrir m\xE3o da liberdade de movimento.
 Produzida em moletom macio e aconchegante, ela oferece um toque suave e confort\xE1vel no corpo do pet. O capuz com forro estampado d\xE1 um charme especial \xE0 pe\xE7a, enquanto o detalhe aplicado nas costas deixa o visual ainda mais fofo e divertido.
 O modelo raglan proporciona melhor ajuste no corpo e mais mobilidade, sendo ideal para passeios, momentos de descanso ou para deixar seu pet estiloso em qualquer ocasi\xE3o.
@@ -119,7 +119,7 @@ Uma pe\xE7a b\xE1sica, vers\xE1til e indispens\xE1vel no guarda-roupa do seu pet
 *Medidas:*
 Pesco\xE7o: 38 cm
 T\xF3rax: 52 cm
-Comprimento: 40 cm.`,preco:30,estoque:1,imagens:["https://i.postimg.cc/pr4HmpPH/Basica_Xadrez_IA.png","https://i.postimg.cc/1XfSRphv/Basica_G_xadrez_Fte.png","https://i.postimg.cc/VvdwsjQg/Basica_G_xadrez_Costas.png","https://i.postimg.cc/gjnpcvFQ/Basica_G_xadrez_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Jaqueta Moletom Azul PP",tamanhos:["PP"],descricao:`*Novidade!* 
+Comprimento: 40 cm.`,preco:30,estoque:0,imagens:["https://i.postimg.cc/pr4HmpPH/Basica_Xadrez_IA.png","https://i.postimg.cc/1XfSRphv/Basica_G_xadrez_Fte.png","https://i.postimg.cc/VvdwsjQg/Basica_G_xadrez_Costas.png","https://i.postimg.cc/gjnpcvFQ/Basica_G_xadrez_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Jaqueta Moletom Azul PP",tamanhos:["PP"],descricao:`*Novidade!* 
 Esta jaqueta foi desenvolvida para vestir com facilidade e manter seu companheiro aquecido nos dias mais fresquinhos.
 Confeccionada em moletom de alta qualidade, a pe\xE7a conta com revestimento interno em moletinho, proporcionando um toque ainda mais macio e confort\xE1vel. O fechamento em velcro no peito facilita na hora de vestir e garante um ajuste r\xE1pido e seguro.
 Seu design simples e elegante combina com qualquer ocasi\xE3o, sendo perfeita para passeios, viagens ou momentos de descanso com muito conforto.
@@ -330,7 +330,7 @@ Deixe sua pet super confort\xE1vel e pronta para qualquer aventura com essa pe\x
 *Medidas:*
 - Pesco\xE7o: 22cm.
 - T\xF3rax: 48cm.
-- Comprimento: 35cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/tTSwCByy/Basica-PP-IA.png","https://i.ibb.co/qYVJ8595/IMG-6841.png","https://i.ibb.co/mFBhFW5v/IMG-6448.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica GG",tamanhos:["GG"],descricao:`C\xE3es grandes sente frio?
+- Comprimento: 35cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/tTSwCByy/Basica-PP-IA.png","https://i.ibb.co/qYVJ8595/IMG-6841.png","https://i.ibb.co/mFBhFW5v/IMG-6448.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica GG",tamanhos:["GG"],descricao:`C\xE3es grandes sente frio?
  Sim, eles tamb\xE9m sentem! 
 E encontrar roupas fofas para eles pode ser um desafio. 
 Esta pe\xE7a \xE9 a solu\xE7\xE3o perfeita!
@@ -395,7 +395,7 @@ Procurando por conforto, higiene e estilo em um s\xF3 produto? Nossa caminha foi
 \u2705 Qualidade e Durabilidade: Confeccionada em tricoline de alta qualidade com estampas exclusivas e fundo em courino (mais resistente e f\xE1cil de limpar).
 \u{1F4CF} Medidas:
 Interna: 36x38cm (\xE1rea \xFAtil de descanso)
-Externa: 54x56cm`,preco:110,estoque:1,imagens:["https://i.ibb.co/DDK1dGx6/cama-P.jpg","https://i.ibb.co/2pv8vS4/Cama-P-Deitada.png","https://i.ibb.co/H3HP9QQ/Cama-P-Verso.png","https://i.ibb.co/vvqsq1KB/Cama-P-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Cama M",tamanhos:["M"],descricao:`\u{1F418} Conforto em dose dupla (e tamanho M!) \u{1F496}
+Externa: 54x56cm`,preco:110,estoque:1,imagens:["https://i.ibb.co/DDK1dGx6/cama-P.jpg","https://i.ibb.co/2pv8vS4/Cama-P-Deitada.png","https://i.ibb.co/H3HP9QQ/Cama-P-Verso.png","https://i.ibb.co/vvqsq1KB/Cama-P-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!0},{nome:"Cama M",tamanhos:["M"],descricao:`\u{1F418} Conforto em dose dupla (e tamanho M!) \u{1F496}
 A nossa queridinha ganhou uma vers\xE3o mais espa\xE7osa para garantir que o seu pet se espalhe com toda a liberdade do mundo! Com uma estampa super fofa de elefantinhos e um pink vibrante, ela \xE9 o equil\xEDbrio perfeito entre beleza e bem-estar.
 
 Por que escolher a nossa Cama M?
@@ -406,7 +406,7 @@ Por que escolher a nossa Cama M?
 \u2728 Base em Courino: Protege contra a umidade do ch\xE3o e traz muito mais durabilidade.
 \u{1F4CF} Medidas:
 Parte Interna: 55x55cm
-Parte Externa: 70x70cm`,preco:150,estoque:1,imagens:["https://i.ibb.co/Sw08MJfv/Cama-M.jpg","https://i.ibb.co/k65CszGQ/Cama-M-Deitada.png","https://i.ibb.co/whcv68C6/Cama-M-Verso.png","https://i.ibb.co/B5StHHDy/Cama-M-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Rosa M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
+Parte Externa: 70x70cm`,preco:150,estoque:0,imagens:["https://i.ibb.co/Sw08MJfv/Cama-M.jpg","https://i.ibb.co/k65CszGQ/Cama-M-Deitada.png","https://i.ibb.co/whcv68C6/Cama-M-Verso.png","https://i.ibb.co/B5StHHDy/Cama-M-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!0},{nome:"Manta Rosa M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
 
 Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. 
 Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
@@ -415,7 +415,7 @@ Por que ela \xE9 incr\xEDvel?
 \u{1F31F} Toque de Nuvem: Feita em fleece ultra macio, que mant\xE9m o calor sem pesar.
 \u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.
 \u{1F31F} Estampa Encantadora: Unic\xF3rnios, luas e estrelas em um rosa vibrante e maravilhoso.
-\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:35,estoque:1,imagens:["https://i.ibb.co/ds3pT3Qc/Manta-Rosa-IA.jpg","https://i.ibb.co/5XWkT8wQ/Manta-Rosa-Aberta.png","https://i.ibb.co/YFs8JJ4j/Manta-Rosa-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Azul M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
+\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:35,estoque:0,imagens:["https://i.ibb.co/ds3pT3Qc/Manta-Rosa-IA.jpg","https://i.ibb.co/5XWkT8wQ/Manta-Rosa-Aberta.png","https://i.ibb.co/YFs8JJ4j/Manta-Rosa-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Manta Azul M",tamanhos:["M"],descricao:`\u2728 Uma manta m\xE1gica para noites iluminadas! \u{1F319}\u{1F496}
 
 Nossa Manta Fleece Tamanho M une o m\xE1ximo de aconchego com um toque de divers\xE3o que vai encantar voc\xEA e seu pet. 
 Perfeita para aqueles dias mais frios ou para deixar o cantinho de dormir ainda mais especial.
@@ -424,7 +424,7 @@ Por que ela \xE9 incr\xEDvel?
 \u{1F31F} Toque de Nuvem: Feita em fleece ultra macio, que mant\xE9m o calor sem pesar.
 \u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.
 \u{1F31F} Estampa Encantadora: Dinossauros.
-\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:35,estoque:2,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
+\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:40,estoque:2,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
 Esta capa \xE9 confeccionada em Nylon Bagun, um tecido t\xE9cnico de alta resist\xEAncia e maior rigidez, que confere um caimento estruturado \xE0 pe\xE7a, al\xE9m de ser totalmente imperme\xE1vel, protegendo seu companheiro da umidade.
 O design funcional conta com capuz para proteger a cabe\xE7a e as orelhas e um fechamento pr\xE1tico e seguro em velcro na barriga e no pesco\xE7o, permitindo um ajuste r\xE1pido e perfeito na hora de sair.
  O charme final fica por conta do acabamento em vi\xE9s de algod\xE3o (amarelo), que confere um toque moderno e sofisticado.
@@ -783,7 +783,7 @@ Entre em Contato para ver as op\xE7\xF5es de estampas, tamanhos e solicitar um o
 Este kit n\xE3o s\xF3 otimiza suas tarefas na cozinha, mas tamb\xE9m adiciona um toque campestre e rom\xE2ntico \xE0 decora\xE7\xE3o. Os tecidos combinam perfeitamente, criando uma harmonia visual \xFAnica.
 <strong>Medidas:</strong>
 -Pano de prato: 45 x 66 cm.
-- Puxa-saco: 21 x 52 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/0pPq9tnV/Pano-Doces.png","https://i.ibb.co/NdGQT1N7/Kit.png","https://i.ibb.co/Zzjh4DMZ/PuxaSaco.png"],observacao:"",tipo:"artesanato",sobMedida:!1},{nome:"Kit com 2 Panos de prato",tamanhos:["U"],descricao:`Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
+- Puxa-saco: 21 x 52 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/0pPq9tnV/Pano-Doces.png","https://i.ibb.co/NdGQT1N7/Kit.png","https://i.ibb.co/Zzjh4DMZ/PuxaSaco.png"],observacao:"",tipo:"artesanato",sobMedida:!0},{nome:"Kit com 2 Panos de prato",tamanhos:["U"],descricao:`Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
 - <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade:
