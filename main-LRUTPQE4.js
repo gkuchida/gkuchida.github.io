@@ -141,7 +141,7 @@ A jaqueta Minnie \xE9 perfeita para deixar seu companheiro protegido nos dias ma
 *Medidas:*
 Pesco\xE7o: 34 cm
 T\xF3rax: 46 cm
-Comprimento: 31 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/dstsmBX4/Jaqueta-Minnie-IA.jpg","https://i.ibb.co/Pzf574h4/Jaqueta-Minnie-Costas.png","https://i.ibb.co/vvc9gg0G/Jaqueta-Minnie-Fte.png","https://i.ibb.co/Df87Bd26/Jaqueta-Minnie-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Soft Verde G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 31 cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/dstsmBX4/Jaqueta-Minnie-IA.jpg","https://i.ibb.co/Pzf574h4/Jaqueta-Minnie-Costas.png","https://i.ibb.co/vvc9gg0G/Jaqueta-Minnie-Fte.png","https://i.ibb.co/Df87Bd26/Jaqueta-Minnie-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Soft Verde G",tamanhos:["G"],descricao:`*Novidade!* 
 A blusa b\xE1sica em soft \xE9 perfeita para proteger do frio leve, mantendo seu companheiro sempre quentinho e confort\xE1vel.
 Confeccionada em tecido soft macio e leve, a pe\xE7a proporciona um toque suave e agrad\xE1vel, ideal para uso di\xE1rio. A modelagem simples e confort\xE1vel permite liberdade de movimento, deixando seu pet \xE0 vontade para brincar, descansar ou passear.
 Com estampa divertida e acabamento delicado, \xE9 uma pe\xE7a pr\xE1tica que combina conforto e charme.
