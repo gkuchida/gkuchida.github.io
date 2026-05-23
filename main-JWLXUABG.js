@@ -224,7 +224,7 @@ Detalhes: Inclui bolsinhos charmosos na saia e o escudo da CBF em destaque.
 \u{1F4CF} Medidas da Pe\xE7a:
 Pesco\xE7o: At\xE9 41 cm (ajust\xE1vel).
 T\xF3rax: 45 cm.
-Comprimento: 33 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/0VFN6LdX/8d384123-0e29-4c04-9d30-7ae52a94e584.jpg","https://i.ibb.co/N2xHz3kw/Vestido-Brasil-Fte.png","https://i.ibb.co/kgw4wBfR/Vestido-Brasil-Costas.png","https://i.ibb.co/x8tdj729/Vestido-BR-Lat.png"],observacao:"D\xEA um show de estilo no passeio! Garanta a camiseta do seu pet agora mesmo. \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil P",tamanhos:["P"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil com Listras - Estilo Camisa 10!
+Comprimento: 33 cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/0VFN6LdX/8d384123-0e29-4c04-9d30-7ae52a94e584.jpg","https://i.ibb.co/N2xHz3kw/Vestido-Brasil-Fte.png","https://i.ibb.co/kgw4wBfR/Vestido-Brasil-Costas.png","https://i.ibb.co/x8tdj729/Vestido-BR-Lat.png"],observacao:"D\xEA um show de estilo no passeio! Garanta a camiseta do seu pet agora mesmo. \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil P",tamanhos:["P"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil com Listras - Estilo Camisa 10!
 
 Seu pet vai marcar um gola\xE7o com esse visual! Esta vers\xE3o traz um detalhe esportivo com listras verticais verdes, perfeita para os pequenos torcedores que t\xEAm muita energia e estilo.
 
