@@ -27,8 +27,7 @@ interface ProdutoRecomendado {
   badge: string;
   categoria: string;
   link?: string;
-  origem?: string; // 🔹 adicionei isso pra diferenciar artesanato/pronta
-}
+  origem?: string;}
 
 @Component({
   standalone: true,
@@ -40,7 +39,7 @@ interface ProdutoRecomendado {
 export class Home implements OnInit, AfterViewInit {
   constructor(private router: Router) {}
 
-  // 🟢 Carrossel “Recomendados para você”
+  // Carrossel “Recomendados para você”
   slides: ProdutoRecomendado[][] = [
     [
       { nome: 'Vestido Safári Rosa GG', imagem: 'https://i.ibb.co/JFgDQBwG/IMG-7593.png', badge: 'Top 1 Verão', categoria: 'verao', origem: 'prontas' },
@@ -53,17 +52,44 @@ export class Home implements OnInit, AfterViewInit {
       { nome: 'Gorro de Natal', imagem: 'https://i.ibb.co/6J1QLySS/Gorro-M-Desenho.png', badge: 'Natal', categoria: 'festiva', origem: 'prontas' },
       { nome: 'Bandana com elástico Pets Verde P', imagem: 'https://i.ibb.co/HLcsB12f/Bandana-El-stico-Verde-Fte.png', badge: 'Acessório', categoria: 'acessorio', origem: 'prontas' },
       { nome: 'Kit com 2 Panos de prato', imagem: 'https://i.ibb.co/DHvNnsqG/Kit-Panos.png', badge: 'Artesanato', categoria: 'artesanato', origem: 'artesanato' },
+    ],
+    [
+      { nome: 'Camiseta Brasil G', imagem: 'https://i.ibb.co/7Jf1GHc7/Camiseta-BR-Costas.png', badge: 'Exclusivo', categoria: 'brasil', origem: 'prontas' },
+      { nome: 'Cama P', imagem: 'https://i.ibb.co/2pv8vS4/Cama-P-Deitada.png', badge: 'Premium', categoria: 'premium', origem: 'prontas' },
+      { nome: 'Manta M', imagem: 'https://i.ibb.co/5XWkT8wQ/Manta-Rosa-Aberta.png', badge: 'Exclusivo', categoria: 'exclusivo', origem: 'prontas' },
+      { nome: 'Jaqueta Moletom G', imagem: 'https://i.ibb.co/jcXNGYw/Jaqueta-Costas.png', badge: 'Meia Estação', categoria: 'meia-estacao', origem: 'prontas' },
     ]
   ];
 
   slidesNovidades: ProdutoPronto[][] = [];
   novidadesGroupSize = 5;
+  imagensNovidades = [
+    {
+      ordem: 1,
+      src: 'https://i.ibb.co/wFSB31TR/Capa.png',
+      alt: 'Programa Fidelidade Artes & Focinhos'
+    },
+    {
+      ordem: 2,
+      src: 'https://i.ibb.co/wZwMTq6L/Card2.png',
+      alt: 'A cada R$150 seu pet ganha bandana'
+    },
+    {
+      ordem: 3,
+      src: 'https://i.ibb.co/2mfWGtN/Card3.png',
+      alt: 'Estampas sujeitas à disponibilidade'
+    }
+  ];
+  trackByOrdem(index: number, item: any) {
+    return item.ordem;
+  }
+
 
   categoriasMenu = [
     { nome: 'Pronta Entrega', link: '/prontas', img: 'https://i.ibb.co/pjmDvYJb/IMG-6978.png' },
     { nome: 'Sob encomenda', link: '/encomenda', img: 'https://i.ibb.co/278jM5Y4/metrica.png' },
     { nome: 'Tecidos', link: '/tecidos', img: 'https://i.ibb.co/nMsg8P31/tecido.png' },
-    { nome: 'Artesanato', link: '/artesanato', img: 'https://i.ibb.co/36cfYjZ/artesanato.png' },
+    //{ nome: 'Artesanato', link: '/artesanato', img: 'https://i.ibb.co/36cfYjZ/artesanato.png' },
     { nome: 'Contato', link: '/contato', img: 'https://i.ibb.co/1f4Wshxt/contact-5441692.png' },
     { nome: 'Sobre', link: '/sobre', img: 'https://i.ibb.co/35qdtH3p/sign-13604037.png' }
   ];
@@ -110,7 +136,6 @@ export class Home implements OnInit, AfterViewInit {
     this.slidesNovidades = this.chunkArray(novidades, this.novidadesGroupSize);
   }
 
-  // 🔵 Define a rota correta conforme o tipo/origem do produto
   getLink(produto: any): any[] {
     if (produto.origem === 'artesanato' || produto.categoria === 'criativa') {
       return ['/artesanato-detalhes', produto.nome];
@@ -119,21 +144,16 @@ export class Home implements OnInit, AfterViewInit {
   }
 
   verDetalhe(produto: any) {
-  // Se tiver link direto, usa ele
   if (produto?.link) {
     this.router.navigateByUrl(produto.link);
     return;
   }
 
-  // 🔹 Se a categoria for artesanato, manda pra rota correta
   if (produto.categoria === 'artesanato' || produto.badge === 'Artesanato') {
     this.router.navigate(['/artesanato-detalhes', produto.nome]);
-
     return;
   }
 
-
-  // Fallback genérico (se não encontrar em nenhum dos dois)
   console.warn('Produto não encontrado nas coleções:', produto);
   this.router.navigate(['/produto-detalhes', produto.nome]);
 }

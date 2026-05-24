@@ -330,7 +330,6 @@ export class Encomenda implements OnInit{
       private dialog: MatDialog,
       private route: ActivatedRoute) {}
 
-  // ** 1. ABRIR TELA DE DETALHES **
   abrirDetalhes(produto: ProdutoEncomenda): void {
     this.produtoEmDetalhe = produto;
     this.tecidoParaMedidas = produto.tecidos.length > 0 ? produto.tecidos[0] : '';
@@ -338,14 +337,12 @@ export class Encomenda implements OnInit{
     this.scrollToTop();
   }
 
-  // ** 2. FECHAR TELA DE DETALHES **
   voltarALista(): void {
     this.produtoEmDetalhe = null;
     this.tecidoParaMedidas = '';
     this.acabamentoParaMedidas = '';
   }
 
-  // ** 3. SELECIONAR E NAVEGAR PARA MEDIDAS **
   selecionarENavegar(): void {
     if (!this.produtoEmDetalhe || !this.tecidoParaMedidas) {
       this.dialog.open(MsgErro, {
@@ -367,7 +364,7 @@ export class Encomenda implements OnInit{
     this.router.navigate(['/medidas']);
     this.voltarALista();
   }
- // 🔥 NOVO: normalizar nomes para comparar
+
   normalizeString(str: string): string {
     return (str || '')
       .toLowerCase()
@@ -376,17 +373,16 @@ export class Encomenda implements OnInit{
       .trim();
   }
 
-  // 🔥 NOVO: remover tamanho do final ("P", "M", "G", "GG", "XG"...)
   removeTamanho(nome: string): string {
     return nome
-      .replace(/-?(pp|p|m|g|gg|xg|xxg)$/i, '') // remove tamanho se vier na URL
+      .replace(/-?(pp|p|m|g|gg|xg|xxg)$/i, '')
       .trim();
   }
+
   ngOnInit(): void {
     const nomeParam = this.route.snapshot.paramMap.get('nome');
 
     if (nomeParam) {
-      // converter "vestido-babadinho-p" -> "vestido babadinho"
       const nomeLimpo = this.removeTamanho(
         this.normalizeString(nomeParam.replace(/-/g, ' '))
       );
@@ -402,7 +398,6 @@ export class Encomenda implements OnInit{
     }
   }
 
-
   showBackToTop = false;
 
   @HostListener('window:scroll', [])
@@ -414,20 +409,21 @@ export class Encomenda implements OnInit{
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
   ordenacao: string = "";
 
-ordenarProdutos() {
-  switch (this.ordenacao) {
-    case "nomeAsc":
-      this.produtos.sort((a, b) => a.nome.localeCompare(b.nome));
-      break;
+  ordenarProdutos() {
+    switch (this.ordenacao) {
+      case "nomeAsc":
+        this.produtos.sort((a, b) => a.nome.localeCompare(b.nome));
+        break;
 
-    case "nomeDesc":
-      this.produtos.sort((a, b) => b.nome.localeCompare(a.nome));
-      break;
+      case "nomeDesc":
+        this.produtos.sort((a, b) => b.nome.localeCompare(a.nome));
+        break;
 
-    default:
-      break;
+      default:
+        break;
+    }
   }
-}
 }

@@ -53,19 +53,13 @@ export class ProdutoDetalhes implements OnInit {
   }
 private removeTamanho(nome: string): string {
     return (nome || '').replace(/[\s-]?(pp|p|m|g|gg|xg|xxg)\s*$/i, '').trim();
-  }// cria slug kebab-case seguro para URL
-  // NOVO MÉTODO: Remove cores/modificadores para isolar o nome base do produto
+  }
 private removeModificadores(nome: string): string {
-  // Lista de cores (e.g., Vermelha, Azul, etc.) no final do nome.
-  // Você pode expandir esta lista conforme a necessidade.
   const regexModificadores = /\s(Vermelha|Azul|Preta|Rosa|Verde|Amarela)\s*$/i;
   return (nome || '').replace(regexModificadores, '').trim();
 }
   private toSlug(nome: string): string {
-    // 1. Remove o tamanho (ex: PP)
     const nomeSemTamanho = this.removeTamanho(nome);
-
-    // 2. Remove cores/modificadores (ex: Vermelha)
     const nomeBase = this.removeModificadores(nomeSemTamanho);
 
     return nomeBase
@@ -79,13 +73,10 @@ private removeModificadores(nome: string): string {
       .replace(/^-+|-+$/g, '');             // Remove hífens extras nas pontas
   }
 
-  // função pública chamada pelo botão do card
   irParaEncomenda(nome: string) {
     const nomeSlug = this.toSlug(nome);
-console.log('SLUG GERADO:', nomeSlug);
-  // Navegar para a rota /encomenda/:nomeSlug
-  this.router.navigate(['/encomenda', nomeSlug]);
-
+    console.log('SLUG GERADO:', nomeSlug);
+    this.router.navigate(['/encomenda', nomeSlug]);
   }
 
   @HostListener('window:scroll', [])
@@ -118,12 +109,8 @@ console.log('SLUG GERADO:', nomeSlug);
     console.log('Produto encontrado:', this.produto);
   }
 
-  /*voltar(): void {
-    this.location.back();
-  }*/
   voltar(): void {
-  const aba = localStorage.getItem('abaAtiva') ?? '0';
-  this.router.navigate(['/prontas'], { queryParams: { aba } });
-}
-
+    const aba = localStorage.getItem('abaAtiva') ?? '0';
+    this.router.navigate(['/prontas'], { queryParams: { aba } });
+  }
 }

@@ -19,13 +19,11 @@ export class Buscar implements OnInit{
   searchQuery = '';
   resultados: any[] = [];
   todosOsResultados: any[] = [];
-  // Lista de resultados exibida no template
   resultadosExibidos: any[] = [];
 
-  // Novo: Controle de filtros
   filtrosSelecionados = {
-    'estoque': true, // Status: Com Estoque
-    'sob-encomenda': true, // Status: Sob Encomenda (produto sem preco ou estoque 0)
+    'estoque': true,
+    'sob-encomenda': true,
   };
 
   constructor(private route: ActivatedRoute, private router: Router) {}
@@ -45,12 +43,6 @@ export class Buscar implements OnInit{
       .replace(/[\u0300-\u036f]/g, '');
   }
 
-  /*buscar() {
-    if (!this.searchQuery.trim()) {
-      this.resultados = [];
-      return;
-    }*/
-   // === Antiga 'buscar()', agora 'carregarResultados()' (traz TUDO) ===
   carregarResultados() {
     if (!this.searchQuery.trim()) {
       this.resultadosExibidos = [];
@@ -69,15 +61,6 @@ export class Buscar implements OnInit{
       this.normalizeString(p.nome).includes(termo)
       ).map(p => ({...p, tipo: 'pronta'}));
 
-    // Buscar no array de artesanato
-    /*const resultadoArtesanato = artesanato.filter(p =>
-      this.normalizeString(p.nome).includes(termo)
-      ).map(p => ({...p, tipo: 'artesanato'}));*/
-
-    // Juntar tudo
-    //this.resultados = [...resultadoEncomendas, ...resultadoProntas, ...resultadoArtesanato];
-    //this.resultados = [...resultadoEncomendas, ...resultadoProntas];
-    // Juntar tudo
     const todosOsResultadosComDuplicata = [...resultadoEncomendas, ...resultadoProntas];
 
     // Remover Duplicatas (mantendo a lógica da unicidade pelo nome)
@@ -90,55 +73,34 @@ export class Buscar implements OnInit{
       nomesVistos.add(chave);
       return true;
     });
-
-    // Depois de carregar todos, aplica os filtros iniciais (todos true)
     this.aplicarFiltros();
   }
-  // === Novo: Função de Filtragem ===
+  // Função de Filtragem
   aplicarFiltros() {
    if (!this.filtrosSelecionados['estoque'] && !this.filtrosSelecionados['sob-encomenda']) {
-        // Opção 1 (Mostrar todos se ambos filtros de status estiverem desativados):
-        // this.resultadosExibidos = [...this.todosOsResultados];
-
-        // Opção 2 (Mostrar zero se ambos estiverem desativados - mais estrito):
         this.resultadosExibidos = [];
         return;
     }
-
     this.resultadosExibidos = this.todosOsResultados.filter(produto => {
-
-      // Verifica o status do produto
       const temEstoque = produto.preco && produto.estoque && produto.estoque > 0;
-
       // 1. FILTRO 'COM ESTOQUE'
       if (temEstoque) {
-          // Se tem estoque E o filtro 'com-estoque' está ativo, exibe.
-          // Caso contrário, se tem estoque MAS o filtro 'com-estoque' está DESATIVADO, não exibe.
           return this.filtrosSelecionados['estoque'];
       }
-
       // 2. FILTRO 'SOB ENCOMENDA'
-      else { // O produto é Sob Encomenda (não tem estoque)
-          // Se é sob encomenda E o filtro 'sob-encomenda' está ativo, exibe.
-          // Caso contrário, se é sob encomenda MAS o filtro 'sob-encomenda' está DESATIVADO, não exibe.
+      else {
           return this.filtrosSelecionados['sob-encomenda'];
       }
 
     });
   }
-  /*verMais(produto: any) {
-  if (!produto || !produto.nome || !produto.tipo) {
-    alert('Produto inválido para navegação');
-    return;
-  }*/
+
  // Função que será chamada no clique do card para navegação
   navegarDetalhes(produto: any) {
     if (!produto || !produto.nome || !produto.tipo) {
       alert('Produto inválido para navegação');
       return;
     }
-
-    // A lógica de slug é melhor para a navegação
     const slug = this.normalizeString(produto.nome).replace(/\s+/g, '-');
     const tipo = produto.tipo.toLowerCase();
 
@@ -151,73 +113,54 @@ export class Buscar implements OnInit{
     }
   }
 
-  /*const slug = produto.nome
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, '-');
-
-  const tipo = produto.tipo.toLowerCase();
-
-  if (tipo === 'pronta') {
-    this.router.navigate(['/produto-detalhes', slug]);
-  } else if (tipo === 'encomenda') {
-    this.router.navigate(['/encomenda', slug]);
-  } else if (tipo === 'artesanato') {
-    this.router.navigate(['/artesanato-detalhes', slug]);
-  } else {
-    this.router.navigate(['/produto-detalhes', slug]);
+  showBackToTop = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
   }
-}*/
 
-showBackToTop = false;
-@HostListener('window:scroll', [])
-onWindowScroll() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  this.showBackToTop = scrollTop > 300; // Exibe o botão após rolar 300px
-}
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
-scrollToTop(): void {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+  ordenacao: string = "";
 
-ordenacao: string = "";
+  ordenarProdutos() {
+    switch (this.ordenacao) {
+      case "nomeAsc":
+        this.resultadosExibidos.sort((a, b) => a.nome.localeCompare(b.nome));
+        break;
 
-ordenarProdutos() {
-  switch (this.ordenacao) {
-    case "nomeAsc":
-      this.resultadosExibidos.sort((a, b) => a.nome.localeCompare(b.nome));
-      break;
+      case "nomeDesc":
+        this.resultadosExibidos.sort((a, b) => b.nome.localeCompare(a.nome));
+        break;
 
-    case "nomeDesc":
-      this.resultadosExibidos.sort((a, b) => b.nome.localeCompare(a.nome));
-      break;
+      case "maiorValor":
+        this.resultadosExibidos.sort((a, b) => b.preco - a.preco);
+        break;
 
-    case "maiorValor":
-      this.resultadosExibidos.sort((a, b) => b.preco - a.preco);
-      break;
+      case "menorValor":
+        this.resultadosExibidos.sort((a, b) => a.preco - b.preco);
+        break;
 
-    case "menorValor":
-      this.resultadosExibidos.sort((a, b) => a.preco - b.preco);
-      break;
-
-      case "comEstoque":
-    this.resultadosExibidos = this.resultadosExibidos.filter(p =>
-      p.preco && p.estoque && p.estoque > 0
-    );
-    break;
-
-    case "sobEncomenda":
+        case "comEstoque":
       this.resultadosExibidos = this.resultadosExibidos.filter(p =>
-        !p.preco || !p.estoque || p.estoque === 0
+        p.preco && p.estoque && p.estoque > 0
       );
       break;
-      
-    default:
-      break;
+
+      case "sobEncomenda":
+        this.resultadosExibidos = this.resultadosExibidos.filter(p =>
+          !p.preco || !p.estoque || p.estoque === 0
+        );
+        break;
+
+      default:
+        break;
+    }
   }
-}
 }

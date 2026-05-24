@@ -1,23 +1,21 @@
 .medidas-wrapper {
   display: flex;
   gap: 15px;
-  padding: 12px 15px;       /* antes 25px — AGORA MUITO MENOR */
+  padding: 12px 15px;
   background: #e9f4ff;
-  border-radius: 16px;      /* leve redução deixa mais compacto */
-  margin: 15px auto;        /* antes 30px — MENOR */
-  max-width: 80%;         /* antes 1000px — encolhe o bloco */
+  border-radius: 16px;
+  margin: 15px auto;
+  max-width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* IMAGEM MAIOR */
 .imagem-produto img {
-  width: 340px;           /* antes 320px */
+  width: 340px;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
 }
 
-/* CARD ENCOSTADO MAIS À DIREITA */
 .medidas-form-card {
   position: relative;
   flex: 1;
@@ -25,11 +23,11 @@
   background: white;
   border-radius: 20px;
   box-shadow: 0 3px 15px rgba(0,0,0,0.8);
-  max-width: 360px;        /* menor = encosta mais no lado direito */
-  margin-left: auto;       /* empurra pra borda direita */
+  max-width: 360px;
+  margin-left: auto;
 }
 
-/* Marca d'agua */
+/* ====== MARCA D'AGUA ====== */
 .marca-agua {
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -37,11 +35,11 @@
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-/* Texto */
+
 .textoEscolhido{
   font-size: 1rem;
 }
-/* Título */
+
 .titulo-produto {
   font-size: 1.8rem;
   font-weight: 800;
@@ -50,14 +48,13 @@
   margin-top: 5%;
 }
 
-/* Textos */
 .medidas-form-card p {
   font-size: 16px;
   margin: 6px 0;
   color: #333;
 }
 
-/* Botão comprar */
+/* ====== Botão comprar ====== */
 .btn-comprar {
   width: 100%;
   background: #0E2270;
@@ -82,91 +79,89 @@
 .medidas-form-card button:hover {
   background: #244689;
 }
+
+/* ====== Botão Flutuante ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
-/* ======= RESPONSIVO: telas até 900px ======= */
-@media (max-width: 900px) {
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
+
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) and (orientation: portrait),
+       (min-width: 601px) and (max-width: 1024px) {
 
   .medidas-wrapper {
-    flex-direction: column;      /* imagem em cima, card embaixo */
-    max-width: 95%;
-    padding: 20px;
-    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
   }
 
+  /* ====== IMAGEM ====== */
   .imagem-produto img {
-    width: 100%;                 /* imagem ocupa toda a largura */
-    max-width: 420px;
+    max-width: 200px;
+    width: 100%;
     margin: 0 auto;
     display: block;
   }
 
+  /* ====== CARD ====== */
   .medidas-form-card {
-    max-width: 100%;
+    max-width: 320px;
     width: 100%;
-    margin-left: 0;              /* tirar "empurrão" pro lado */
-    padding: 22px 20px;
+    margin: 0 auto;
+    padding: 10px 12px;
+    border-radius: 14px;
   }
 
-  .titulo-modelo {
-    font-size: 20px;
-    margin-top: 25px;
+  .textoEscolhido {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
   }
 
-  .medidas-form-card p {
-    font-size: 15px;
-  }
-.marca-agua {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  color: rgba(0,0,0,0.15);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-  .btn-comprar {
+  .titulo-produto {
     font-size: 1rem;
-    padding: 12px;
-  }
-}
-
-/* ======= CELULAR PEQUENO (até 480px) ======= */
-@media (max-width: 480px) {
-/* Texto */
-.textoEscolhido{
-  font-size: 0.8rem;
-  top: 10px;
-}
-  .medidas-wrapper {
-    padding: 15px;
-    border-radius: 15px;
-    gap: 15px;
-  }
-
-  .imagem-produto img {
-    max-width: 100%;
-    border-radius: 12px;
-  }
-
-  .medidas-form-card {
-    padding: 18px 15px;
-    border-radius: 15px;
-  }
-
-  .titulo-modelo {
-    font-size: 18px;
+    margin: 4px 0 8px;
+    text-align: center;
   }
 
   .medidas-form-card p {
-    font-size: 14px;
+    font-size: 0.8rem;
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  .marca-agua {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
   }
 
   .btn-comprar {
-    font-size: 0.95rem;
-    padding: 10px;
-    border-radius: 6px;
+    max-width: 200px;
+    font-size: 0.9rem;
+    padding: 8px;
+    margin: 10px auto 0;
+    display: block;
   }
 }
+

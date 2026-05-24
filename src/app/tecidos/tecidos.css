@@ -55,7 +55,7 @@
   color: #333;
 }
 
-/* Botão de ajuda */
+/* ====== Botão de ajuda ====== */
 .botao-ajuda {
   position: absolute;
   top: 10px;
@@ -75,7 +75,7 @@
   background: #5ab2ff;
 }
 
-/* Caixa de descrição */
+/* ====== Caixa de descrição ====== */
 .descricao-ajuda {
   background: #0a3d62;
   margin-top: 10px;
@@ -84,13 +84,32 @@
   color: #FFFFFF;
   border-radius: 8px;
 }
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
 
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
+
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .titulo-pagina {
@@ -102,8 +121,8 @@
   }
 
   .cards-tecidos {
-    grid-template-columns: repeat(2, 1fr); /* sempre 2 cards */
-    gap: 14px; /* diminui o espaçamento pra caber bonito */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .card-tecido {
@@ -112,7 +131,7 @@
   }
 
   .card-tecido img {
-    height: 100px; /* reduz a altura da imagem */
+    height: 100px; 
     border-radius: 10px;
   }
 

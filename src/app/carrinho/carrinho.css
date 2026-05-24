@@ -1,12 +1,13 @@
 .carrinho-vazio {
-  min-height: 50vh;        /* deixa a área maior */
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
-  align-items: center;     /* centraliza horizontalmente */
+  justify-content: center;
+  align-items: center;
   font-size: 1.3rem;
   color: #444;
 }
+
 .promo-brinde {
   background: #D0E3FF;
   padding: 12px 15px;
@@ -23,38 +24,37 @@ h2{
   font-size: 1.4rem;
 }
 
-/* --- ESTILOS GERAIS DO CARRINHO --- */
+/* ====== CARRINHO ====== */
 .card.mb-4 {
-    /* 1. Remove a borda padrão do Bootstrap/Tailwind card */
-    border: none !important;
-    padding: 0;
-    margin-bottom: 20px !important;
+  border: none !important;
+  padding: 0;
+  margin-bottom: 20px !important;
 }
 
 .carrinho-layout {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 15px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-/* --- LAYOUT GRID (Cabeçalho e Itens) --- */
+/* ====== GRID ====== */
 .carrinho-header,
 .carrinho-item {
-    display: grid;
-    /* Define 3 colunas: Produto (Grande), Preço (Médio), Excluir (Pequeno) */
-    grid-template-columns: 2fr 1fr 0.8fr;
-    gap: 10px;
-    align-items: center;
-    padding: 10px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.8fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .carrinho-header {
-    font-weight: bold;
-    color: #444;
-    border-bottom: 2px solid #5D78B4; /* Linha de separação do cabeçalho */
-    margin-bottom: 10px;
-    padding-bottom: 15px;
+  font-weight: bold;
+  color: #444;
+  border-bottom: 2px solid #5D78B4;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
 }
+
 .header-produto {
   padding-left: 10px;
 }
@@ -71,121 +71,135 @@ h2{
 }
 
 .carrinho-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
 }
 
-/* --- Coluna Produto (3) --- */
+/* ====== Coluna Produto ====== */
 .item-produto {
-    display: flex;
-    align-items: flex-start; /* Alinha a imagem e o texto no topo */
-    gap: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .imagem-pequena {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .item-detalhes {
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
 
 .nome-produto {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .info-adicional {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 2px 0;
+  font-size: 0.85rem;
+  color: #666;
+  margin: 2px 0;
 }
 
-/* --- Coluna Preço (4) --- */
+/* ====== Coluna Preço ====== */
 .item-preco {
-    font-weight: 600;
-    color: #0072CE;
+  font-weight: 600;
+  color: #0072CE;
 }
 
-/* Preço "A definir" */
+/* ====== Preço "A definir"  ====== */
 .item-preco .text-danger {
-    color: #E74C3C;
-    font-weight: normal;
-}
-
-/* --- Coluna Excluir (5) --- */
-.item-excluir {
-    /* Alinhamento já está no grid */
+  color: #E74C3C;
+  font-weight: normal;
 }
 
 .delete-btn {
-    background: none;
-    border: none;
-    color: #A93226; /* Vermelho sutil para excluir */
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.2s;
-    padding: 5px;
+  background: none;
+  border: none;
+  color: #A93226;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 5px;
 }
 
 .delete-btn:hover {
-    color: #E74C3C;
+  color: #E74C3C;
 }
 
-/* --- Botoes de Ação Final --- */
+/* ====== Botoes de Ação Final ====== */
 .botoes {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-top: 20px;
 }
 
 .botoes button {
-    padding: 10px 20px;
-    border-radius: 20px;
-
-    cursor: pointer;
-    transition: background-color 0.2s, box-shadow 0.2s;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-.botoes button:first-child { /* Finalizar Compra */
-    background-color: #5D78B4;
-    color: #fff;
-    border: none;
+.botoes button:first-child {
+  background-color: #5D78B4;
+  color: #fff;
+  border: none;
 }
 
 .botoes button:first-child:hover {
-    background-color: #4a6396;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #4a6396;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.botoes button:last-child { /* Continuar Comprando */
-    background-color: #fff;
-    color: #5D78B4;
-    border: 1px solid #5D78B4;
+.botoes button:last-child {
+  background-color: #fff;
+  color: #5D78B4;
+  border: 1px solid #5D78B4;
 }
 
 .botoes button:last-child:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
+
+/* ====== Botão Flutuante ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
 
-/* --- Responsividade (Para telas menores) --- */
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
+
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .carrinho-vazio{
     font-size: 1rem;
   }
+
   .promo-brinde{
     font-size: 0.8rem;
   }
@@ -193,10 +207,11 @@ h2{
   h2{
     font-size: 1rem;
   }
+
   .carrinho-header{
     font-size: 0.8rem;
   }
-    .carrinho-item {
+  .carrinho-item {
     display: flex;
     grid-template-columns: 1fr auto auto;
     align-items: center;
@@ -205,7 +220,7 @@ h2{
     padding: 10px 0;
   }
 
-  /* Produto: imagem em cima, nome abaixo */
+  /* ====== Produto ====== */
   .item-produto {
     display: flex;
     flex-direction: column;
@@ -223,19 +238,19 @@ h2{
     font-size: 0.9rem;
   }
 
-  /* Preço */
+  /* ====== Preço ====== */
   .item-preco {
     text-align: center;
     font-size: 1rem;
     width: 100%;
   }
 
-  /* Excluir */
+  /* ====== Excluir ====== */
   .item-excluir {
     text-align: center;
   }
 
-  /* Botões no final da lista */
+  /* ====== Botões no final da lista ====== */
   .botoes {
     display: flex;
     flex-direction: column;

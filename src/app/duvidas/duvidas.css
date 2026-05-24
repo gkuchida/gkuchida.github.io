@@ -1,7 +1,4 @@
-/* ===========================
-   FAQ — FOFINHO
-=========================== */
-
+/* ====== FAQ ====== */
 .faq-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -48,12 +45,7 @@
   transform: scale(1.1);
 }
 
-
-
-/* ===========================
-   LISTA DE PERGUNTAS
-=========================== */
-
+/* ======LISTA DE PERGUNTAS  ====== */
 .faq-container {
   max-width: 900px;
   margin: 0 0;
@@ -62,7 +54,7 @@
 
 .faq-item {
   padding: 18px 0 22px;
-  border-bottom: 1px solid #ddd; /* o traço separador */
+  border-bottom: 1px solid #ddd;
 }
 
 .faq-pergunta {
@@ -89,17 +81,33 @@
   color: #0E2270;
   margin-left: 10px;
 }
+
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
 
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
-/* ===========================
-   RESPONSIVO
-=========================== */
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
 
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .faq-header-card {

@@ -1,55 +1,82 @@
-/*ARRUMAR ALTURA DE TODOS*/
-/* Reset/ajuste base */
 *{box-sizing:border-box;}
-body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-serif; margin:0;}
+
+body{
+  background:var(--bege);
+  color:var(--marrom);
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 h5{
   color: #3B5998;
   text-align: center;
   top: 10px;
   font-size: 1.1rem;
 }
-/* =========================
-   Regras gerais de carrossel (escopo amplo, seguro)
-   ========================= */
+
+/* ====== Regras gerais de carrossel ====== */
 .carousel-inner {
   border-radius: 8px;
 }
+
 .carousel-title h2 {
   font-weight: 500;
   font-size: 2rem;
   color: #000080;
   margin-bottom: 30px;
 }
+
 .carousel, .slideSecundario {
   border-radius: 12px;
   margin: 1.25rem 0;
 }
 
-/* controles (setas) padrão - contraste legível sobre fundos claros */
 .carousel-control-prev, .carousel-control-next {
-  width:44px; height:44px; border-radius:50%;
-  /*background: rgba(0,0,0,0.35);*/
+  width:44px;
+  height:44px;
+  border-radius:50%;
   background: #5D78B4;
-  display:flex; align-items:center; justify-content:center;
-  top:50%; transform:translateY(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top:50%;
+  transform:translateY(-50%);
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
   transition: transform .15s ease, background .15s ease;
   z-index: 12;
 }
-.carousel-control-prev:hover, .carousel-control-next:hover { transform: translateY(-50%) scale(1.04); background: rgba(0,0,0,0.55); }
 
-/* ícones das setas */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  transform: translateY(-50%) scale(1.04);
+  background: rgba(0,0,0,0.55);
+}
+
+/* ====== ícones das setas ====== */
 .carousel-control-prev-icon, .carousel-control-next-icon {
   filter: invert(1) brightness(1.8);
-  width: 20px; height:20px;
+  width: 20px;
+  height:20px;
 }
 
-/* indicadores (bolinhas) */
+/* ====== indicadores====== */
 .carousel-indicators [data-bs-target] {
-  width:10px; height:10px; border-radius:50%;
-  background: var(--marrom-claro); opacity:0.6;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: var(--marrom-claro);
+  opacity:0.6;
 }
-.carousel-indicators .active { background: var(--rosa); opacity:1; }
+
+.carousel-indicators .active {
+  background: var(--rosa);
+  opacity:1;
+}
+
 #carouselNovidades .carousel-control-prev,
 #carouselNovidades .carousel-control-next,
 #mainCarousel .carousel-control-next,
@@ -57,15 +84,8 @@ h5{
   background: #5D78B4;
 }
 
-/* =========================
-   CARROSSEL PRINCIPAL
-   ========================= */
-/* ÁREA PRINCIPAL DO CARROSSEL */
-/* ÁREA PRINCIPAL DO CARROSSEL */
-/* ÁREA PRINCIPAL DO CARROSSEL */
-#mainCarousel,
-#mainCarousel .carousel-inner,
-#mainCarousel .carousel-item {
+/* ====== CARROSSEL PRINCIPAL (#mainCarousel)====== */
+#mainCarousel {
   width: 100%;
   height: 65vh;
   min-height: 360px;
@@ -74,34 +94,55 @@ h5{
   background: #5D78B4;
 }
 
-/* ÁREA DAS IMAGENS NO TOPO */
+#mainCarousel .carousel-inner {
+  height: 100%;
+}
+
+#mainCarousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
 .image-slides-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding: 0 40px;
+  height: 85%;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  min-height: 100px;
 }
 
-/* TODAS AS IMAGENS IGUAIS */
-.image-slides-container img {
-  height: 100%;        /* altura fixa = todas ficam iguais */
-  width: 100%;           /* controla o tamanho horizontal */
-  object-fit: cover;    /* corta só o necessário sem distorcer */
-  border-radius: 8px;
+.image-slides-container .pet {
+  width: calc(100% / 3);
+  height: 100%;
+  min-height: 180px;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+  flex-shrink: 0;
+  position: static !important;
+  display: block;
 }
 
-/* ÁREA DA DESCRIÇÃO — PARTE INFERIOR */
+#slide3 .pet:nth-child(3),
+#slide5 .pet:nth-child(3) {
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
 .description-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 25%;        /* completa o espaço total */
+  height: 15%;
   background: rgba(255, 255, 255, 0.55);
   padding: 20px 15px;
   text-align: center;
@@ -110,35 +151,25 @@ h5{
   justify-content: center;
 }
 
-/* TEXTO */
 .description-bar h2 {
   margin: 0 0 8px;
-  font-size: 1.6rem;
-  color: #444;        /* cinza chumbo */
+  font-size: 1.2rem;
+  color: #444;
 }
+
 .description-bar p {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
 
-/* SETAS */
+/* ====== SETAS ====== */
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 50;
 }
 
-/*
-#slide2.multi-image-slide{
-  background: #ffb3b3;
-}
-#slide3.multi-image-slide{
-  background: #1E3A8A;
-}
-#slide4.multi-image-slide{
-  background: #00BFA6;
-}*/
-/* Sobre */
+/* ====== Sobre ====== */
 .sobre-home {
   background: #D0E3FF;
   padding: 60px 20px;
@@ -182,12 +213,14 @@ h5{
   font-size: 2rem;
   margin-bottom: 10px;
   font-weight: 500;
+  text-align: center;
 }
 
 .sobre-texto .sub {
   color: #1A1A80;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .sobre-texto .desc {
@@ -215,7 +248,7 @@ h5{
   padding: 12px 22px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.2s;
 }
 
@@ -223,91 +256,26 @@ h5{
   background: #FF9100;
 }
 
-/* Imagem */
+/* ====== Imagem ====== */
 .sobre-imagem img {
   width: 330px;
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   CARROSSEL NOVIDADES (#carouselNovidades)
-   - area de vitrine compacta
-   ========================= */
-#carouselNovidades {
-  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);*/
-  /*background: #E1F5FE;*/
-  background: #AFCBFF;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 6px 18px var(--sombra);
-}
-
-/* controla altura e overflow (slides horizontais internos) */
-#carouselNovidades .carousel-inner {
-  height: 350px;
-}
-
-/* produto dentro do carrossel de novidades */
-#carouselNovidades .product-card {
-  width: 220px;
-  height: 300px;
-  background: var(--branco);
-  border-radius: 12px;
-  padding: 10px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  gap:8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform .2s ease;
-  /*background: #FFC86F;*/
-  background: #D4E4FF;
-}
-#carouselNovidades .product-card:hover { transform: translateY(-6px); }
-
-/* imagem do produto bem contida */
-#carouselNovidades .imagem-container { height: 190px; display:flex; align-items:center; justify-content:center;
-  background:#fbfbfb;
-
-   border-radius:10px; overflow:hidden; }
-#carouselNovidades .imagem-container img { max-width:100%; max-height:100%; object-fit: contain; }
-
-/* botão carrinho */
-#carouselNovidades .btn-carrinho {
-  background: #005fa3;
-  color:#fff;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.12);
-  text-decoration: none;
-}
-#carouselNovidades .btn-carrinho:hover { background:#005fa3; }
-
-
-/* =========================
-   CARROSSEL INSPIRAÇÕES (desktop e mobile)
-   - #carouselDesktop (grid de cards)
-   - #carouselMobile (cards individuais)
-   ========================= */
-
-/* container geral de inspirações já tem sua classe; vamos harmonizar */
+/* ====== CARROSSEL INSPIRAÇÕES ====== */
 .inspiracoes-container {
   background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
   padding: 0;
   margin-top: 1rem; }
 
-/* desktop: cards-wrapper já definido no HTML, ajusta espaçamento */
-#carouselDesktop .cards-wrapper { display:flex; gap: 1rem; justify-content:center; padding: 1.2rem; }
+#carouselDesktop .cards-wrapper {
+  display:flex;
+  gap: 1rem;
+  justify-content:center;
+  padding: 1.2rem;
+}
 
-/* card visual */
 #carouselDesktop .card, #carouselMobile .card {
   border-radius: 14px;
   overflow: hidden;
@@ -316,59 +284,74 @@ h5{
   background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
   transition: transform .2s ease;
 }
-#carouselDesktop .card:hover, #carouselMobile .card:hover { transform: translateY(-6px); }
 
-/* imagem dos cards: manter proporção e não esticar */
+#carouselDesktop .card:hover, #carouselMobile .card:hover {
+  transform: translateY(-6px);
+}
+
 .card-img-top {
   width: 100%;
   height: 220px;
-  object-fit: contain; /* mostra o pet por inteiro sem cortar */
+  object-fit: contain;
   background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
 }
 
-/* corpo do card */
-.card-body { padding: 0.8rem 1rem; text-align:center; background: var(--rosa-claro); }
+.card-body {
+  padding: 0.8rem 1rem;
+  text-align:center;
+  background: var(--rosa-claro);
+}
+
 .card-body h5{
   margin:0.25rem 0;
   color: wheat;
   font-weight:700;
 }
-.card-body p { margin:0; color:#6b4e3d; font-size:0.95rem; }
 
+.card-body p {
+  margin:0;
+  color:#6b4e3d;
+  font-size:0.95rem;
+}
 
-/* =========================
-   CARROSSEL RECOMENDADOS (#carouselRecomendados)
-   - estilo de grid (mantém sua classe slide-theme-X)
-   ========================= */
-#carouselRecomendados {
-  padding: 2rem 20px;
-  /*background: linear-gradient(180deg, #F3E5F5 0%, #E1BEE7 100%);*/
-  /*background: #FFD0D0;*/
+/* ======CARROSEL NOVIDADES CARROSSEL RECOMENDADOS  ====== */
+#carouselNovidades{
+  background: #AFCBFF;
+}
+#carouselRecomendados{
   background: #8AB3F5;
+}
+#carouselRecomendados,
+#carouselNovidades {
+  padding: 2rem 20px;
   border-radius: 12px;
   box-shadow: 0 6px 18px var(--sombra);
 }
 
 #carouselRecomendados .carousel-item,
-#carouselRecomendados .carousel-row{
-  /*background: #FFD0D0;*/
+#carouselNovidades .carousel-item,
+#carouselRecomendados .carousel-row,
+#carouselNovidades .carousel-row{
   background: transparent !important;
   border-radius: 0;
   height: 900px;
 }
-#carouselRecomendados .carousel-inner{
+
+#carouselRecomendados .carousel-inner,
+#carouselNovidades .carousel-inner{
   height: 350px;
 }
-.carousel-section.recomendados .carousel-row {
+
+.carousel-section.recomendados .carousel-row,
+.carousel-section.novidades .carousel-row{
   display:flex; gap:20px;
   flex-wrap:wrap;
   justify-content:center;
   padding:1rem 20px;
-
 }
 
-/* produto recomendado (maior que o de novidades) */
-.carousel-section.recomendados .product-card {
+.carousel-section.recomendados .product-card,
+.carousel-section.novidades .product-card {
   width: 240px;
   height: 310px;
   border-radius: 12px;
@@ -378,30 +361,71 @@ h5{
   justify-content:flex-start;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   transition: transform .2s ease;
-  /*background: #FFC86F;*/
   background: #C7D8FF;
   position: relative;
 }
 
-.carousel-section.recomendados .imagem-container {
+.carousel-section.recomendados .imagem-container,
+.carousel-section.novidades .imagem-container {
   height: 200px;
-  /*background:#f9f9f9;*/
-   border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
-.carousel-section.recomendados .imagem-container img { max-width:100%; max-height:100%; object-fit:contain; }
-
-/* cores por categoria (use as classes que passar no produto.categoria) */
-.badge-custom { position:absolute; top:10px; left:10px; padding:6px 10px; border-radius:10px; font-weight:700; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.08); font-size:0.78rem; }
-.badge-custom.verao { background: linear-gradient(90deg,#f6a83b,#f37f2a); }
-.badge-custom.verao { background: linear-gradient(90deg,#ffb703,#ff6f00); }
-.badge-custom.inverno { background: linear-gradient(90deg,#2b3a67,#4b6cb7); }
-.badge-custom.meia-estacao { background: linear-gradient(90deg,#4caf50,#8bc34a); }
-.badge-custom.chuva { background: linear-gradient(90deg,#0077b6,#0096c7); }
-.badge-custom.festiva { background: linear-gradient(90deg,#b71c1c,#f44336); }
-.badge-custom.acessorio { background: linear-gradient(90deg,#8e24aa,#ba68c8); }
-.product-card .badge-custom.artesanato { background: linear-gradient(90deg,#e91e63,#ff80ab);
+  border-radius:12px 12px 0 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* ver-mais button (círculo central) */
+.carousel-section.recomendados .imagem-container img,
+.carousel-section.novidades .imagem-container img {
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* ====== cores por categoria ====== */
+.badge-custom {
+  position:absolute;
+  top:10px;
+  left:10px;
+  padding:6px 10px;
+  border-radius:10px;
+  font-weight:700;
+  color:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  font-size:0.78rem;
+  }
+
+.badge-custom.verao {
+  background: linear-gradient(90deg,#f6a83b,#f37f2a);
+}
+
+.badge-custom.verao {
+  background: linear-gradient(90deg,#ffb703,#ff6f00);
+}
+
+.badge-custom.inverno {
+  background: linear-gradient(90deg,#2b3a67,#4b6cb7);
+ }
+
+.badge-custom.meia-estacao {
+  background: linear-gradient(90deg,#4caf50,#8bc34a);
+}
+
+.badge-custom.chuva {
+  background: linear-gradient(90deg,#0077b6,#0096c7);
+}
+
+.badge-custom.festiva {
+  background: linear-gradient(90deg,#b71c1c,#f44336);
+}
+
+.badge-custom.acessorio {
+  background: linear-gradient(90deg,#8e24aa,#ba68c8);
+}
+
+.product-card .badge-custom.artesanato {
+  background: linear-gradient(90deg,#e91e63,#ff80ab);
+}
+
 .ver-mais-btn {
   background: #1e40af;
   border: none;
@@ -418,13 +442,12 @@ h5{
   transition: background 0.3s ease;
   text-decoration: none;
   position: absolute;
-  top: 270px;
-  left: 50%;
+  top: 5%;
+  left: 90%;
   transform: translateX(-50%);
   margin: 0;
 }
 
-/* --- Clientes --- */
 .marquee-clientes {
   text-align: center;
   padding: 50px 0;
@@ -447,7 +470,7 @@ h5{
   color: #1A1A80;
 }
 
-/* ÁREA ROLANTE */
+/* ====== ÁREA ROLANTE ====== */
 .marquee {
   overflow: hidden;
   width: 100%;
@@ -466,7 +489,7 @@ h5{
   100% { transform: translateX(-50%); }
 }
 
-/* ITENS */
+/* ====== ITENS ====== */
 .cliente-item {
   width: 120px;
   height: 120px;
@@ -489,12 +512,10 @@ h5{
   background: #E1E8FF;
 }
 
-/* =========================
-   CARROSSEL DE AVALIAÇÕES
-   ========================= */
+/* ====== CARROSSEL DE AVALIAÇÕES ====== */
 .avaliacoes-container {
   margin-top: 20px;
-  padding-top: 10px !important;  /* reduz o “respiro” interno */
+  padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
 
@@ -518,7 +539,7 @@ h5{
   height: 250px;
   margin: 0 auto;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  align-items: center;   /* 👈 centraliza verticalmente */
+  align-items: center;
   justify-content: center;
 }
 
@@ -567,14 +588,7 @@ h5{
   filter: invert(1);
 }
 
-
-
-/* =========================
-   SLIDE THEME (mantém sua lógica, só suaviza)
-   para slides que usam .slide-theme-X no HTML
-   ========================= */
-/*.slide-theme-0 { background: linear-gradient(180deg, rgba(255,250,245,0.55), rgba(255,255,255,0.25)); padding: 1rem; border-radius:12px; }
-.slide-theme-1 { background: linear-gradient(180deg, rgba(255,245,247,0.55), rgba(255,250,250,0.25)); padding:1rem; border-radius:12px; }*/
+/* ====== SLIDE THEME ====== */
 .slide-theme-0,
 .slide-theme-1,
 .slide-theme-2,
@@ -583,9 +597,7 @@ h5{
   background: transparent !important;
 }
 
-/* =========================
-   Ajustes de imagens (evita deformar em carrosséis menores)
-   ========================= */
+/* ====== Ajustes de imagens ====== */
 .carousel-item img, .card-img-top, .product-card img, .imagem-container img {
   image-rendering: auto;
   -o-object-fit: contain;
@@ -593,61 +605,122 @@ h5{
   object-position: center;
 }
 
-/* quando quiser que a imagem cubra o background (use com parcimônia) */
-.carousel-cover .carousel-item img { object-fit: cover; width:100%; height:100%; }
-
-/* =========================
-   Categorias (mantém seu estilo)
-   ========================= */
-.categorias-home {
-  /*background: linear-gradient(180deg, #FFF8E1 0%, #FFF3E0 100%);*/
-  /*background: #3B5998;*/
-  background: #5D78B4;
-
- border-radius: 12px;
- padding: 2rem 1rem;
- box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+.carousel-cover .carousel-item img {
+  object-fit: cover;
+  width:100%;
+  height:100%;
 }
-.categoria-circulo { color: var(--marrom); text-decoration:none; display:block; }
-.img-circle-wrapper { width:80px; height:80px; border-radius:50%; background:#f3f3f3; display:flex; align-items:center; justify-content:center; margin:0 auto; transition:all .18s ease; }
-.img-circle-wrapper img { width:72%; height:72%; object-fit:contain; }
 
-/* =========================
-   Back to top button (mantém)
-   ========================= */
-.back-to-top-fixed { position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+/* ====== Categorias ====== */
+.categorias-home {
+  background: #5D78B4;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  display: block;
+}
 
+.categorias-home h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-/* ===========================================================
-   RESPONSIVO — AJUSTES SOMENTE PARA CELULAR (max-width: 600px)
-   NÃO ALTERA NADA DO DESKTOP
-   =========================================================== */
+.categorias-faixa-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 10px;
+}
 
-@media (max-width: 600px) {
-  /* ----------- PRIMEIRO CARROSSEL ----------- */
-  /* Permite que as legendas apareçam */
-  #mainCarousel,
-  #mainCarousel .carousel-item {
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 400px !important;
-    padding-bottom: 20px !important;
+.categoria-item {
+  width: 120px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* ====== CÍRCULO E IMAGEM ====== */
+.img-circle-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.img-circle-wrapper img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+.categoria-nome{
+  font-size: 1rem;
+  display: block;
+  text-decoration:none;
+}
+
+/* ====== BOTÃO FLUTUANTE ====== */
+.back-to-top-fixed * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.back-to-top-fixed::before,
+.back-to-top-fixed::after {
+  content: none !important;
+  display: none !important;
+}
+
+.back-to-top-fixed {
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   }
 
-  /* Mantém IMAGENS lado a lado no mobile */
-  .single-image-slide,
-  .multi-image-slide {
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 12px !important;
-    height: auto !important;
-  }
-  /* ----------- LEGENDAS (TODAS) ----------- */
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
 
-  /* Todas as legendas ficam centralizadas e visíveis */
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+  .carousel-title h2,
+  .marquee-clientes h2,
+  .avaliacoes-container h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  h5{
+    font-size: 1rem;
+  }
+
+  .marquee-clientes p,
+  .avaliacoes-container p{
+    font-size: 0.9rem;
+  }
+
+  /* ====== LEGENDAS (TODAS)  ====== */
   .carousel-caption,
   .top-left-caption,
   .bottom-left-caption {
@@ -671,120 +744,189 @@ h5{
     font-size: 0.95rem !important;
   }
 
-   #slide5 .carousel-caption.slide5-card {
-    position: absolute !important;
-    bottom: auto !important; /* cancelando o padrão do Bootstrap */
-    top: 3% !important;      /* agora sobe mesmo */
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 90% !important;
-    background: rgba(0,0,0,0.45) !important;
-    padding: 0.7rem 1rem !important;
-    border-radius: 12px !important;
-    text-align: center !important;
-    z-index: 20 !important;
+  /* ====== PRIMEIRO CARROSSEL ====== */
+  #mainCarousel {
+    height: 50vh;
+    min-height: 250px;
   }
 
-  /* desce os cards para não bater na faixa */
-  #slide5 .slide5-right {
-    margin-top: 100px !important;
+  .image-slides-container {
+    height: 75%;
+    min-height: 150px;
   }
 
-  #slide5 .cliente-card {
-    width: 30% !important;
+  .image-slides-container .pet {
+    width: calc(100% / 3);
+    min-height: 100px;
+    object-fit: cover;
   }
 
-  #mainCarousel .carousel-caption h2,
-  #slide2 .carousel-caption h2,
-  #slide3 .carousel-caption h2,
-  #slide4 .carousel-caption h2,
-  #slide5 .carousel-caption h2{
-    font-size: 1.8rem;
-  }
-  /* ----------- SETAS ----------- */
-
-  #mainCarousel .carousel-control-prev,
-  #mainCarousel .carousel-control-next {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 200 !important;
+  .description-bar {
+    height: 25%;
+    padding: 10px 10px;
   }
 
-  /* ----------- SOBRE ----------- */
-.sobre-home {
+  .description-bar h2 {
+    font-size: 1rem;
+    margin: 0 0 4px;
+  }
+
+  .description-bar p {
+    font-size: 0.8rem;
+  }
+
+  #slide3 .pet:nth-child(3),
+  #slide5 .pet:nth-child(3){
+    object-position: 50% 50%;
+  }
+
+  #slide5 .pet:nth-child(1) {
+    object-position: 80% 10%;
+  }
+
+  /* ====== CATEGORIA ====== */
+  .categorias-faixa-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 0 5px;
+  }
+
+  .categorias-faixa-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoria-item {
+    width: 13%;
+    max-width: 55px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 0 1px;
+  }
+
+  .categorias-home h2 {
+    font-size: 1.3rem;
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .img-circle-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px !important;
+  }
+
+  .categoria-nome {
+    font-size: 0.65rem;
+    margin-top: 0;
+    line-height: 1.1;
+  }
+
+  .sobre-home {
     padding: 40px 18px;
     margin: 30px 0;
   }
 
-  /* Ajusta a marca d’água */
   .sobre-home::before {
     background-position: top center;
-    top: -120px; /* ajusta a altura da marca d’água só no mobile */
-    right: 0;    /* centraliza melhor para telas pequenas */
+    top: -120px;
+    right: 0;
     max-width: 400px;
     max-height: 400px;
   }
 
-  /* Container vira coluna */
   .sobre-container {
     flex-direction: column;
     text-align: center;
     gap: 25px;
   }
 
-  /* Textos menores */
- .sobre-texto h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-}
+  .sobre-texto h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
 
-.sobre-texto .sub {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: .75;
-}
+  .sobre-texto .sub {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: .75;
+  }
 
-.sobre-texto .desc {
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-  .sobre-lista li {
-    font-size: 1.05rem;
+  .sobre-texto .desc {
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 
-  /* Botão centralizado */
+  .sobre-lista li {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
   .sobre-botao {
     padding: 10px 20px;
     font-size: 1.05em;
   }
 
-  /* Imagem reduzida e centralizada */
   .sobre-imagem img {
     width: 220px;
     margin: 0 auto;
   }
-/* ----------- NOVIDADES ----------- */
 
+  /* ====== NOVIDADES RECOMENDADOS====== */
+  #carouselRecomendados .carousel-inner,
   #carouselNovidades .carousel-inner {
-    height: 300px !important;
+    height: 300px; /* De 350px para 280px */
   }
 
-  #carouselNovidades .product-card {
-    width: 180px !important;
-    height: auto !important;
+  .carousel-section.recomendados .product-card,
+  .carousel-section.novidades .product-card {
+    width: 45%;
+    height: 280px;
+    padding: 5px;
+    padding-bottom: 15px;
   }
-/* ----------- MARQUEE (CLIENTES) ----------- */
-  .cliente-item { width: 90px !important; height: 90px !important; }
-  /* ----------- AVALIAÇÕES ----------- */
 
+  .carousel-section.recomendados .imagem-container,
+  .carousel-section.novidades .imagem-container {
+    height: 180px; /* De 200px para 180px */
+    margin-top: 35px;
+  }
+
+  #carouselRecomendados,
+  #carouselNovidades {
+    padding: 1.5rem 10px;
+  }
+
+  #carouselRecomendados .carousel-item,
+  #carouselNovidades .carousel-item,
+  #carouselRecomendados .carousel-row,
+  #carouselNovidades .carousel-row {
+    height: auto;
+  }
+
+  .badge-custom {
+    top:-10px;
+    left:10px;
+  }
+
+  #carouselNovidades .carousel-control-prev,
+  #carouselRecomendados .carousel-control-prev,
+  #carouselNovidades .carousel-control-next,
+  #carouselRecomendados .carousel-control-next {
+    z-index: 5 !important;
+  }
+
+  /* ====== MARQUEE (CLIENTES) ====== */
+  .cliente-item {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  /* ====== AVALIAÇÕES ====== */
   #carouselAvaliacoes {
-    height: 200px !important;
+    height: 180px !important;
     padding: 20px 12px !important;
   }
 

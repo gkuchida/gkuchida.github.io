@@ -7,14 +7,12 @@
   </h2>
 
   <div class="cards-tecidos">
-
     <div
       class="card-tecido"
       *ngFor="let tecido of tecidos"
       (click)="abrirDetalhes(tecido)"
     >
       <img [src]="tecido.imagem" [alt]="tecido.nome">
-
       <h3>{{ tecido.nome }}</h3>
 
       <!-- Botão de ajuda -->
@@ -28,12 +26,10 @@
       <div class="descricao-ajuda" *ngIf="tecido.mostrarDescricao">
         {{ tecido.descricao }}
       </div>
-
     </div>
-
   </div>
-
 </div>
+
 <!-- Botão flutuante lateral direita -->
 <button
   *ngIf="showBackToTop"

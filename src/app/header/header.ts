@@ -16,21 +16,21 @@ export class Header {
   menuAberto: boolean = false;
   quantidadeCarrinho = 0;
 
-    constructor(private router: Router, private carrinhoService: CarrinhoService) {}
+  constructor(private router: Router, private carrinhoService: CarrinhoService) {}
 
-    onSearch() {
-      if (this.searchQuery.trim()) {
-        this.router.navigate(['/buscar'], {
-          queryParams: { query: this.searchQuery.trim() }
-        });
-      }
+  onSearch() {
+    if (this.searchQuery.trim()) {
+      this.router.navigate(['/buscar'], {
+        queryParams: { query: this.searchQuery.trim() }
+      });
     }
-    toggleMenu() {
+  }
+
+  toggleMenu() {
     this.menuAberto = !this.menuAberto;
   }
-  
-  // Função para fechar o menu (chamada ao clicar no item de navegação)
-    fecharMenu() {
+
+  fecharMenu() {
     this.menuAberto = false;
   }
 }

@@ -1,40 +1,32 @@
-/* ===== FILTRO DE ORDENAÇÃO ===== */
-
-/* Seleciona apenas o filtro que é filho direto e força layout de linha inteira */
-/* cobre casos onde .encomenda-lista usa grid ou flex */
+/* ====== FILTRO DE ORDENAÇÃO ====== */
 .encomenda-lista > .filtro-ordenacao {
   display: flex !important;
   flex-wrap: nowrap;
   align-items: center !important;
-  justify-content: flex-end !important; /* joga pro lado direito */
+  justify-content: flex-end !important;
   gap: 8px;
-
-  width: 100% !important;      /* ocupa a linha inteira */
-  padding: 0 12px 12px 12px;   /* separação do conteúdo */
-  margin: 0;                   /* evita margem que pareça card */
-
-  /* remove aparência de "card" (sombas, bordas, fundo) */
+  width: 100% !important;
+  padding: 0 12px 12px 12px;
+  margin: 0;
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
   border-radius: 0 !important;
-
-  /* se o pai for grid, garante que ocupe toda a linha */
   grid-column: 1 / -1;
 }
 
-/* Ícone */
+/* ====== Ícone ====== */
 .encomenda-lista > .filtro-ordenacao .icon-filtro {
-  color: #000080;              /* seu azul */
+  color: #000080;
   font-size: 1.2rem;
   margin-right: 6px;
   line-height: 1;
   display: inline-block;
 }
 
-/* Select — linha azul sempre visível, sem fundo e sem hover */
+/* ====== Select ====== */
 .encomenda-lista > .filtro-ordenacao select {
-  -webkit-appearance: none; /* remove aparência nativa em alguns navegadores */
+  -webkit-appearance: none;
   appearance: none;
   border: none !important;
   background: transparent !important;
@@ -42,28 +34,24 @@
   color: #333;
   padding: 4px 6px;
   font-weight: 400;
-
-  border-bottom: 2px solid #000080 !important; /* linha azul sempre visível */
+  border-bottom: 2px solid #000080 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-/* remove fundo no hover (mesmo se houver regra global) */
 .encomenda-lista > .filtro-ordenacao select:hover,
 .encomenda-lista > .filtro-ordenacao select:active {
   background: transparent !important;
 }
 
-/* foco: sem outline feio, manter a linha */
 .encomenda-lista > .filtro-ordenacao select:focus {
   outline: none !important;
   box-shadow: none !important;
   border-bottom: 2px solid #000080 !important;
 }
 
-/* garante que os cards comecem visualmente abaixo do filtro */
 .encomenda-lista > .encomenda-card {
-  margin-top: 10px; /* ajuste se quiser mais espaço */
+  margin-top: 10px;
 }
 
 .carousel,
@@ -73,6 +61,29 @@
 }
 
 /* ===== LISTA DE PRODUTOS ===== */
+.titulo-encomenda {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: -10px 10px 10px 0;
+  color: #000080;
+  display: block;
+}
+
+.titulo-encomenda i {
+  margin-right: 6px;
+  color: #6c63ff;
+}
+
+.encomenda-lista,
+.container-cards {
+  text-align: initial;
+}
+
+.titulo-encomenda {
+  align-self: center !important;
+}
+
 .encomenda-lista {
   position: relative;
   width: 100%;
@@ -84,16 +95,16 @@
 
 /* ===== CARD DE PRODUTO ===== */
 .encomenda-card {
-  background: #DCE6FF;
-  /*border: 3px solid #0E2270;     */
-  border-radius: 12px;
+   background: #F7F9FF;
+  border: 2px solid #B4C9F0;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
   transition: 0.25s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0.6, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0.6, 0.2);
 }
 
 .encomenda-card:hover {
@@ -101,7 +112,7 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.18);
 }
 
-/* imagem do card */
+/* ===== imagem do card= ====== */
 .encomenda-card img {
   width: 100%;
   height: 200px;
@@ -109,44 +120,40 @@
   margin-bottom: 10px;
 }
 
-/* nome do produto */
+/* ====== nome do produto ====== */
 .encomenda-card h3 {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #0E2270;     /* marinho */
+  color: #0E2270;
   margin-bottom: 15px;
 }
 
-/* botão com símbolo + */
+/* ====== botão ====== */
+.linha-seta {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #3E5BBF 60%, transparent);
+  position: relative;
+  margin: -4px auto 12px;
+}
 
-.btn-ver-detalhes {
+/* ====== Setinha ====== */
+.linha-seta::after {
+  content: "➜";
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  width: 45px;
-  height: 45px;
-  background: #2196F3;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 32px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-  top: 5px;
+  right: -4px;
+  top: -9px;
+  font-size: 1.1rem;
+  color: #0E2270;
+  font-weight: 600;
+  transition: transform .2s ease;
 }
 
-.btn-ver-detalhes:hover {
-  background: #1976D2;
+.card-produto:hover .linha-seta::after {
+  transform: translateX(4px);
 }
 
-.btn-ver-detalhes::after {
-  content: "+";
-  margin-top: -2px;
-}
-/* ==== GRID DOS DETALHES (continua funcionando igual) ==== */
+/* ====== GRID DOS DETALHES ====== */
 .encomenda-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -158,7 +165,7 @@
   border-radius: 10px;
 }
 
-/* GRID PRINCIPAL */
+/* ====== GRID PRINCIPAL ====== */
 .encomenda-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -168,20 +175,17 @@
   margin: 0 auto;
 }
 
-/* COLUNA ESQUERDA — CARD AZUL */
+/* ====== COLUNA ESQUERDA ====== */
 .encomenda-col-esquerda {
-  /* background: #DCE6FF; azul da loja */
   padding: 25px;
   border-radius: 18px;
-  /*box-shadow: 0 4px 15px rgba(0,0,0,0.5);*/
   display: flex;
   align-items: center;
   justify-content: center;
-   transform: none !important;
-
+  transform: none !important;
 }
 
-/* CAROUSEL */
+/* ====== CAROUSEL ====== */
 .encomenda-col-esquerda .carousel {
   width: 100%;
 }
@@ -190,15 +194,14 @@
   border-radius: 15px;
   object-fit: contain;
   max-height: 420px;
-  padding: 0;       /* remove espaço */
-  background: none; /* remove moldura */
+  padding: 0;
+  background: none;
 }
 
-
-/* CONTROLES DO CAROUSEL */
+/* ====== CONTROLES DO CAROUSEL ====== */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(1); /* deixa branco */
+  filter: invert(1);
   opacity: 0.9;
 }
 
@@ -207,21 +210,23 @@
   width: 50px;
 }
 
-/* INDICATORS */
+/* ====== INDICATORS ====== */
 #carouselEncomendaDetalhes {
   position: relative;
-  padding-bottom: 0 !important;    /* remove espaço interno */
+  padding-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
 
 #carouselEncomendaDetalhes .carousel-inner {
-  padding-bottom: 0 !important;    /* remove o padding dos slides */
+  padding-bottom: 0 !important;
 }
+
 #carouselEncomendaDetalhes .carousel-indicators{
   position: absolute;
   bottom: 0 !important;
   margin-bottom: -30px !important;
 }
+
 .carousel-indicators [data-bs-target] {
   background-color: #0057ff;
   width: 10px;
@@ -230,7 +235,7 @@
   margin-bottom: 0 !important;
 }
 
-/* COLUNA DIREITA */
+/* ====== COLUNA DIREITA ====== */
 .marca-agua {
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -246,7 +251,7 @@
   margin-bottom: 15px;
 }
 
-/* SELECTS */
+/* ====== SELECTS ====== */
 .seletor-variacao {
   margin: 15px 0;
 }
@@ -279,14 +284,14 @@
   border-color: #5D78B4;
 }
 
-/* AVISO */
+/* ====== AVISO ====== */
 .aviso-tecido {
   font-size: 0.9rem;
   opacity: 0.7;
   margin-bottom: 20px;
 }
 
-/* BOTÃO SELECIONAR */
+/* ====== BOTÃO SELECIONAR ====== */
 .btn-selecionar-encomenda-detalhe {
   background: #0E2270;
   color: #fff;
@@ -307,12 +312,12 @@
   filter: brightness(1.15);
 }
 
-/* DESCRIÇÃO */
+/* ====== DESCRIÇÃO ====== */
 .descricao-central {
-  width: 100% !important;      /* ocupa toda a largura */
-  max-width: 1200px !important; /* mesma largura do grid */
-  margin: 40px auto 0 auto !important;  /* separa do topo */
-  display: block !important;   /* força linha inteira */
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto 0 auto !important;
+  display: block !important;
   flex-direction: column !important;
   align-items: center;
 }
@@ -329,22 +334,21 @@
   padding-bottom: 6px;
 }
 
-/* Faixa fina embaixo */
 .titulo-descricao::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%; /* tamanho da linha */
-  height: 3px; /* espessura */
-  background-color: #FFF3C1; /* amarelo do header */
+  width: 100%;
+  height: 3px;
+  background-color: #FFF3C1;
   border-radius: 10px;
 }
 
-/* BOTÃO VOLTAR */
+/* ====== BOTÃO VOLTAR ====== */
 .voltar-pill {
   position: relative;
-  margin: 15px 0 10px 20px; /* abaixo do header e levemente à esquerda */
+  margin: 15px 0 10px 20px;
 }
 
 .voltar-pill button {
@@ -354,7 +358,7 @@
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 400;
-  border-radius: 30px;  /* estilo pílula */
+  border-radius: 30px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -365,22 +369,37 @@
 .voltar-pill button:hover {
   background: #4b6394;
 }
+
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
 
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
 
-/*
- * RESPONSIVO PARA LISTA DE PRODUTOS (CELULAR)
- * Garante 2 cards por linha
- */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .encomenda-lista {
-    grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
@@ -397,38 +416,48 @@
   .encomenda-col-esquerda {
     width: 100%;
   }
+
   .encomenda-card h3{
     font-size: 1.1rem;
   }
+
   .titulo-produto {
     font-size: 1.3rem;
   }
+
   .titulo-descricao {
     font-size: 1.3rem;
   }
-   .aviso-tecido{
+
+  .aviso-tecido{
     font-size: 0.7rem;
   }
+
   .seletor-variacao select {
     font-size: 0.8rem;
   }
+
   .encomenda-select {
     font-size: 0.85rem;
   }
-    .voltar-pill button {
+
+  .voltar-pill button {
     font-size: 1rem;
   }
+
   .btn-ver-detalhes {
     width: 30px;
     height: 30px;
     font-size: 1rem;
     font-weight: 800;
   }
-  /* BOTÃO SELECIONAR */
+
+  /* ====== BOTÃO SELECIONAR ====== */
   .btn-selecionar-encomenda-detalhe {
     font-size: 0.9rem;
   }
-  /* ===== CAROUSEL ===== */
+
+  /* ====== CAROUSEL ====== */
   #carouselEncomendaDetalhes {
     width: 100%;
     max-width: 350px;
@@ -436,41 +465,36 @@
     border-radius: 20px;
     overflow: hidden;
     height: auto !important;
-
   }
 
-  /* Altura fixa leve para evitar ficar gigante */
   #carouselEncomendaDetalhes {
     max-height: 330px;
   }
 
-  /* Ajuste da imagem do slide */
   #carouselEncomendaDetalhes .carousel-inner img {
     height: 280px;
     object-fit: contain;
     padding: 5px;
   }
 
-  /* Controladores (setas) menores */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-     filter: invert(30%) sepia(97%) saturate(3000%) hue-rotate(205deg) brightness(95%) contrast(105%);
+    filter: invert(30%) sepia(97%) saturate(3000%) hue-rotate(205deg) brightness(95%) contrast(105%);
   }
 
-
-
-
   .carousel-control-prev {
-    left: -15px;   /* antes era 0 — agora fica mais longe da borda */
+    left: -15px;
   }
 
   .carousel-control-next {
-    right: 0;  /* antes era 0 — agora também afasta */
+    right: 0;
   }
+
   .encomenda-lista > .filtro-ordenacao select {
     font-size: 0.9rem;
   }
-   .encomenda-lista > .filtro-ordenacao .icon-filtro {
+
+  .encomenda-lista > .filtro-ordenacao .icon-filtro {
     font-size: 1rem;
    }
 }

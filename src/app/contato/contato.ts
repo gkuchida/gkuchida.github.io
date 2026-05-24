@@ -24,7 +24,7 @@ export class Contato {
       email: ['', [Validators.required, Validators.email]],
       mensagem: ['', [Validators.required, Validators.minLength(10)]]
     });
-     emailjs.init('Gxhd3YDu7ljHfc8gy');
+    emailjs.init('Gxhd3YDu7ljHfc8gy');
   }
 
   enviar() {
@@ -68,7 +68,7 @@ export class Contato {
     @HostListener('window:scroll', [])
     onWindowScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; 
+      this.showBackToTop = scrollTop > 300;
     }
 
     scrollToTop(): void {

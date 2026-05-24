@@ -1,3 +1,11 @@
+.container-busca {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  margin-top: -20px;
+}
+
+/* ====== FILTROS ====== */
 .filtro-ordenacao {
   display: flex;
   align-items: center;
@@ -28,377 +36,284 @@
   font-size: 1.2rem;
 }
 
-.container-busca {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 15px;
-    margin-top: -20px;
-}
-
-/* ====================================
-    ESTILIZAÇÃO DOS FILTROS FOFOS
-==================================== */
-.filtros-fofos {
-    background-color: #fff6e9; /* Fundo Creme Suave */
-    border: 1px solid #ffddb8;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.filtro-titulo {
-    font-size: 1.4rem;
-    color: #ff8b2c;
-    font-weight: 700;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ffe8d2;
-    padding-bottom: 8px;
-}
-
-.filtro-opcoes {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px 25px; /* Espaço entre grupos e itens */
-    margin-bottom: 5px;
-}
-
-.filtro-label {
-    font-weight: 500;
-    color: #5d4037; /* Marrom aconchegante */
-    margin-right: 10px;
-    font-size: 1rem;
-}
-
-/* Estilo do Checkbox Personalizado (o 'checkmark' fofo) */
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #333;
-    user-select: none;
-}
-
-.checkbox-container input {
-    /* Esconder o checkbox nativo */
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    height: 20px;
-    width: 20px;
-    background-color: #fff;
-    border: 2px solid #ff8b2c;
-    border-radius: 6px;
-    margin-right: 8px;
-    transition: all 0.2s ease;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilo do checkmark quando marcado */
-.checkbox-container input:checked ~ .checkmark {
-    background-color: #ff8b2c;
-    border-color: #ff8b2c;
-}
-
-/* O "visto" dentro do checkmark */
-.checkbox-container input:checked ~ .checkmark::after {
-    content: '✓';
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1;
-}
-
-/* ====================================
-    ESTILIZAÇÃO DO RESUMO DA BUSCA
-==================================== */
+/* ====== RESUMO DA BUSCA ====== */
 .busca-resumo {
-    /* background-color: #e6f7ff; Fundo Azul Claro Suave
-    border: 1px solid #b3e0ff;*/
-    padding: 20px;
-    border-radius: 16px;
-    margin-top: -10px;
-    margin-bottom: 30px;
-    text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .busca-resumo.sem-resultados {
-    background-color: #fff0f0; /* Fundo para Sem Resultados */
-    border-color: #ffcccc;
+  background-color: #fff0f0;
+  border-color: #ffcccc;
 }
 
 .resultado-mensagem {
-    font-size: 1.2rem;
-    color: #000080; /* Azul Marinho */
-    margin-bottom: 8px;
-    font-weight: 500;
+  font-size: 1.2rem;
+  color: #000080;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .termo-buscado {
-    font-weight: 550;
-    color: #ff5e00; /* Laranja mais intenso */
-    background-color: #fff0e6;
-    padding: 3px 10px;
-    border-radius: 8px;
-    font-size: 1.15rem;
+  font-weight: 550;
+  color: #ff5e00;
+  background-color: #fff0e6;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 1.15rem;
 }
 
 .instrucao-mensagem {
-    font-size: 0.9rem;
-    color: #4a4a4a;
-    margin: 0;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin: 0;
 }
 
-/* ====================================
-    GRID E CARDS FOFOS
-==================================== */
+/* ====== GRID E CARDS ====== */
 .grid-titulo {
-    font-size: 1.3rem;
-    color: #5d4037;
-    margin-bottom: 20px;
-    padding: 0;
+  font-size: 1.3rem;
+  color: #5d4037;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 .grid-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-     max-width: 900px;       /* impede cards gigantes se houver só 1 ou 2 */
-    margin: 0 auto;         /* centraliza o grid totalmente */
-    padding: 10px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+    max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 120px;
 }
 
 .card {
-    background-color: #ffffff;
-    border: 2px solid #ffddb8;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    max-width: 250px;
-    width: 100%;
-    margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #ffddb8;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255,139,44,0.3); /* Sombra laranja de destaque */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255,139,44,0.3);
 }
 
 .card-img-container {
-    width: 100%;
-    height: 140px; /* Altura fixa para a imagem */
-    overflow: hidden;
-    border-bottom: 2px solid #ffddb8;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-bottom: 2px solid #ffddb8;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Garante que a imagem preencha o container */
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .card:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .produto-info {
-    padding: 15px;
-    flex-grow: 1; /* Garante que o bloco de info preencha o espaço */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .produto-nome {
-    font-size: 1.1rem;
-    color: #000080;
-    font-weight: 700;
-    margin-bottom: 8px;
-    line-height: 1.3;
+  font-size: 1.1rem;
+  color: #000080;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .produto-status {
-    font-size: 1rem;
-    color: #ff5e00; /* Cor de destaque para preço/status */
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ff5e00;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-/* Estilização das Tags (Para um visual mais fofo) */
+/* ====== TAGS ====== */
 .produto-tags {
-    margin-top: auto; /* Empurra as tags para baixo */
-    padding-top: 10px;
-    border-top: 1px dashed #ffd8b8;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed #ffd8b8;
 }
 
 .tag {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 12px;
-    margin-right: 8px;
-    margin-bottom: 5px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-right: 8px;
+  margin-bottom: 5px;
 }
 
 .tag-pronta {
-    background-color: #e6ffec; /* Verde claro suave */
-    color: #00a037;
+  background-color: #e6ffec;
+  color: #00a037;
 }
 
 .tag-encomenda {
-    background-color: #fff9e6; /* Amarelo claro suave */
-    color: #ff8b2c;
+  background-color: #fff9e6;
+  color: #ff8b2c;
 }
 
 .tag-artesanato {
-    background-color: #ffe6ff; /* Rosa claro suave */
-    color: #a000a0;
+  background-color: #ffe6ff;
+  color: #a000a0;
 }
 
-/* Botão Flutuante */
+/* ====== Botão Flutuante ====== */
 .back-to-top-fixed {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #4169e1;
-    color: white;
-    padding: 12px 15px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: background 0.2s;
-    font-size: 1.2rem;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4169e1;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.2rem;
+  z-index: 1000;
 }
 
 .back-to-top-fixed:hover {
-    background: #3151b7;
+  background: #3151b7;
 }
 
-/* ====================================
-    RESPONSIVIDADE
-==================================== */
-/* RESPONSIVIDADE PARA CELULAR (VERTICAL) E TABLET */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait),
        (min-width: 601px) and (max-width: 1024px) {
+  .container-busca {
+    padding: 15px;
+  }
 
-    /* --- GERAL: Container e padding --- */
-    .container-busca {
-        padding: 15px; /* Reduz o padding geral */
-    }
+  /* ====== FILTROS ====== */
+  .filtro-ordenacao {
+    margin-top: -45px;
+  }
 
-    /* --- FILTROS: Melhor visualização empilhada --- */
-    .filtros-fofos {
-       padding: 10px;
-        margin-bottom: 5px;
-    }
-    .filtro-titulo{
-      margin-bottom: 10px; /* Adiciona espaço abaixo do título empilhado */
-        width: 100%;
-    }
-    .filtro-opcoes {
-        flex-direction: row;
-        flex-wrap: wrap; /* Permite quebrar se a tela for muito pequena */
-        justify-content: flex-start;
-        align-items: center;
-        gap: 15px 25px;
-    }
-    .filtro-label {
-        width: 100%; /* Ocupa a largura total para melhor leitura */
-        margin-bottom: 5px;
-        font-size: 0.9rem;
-    }
-    .checkbox-container, .checkmark{
-      font-size: 0.9rem;
-    }
-    .filtro-opcoes{
-      font-size: 1rem;
-    }
-    /*Resultado*/
-    .busca-resumo{
-      width: 500px;
-      margin-left: -70px;
+  .filtro-ordenacao select {
+    font-size: 0.8rem;
+  }
+
+  .icon-filtro {
+    font-size: 1rem;
+  }
+
+  .filtros-fofos {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .filtro-titulo{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .filtro-opcoes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px 25px;
+  }
+
+  .filtro-label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+
+  .filtro-opcoes{
+    font-size: 1rem;
+  }
+
+  /* ====== Resultado ====== */
+  .busca-resumo{
+    width: 500px;
+    margin-left: -70px;
     margin-right: auto;
-    }
-    .container-busca{
-      margin-top: -20px;
-    }
-    .resultado-mensagem{
-      font-size: 1rem;
-    }
-    .instrucao-mensagem{
-      font-size: 0.8rem;
-    }
-    .sem-resultados {
+  }
+
+  .container-busca{
+    margin-top: -20px;
+  }
+
+  .resultado-mensagem{
+    font-size: 1rem;
+  }
+
+  .instrucao-mensagem{
+    font-size: 0.8rem;
+  }
+
+  .sem-resultados {
     margin-top: 20px !important;
     display: block;
     width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
-    /* --- GRID: O Ponto Principal --- */
-    .grid-produtos {
-        /* 1. Força a exibição de 2 colunas */
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
-        gap: 10px; /* Reduz o espaço entre os cards */
-        display: grid;
 
-    margin: 0 auto;         /* centraliza o grid totalmente */
+  /* ====== GRID ====== */
+  .grid-produtos {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 10px;
+    display: grid;
+    margin: 0 auto;
     padding: 10px 20px;
-    }
-    .grid-titulo{
-      font-size: 1.1rem;
-    }
-    /* --- CARDS: Otimização de Espaço --- */
-    .card {
-        border-radius: 12px; /* Arredondamento menor */
-         max-width: 100%;
-    padding: 10px;
-    }
-
-    /* O container de imagem deve ser 100% da largura do novo grid */
-    .card-img-container {
-        width: 100%; /* Ocupa 100% da nova coluna */
-        height: 120px; /* Reduz a altura da imagem para economizar espaço vertical */
-    }
-
-    /* Reduz o tamanho da fonte para caber melhor no layout de 2 colunas */
-    .produto-nome {
-        font-size: 0.95rem;
-    }
-    .produto-status, .tag {
-        font-size: 0.75rem;
-    }
-    .filtro-ordenacao {
-      margin-top: -45px;
-    }
-    .filtro-ordenacao select {
-    font-size: 0.8rem;
   }
-  .icon-filtro {
-  font-size: 1rem;
-}
+
+  .grid-titulo{
+    font-size: 1.1rem;
+  }
+
+  /* ====== CARDS ====== */
+  .card {
+    border-radius: 12px;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .card-img-container {
+    width: 100%;
+    height: 120px;
+  }
+
+  .produto-nome {
+      font-size: 0.95rem;
+  }
+
+  .produto-status, .tag {
+    font-size: 0.75rem;
+  }
 }

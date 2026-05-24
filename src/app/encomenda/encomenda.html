@@ -1,28 +1,24 @@
 <!-- LISTA DE PRODUTOS (quando NÃO está nos detalhes) -->
 <div class="encomenda-lista" *ngIf="!produtoEmDetalhe">
   <div class="filtro-ordenacao">
-  <i class="bi bi-funnel-fill icon-filtro"></i>
+    <i class="bi bi-funnel-fill icon-filtro"></i>
+    <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
+      <option value="">Ordenar...</option>
+      <option value="nomeAsc">Nome (A → Z)</option>
+      <option value="nomeDesc">Nome (Z → A)</option>
+    </select>
+  </div>
 
-  <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
-    <option value="">Ordenar...</option>
-    <option value="nomeAsc">Nome (A → Z)</option>
-    <option value="nomeDesc">Nome (Z → A)</option>
-  </select>
-</div>
   <div class="encomenda-card"
-       *ngFor="let p of produtos"
-       (click)="abrirDetalhes(p)">
-
+    *ngFor="let p of produtos"
+    (click)="abrirDetalhes(p)">
     <img [src]="p.imagens[0]" alt="{{ p.nome }}">
     <h3>{{ p.nome }}</h3>
-
-    <div class="btn-ver-detalhes"></div>
-
-
+    <div class="linha-seta"></div>
   </div>
 </div>
-<div class="encomenda-lista" *ngIf="!produtoEmDetalhe">
-  </div>
+
+<div class="encomenda-lista" *ngIf="!produtoEmDetalhe"></div>
 
 <div class="voltar-pill" *ngIf="produtoEmDetalhe">
   <button (click)="voltarALista()">
@@ -30,96 +26,82 @@
   </button>
 </div>
 
-<div class="encomenda-grid" *ngIf="produtoEmDetalhe">
-  </div>
+<div class="encomenda-grid" *ngIf="produtoEmDetalhe"></div>
+
 <!-- GRID PRINCIPAL (DETALHES DO PRODUTO) -->
 <div class="encomenda-grid" *ngIf="produtoEmDetalhe">
-
   <div class="encomenda-col-esquerda">
-
-  <div id="carouselEncomendaDetalhes" class="carousel slide" data-bs-ride="carousel">
-
+    <div id="carouselEncomendaDetalhes" class="carousel slide" data-bs-ride="carousel">
     <!-- INDICATORS -->
-    <div class="carousel-indicators">
-      <button
-        *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
-        type="button"
-        data-bs-target="#carouselEncomendaDetalhes"
-        [attr.data-bs-slide-to]="i"
-        [class.active]="i === 0">
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+          type="button"
+          data-bs-target="#carouselEncomendaDetalhes"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0">
+        </button>
+      </div>
+
+    <!-- SLIDES -->
+      <div class="carousel-inner">
+        <div
+          *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
+          class="carousel-item"
+          [class.active]="i === 0">
+          <img [src]="img" class="d-block w-100" />
+        </div>
+      </div>
+
+    <!-- CONTROLES -->
+      <button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button"
+        data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
       </button>
     </div>
 
-    <!-- SLIDES -->
-    <div class="carousel-inner">
-      <div
-        *ngFor="let img of produtoEmDetalhe.imagens; let i = index"
-        class="carousel-item"
-        [class.active]="i === 0">
-        <img [src]="img" class="d-block w-100" />
-      </div>
-    </div>
-
-    <!-- CONTROLES -->
-    <button class="carousel-control-prev" type="button"
-            data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-
-    <button class="carousel-control-next" type="button"
-            data-bs-target="#carouselEncomendaDetalhes" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
   </div>
-
-</div>
-
-
   <!-- COLUNA DIREITA -->
   <div class="encomenda-col-direita">
-
     <div class="marca-agua">Artes & Focinhos</div>
     <h1 class="titulo-produto">{{ produtoEmDetalhe.nome }}</h1>
     <!-- SELECT TECIDO -->
-     <div class="seletor-variacao">
-     <label for="tamanho">Selecione o tecido:</label>
-    <select class="encomenda-select" [(ngModel)]="tecidoParaMedidas">
-      <option value="" disabled selected>-- Selecione --</option>
-      <option *ngFor="let t of produtoEmDetalhe.tecidos">{{ t }}</option>
-    </select>
+    <div class="seletor-variacao">
+      <label for="tamanho">Selecione o tecido:</label>
+        <select class="encomenda-select" [(ngModel)]="tecidoParaMedidas">
+          <option value="" disabled selected>-- Selecione --</option>
+          <option *ngFor="let t of produtoEmDetalhe.tecidos">{{ t }}</option>
+        </select>
     </div>
-
     <!-- SELECT ACABAMENTO -->
     <div class="seletor-variacao" *ngIf="produtoEmDetalhe.acabamento && produtoEmDetalhe.acabamento.length > 0">
       <label for="tamanho">Selecione o acabamento:</label>
-      <select class="encomenda-select" [(ngModel)]="acabamentoParaMedidas">
-        <option value="" disabled selected>-- Selecione --</option>
-        <option *ngFor="let a of produtoEmDetalhe.acabamento">{{ a }}</option>
-      </select>
+        <select class="encomenda-select" [(ngModel)]="acabamentoParaMedidas">
+          <option value="" disabled selected>-- Selecione --</option>
+          <option *ngFor="let a of produtoEmDetalhe.acabamento">{{ a }}</option>
+        </select>
     </div>
-
     <p class="aviso-tecido">
       *As fotos são ilustrativas. Os tecidos disponíveis serão confirmados após a escolha.
     </p>
-
     <button class="btn-selecionar-encomenda-detalhe"
-            [disabled]="!tecidoParaMedidas"
-            (click)="selecionarENavegar()">
+      [disabled]="!tecidoParaMedidas"
+      (click)="selecionarENavegar()">
       Selecionar e ir para medidas
     </button>
-
   </div>
 </div>
 
 <!-- DESCRIÇÃO -->
-
 <h2 class="titulo-descricao" *ngIf="produtoEmDetalhe">Descrição</h2>
 <div class="descricao-central" *ngIf="produtoEmDetalhe">
   <p *ngFor="let p of produtoEmDetalhe.descricao" [innerHTML]="p"></p>
 </div>
-
-
 <!-- BOTÃO VOLTAR AO TOPO -->
 <button
   *ngIf="showBackToTop"

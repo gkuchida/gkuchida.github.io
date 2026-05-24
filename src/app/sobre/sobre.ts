@@ -10,14 +10,16 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./sobre.css']
 })
 export class Sobre {
-   showBackToTop = false;
-    @HostListener('window:scroll', [])
-    onWindowScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300; 
-    }
+  showBackToTop = false;
 
-    scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  @HostListener('window:scroll', [])
+
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showBackToTop = scrollTop > 300;
+  }
+
+  scrollToTop(): void {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

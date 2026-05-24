@@ -8,9 +8,9 @@ export interface ProdutoSelecionado {
 }
 
 export interface MedidasPedido {
-  pescoco: string;
-  torax: string;
-  comprimento: string;
+  pescoco: number | null;
+  torax: number | null;
+  comprimento: number | null;
   observacoes?: string;
 }
 
@@ -21,6 +21,7 @@ export interface ArtesanatoSelecionado {
 @Injectable({
   providedIn: 'root'
 })
+
 export class EncomendaService {
   private produtoSelecionado?: ProdutoSelecionado;
   private medidas?: MedidasPedido;

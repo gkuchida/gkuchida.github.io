@@ -3,11 +3,9 @@
   <!-- COLUNA ESQUERDA — CONTATOS -->
   <div class="lado-contatos">
     <h2 class="titulo-fofo">Fale com a Artes & Focinhos 💛</h2>
-
     <p class="subtexto">
       WhatsApp, redes sociais ou e-mail — estamos prontos para ajudar!
     </p>
-
     <ul class="lista-contatos">
       <li>
         <i class="bi bi-whatsapp"></i>
@@ -28,41 +26,32 @@
     </ul>
 
   <div class="localizacao-fofa">
-
-  <h3 class="loc-titulo">📍 Estamos em Curitiba-Paraná</h3>
-
-  <div class="mapa-container-fofo">
-    <div class="patinhas patinha1">🐾</div>
-    <div class="patinhas patinha2">🐾</div>
-
-    <iframe
-      src="https://www.google.com/maps?q=80530-300+Curitiba+Juvev%C3%AA&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
+    <h3 class="loc-titulo">📍 Estamos em Curitiba-Paraná</h3>
+    <div class="mapa-container-fofo">
+      <div class="patinhas patinha1">🐾</div>
+      <div class="patinhas patinha2">🐾</div>
+      <iframe
+        src="https://www.google.com/maps?q=80530-300+Curitiba+Juvev%C3%AA&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
-
 </div>
-  </div>
-  <!-- COLUNA DIREITA — FORMULÁRIO -->
+<!-- COLUNA DIREITA — FORMULÁRIO -->
   <div class="lado-form">
-
     <div class="faq-aviso">
-  <h3 class="faq-titulo">Antes de enviar sua mensagem 💬</h3>
-  <p class="faq-texto">
-    Temos uma página especial de <a [routerLink]="['/duvidas']">Perguntas Frequentes (FAQ)</a>
- com várias informações importantes sobre prazos, tamanhos, encomendas e entrega.
-  </p>
-
-  <p class="faq-texto">
-    👉 Se sua dúvida não foi respondida lá, você pode falar com a gente usando o formulário abaixo.
-    Vamos te ajudar com muito carinho! 💛🐾
-  </p>
-</div>
-
-
+      <h3 class="faq-titulo">Antes de enviar sua mensagem 💬</h3>
+      <p class="faq-texto">
+        Temos uma página especial de <a [routerLink]="['/duvidas']">Perguntas Frequentes (FAQ)</a>
+        com várias informações importantes sobre prazos, tamanhos, encomendas e entrega.
+      </p>
+      <p class="faq-texto">
+        👉 Se sua dúvida não foi respondida lá, você pode falar com a gente usando o formulário abaixo.
+        Vamos te ajudar com muito carinho! 💛🐾
+      </p>
+    </div>
     <form [formGroup]="contatoForm" (ngSubmit)="enviar()">
-
       <div class="campo">
         <label for="nome">Nome:</label>
         <input id="nome" type="text" formControlName="nome" />
@@ -70,7 +59,6 @@
           Nome é obrigatório.
         </div>
       </div>
-
       <div class="campo">
         <label for="email">Email:</label>
         <input id="email" type="email" formControlName="email" />
@@ -78,7 +66,6 @@
           Digite um email válido.
         </div>
       </div>
-
       <div class="campo">
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" rows="5" formControlName="mensagem"></textarea>
@@ -86,18 +73,14 @@
           A mensagem precisa ter ao menos 10 caracteres.
         </div>
       </div>
-
       <div class="form-buttons">
         <button type="submit" [disabled]="contatoForm.invalid">Enviar</button>
         <button type="button" class="limpar" (click)="limpar()">Limpar</button>
         <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
       </div>
-
     </form>
   </div>
 </div>
-
-
 <!-- BOTÃO FLUTUANTE -->
 <button class="back-to-top-fixed" (click)="scrollToTop()" aria-label="Voltar ao topo">
   <i class="bi bi-arrow-up"></i>

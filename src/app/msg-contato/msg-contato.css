@@ -3,36 +3,38 @@
 }
 
 :host {
-    display: block;
-    text-align: center;
-    padding: 20px;
-  }
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
 
-  h2 {
-    margin-top: 0;
-    color: #000080;
-  }
+h2 {
+  margin-top: 0;
+  color: #000080;
+}
 
-  p {
-    font-size: 16px;
-    margin: 10px 0 20px;
-  }
+p {
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
 
-  button {
-    background-color: #0072ce;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+button {
+  background-color: #0072ce;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  button:hover {
-    background-color: #000080;
-  }
-/* -- RESPONSIVO -- */
-@media (max-width: 600px) {
+button:hover {
+  background-color: #000080;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   :host {
     padding: 12px 10px;
   }
@@ -56,4 +58,3 @@
     max-width: 280px;
   }
 }
-/* -- FIM RESPONSIVO -- */

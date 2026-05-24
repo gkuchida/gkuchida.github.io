@@ -1,37 +1,45 @@
 <header class="header">
   <div class="top-bar">
     <div class="logo">
-     <a [routerLink]="['/']" class="link-home">
-      <img src="https://i.ibb.co/vvzQQfTx/IMG-6612.png" alt="Logo"/> Artes & Focinhos</a>
-      <h3>Moda para pets estilosos</h3>
+      <a [routerLink]="['/']" class="link-home">
+        <img src="https://i.ibb.co/vvzQQfTx/IMG-6612.png" alt="Logo"/> Artes & Focinhos</a>
+        <h3>Moda para pets estilosos</h3>
     </div>
     <div class="search-wrapper">
-  <input
-    type="text"
-    placeholder="Buscar produtos..."
-    [(ngModel)]="searchQuery"
-    (keydown.enter)="onSearch()"
-  />
+      <input
+        type="text"
+        placeholder="Buscar produtos..."
+        [(ngModel)]="searchQuery"
+        (keydown.enter)="onSearch()"
+      />
+      <button (click)="onSearch()">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
 
-  <button (click)="onSearch()">
-    <i class="bi bi-search"></i>
-  </button>
-</div>
-
+    <!-- CARRINHO MOBILE -->
+    <a routerLink="/carrinho" class="cart-mobile" title="Meu carrinho">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+    </a>
 
     <div class="social-links d-flex align-items-center ms-3">
       <a href="https://instagram.com/artesfocinhos" target="_blank" class="me-2" title="Instagram">
-          <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+        <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
       </a>
 
       <a href="https://facebook.com/artesfocinhos" target="_blank" class="me-2" title="Facebook">
-          <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+        <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
       </a>
 
       <a href="https://api.whatsapp.com/send?phone=5541999218178" target="_blank" title="WhatsApp">
-          <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+        <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
       </a>
     </div>
+
     <button class="menu-toggle" (click)="toggleMenu()">
       ☰
     </button>
@@ -48,8 +56,6 @@
       </li>
       <li><a routerLink="/prontas" (click)="fecharMenu()">Pronta Entrega</a></li>
       <li><a routerLink="/encomenda" (click)="fecharMenu()">Monte o seu Pedido</a></li>
-      <!--<li><a routerLink="/tecidos" (click)="fecharMenu()">Tecidos</a></li>
-      <li><a routerLink="/contato" (click)="fecharMenu()">Contato</a></li>-->
       <li><a routerLink="/sobre" (click)="fecharMenu()">Sobre</a></li>
       <li><a routerLink="/duvidas" (click)="fecharMenu()">Dúvidas</a></li>
       <li>

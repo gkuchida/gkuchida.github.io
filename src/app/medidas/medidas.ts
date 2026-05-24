@@ -1,4 +1,3 @@
-/* medidas.ts */
 import { Component,HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -18,9 +17,9 @@ export class Medidas {
   produto?: ProdutoSelecionado;
 
   medidas: MedidasPedido = {
-    pescoco: '',
-    torax: '',
-    comprimento: '',
+    pescoco: null,
+    torax: null,
+    comprimento: null,
     observacoes: ''
   };
 
@@ -40,10 +39,10 @@ export class Medidas {
 
   ok() {
     if (!this.validarCampos()) {
-       this.dialog.open(MsgErro, {
-        width: '400px',
-        data: { medidas: this.medidas },
-        panelClass: 'custom-modal'
+      this.dialog.open(MsgErro, {
+      width: '400px',
+      data: { medidas: this.medidas },
+      panelClass: 'custom-modal'
       });
       return;
     }

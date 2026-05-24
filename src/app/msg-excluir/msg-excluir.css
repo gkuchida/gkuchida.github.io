@@ -73,8 +73,10 @@
 .modal-footer .btn-secondary:hover {
   background-color: #5a6268;
 }
-/* -- RESPONSIVO -- */
-@media (max-width: 600px) {
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .modal-dialog {
     max-width: 90%;
     margin: 1rem auto;
@@ -107,4 +109,3 @@
     width: 100%;
   }
 }
-/* -- FIM RESPONSIVO -- */

@@ -3,6 +3,7 @@
     <i class="bi bi-arrow-left"></i> Voltar
   </button>
 </div>
+
 <div *ngIf="produto" class="medidas-container">
 
   <div class="form-wrapper">
@@ -10,26 +11,56 @@
     <h3 class="titulo-produto">{{ produto.nome }}</h3>
     <div class="linha-amarela"></div>
 
+    <button (click)="alternarAjuda()" class="btn-ajuda-medidas">
+      <i class="bi bi-question-circle"></i> Como medir
+      <i class="bi" [ngClass]="{'bi-chevron-up': mostrarImagemAjuda, 'bi-chevron-down': !mostrarImagemAjuda}"></i>
+    </button>
+
     <form (ngSubmit)="ok()">
-      <label>
-        Pescoço (cm) *:
-        <input type="text" [(ngModel)]="medidas.pescoco" name="pescoco" required />
-      </label>
 
-      <label>
-        Tórax (cm) *:
-        <input type="text" [(ngModel)]="medidas.torax" name="torax" required />
-      </label>
+  <label>
+    Pescoço (cm) *:
+    <input
+      type="number"
+      [(ngModel)]="medidas.pescoco"
+      name="pescoco"
+      required
+      min="1"
+      step="0.1"
+    />
+  </label>
 
-      <label>
-        Comprimento (cm) *:
-        <input type="text" [(ngModel)]="medidas.comprimento" name="comprimento" required />
-      </label>
+  <label>
+    Tórax (cm) *:
+    <input
+      type="number"
+      [(ngModel)]="medidas.torax"
+      name="torax"
+      required
+      min="1"
+      step="0.1"
+    />
+  </label>
 
-      <label>
-        Observações:
-        <textarea [(ngModel)]="medidas.observacoes" name="observacoes"></textarea>
-      </label>
+  <label>
+    Comprimento (cm) *:
+    <input
+      type="number"
+      [(ngModel)]="medidas.comprimento"
+      name="comprimento"
+      required
+      min="1"
+      step="0.1"
+    />
+  </label>
+
+  <label>
+    Observações:
+    <textarea
+      [(ngModel)]="medidas.observacoes"
+      name="observacoes">
+    </textarea>
+  </label>
 
       <button type="submit" class="btn-ok">
         OK
@@ -37,18 +68,9 @@
     </form>
   </div>
 
-  <div class="imagem-ajuda">
+  <div *ngIf="mostrarImagemAjuda" class="imagem-ajuda-toggle">
     <div class="ajuda-card">
       <img src="https://i.ibb.co/NgzWfjX2/MEDIDAS.jpg" alt="Como medir" />
     </div>
   </div>
 </div>
-
-<!-- Botão flutuante lateral direita -->
-<button
-  class="back-to-top-fixed"
-  (click)="scrollToTop()"
-  aria-label="Voltar ao topo"
->
-  <i class="bi bi-arrow-up"></i>
-</button>

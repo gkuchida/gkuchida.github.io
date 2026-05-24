@@ -6,89 +6,69 @@
     </button>
   </div>
 </div>
-<div *ngIf="items.length === 1" class="promo-brinde">
-  Compre mais 1 item e ganhe um brinde.
-</div>
+<div *ngIf="items.length === 1" class="promo-brinde">Compre mais 1 item e ganhe um brinde.</div>
 
-<div *ngIf="items.length >= 2" class="promo-brinde">
-  Parabéns! Você ganhou um brinde surpresa por comprar 2 ou mais produtos.
-</div>
+<div *ngIf="items.length >= 2" class="promo-brinde">Parabéns! Você ganhou um brinde surpresa por comprar 2 ou mais produtos.</div>
 
 <div class="card mb-4" *ngIf="items.length > 0">
   <h2>
     <span style="color: #0072ce;">Meu Carrinho -</span>
     Clique em finalizar compra para efetuar seu pedido.
   </h2>
-<!-- 2. Cabeçalho -->
-<div class="carrinho-header">
+  <!-- 2. Cabeçalho -->
+  <div class="carrinho-header">
     <div class="header-produto">Produto</div>
     <div class="header-preco text-center">Preço</div>
     <div class="header-excluir text-center">Excluir</div>
-</div>
+  </div>
 
-<!-- 3. Itens -->
-<div *ngFor="let item of items; let i = index" class="carrinho-item">
+  <!-- 3. Itens -->
+  <div *ngFor="let item of items; let i = index" class="carrinho-item">
     <!-- COLUNA 1 — PRODUTO -->
     <div class="item-produto">
-        <img
-  *ngIf="item.imagens?.length"
-  [src]="item.imagens[0]"
-  [alt]="item.nomeModelo"
-  class="carrinho-img"
-/>
-
-
-
-        <div class="item-detalhes">
-            <div class="nome-produto">
-                {{ item.nomeModelo }} {{ item.tecido }} 
-            </div>
-
-            <p *ngIf="item.tamanho" class="info-adicional">
-                Tamanho: {{ item.tamanho }}
-            </p>
-
-            <!-- Medidas Encomenda -->
-            <div *ngIf="item.tipo === 'encomenda' && item.medidas">
-                <p class="info-adicional">Pescoço: {{ item.medidas.pescoco }} cm</p>
-                <p class="info-adicional">Tórax: {{ item.medidas.torax }} cm</p>
-                <p class="info-adicional">Comprimento: {{ item.medidas.comprimento }} cm</p>
-                <p *ngIf="item.acabamento" class="info-adicional">
-                    <strong>Acabamento:</strong> {{ item.acabamento }}
-                </p>
-                <p *ngIf="item.medidas.observacoes" class="info-adicional">
-                    <strong>Obs:</strong> {{ item.medidas.observacoes }}
-                </p>
-            </div>
+      <img
+        *ngIf="item.imagens?.length"
+        [src]="item.imagens[0]"
+        [alt]="item.nomeModelo"
+        class="carrinho-img"/>
+      <div class="item-detalhes">
+        <div class="nome-produto">{{ item.nomeModelo }} {{ item.tecido }}</div>
+        <p *ngIf="item.tamanho" class="info-adicional">Tamanho: {{ item.tamanho }}</p>
+        <!-- Medidas Encomenda -->
+        <div *ngIf="item.tipo === 'encomenda' && item.medidas">
+          <p class="info-adicional">Pescoço: {{ item.medidas.pescoco }} cm</p>
+          <p class="info-adicional">Tórax: {{ item.medidas.torax }} cm</p>
+          <p class="info-adicional">Comprimento: {{ item.medidas.comprimento }} cm</p>
+          <p *ngIf="item.acabamento" class="info-adicional"><strong>Acabamento:</strong> {{ item.acabamento }}</p>
+          <p *ngIf="item.medidas.observacoes" class="info-adicional"><strong>Obs:</strong> {{ item.medidas.observacoes }}</p>
         </div>
+      </div>
     </div>
 
     <!-- COLUNA 2 — PREÇO -->
     <div class="item-preco text-center">
-        <ng-container *ngIf="item.preco !== undefined && item.preco !== null; else semPreco">
-            <strong>R$ {{ item.preco | number:'1.2-2' }}</strong>
-        </ng-container>
+      <ng-container *ngIf="item.preco !== undefined && item.preco !== null; else semPreco">
+        <strong>R$ {{ item.preco | number:'1.2-2' }}</strong>
+      </ng-container>
 
-        <ng-template #semPreco>
-            <span class="sem-preco">Aguarde orçamento</span>
-        </ng-template>
+      <ng-template #semPreco>
+        <span class="sem-preco">Aguarde orçamento</span>
+      </ng-template>
     </div>
 
     <!-- COLUNA 3 — EXCLUIR -->
     <div class="item-excluir text-center">
-        <button class="delete-btn" (click)="openConfirmDialog(i)">
-            <i class="bi bi-trash"></i>
-        </button>
+      <button class="delete-btn" (click)="openConfirmDialog(i)">
+        <i class="bi bi-trash"></i>
+      </button>
     </div>
+  </div>
 
-</div>
-
-
-<!-- Botoes de Ação Final -->
-<div class="botoes mt-4">
+  <!-- Botoes de Ação Final -->
+  <div class="botoes mt-4">
     <button (click)="finalizarCompra()">Finalizar Compra</button>
     <button (click)="continuarComprando()">Continuar Comprando</button>
-</div>
+  </div>
 </div>
 <app-msg-excluir
   *ngIf="showConfirmDialog"

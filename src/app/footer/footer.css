@@ -1,11 +1,11 @@
 .footer {
   background: #f4f4f4;
-  padding: 15px 20px; /* reduzido */
+  padding: 15px 20px;
 }
 
 .footer-columns {
    display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 5px;
   align-items: start;
 }
@@ -14,12 +14,13 @@
   flex: 1;
   min-width: 180px;
 }
+
 .col-localizacao {
-  grid-column: 2; /* mesma coluna do pagamento */
-  grid-row: 2;    /* fica exatamente embaixo */
+  grid-column: 2;
+  grid-row: 2;
   margin-top: -65px;
 }
-/* Grupo para reorganizar no mobile */
+
 .footer-col-group {
   display: flex;
   gap: 40px;
@@ -83,43 +84,41 @@
   margin: 3px 0;
 }
 
-/* =========================== */
-/*         RESPONSIVO          */
-/* =========================== */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
  .footer-columns {
     display: grid !important;
-    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     gap: 12px;
     align-items: start;
     width: 100%;
   }
 
-  /* SELTORES: use as classes do seu HTML */
+  /* ====== SELTORES ====== */
   .col-atendimento {
-    grid-column: 1 / 2; /* coluna da esquerda */
+    grid-column: 1 / 2;
     grid-row: 1;
   }
 
   .col-pagamento {
-    grid-column: 1 / 2; /* coluna da direita, linha 1 */
+    grid-column: 1 / 2;
     grid-row: 2;
   }
 
   .col-categorias {
-    grid-column: 2 / 3; /* mesma coluna da direita, linha 2 (embaixo do pagamento) */
+    grid-column: 2 / 3;
     grid-row: 1;
-    margin-top: 0;      /* garante que não haja espaço extra */
+    margin-top: 0;
   }
 
   .col-localizacao{
-    grid-column: 2 / 3; /* coluna da direita, linha 1 */
+    grid-column: 2 / 3;
     grid-row: 2;
     margin-top: -10px;
   }
-  /* pequenas proteções para evitar largura indesejada */
+
   .footer-col {
     box-sizing: border-box;
     width: 100%;

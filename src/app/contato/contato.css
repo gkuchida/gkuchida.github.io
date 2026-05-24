@@ -8,16 +8,12 @@
   margin-top: -20px;
 }
 
-/* =========================
-      COLUNA ESQUERDA
-========================= */
+/* ====== COLUNA ESQUERDA ====== */
 .lado-contatos {
   flex: 1;
   min-width: 300px;
-  /*background: #fff6e9;*/
   padding: 25px;
   border-radius: 22px;
-  /*box-shadow: 0 4px 10px rgba(0,0,0,0.08);*/
   animation: deslizar 0.6s ease forwards;
 }
 
@@ -68,7 +64,7 @@
   color: #ff5500;
 }
 
-/* Ilustração */
+/* ====== Ilustração ====== */
 .localizacao-fofa {
   background: #fff7ea;
   padding: 25px 20px;
@@ -109,7 +105,7 @@
   display: block;
 }
 
-/* PATINHAS */
+/* ====== PATINHAS ====== */
 .patinhas {
   position: absolute;
   font-size: 2rem;
@@ -129,9 +125,7 @@
   transform: rotate(10deg);
 }
 
-/* =========================
-      COLUNA DIREITA
-========================= */
+/* ====== COLUNA DIREITA ====== */
 .lado-form {
   flex: 1;
   min-width: 300px;
@@ -175,7 +169,7 @@
   margin-top: 4px;
 }
 
-/* BOTÕES */
+/* ====== BOTÕES ====== */
 .form-buttons {
   display: flex;
   gap: 10px;
@@ -203,7 +197,7 @@
   background: #e7e7e7;
 }
 
-/* BOTÃO FLUTUANTE */
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   position: fixed;
   bottom: 20px;
@@ -246,44 +240,31 @@
   text-decoration: underline;
 }
 
-/* RESPONSIVIDADE */
-/* RESPONSIVIDADE */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
-        (min-width: 601px) and (max-width: 1024px)  /* CONDIÇÃO B: Tablet */{
+      (min-width: 601px) and (max-width: 1024px)  /* CONDIÇÃO B: Tablet */{
 
-  /* 1. MUDAR A DIREÇÃO DO FLEXBOX PARA COLUNA */
   .contato-container {
-    /* Faz com que os itens fiquem empilhados verticalmente */
     flex-direction: column;
-    /* Reduz o padding nas laterais em telas muito pequenas */
     padding: 15px;
-    gap: 20px; /* Ajusta o espaçamento vertical entre os itens */
+    gap: 20px;
     margin-top: -50px;
   }
 
-  /* 2. REORDENAR AS COLUNAS COM A PROPRIEDADE 'ORDER' */
-
-  /* Coluna Esquerda (.lado-contatos): Fica em cima (order: 1) */
+/* ====== Coluna Esquerda ====== */
   .lado-contatos {
-    /* Um valor menor (1) faz com que ele apareça primeiro na pilha vertical */
     order: 1;
-    /* Garante que ocupe a largura total, embora o flex-direction: column já ajude */
     width: 100%;
-    min-width: auto; /* Remove a restrição de largura mínima */
+    min-width: auto;
   }
-
-  /* Coluna Direita (.lado-form): Fica embaixo (order: 2) */
+/* ====== Coluna Direita ====== */
   .lado-form {
-    /* Um valor maior (2) faz com que ele apareça depois na pilha vertical */
     order: 2;
     width: 100%;
     min-width: auto;
     margin-top: -20px;
   }
 
-  /* AJUSTES ADICIONAIS PARA MÓVEL */
-
-  /* Remove a animação de deslizar no carregamento em telas menores */
   @keyframes deslizar {
     from { transform: none; opacity: 1; }
     to { transform: none; opacity: 1; }
@@ -294,16 +275,15 @@
     to { transform: none; opacity: 1; }
   }
 
-  /* Ajuste no padding do container de localização/mapa */
   .localizacao-fofa {
-      padding: 20px 15px;
-      margin: 15px auto;
+    padding: 20px 15px;
+    margin: 15px auto;
   }
 
-  /* Reduz o tamanho da fonte para melhor visualização em telas pequenas */
   .titulo-fofo, .loc-titulo, .faq-titulo {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
+
   .subtexto, .lista-contatos, .lista-contatos a, .faq-texto{
     font-size: 0.9rem;
   }

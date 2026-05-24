@@ -1,4 +1,3 @@
-/* GRID PRINCIPAL */
 .medidas-container {
   display: flex;
   justify-content: center;
@@ -8,9 +7,9 @@
   flex-wrap: wrap;
 }
 
-/* CARD ESQUERDO (FORMULÁRIO) */
+/* ====== CARD ESQUERDO (FORMULÁRIO) ====== */
 .form-wrapper {
-  background: #e9f4ff; /* mesmo azul clarinho da área do carrossel */
+  background: #e9f4ff;
   padding: 32px;
   border-radius: 24px;
   width: 420px;
@@ -28,7 +27,7 @@
 .titulo-produto {
   font-size: 26px;
   margin: 0;
-  color: #0c1e5b; /* navy */
+  color: #0c1e5b;
   font-weight: 700;
 }
 
@@ -40,7 +39,7 @@
   border-radius: 4px;
 }
 
-/* FORM */
+/* ====== FORM ====== */
 label {
   display: flex;
   flex-direction: column;
@@ -65,7 +64,6 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(93,120,180,0.25);
 }
 
-/* BOTÃO OK */
 .btn-ok {
   width: 100%;
   padding: 14px;
@@ -85,19 +83,18 @@ textarea:focus {
   transform: scale(1.02);
 }
 
-/* CARD DA IMAGEM DE AJUDA */
 .btn-ajuda-medidas {
   background: none;
   border: none;
-  color: #0072CE; /* Cor de link para indicar que é clicável */
+  color: #0072CE;
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
-  padding: 10px 0; /* Espaçamento acima e abaixo */
+  padding: 10px 0;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 15px; /* Adiciona espaço entre o botão de ajuda e o formulário */
+  margin-bottom: 15px;
 }
 
 .btn-ajuda-medidas i {
@@ -105,7 +102,7 @@ textarea:focus {
 }
 
 .ajuda-card {
-  background: #fffbee; /* tom pastel amarelinho */
+  background: #fffbee;
   padding: 20px;
   border-radius: 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -117,6 +114,7 @@ textarea:focus {
   border-radius: 16px;
 }
 
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
@@ -145,10 +143,10 @@ textarea:focus {
   transform: scale(1.1);
 }
 
-/* BOTÃO VOLTAR */
+/* ====== BOTÃO VOLTAR ====== */
 .voltar-pill {
   position: relative;
-  margin: 15px 0 10px 20px; /* abaixo do header e levemente à esquerda */
+  margin: 15px 0 10px 20px;
 }
 
 .voltar-pill button {
@@ -158,7 +156,7 @@ textarea:focus {
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 400;
-  border-radius: 30px;  /* estilo pílula */
+  border-radius: 30px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -169,8 +167,10 @@ textarea:focus {
 .voltar-pill button:hover {
   background: #4b6394;
 }
-/* RESPONSIVO */
-@media (max-width: 850px) {
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
   .medidas-container {
     flex-direction: column;
     align-items: center;

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./tecidos.css'],
 })
 export class Tecidos {
- tecidos = [
+  tecidos = [
   {
     nome: "Soft",
     imagem: "https://i.ibb.co/gM5HSMqG/S07.jpg",
@@ -65,32 +65,33 @@ export class Tecidos {
     descricao: "Malha canelada de alta elasticidade, essencial para o ajuste perfeito de punhos, barras e golas. Garante que a roupa permaneça no lugar, oferece maior durabilidade e confere um caimento clássico/esportivo, como o de um moletom.",
     mostrarDescricao: false
   }
-];
+  ];
 
-abrirDetalhes(tecido: any) {
-  console.log("clicou no card", tecido);
-  // se quiser abrir modal no futuro, já tá pronto
-}
+  abrirDetalhes(tecido: any) {
+    console.log("clicou no card", tecido);
+  }
 
-toggleDescricao(tecido: any, event: Event) {
-  event.stopPropagation(); // evita conflito com abrirDetalhes
-  tecido.mostrarDescricao = !tecido.mostrarDescricao;
-}
+  toggleDescricao(tecido: any, event: Event) {
+    event.stopPropagation();
+    tecido.mostrarDescricao = !tecido.mostrarDescricao;
+  }
 
   infoAberta: number | null = null;
 
-toggleInfo(index: number) {
-  this.infoAberta = this.infoAberta === index ? null : index;
-}
+  toggleInfo(index: number) {
+    this.infoAberta = this.infoAberta === index ? null : index;
+  }
 
-    showBackToTop = false;
-    @HostListener('window:scroll', [])
-    onWindowScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      this.showBackToTop = scrollTop > 300;
-    }
+  showBackToTop = false;
 
-    scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  @HostListener('window:scroll', [])
+
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showBackToTop = scrollTop > 300;
+  }
+
+  scrollToTop(): void {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

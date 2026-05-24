@@ -1,4 +1,3 @@
-/* GRID PRINCIPAL */
 .detalhes-wrapper {
   padding: 40px 20px;
   display: flex;
@@ -14,13 +13,10 @@
   align-items: start;
 }
 
-
-/* LIMITA A ALTURA DO CARROSSEL NO DESKTOP */
 #carouselDetalhes {
   width: 60%;
   max-width: none;
   margin: 0 auto;
-  /*background: #D0E3FF;*/
   border-radius: 60px;
   overflow: hidden;
 }
@@ -36,7 +32,7 @@
   border-radius: 16px;
 }
 
-/* COLUNA DIREITA */
+/* ====== COLUNA DIREITA ====== */
 .marca-agua {
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -67,6 +63,7 @@
   margin-bottom: 4px;
   opacity: 0.8;
 }
+
 .pagamento-opcoes {
   margin: 10px 0 15px;
   display: flex;
@@ -92,7 +89,6 @@
   object-fit: contain;
 }
 
-/* BOTÃO COMPRAR */
 .btn-comprar {
   width: 340px;
   background: #0E2270;
@@ -129,7 +125,7 @@
   color: #666;
 }
 
-/*SOB MEDIDA*/
+/* ====== SOB MEDIDA ====== */
 .sob-medida-box {
   margin-top: 15px;
   padding: 10px;
@@ -163,12 +159,12 @@
   background: #00327a;
 }
 
-/* COLUNA ESQUERDA */
+/* ====== COLUNA ESQUERDA ====== */
 .descricao-central {
-  width: 100% !important;      /* ocupa toda a largura */
-  max-width: 1200px !important; /* mesma largura do grid */
-  margin: 40px auto 0 auto !important;  /* separa do topo */
-  display: block !important;   /* força linha inteira */
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto 0 auto !important;
+  display: block !important;
   flex-direction: column !important;
   align-items: center;
 }
@@ -185,21 +181,20 @@
   padding-bottom: 6px;
 }
 
-/* Faixa fina embaixo */
 .titulo-descricao::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%; /* tamanho da linha */
-  height: 3px; /* espessura */
-  background-color: #FFF3C1; /* amarelo do header */
+  width: 100%;
+  height: 3px;
+  background-color: #FFF3C1;
   border-radius: 10px;
 }
 
 .voltar-pill {
   position: relative;
-  margin: 15px 0 10px 20px; /* abaixo do header e levemente à esquerda */
+  margin: 15px 0 10px 20px;
 }
 
 .voltar-pill button {
@@ -209,7 +204,7 @@
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 400;
-  border-radius: 30px;  /* estilo pílula */
+  border-radius: 30px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -226,12 +221,13 @@
   width: 40px;
 }
 #carouselDetalhes .carousel-control-prev {
-  left: -12px;                  /* encosta na borda esquerda */
+  left: -12px;
 }
 
 #carouselDetalhes .carousel-control-next {
-  right: -12px;                 /* encosta na borda direita */
+  right: -12px;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1) brightness(70%);
@@ -255,13 +251,33 @@
   border: 1px solid #ccc;
   font-size: 14px;
 }
+
+/* ====== BOTÃO FLUTUANTE ====== */
 .back-to-top-fixed {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  position: fixed; bottom:40px; right:20px; z-index:2000; background-color: #4169e1; color: #fff; border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.18); }
-.back-to-top-fixed:hover { transform: scale(1.06); background:#3151b7; }
-/* RESPONSIVO */
+  position: fixed;
+  bottom:40px;
+  right:20px;
+  z-index:2000;
+  background-color: #4169e1;
+  color: #fff;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,0.18);
+}
+
+.back-to-top-fixed:hover {
+  transform: scale(1.06);
+  background:#3151b7;
+}
+
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */
 {
@@ -273,31 +289,65 @@
     top: 80px;
   }
 
-
   .titulo-produto {
     font-size: 1.3rem;
-    text-align: left;
+    text-align: center;
   }
+
   .preco {
     font-size: 1.4rem;
-    text-align: left;
+    text-align: center;
   }
-  .estoque{
+
+  .estoque {
+    width: 200px;
+    margin: 6px auto 0;
+    text-align: left;
     font-size: 0.8rem;
   }
+
   .descricao-central {
     margin-top: 10px;
   }
+
   #carouselDetalhes img {
     max-height: 280px;
   }
+
+  .col-direita {
+    text-align: center;
+    align-items: center;
+  }
+
+  .pagamento-opcoes {
+    justify-content: center;
+  }
+
+  .seletor-variacao {
+    align-items: center;
+  }
+
   .btn-comprar {
-  width: 200px;
-  font-size: 1rem;
-  font-weight: 400;
-}
-.sob-medida-box {
-  margin-bottom: -35px !important;
-  padding-bottom: 0 !important;
-}
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ .sob-medida-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .sob-medida-texto {
+    text-align: center;
+  }
+
+  .btn-sob-medida {
+    margin: 8px auto 0;     
+  }
 }

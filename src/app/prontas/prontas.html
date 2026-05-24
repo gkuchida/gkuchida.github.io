@@ -12,9 +12,9 @@
 
 <div class="tabs">
   <div *ngFor="let aba of abas; let i = index"
-       class="tab"
-       [class.active]="abaAtiva === i"
-       (click)="mudarAba(i)">
+    class="tab"
+    [class.active]="abaAtiva === i"
+    (click)="mudarAba(i)">
     {{ aba }}
   </div>
 </div>
@@ -26,23 +26,19 @@
     <div class="grid-produtos">
       <ng-container *ngFor="let produto of produtos">
         <a *ngIf="produto.tipo === 'inverno' && produto.estoque > 0"
-           [routerLink]="['/produto-detalhes', produto.nome]"
-           class="card-produto-link card-inverno">
+          [routerLink]="['/produto-detalhes', produto.nome]"
+          class="card-produto-link card-inverno">
 
           <div class="card-produto">
-            <span class="price-tag">R$ {{ produto.preco }}</span>
-
             <div class="produto-info">
               <h3>{{ produto.nome }}</h3>
+              <div class="linha-seta"></div>
             </div>
 
             <div class="img-wrapper">
               <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
             </div>
-
-            <div class="btn-ver-detalhes"></div>
           </div>
-
         </a>
       </ng-container>
     </div>
@@ -53,14 +49,13 @@
     <div class="grid-produtos">
       <ng-container *ngFor="let produto of produtos">
         <a *ngIf="produto.tipo === 'verao' && produto.estoque > 0"
-           [routerLink]="['/produto-detalhes', produto.nome]"
-           class="card-produto-link card-verao">
+          [routerLink]="['/produto-detalhes', produto.nome]"
+          class="card-produto-link card-verao">
 
           <div class="card-produto">
-            <span class="price-tag">R$ {{ produto.preco }}</span>
-
             <div class="produto-info">
               <h3>{{ produto.nome }}</h3>
+              <div class="linha-seta"></div>
             </div>
 
             <div class="img-wrapper">
@@ -69,25 +64,23 @@
 
             <div class="btn-ver-detalhes"></div>
           </div>
-
         </a>
       </ng-container>
     </div>
   </div>
 
-  <!-- Aba 2 — Acessórios -->
+  <!-- Aba 2 — Meia Estação -->
   <div *ngIf="abaAtiva === 2" class="tab-content active">
     <div class="grid-produtos">
       <ng-container *ngFor="let produto of produtos">
-        <a *ngIf="produto.tipo === 'acessorios' && produto.estoque > 0"
-           [routerLink]="['/produto-detalhes', produto.nome]"
-           class="card-produto-link card-acessorios">
+        <a *ngIf="produto.tipo === 'meiaestacao' && produto.estoque > 0"
+          [routerLink]="['/produto-detalhes', produto.nome]"
+          class="card-produto-link card-mestacao">
 
           <div class="card-produto">
-            <span class="price-tag">R$ {{ produto.preco }}</span>
-
             <div class="produto-info">
               <h3>{{ produto.nome }}</h3>
+              <div class="linha-seta"></div>
             </div>
 
             <div class="img-wrapper">
@@ -96,25 +89,23 @@
 
             <div class="btn-ver-detalhes"></div>
           </div>
-
         </a>
       </ng-container>
     </div>
   </div>
 
-  <!-- Aba 3 — Artesanato -->
+  <!-- Aba 3 — Acessórios -->
   <div *ngIf="abaAtiva === 3" class="tab-content active">
     <div class="grid-produtos">
       <ng-container *ngFor="let produto of produtos">
-        <a *ngIf="produto.tipo === 'artesanato' && produto.estoque > 0"
-           [routerLink]="['/produto-detalhes', produto.nome]"
-           class="card-produto-link card-chuva">
+        <a *ngIf="produto.tipo === 'acessorios' && produto.estoque > 0"
+          [routerLink]="['/produto-detalhes', produto.nome]"
+          class="card-produto-link card-acessorios">
 
           <div class="card-produto">
-            <span class="price-tag">R$ {{ produto.preco }}</span>
-
             <div class="produto-info">
               <h3>{{ produto.nome }}</h3>
+              <div class="linha-seta"></div>
             </div>
 
             <div class="img-wrapper">
@@ -123,7 +114,31 @@
 
             <div class="btn-ver-detalhes"></div>
           </div>
+        </a>
+      </ng-container>
+    </div>
+  </div>
 
+  <!-- Aba 4 — Artesanato -->
+  <div *ngIf="abaAtiva === 4" class="tab-content active">
+    <div class="grid-produtos">
+      <ng-container *ngFor="let produto of produtos">
+        <a *ngIf="produto.tipo === 'artesanato' && produto.estoque > 0"
+          [routerLink]="['/produto-detalhes', produto.nome]"
+          class="card-produto-link card-chuva">
+
+          <div class="card-produto">
+            <div class="produto-info">
+              <h3>{{ produto.nome }}</h3>
+              <div class="linha-seta"></div>
+            </div>
+
+            <div class="img-wrapper">
+              <img [src]="produto.imagens[0]" [alt]="produto.nome" class="img-produto" />
+            </div>
+
+            <div class="btn-ver-detalhes"></div>
+          </div>
         </a>
       </ng-container>
     </div>

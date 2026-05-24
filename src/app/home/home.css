@@ -1,615 +1,675 @@
-/*ARRUMAR ALTURA DE TODOS*/
-/* Reset/ajuste base */
-*{box-sizing:border-box;}
-body{background:var(--bege); color:var(--marrom); font-family: 'Roboto', sans-serif; margin:0;}
-h2{
-  font-size: 2rem;
-  font-weight: 500;
-}
-h5{
-  color: #3B5998;
-  text-align: center;
-  top: 10px;
-  font-size: 1.1rem;
-}
-/* =========================
-   Regras gerais de carrossel (escopo amplo, seguro)
-   ========================= */
-.carousel-inner {
-  border-radius: 8px;
-}
-.carousel-title h2 {
-  font-weight: 500;
-  font-size: 2rem;
-  color: #000080;
-  margin-bottom: 30px;
-}
-.carousel, .slideSecundario {
-  border-radius: 12px;
-  margin: 1.25rem 0;
-}
+  *{box-sizing:border-box;}
 
-/* controles (setas) padrão - contraste legível sobre fundos claros */
-.carousel-control-prev, .carousel-control-next {
-  width:44px; height:44px; border-radius:50%;
-  /*background: rgba(0,0,0,0.35);*/
-  background: #5D78B4;
-  display:flex; align-items:center; justify-content:center;
-  top:50%; transform:translateY(-50%);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  transition: transform .15s ease, background .15s ease;
-  z-index: 12;
-}
-.carousel-control-prev:hover, .carousel-control-next:hover { transform: translateY(-50%) scale(1.04); background: rgba(0,0,0,0.55); }
+  body{
+    background:var(--bege);
+    color:var(--marrom);
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+  }
 
-/* ícones das setas */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  filter: invert(1) brightness(1.8);
-  width: 20px; height:20px;
-}
+  h2{
+    font-size: 2rem;
+    font-weight: 500;
+  }
 
-/* indicadores (bolinhas) */
-.carousel-indicators [data-bs-target] {
-  width:10px; height:10px; border-radius:50%;
-  background: var(--marrom-claro); opacity:0.6;
-}
-.carousel-indicators .active { background: var(--rosa); opacity:1; }
-#carouselNovidades .carousel-control-prev,
-#carouselNovidades .carousel-control-next,
-#mainCarousel .carousel-control-next,
-#mainCarousel .carousel-control-prev{
-  background: #5D78B4;
-}
+  h5{
+    color: #3B5998;
+    text-align: center;
+    top: 10px;
+    font-size: 1.1rem;
+  }
 
-/* =========================
-3. CARROSSEL PRINCIPAL (#mainCarousel) - CORREÇÃO PARA "IMAGENS GRUDADAS"
-=========================
-*/
-#mainCarousel {
-  width: 100%;
-  height: 65vh;
-  min-height: 360px;
-  position: relative;
-  overflow: hidden;
-  background: #5D78B4;
-}
+  /* ====== Regras gerais de carrossel ====== */
+  .carousel-inner {
+    border-radius: 8px;
+  }
 
-#mainCarousel .carousel-inner {
-  height: 100%;
-}
-#mainCarousel .carousel-item {
-  width: 100%;
-  height: 100%;
-}
+  .carousel-title h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #000080;
+    margin-bottom: 30px;
+  }
 
-.image-slides-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 85%;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  overflow: hidden;
-  min-height: 100px;
-}
+  .carousel, .slideSecundario {
+    border-radius: 12px;
+    margin: 1.25rem 0;
+  }
 
-.image-slides-container .pet {
-  width: calc(100% / 3);
-  height: 100%;
-  min-height: 180px;
-  max-width: none;
-  max-height: none;
-  object-fit: cover;
-  border-radius: 0;
-  flex-shrink: 0;
-  position: static !important;
-  display: block;
-}
-#slide3 .pet:nth-child(3),
-#slide5 .pet:nth-child(3) {
-object-fit: cover; /* Garante que preencha */
-  object-position: 50% 70%;
-}
-/* ÁREA DA DESCRIÇÃO — PARTE INFERIOR (25% de altura) */
-.description-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-  background: rgba(255, 255, 255, 0.55);
-  padding: 20px 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .carousel-control-prev, .carousel-control-next {
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background: #5D78B4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    top:50%;
+    transform:translateY(-50%);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: transform .15s ease, background .15s ease;
+    z-index: 12;
+  }
 
-.description-bar h2 {
-  margin: 0 0 8px;
-  font-size: 1.2rem;
-  color: #444;
-}
-.description-bar p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-}
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    transform: translateY(-50%) scale(1.04);
+    background: rgba(0,0,0,0.55);
+  }
 
-/* SETAS */
-.carousel-control-prev,
-.carousel-control-next {
-  z-index: 50;
-}
+  /* ====== ícones das setas ====== */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1) brightness(1.8);
+    width: 20px;
+    height:20px;
+  }
 
-/*
-#slide2.multi-image-slide{
-  background: #ffb3b3;
-}
-#slide3.multi-image-slide{
-  background: #1E3A8A;
-}
-#slide4.multi-image-slide{
-  background: #00BFA6;
-}*/
-/* Sobre */
-.sobre-home {
-  background: #D0E3FF;
-  padding: 60px 20px;
-  margin: 50px 0;
-  border-radius: 18px;
-  overflow: hidden;
-  position: relative;
-}
-.sobre-home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('https://i.ibb.co/vvzQQfTx/IMG-6612.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  max-width: 600px;
-  max-height: 600px;
-  opacity: 0.15;
-  z-index: 0;
-  margin: auto;
-  right: 250px;
-}
+  /* ====== indicadores====== */
+  .carousel-indicators [data-bs-target] {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: var(--marrom-claro);
+    opacity:0.6;
+  }
 
-.sobre-home > * {
-  position: relative;
-  z-index: 1;
-}
+  .carousel-indicators .active {
+    background: var(--rosa);
+    opacity:1;
+  }
 
-.sobre-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
+  #carouselNovidades .carousel-control-prev,
+  #carouselNovidades .carousel-control-next,
+  #mainCarousel .carousel-control-next,
+  #mainCarousel .carousel-control-prev{
+    background: #5D78B4;
+  }
 
-.sobre-texto h2 {
-  color: #000080;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-align: center;
-}
+  /* ====== CARROSSEL PRINCIPAL (#mainCarousel)====== */
+  #mainCarousel {
+    width: 100%;
+    height: 65vh;
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+    background: #5D78B4;
+  }
 
-.sobre-texto .sub {
-  color: #1A1A80;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
+  #mainCarousel .carousel-inner {
+    height: 100%;
+  }
 
-.sobre-texto .desc {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.55;
-  margin-bottom: 20px;
-}
+  #mainCarousel .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
 
-.sobre-lista {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-}
+  .image-slides-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+    min-height: 100px;
+  }
 
-.sobre-lista li {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 6px;
-}
+  .image-slides-container .pet {
+    width: calc(100% / 3);
+    height: 100%;
+    min-height: 180px;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 0;
+    flex-shrink: 0;
+    position: static !important;
+    display: block;
+  }
 
-.sobre-botao {
-  background: #FFA726;
-  color: white;
-  padding: 12px 22px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 400;
-  transition: 0.2s;
-}
+  #slide3 .pet:nth-child(3),
+  #slide5 .pet:nth-child(3) {
+    object-fit: cover;
+    object-position: 50% 70%;
+  }
 
-.sobre-botao:hover {
-  background: #FF9100;
-}
+  .description-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 20px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-/* Imagem */
-.sobre-imagem img {
-  width: 330px;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+  .description-bar h2 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: #444;
+  }
 
-/* =========================
-   CARROSSEL INSPIRAÇÕES (desktop e mobile)
-   - #carouselDesktop (grid de cards)
-   - #carouselMobile (cards individuais)
-   ========================= */
+  .description-bar p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
 
-/* container geral de inspirações já tem sua classe; vamos harmonizar */
-.inspiracoes-container {
-  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
-  padding: 0;
-  margin-top: 1rem; }
+  /* ====== SETAS ====== */
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 50;
+  }
 
-/* desktop: cards-wrapper já definido no HTML, ajusta espaçamento */
-#carouselDesktop .cards-wrapper { display:flex; gap: 1rem; justify-content:center; padding: 1.2rem; }
+  /* ====== Sobre ====== */
+  .sobre-home {
+    background: #D0E3FF;
+    padding: 60px 20px;
+    margin: 50px 0;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+  .sobre-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://i.ibb.co/vvzQQfTx/IMG-6612.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 600px;
+    max-height: 600px;
+    opacity: 0.15;
+    z-index: 0;
+    margin: auto;
+    right: 250px;
+  }
 
-/* card visual */
-#carouselDesktop .card, #carouselMobile .card {
-  border-radius: 14px;
-  overflow: hidden;
-  width: 260px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
-  transition: transform .2s ease;
-}
-#carouselDesktop .card:hover, #carouselMobile .card:hover { transform: translateY(-6px); }
+  .sobre-home > * {
+    position: relative;
+    z-index: 1;
+  }
 
-/* imagem dos cards: manter proporção e não esticar */
-.card-img-top {
-  width: 100%;
-  height: 220px;
-  object-fit: contain; /* mostra o pet por inteiro sem cortar */
-  background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
-}
+  .sobre-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
 
-/* corpo do card */
-.card-body { padding: 0.8rem 1rem; text-align:center; background: var(--rosa-claro); }
-.card-body h5{
-  margin:0.25rem 0;
-  color: wheat;
-  font-weight:700;
-}
-.card-body p { margin:0; color:#6b4e3d; font-size:0.95rem; }
+  .sobre-texto h2 {
+    color: #000080;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+  }
 
+  .sobre-texto .sub {
+    color: #1A1A80;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-/* =========================
-  CARROSEL NOVIDADES (#carouselNovidades)
-  CARROSSEL RECOMENDADOS (#carouselRecomendados)
-========================= */
-#carouselNovidades{
-  background: #AFCBFF;
-}
-#carouselRecomendados{
-  background: #8AB3F5;
-}
-#carouselRecomendados,
-#carouselNovidades {
-  padding: 2rem 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px var(--sombra);
-}
+  .sobre-texto .desc {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
 
-#carouselRecomendados .carousel-item,
-#carouselNovidades .carousel-item,
-#carouselRecomendados .carousel-row,
-#carouselNovidades .carousel-row{
-  /*background: #FFD0D0;*/
-  background: transparent !important;
-  border-radius: 0;
-  height: 900px;
-}
-#carouselRecomendados .carousel-inner,
-#carouselNovidades .carousel-inner{
-  height: 350px;
-}
-.carousel-section.recomendados .carousel-row,
-.carousel-section.novidades .carousel-row{
-  display:flex; gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding:1rem 20px;
-}
+  .sobre-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+  }
 
-/* produto recomendado (maior que o de novidades) */
-.carousel-section.recomendados .product-card,
-.carousel-section.novidades .product-card {
-  width: 240px;
-  height: 310px;
-  border-radius: 12px;
-  padding: 8px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform .2s ease;
-  /*background: #FFC86F;*/
-  background: #C7D8FF;
-  position: relative;
-}
+  .sobre-lista li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 6px;
+  }
 
-.carousel-section.recomendados .imagem-container,
-.carousel-section.novidades .imagem-container {
-  height: 200px;
-  /*background:#f9f9f9;*/
-   border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; }
-.carousel-section.recomendados .imagem-container img,
-.carousel-section.novidades .imagem-container img {
-  max-width:100%; max-height:100%; object-fit:contain; }
+  .sobre-botao {
+    background: #FFA726;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.2s;
+  }
 
-/* cores por categoria (use as classes que passar no produto.categoria) */
-.badge-custom { position:absolute; top:10px; left:10px; padding:6px 10px; border-radius:10px; font-weight:700; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.08); font-size:0.78rem; }
-.badge-custom.verao { background: linear-gradient(90deg,#f6a83b,#f37f2a); }
-.badge-custom.verao { background: linear-gradient(90deg,#ffb703,#ff6f00); }
-.badge-custom.inverno { background: linear-gradient(90deg,#2b3a67,#4b6cb7); }
-.badge-custom.meia-estacao { background: linear-gradient(90deg,#4caf50,#8bc34a); }
-.badge-custom.chuva { background: linear-gradient(90deg,#0077b6,#0096c7); }
-.badge-custom.festiva { background: linear-gradient(90deg,#b71c1c,#f44336); }
-.badge-custom.acessorio { background: linear-gradient(90deg,#8e24aa,#ba68c8); }
-.product-card .badge-custom.artesanato { background: linear-gradient(90deg,#e91e63,#ff80ab);
-}
+  .sobre-botao:hover {
+    background: #FF9100;
+  }
 
-/* ver-mais button (círculo central) */
-.ver-mais-btn {
-  background: #1e40af;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  color: white;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  position: absolute;
-  top: 5%;
-  left: 90%;
-  transform: translateX(-50%);
-  margin: 0;
-}
+  /* ====== Imagem ====== */
+  .sobre-imagem img {
+    width: 330px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
 
-/* --- Clientes --- */
-.marquee-clientes {
-  text-align: center;
-  padding: 50px 0;
-  color: #fff;
-  border-radius: 16px;
-  margin-top: 40px;
-}
+  /* ====== CARROSSEL INSPIRAÇÕES ====== */
+  .inspiracoes-container {
+    background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+    padding: 0;
+    margin-top: 1rem; }
 
-.marquee-clientes h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #000080;
-}
+  #carouselDesktop .cards-wrapper {
+    display:flex;
+    gap: 1rem;
+    justify-content:center;
+    padding: 1.2rem;
+  }
 
-.marquee-clientes p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 25px;
-  color: #1A1A80;
-}
+  #carouselDesktop .card, #carouselMobile .card {
+    border-radius: 14px;
+    overflow: hidden;
+    width: 260px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+    transition: transform .2s ease;
+  }
 
-/* ÁREA ROLANTE */
-.marquee {
-  overflow: hidden;
-  width: 100%;
-  background: #5D78B4;
-}
+  #carouselDesktop .card:hover, #carouselMobile .card:hover {
+    transform: translateY(-6px);
+  }
 
-.marquee-track {
-  display: flex;
-  gap: 25px;
-  animation: marquee 22s linear infinite;
-  width: max-content;
-}
+  .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+  }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+  .card-body {
+    padding: 0.8rem 1rem;
+    text-align:center;
+    background: var(--rosa-claro);
+  }
 
-/* ITENS */
-.cliente-item {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: white;
-  border: 4px solid #5d9f9a;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-}
+  .card-body h5{
+    margin:0.25rem 0;
+    color: wheat;
+    font-weight:700;
+  }
 
-.cliente-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .card-body p {
+    margin:0;
+    color:#6b4e3d;
+    font-size:0.95rem;
+  }
 
-#carouselRecomendados .carousel-control-next,
-#carouselRecomendados .carousel-control-prev {
-  background: #E1E8FF;
-}
+  /* ======CARROSEL NOVIDADES CARROSSEL RECOMENDADOS  ====== */
+  #carouselNovidades{
+    background: #AFCBFF;
+  }
+  #carouselRecomendados{
+    background: #8AB3F5;
+  }
+  #carouselRecomendados {
+    padding: 2rem 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px var(--sombra);
+  }
 
-/* =========================
-   CARROSSEL DE AVALIAÇÕES
-   ========================= */
-.avaliacoes-container {
-  margin-top: 20px;
-  padding-top: 10px !important;  /* reduz o “respiro” interno */
-  padding-bottom: 10px !important;
-}
+  #carouselRecomendados .carousel-item,
+  #carouselRecomendados .carousel-row{
+    background: transparent !important;
+    border-radius: 0;
+    height: 900px;
+  }
 
-.avaliacoes-container h2 {
-  color: #000080;
-  font-size: 2rem;
-  font-weight: 500;
-}
+  #carouselRecomendados .carousel-inner,
+  #carouselNovidades .carousel-inner{
+    height: 350px;
+  }
 
-.avaliacoes-container p {
-  color: #1A1A80;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
+  .carousel-section.recomendados .carousel-row,
+  .carousel-section.novidades .carousel-row{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:1rem 20px;
+  }
 
-#carouselAvaliacoes {
-  background: #4B639A;
-  padding: 18px 0;
-  border-radius: 16px;
-  max-width: 1700px;
-  height: 250px;
-  margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  align-items: center;   /* 👈 centraliza verticalmente */
-  justify-content: center;
-}
+  .carousel-section.recomendados .product-card{
+    width: 240px;
+    height: 310px;
+    border-radius: 12px;
+    padding: 8px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform .2s ease;
+    background: #C7D8FF;
+    position: relative;
+  }
 
-#carouselAvaliacoes .carousel-inner {
-  display: flex;
-  align-items: center;
-}
+  .carousel-section.recomendados .imagem-container {
+    height: 200px;
+    border-radius:12px 12px 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
 
-.avaliacao-card {
-  background: #C7D8FF;
-  padding: 20px 28px;
-  border-radius: 14px;
-  width: 40%;
-  margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-  text-align: center;
-  margin-top:30px;
-}
+  .carousel-section.recomendados .imagem-container img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
 
-.avaliacao-card p {
-  margin: 8px 0 6px;
-  font-size: 1rem;
-  color: #000080;
-}
+  .novidade-card img, .product-card img, .imagem-container img {
+    max-width: 100%;
+    max-height: 280px; /* Limita a altura da imagem */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Não estica */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
 
-.avaliacao-card span {
-  font-size: 0.85rem;
-  color: #3b4260;
-}
+  .novidade-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 40px;
-  height: 40px;
-  background: #5D78B4 !important;
-  border-radius: 50%;
-}
+  /* ====== cores por categoria ====== */
+  .badge-custom {
+    position:absolute;
+    top:10px;
+    left:10px;
+    padding:6px 10px;
+    border-radius:10px;
+    font-weight:700;
+    color:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    font-size:0.78rem;
+    }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background: #344a87 !important;
-}
+  .badge-custom.verao {
+    background: linear-gradient(90deg,#f6a83b,#f37f2a);
+  }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
+  .badge-custom.verao {
+    background: linear-gradient(90deg,#ffb703,#ff6f00);
+  }
 
+  .badge-custom.inverno {
+    background: linear-gradient(90deg,#2b3a67,#4b6cb7);
+  }
 
+  .badge-custom.meia-estacao {
+    background: linear-gradient(90deg,#4caf50,#8bc34a);
+  }
 
-/* =========================
-   SLIDE THEME (mantém sua lógica, só suaviza)
-   para slides que usam .slide-theme-X no HTML
-   ========================= */
-/*.slide-theme-0 { background: linear-gradient(180deg, rgba(255,250,245,0.55), rgba(255,255,255,0.25)); padding: 1rem; border-radius:12px; }
-.slide-theme-1 { background: linear-gradient(180deg, rgba(255,245,247,0.55), rgba(255,250,250,0.25)); padding:1rem; border-radius:12px; }*/
-.slide-theme-0,
-.slide-theme-1,
-.slide-theme-2,
-.slide-theme-3,
-.slide-theme-4 {
-  background: transparent !important;
-}
+  .badge-custom.chuva {
+    background: linear-gradient(90deg,#0077b6,#0096c7);
+  }
 
-/* =========================
-   Ajustes de imagens (evita deformar em carrosséis menores)
-   ========================= */
-.carousel-item img, .card-img-top, .product-card img, .imagem-container img {
-  image-rendering: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-  object-position: center;
-}
+  .badge-custom.festiva {
+    background: linear-gradient(90deg,#b71c1c,#f44336);
+  }
 
-/* quando quiser que a imagem cubra o background (use com parcimônia) */
-.carousel-cover .carousel-item img { object-fit: cover; width:100%; height:100%; }
+  .badge-custom.acessorio {
+    background: linear-gradient(90deg,#8e24aa,#ba68c8);
+  }
 
-/* =========================
-   Categorias (mantém seu estilo)
-   ========================= */
-.categorias-home {
+  .badge-custom.premium {
+    background: linear-gradient(135deg, #c5a059 0%, #f7ef8a 25%, #d2ac47 50%, #edc967 75%, #a37a2c 100%);
+    color: #2c1e05;
+  }
+
+  .badge-custom.exclusivo {
+    background: linear-gradient(135deg, #bdc3c7 0%, #ffffff 50%, #7f8c8d 100%);
+    color: #2c3e50;
+  }
+
+  .badge-custom.brasil {
+    background: linear-gradient(135deg, #009b3a 0%, #00b344 100%);
+
+    color: #fedf00;
+  }
+
+  .product-card .badge-custom.artesanato {
+    background: linear-gradient(90deg,#e91e63,#ff80ab);
+  }
+
+  .ver-mais-btn {
+    background: #1e40af;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .marquee-clientes {
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+    border-radius: 16px;
+    margin-top: 40px;
+  }
+
+  .marquee-clientes h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000080;
+  }
+
+  .marquee-clientes p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    color: #1A1A80;
+  }
+
+  /* ====== ÁREA ROLANTE ====== */
+  .marquee {
+    overflow: hidden;
+    width: 100%;
+    background: #5D78B4;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 25px;
+    animation: marquee 22s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ====== ITENS ====== */
+  .cliente-item {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: white;
+    border: 4px solid #5d9f9a;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  }
+
+  .cliente-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #carouselRecomendados .carousel-control-next,
+  #carouselRecomendados .carousel-control-prev {
+    background: #E1E8FF;
+  }
+
+  /* ====== CARROSSEL DE AVALIAÇÕES ====== */
+  .avaliacoes-container {
+    margin-top: 20px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .avaliacoes-container h2 {
+    color: #000080;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .avaliacoes-container p {
+    color: #1A1A80;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  #carouselAvaliacoes {
+    background: #4B639A;
+    padding: 18px 0;
+    border-radius: 16px;
+    max-width: 1700px;
+    height: 250px;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    align-items: center;
+    justify-content: center;
+  }
+
+  #carouselAvaliacoes .carousel-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .avaliacao-card {
+    background: #C7D8FF;
+    padding: 20px 28px;
+    border-radius: 14px;
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    text-align: center;
+    margin-top:30px;
+  }
+
+  .avaliacao-card p {
+    margin: 8px 0 6px;
+    font-size: 1rem;
+    color: #000080;
+  }
+
+  .avaliacao-card span {
+    font-size: 0.85rem;
+    color: #3b4260;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: #5D78B4 !important;
+    border-radius: 50%;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background: #344a87 !important;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+
+  /* ====== SLIDE THEME ====== */
+  .slide-theme-0,
+  .slide-theme-1,
+  .slide-theme-2,
+  .slide-theme-3,
+  .slide-theme-4 {
+    background: transparent !important;
+  }
+
+  /* ====== Ajustes de imagens ====== */
+  .carousel-item img, .card-img-top, .product-card img, .imagem-container img {
+    image-rendering: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .carousel-cover .carousel-item img {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+
+  /* ====== Categorias ====== */
+  .categorias-home {
     background: #5D78B4;
     border-radius: 12px;
     padding: 2rem 1rem;
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-    /* Garante que o container principal não seja flexível */
     display: block;
-}
+  }
 
-/* 2. TITULO (Mantém o tamanho original de desktop) */
-.categorias-home h2 {
+  .categorias-home h2 {
     font-size: 2rem;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 20px; /* Adiciona espaçamento após o título */
-}
+    margin-bottom: 20px;
+  }
 
-/* 3. FAIXA DE CATEGORIAS (Simula o ROW com Wrap e Espaçamento) */
-.categorias-faixa-mobile {
-    /* Ativa o Flexbox para organizar os itens */
+  .categorias-faixa-mobile {
     display: flex;
-    /* 💡 Permite que os itens quebrem para a próxima linha (Layout de colunas) */
     flex-wrap: wrap;
-    /* Centraliza e distribui o espaço ao redor dos itens */
     justify-content: center;
-    /* Adiciona espaçamento entre as linhas e colunas */
-    gap: 20px 10px; /* 20px entre as linhas, 10px entre as colunas */
-}
+    gap: 20px 10px;
+  }
 
-/* 4. CADA ITEM DE CATEGORIA (.categoria-item substitui o col-md-2) */
-.categoria-item {
-    /* Define o tamanho para caberem 6 ou mais itens por linha, ou no máximo 150px */
+  .categoria-item {
     width: 120px;
-    /* Permite que o item cresça, se necessário, e não encolha */
     flex-grow: 1;
     flex-shrink: 0;
-    /* Alinhamento de texto (Nome da categoria) */
     text-align: center;
-}
+  }
 
-/* 5. CÍRCULO E IMAGEM (Mantém o tamanho original de desktop) */
-.img-circle-wrapper {
+  /* ====== CÍRCULO E IMAGEM ====== */
+  .img-circle-wrapper {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -617,321 +677,295 @@ object-fit: cover; /* Garante que preencha */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 10px; /* Centraliza e adiciona margem inferior */
-}
-.img-circle-wrapper img {
+    margin: 0 auto 10px;
+  }
+
+  .img-circle-wrapper img {
     width: 65%;
     height: 65%;
     object-fit: contain;
-}
+  }
 
-/* 6. NOME DA CATEGORIA */
-.categoria-nome{
+  .categoria-nome{
     font-size: 1rem;
     display: block;
     text-decoration:none;
-}
-
-/* =========================
-   Back to top button (mantém)
-   ========================= */
-.back-to-top-fixed * {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.back-to-top-fixed::before,
-.back-to-top-fixed::after {
-  content: none !important;
-  display: none !important;
-}
-
-.back-to-top-fixed {
-  position: fixed;
-  bottom:40px;
-  right:20px;
-  z-index:2000;
-  background-color: #4169e1;
-  color: #fff;
-  border-radius:50%;
-  width:48px;
-  height:48px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  }
-.back-to-top-fixed:hover {
-  transform: scale(1.06);
-  background:#3151b7;
-}
-
-
-/* ===========================================================
-   RESPONSIVO — AJUSTES SOMENTE PARA CELULAR (max-width: 600px)
-   NÃO ALTERA NADA DO DESKTOP
-   =========================================================== */
-
-@media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
-       (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
-  .carousel-title h2,
-  .marquee-clientes h2,
-  .avaliacoes-container h2{
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  h5{
-    font-size: 1rem;
-  }
-  .marquee-clientes p,
-  .avaliacoes-container p{
-    font-size: 0.9rem;
-  }
-  /* ----------- LEGENDAS (TODAS) ----------- */
-.carousel-caption,
-  .top-left-caption,
-  .bottom-left-caption {
-    width: 90% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    text-align: center !important;
-    padding: 10px 12px !important;
-    bottom: 10px !important;
-    top: auto !important;
-    height: auto !important;
-    background: rgba(0,0,0,0.45) !important;
-    z-index: 99 !important;
   }
 
-  .carousel-caption p,
-  .top-left-caption p,
-  .bottom-left-caption p{
-    display: block !important;
-    line-height: 1.3 !important;
-    font-size: 0.95rem !important;
+  /* ====== BOTÃO FLUTUANTE ====== */
+  .back-to-top-fixed * {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
-/* ----------- PRIMEIRO CARROSSEL ----------- */
-/* 1. Ajuste a altura do container principal para que o conteúdo caiba melhor */
+
+  .back-to-top-fixed::before,
+  .back-to-top-fixed::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .back-to-top-fixed {
+    position: fixed;
+    bottom:40px;
+    right:20px;
+    z-index:2000;
+    background-color: #4169e1;
+    color: #fff;
+    border-radius:50%;
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    }
+
+  .back-to-top-fixed:hover {
+    transform: scale(1.06);
+    background:#3151b7;
+  }
+
+  /* ====== RESPONSIVIDADE ====== */
+  @media (max-width: 600px) and (orientation: portrait), /* CONDIÇÃO A: Celular Vertical */
+        (min-width: 601px) and (max-width: 1024px)     /* CONDIÇÃO B: Tablet */{
+    .carousel-title h2,
+    .marquee-clientes h2,
+    .avaliacoes-container h2{
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    h5{
+      font-size: 1rem;
+    }
+
+    .marquee-clientes p,
+    .avaliacoes-container p{
+      font-size: 0.9rem;
+    }
+
+    /* ====== LEGENDAS (TODAS)  ====== */
+    .carousel-caption,
+    .top-left-caption,
+    .bottom-left-caption {
+      width: 90% !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      text-align: center !important;
+      padding: 10px 12px !important;
+      bottom: 10px !important;
+      top: auto !important;
+      height: auto !important;
+      background: rgba(0,0,0,0.45) !important;
+      z-index: 99 !important;
+    }
+
+    .carousel-caption p,
+    .top-left-caption p,
+    .bottom-left-caption p{
+      display: block !important;
+      line-height: 1.3 !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* ====== PRIMEIRO CARROSSEL ====== */
     #mainCarousel {
-        /* Reduz a altura da tela, mas mantém o min-height para não quebrar */
-        height: 50vh;
-        min-height: 250px;
+      height: 50vh;
+      min-height: 250px;
     }
 
-    /* 2. Ajuste o container das imagens */
     .image-slides-container {
-        /* Reduz a altura para dar espaço para a descrição */
-        height: 75%;
-        min-height: 150px;
+      height: 75%;
+      min-height: 150px;
     }
 
-    /* 3. Ajuste as imagens individuais */
     .image-slides-container .pet {
-        /* Mantém a largura de 1/3 para que todas caibam lado a lado */
-        width: calc(100% / 3);
-        /* Reduz o min-height para se ajustar melhor à nova altura do container */
-        min-height: 100px;
-        /* Garante que a imagem preencha a área designada, importante para telas pequenas */
-        object-fit: cover;
+      width: calc(100% / 3);
+      min-height: 100px;
+      object-fit: cover;
     }
 
-    /* 4. Ajuste a área de descrição */
     .description-bar {
-        /* Aumenta a altura para que o texto não fique muito apertado */
-        height: 25%;
-        padding: 10px 10px; /* Reduz o padding */
+      height: 25%;
+      padding: 10px 10px;
     }
 
-    /* 5. Ajuste o tamanho da fonte */
     .description-bar h2 {
-        font-size: 1rem; /* Fonte menor para caber */
-        margin: 0 0 4px;
+      font-size: 1rem;
+      margin: 0 0 4px;
     }
 
     .description-bar p {
-        font-size: 0.8rem; /* Fonte menor para caber */
+      font-size: 0.8rem;
     }
-  /* 5. GARANTE QUE O AJUSTE DE POSIÇÃO DO PET NÃO ATRAPALHE (Se aplicável) */
-  /* Remove o ajuste de posição agressivo, pois a imagem agora tem mais espaço */
-  #slide3 .pet:nth-child(3),
-  #slide5 .pet:nth-child(3){
-    object-position: 50% 50%; /* Volta a centralizar a imagem única */
-  }
-#slide5 .pet:nth-child(1) {
-    object-position: 80% 10%; /* Foca nos 10% superiores, puxando a imagem para cima */
-}
-  /*CATEGORIA*/
 
+    #slide3 .pet:nth-child(3),
+    #slide5 .pet:nth-child(3){
+      object-position: 50% 50%;
+    }
+
+    #slide5 .pet:nth-child(1) {
+      object-position: 80% 10%;
+    }
+
+    /* ====== CATEGORIA ====== */
     .categorias-faixa-mobile {
-        display: flex; /* Ativa o Flexbox */
-        flex-wrap: nowrap; /* 💡 CRÍTICO: Impede a quebra de linha do Bootstrap/Row */
-        justify-content: space-between; /* Distribui os 6 itens uniformemente */
-        overflow-x: hidden; /* Remove a barra de rolagem horizontal */
-        padding: 0 5px; /* Padding lateral */
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      overflow-x: hidden;
+      padding: 0 5px;
     }
+
     .categorias-faixa-mobile::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
 
-    /* 2. CADA ITEM (SUBSTITUINDO O col-*) */
     .categoria-item {
-        /* Garante que o item ocupe 1/6 da largura e não encolha */
-        width: 13%;
-        max-width: 55px;
-        flex-shrink: 0;
-        text-align: center;
-        padding: 0 1px; /* Espaçamento mínimo entre os itens */
+      width: 13%;
+      max-width: 55px;
+      flex-shrink: 0;
+      text-align: center;
+      padding: 0 1px;
     }
 
-    /* 3. TÍTULO E OUTROS AJUSTES (para comprimir o espaço vertical) */
     .categorias-home h2 {
-        font-size: 1.3rem;
-        top: 0;
-        margin-bottom: 15px; /* Espaçamento entre Título e Faixa */
+      font-size: 1.3rem;
+      top: 0;
+      margin-bottom: 15px;
     }
 
     .img-circle-wrapper {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 5px !important; /* Reduz margem inferior do círculo */
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px !important;
     }
 
     .categoria-nome {
-        font-size: 0.65rem; /* Fonte pequena */
-        margin-top: 0;
-        line-height: 1.1;
+      font-size: 0.65rem;
+      margin-top: 0;
+      line-height: 1.1;
     }
 
+    .sobre-home {
+      padding: 40px 18px;
+      margin: 30px 0;
+    }
 
-  /* ----------- SOBRE ----------- */
-.sobre-home {
-    padding: 40px 18px;
-    margin: 30px 0;
-  }
+    .sobre-home::before {
+      background-position: top center;
+      top: -120px;
+      right: 0;
+      max-width: 400px;
+      max-height: 400px;
+    }
 
-  /* Ajusta a marca d’água */
-  .sobre-home::before {
-    background-position: top center;
-    top: -120px; /* ajusta a altura da marca d’água só no mobile */
-    right: 0;    /* centraliza melhor para telas pequenas */
-    max-width: 400px;
-    max-height: 400px;
-  }
+    .sobre-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 25px;
+    }
 
-  /* Container vira coluna */
-  .sobre-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-  }
+    .sobre-texto h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
 
-  /* Textos menores */
- .sobre-texto h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-}
+    .sobre-texto .sub {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: .75;
+    }
 
-.sobre-texto .sub {
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: .75;
-}
+    .sobre-texto .desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
 
-.sobre-texto .desc {
-  font-size: 0.9rem;
-  line-height: 1.65;
-}
-  .sobre-lista li {
-    font-size: 0.9rem;
-    line-height: 1.65;
-  }
+    .sobre-lista li {
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
 
-  /* Botão centralizado */
-  .sobre-botao {
-    padding: 10px 20px;
-    font-size: 1.05em;
-  }
+    .sobre-botao {
+      padding: 10px 20px;
+      font-size: 1.05em;
+    }
 
-  /* Imagem reduzida e centralizada */
-  .sobre-imagem img {
-    width: 220px;
-    margin: 0 auto;
-  }
-/* ----------- NOVIDADES
-RECOMENDADOS----------- */
-#carouselRecomendados .carousel-inner,
+    .sobre-imagem img {
+      width: 220px;
+      margin: 0 auto;
+    }
+
+    /* ====== NOVIDADES RECOMENDADOS====== */
+    #carouselRecomendados .carousel-inner,
     #carouselNovidades .carousel-inner {
-        /* Reduz a altura da área visível do carrossel */
-        height: 300px; /* De 350px para 280px */
+      height: 300px; /* De 350px para 280px */
     }
 
-    /* 2. Ajusta o card e o container da imagem */
     .carousel-section.recomendados .product-card,
     .carousel-section.novidades .product-card {
-        /* Reduz ligeiramente a largura e altura do card se necessário
-           (exemplo, de 240px/310px para 220px/280px) */
-        width: 45%;
-        height: 280px;
-        padding: 5px; /* Ajusta o padding interno */
-        padding-bottom: 15px;
+      width: 45%;
+      height: 280px;
+      padding: 5px;
+      padding-bottom: 15px;
     }
 
     .carousel-section.recomendados .imagem-container,
     .carousel-section.novidades .imagem-container {
-        /* Reduz a altura do container da imagem para que o card caiba */
-        height: 180px; /* De 200px para 180px */
-        margin-top: 35px;
+      height: 180px; /* De 200px para 180px */
+      margin-top: 35px;
     }
 
-    /* 3. Ajusta o padding da seção */
     #carouselRecomendados,
     #carouselNovidades {
-        /* Reduz o padding da seção para economizar espaço */
-        padding: 1.5rem 10px;
+      padding: 1.5rem 10px;
     }
 
-    /* Opcional: Se a altura de 900px do .carousel-item estiver causando problemas no mobile, ajuste-a. */
     #carouselRecomendados .carousel-item,
     #carouselNovidades .carousel-item,
     #carouselRecomendados .carousel-row,
     #carouselNovidades .carousel-row {
-        height: auto; /* Ou um valor menor como 400px, dependendo da necessidade */
+      height: auto;
     }
-.badge-custom {
-  top:-10px;
-   left:10px;
-}
 
-#carouselNovidades .carousel-control-prev,
-#carouselRecomendados .carousel-control-prev,
-#carouselNovidades .carousel-control-next,
-#carouselRecomendados .carousel-control-next {
-  z-index: 5 !important;
-}
+    .badge-custom {
+      top:-10px;
+      left:10px;
+    }
 
-/* ----------- MARQUEE (CLIENTES) ----------- */
-  .cliente-item { width: 90px !important; height: 90px !important; }
+    #carouselNovidades .carousel-control-prev,
+    #carouselRecomendados .carousel-control-prev,
+    #carouselNovidades .carousel-control-next,
+    #carouselRecomendados .carousel-control-next {
+      z-index: 5 !important;
+    }
 
-  /* ----------- AVALIAÇÕES ----------- */
+    /* ====== MARQUEE (CLIENTES) ====== */
+    .cliente-item {
+      width: 90px !important;
+      height: 90px !important;
+    }
 
-  #carouselAvaliacoes {
-    height: 180px !important;
-    padding: 20px 12px !important;
+    /* ====== AVALIAÇÕES ====== */
+    #carouselAvaliacoes {
+      height: 180px !important;
+      padding: 20px 12px !important;
+    }
+
+    #carouselAvaliacoes .carousel-inner {
+      height: auto !important;
+      align-items: center !important;
+    }
+
+    .avaliacao-card {
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding: 16px !important;
+      max-width: 100% !important;
+    }
   }
-
-  #carouselAvaliacoes .carousel-inner {
-    height: auto !important;
-    align-items: center !important;
-  }
-
-  .avaliacao-card {
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 16px !important;
-    max-width: 100% !important;
-  }
-}

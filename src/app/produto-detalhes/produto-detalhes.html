@@ -8,7 +8,6 @@
 
   <!-- GRID ESQUERDA + DIREITA -->
   <div class="detalhes-grid">
-
     <!-- COLUNA ESQUERDA -->
     <div class="col-esquerda" [ngClass]="categoriaAba">
       <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
@@ -17,7 +16,6 @@
 
             <img [src]="img" [alt]="produto.nome" class="img-produto" />
           </div>
-
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="prev">
@@ -66,23 +64,23 @@
       <div class="estoque">
         Estoque: {{ produto.estoque }}
       </div>
-      <!-- ❗️ NOVO BLOCO SOB MEDIDA -->
+      <!-- SOB MEDIDA -->
      <div class="sob-medida-box" *ngIf="produto.sobMedida">
-  <p class="sob-medida-texto">
-    <i class="bi bi-scissors"></i>
-    Deseja em outra medida?
-  </p>
+      <p class="sob-medida-texto">
+        <i class="bi bi-scissors"></i>
+        Deseja em outra medida?
+      </p>
 
-  <button class="btn-sob-medida"
-          (click)="irParaEncomenda(produto.nome)">
-    Solicitar Sob Medida
-  </button>
-</div>
-
-      </div>
+      <button class="btn-sob-medida"
+              (click)="irParaEncomenda(produto.nome)">
+        Solicitar Sob Medida
+      </button>
     </div>
 
   </div>
+</div>
+
+</div>
 
 <!-- Descrição do produto -->
 <h2 class="titulo-descricao">Descrição</h2>

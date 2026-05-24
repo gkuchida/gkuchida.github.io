@@ -1,15 +1,11 @@
 import { Injectable, signal, Signal } from '@angular/core';
+import { MedidasPedido } from './encomenda.service';
 export interface CarrinhoItem {
   tipo: 'pronta' | 'encomenda' | 'artesanato';
   nomeModelo: string;
   tecido?: string;
   acabamento?: string;
-  medidas?: {
-    pescoco: string;
-    torax: string;
-    comprimento: string;
-    observacoes?: string;
-  };
+  medidas?: MedidasPedido;
   imagens: string [];
   tamanho?: string;
   preco?:number;
@@ -18,6 +14,7 @@ export interface CarrinhoItem {
 @Injectable({
   providedIn: 'root'
 })
+
 export class CarrinhoService {
   private _items = signal<CarrinhoItem[]>([]);
 
