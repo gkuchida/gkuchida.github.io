@@ -58,7 +58,7 @@ Confeccionada em tecido fleece com revestimento em pele artificial extremamente 
 *Medidas:*
 \u2022 Pesco\xE7o: at\xE9 36 cm
 \u2022 T\xF3rax: 43-50 cm
-\u2022 Comprimento: 38 cm`,preco:35,estoque:1,imagens:["https://i.ibb.co/KpJMxSv5/VF-Rosa-IA.png","https://i.ibb.co/8n9dphPc/IMG-9012.png","https://i.ibb.co/8n9dphPc/IMG-9012.png","https://i.ibb.co/fYjYmftx/VF-M-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa Veste F\xE1cil P",tamanhos:["P"],descricao:`A capinha veste f\xE1cil em fleece \xE9 perfeita para manter seu pet protegido e confort\xE1vel nos dias frios, sem complica\xE7\xE3o na hora de vestir.
+\u2022 Comprimento: 38 cm`,preco:35,estoque:0,imagens:["https://i.ibb.co/KpJMxSv5/VF-Rosa-IA.png","https://i.ibb.co/8n9dphPc/IMG-9012.png","https://i.ibb.co/8n9dphPc/IMG-9012.png","https://i.ibb.co/fYjYmftx/VF-M-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa Veste F\xE1cil P",tamanhos:["P"],descricao:`A capinha veste f\xE1cil em fleece \xE9 perfeita para manter seu pet protegido e confort\xE1vel nos dias frios, sem complica\xE7\xE3o na hora de vestir.
 Com modelagem pr\xE1tica e confort\xE1vel, a pe\xE7a se ajusta ao corpo de forma suave, permitindo liberdade de movimento para brincar, passear ou descansar com muito aconchego.
 Confeccionada em tecido fleece com revestimento em microsoft anti piling, ajudam a manter o calor corporal, deixando seu companheiro ainda mais quentinho. A estampa espacial em tons de azul-marinho, com foguetes, planetas e estrelas, traz um visual divertido e cheio de personalidade.
 *Tecido:* Fleece
@@ -161,7 +161,7 @@ Perfeito para passeios, fotos especiais ou para deixar o dia a dia muito mais es
 *Medidas:*
 Pesco\xE7o: 35 a 43 cm
 T\xF3rax: 50 cm
-Comprimento: 41 cm.`,preco:35,estoque:1,imagens:["https://i.postimg.cc/nVP2XvfX/Vestido_Cachecol.png","https://i.postimg.cc/66mwj1nF/Vestido_Cachecol_Fte.png","https://i.postimg.cc/kMp91hKH/Vestido_Cachecol_Costas.png","https://i.postimg.cc/qB50bZy9/Vestido_Cachecol_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Xadrez G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 41 cm.`,preco:35,estoque:0,imagens:["https://i.postimg.cc/nVP2XvfX/Vestido_Cachecol.png","https://i.postimg.cc/66mwj1nF/Vestido_Cachecol_Fte.png","https://i.postimg.cc/kMp91hKH/Vestido_Cachecol_Costas.png","https://i.postimg.cc/qB50bZy9/Vestido_Cachecol_Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Xadrez G",tamanhos:["G"],descricao:`*Novidade!* 
 Deixe seu pet quentinho e confort\xE1vel com essa blusa b\xE1sica em fleece
 Com estampa xadrez em tons vibrantes de vermelho, azul marinho e branco, ela traz um visual cl\xE1ssico e estiloso para os dias mais fresquinhos. O acabamento em ribana preta na gola e nas aberturas garante melhor ajuste e um toque moderno \xE0 pe\xE7a.
 Confeccionada em fleece, \xE9 super macia, leve e aconchegante, mantendo seu pet aquecido sem limitar os movimentos. O modelo \xE9 pr\xE1tico e f\xE1cil de vestir, ideal para o dia a dia, passeios ou momentos de descanso.
@@ -290,7 +290,7 @@ Acabamento de Qualidade: Gola e barras em ribana verde para maior durabilidade e
 \u{1F4CF} Medidas:
 Pesco\xE7o: 32 cm.
 T\xF3rax: 42 cm.
-Comprimento: 30 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/bMtNfVZK/BR-P.jpg","https://i.ibb.co/rfx7W2S2/Camiseta-BR-Fte-P.png","https://i.ibb.co/1JR7cyBz/Camiseta-BR-Fte.png","https://i.ibb.co/0pYHbf2B/Camiseta-BR-Lat-P.png"],observacao:"Deixe seu pequeno torcedor pronto para a festa! Garanta a dele agora. \u{1F43E}\u{1F49B}\u{1F49A}",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil M",tamanhos:["M"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil - Conforto de Craque!
+Comprimento: 30 cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/bMtNfVZK/BR-P.jpg","https://i.ibb.co/rfx7W2S2/Camiseta-BR-Fte-P.png","https://i.ibb.co/1JR7cyBz/Camiseta-BR-Fte.png","https://i.ibb.co/0pYHbf2B/Camiseta-BR-Lat-P.png"],observacao:"Deixe seu pequeno torcedor pronto para a festa! Garanta a dele agora. \u{1F43E}\u{1F49B}\u{1F49A}",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil M",tamanhos:["M"],descricao:`\u{1F1E7}\u{1F1F7} Camiseta Pet Brasil - Conforto de Craque!
 
 Para os pets que torcem com garra e estilo! Essa camiseta \xE9 a escolha perfeita para deixar seu melhor amigo pronto para vibrar em todos os momentos, com a leveza que ele precisa para brincar \xE0 vontade.
 
@@ -303,7 +303,7 @@ Durabilidade: Tecido resistente e de f\xE1cil lavagem, ideal para o dia a dia.
 \u{1F4CF} Medidas:
 Pesco\xE7o: 34 cm.
 T\xF3rax: 48 cm.
-Comprimento: 43 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/1kQzWhT/BR-M.jpg","https://i.ibb.co/DDJL6tTk/Camiseta-BR-Ftet.png","https://i.ibb.co/tp5Yg5z2/Camiseta-BR-Costas-M.png","https://i.ibb.co/Zp9CKLDQ/Camiseta-BR-Lat-M.png"],observacao:"Garanta j\xE1 esse modelo exclusivo e deixe sua pet pronta para o pr\xF3ximo jogo! \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil G",tamanhos:["G"],descricao:`\u{1F1E7}\u{1F1F7} Rumo ao Hexa com Estilo \xDAnico! \u{1F43E}\u26BD
+Comprimento: 43 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/1kQzWhT/BR-M.jpg","https://i.ibb.co/DDJL6tTk/Camiseta-BR-Ftet.png","https://i.ibb.co/tp5Yg5z2/Camiseta-BR-Costas-M.png","https://i.ibb.co/Zp9CKLDQ/Camiseta-BR-Lat-M.png"],observacao:"Garanta j\xE1 esse modelo exclusivo e deixe sua pet pronta para o pr\xF3ximo jogo! \u{1F43E}\u26BD",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"Camiseta Brasil G",tamanhos:["G"],descricao:`\u{1F1E7}\u{1F1F7} Rumo ao Hexa com Estilo \xDAnico! \u{1F43E}\u26BD
 
 A Copa est\xE1 chegando e o seu pet n\xE3o pode ficar fora dessa torcida! Apresentamos nossa Camiseta Brasil \u2013 Modelo Exclusivo, desenvolvida para quem quer torcer com conforto e originalidade.
 
