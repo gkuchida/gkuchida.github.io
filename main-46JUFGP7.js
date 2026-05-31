@@ -396,7 +396,7 @@ Garanta j\xE1 o aconchego e a fofura que a sua gigante precisa!
 *Medidas:*
 - Pesco\xE7o: 52cm.
 - T\xF3rax: 66cm.
-- Comprimento: 50cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/279LXZ65/Basica-GG-IA.png","https://i.ibb.co/BHR80ZRj/IMG-6044.png","https://i.ibb.co/PvFd9cTr/IMG-6045.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Vermelha PP",tamanhos:["PP"],descricao:`A pe\xE7a ideal para aquecer e encantar seu pet de pequeno porte!
+- Comprimento: 50cm.`,preco:40,estoque:0,imagens:["https://i.ibb.co/279LXZ65/Basica-GG-IA.png","https://i.ibb.co/BHR80ZRj/IMG-6044.png","https://i.ibb.co/PvFd9cTr/IMG-6045.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Vermelha PP",tamanhos:["PP"],descricao:`A pe\xE7a ideal para aquecer e encantar seu pet de pequeno porte!
 Esta linda blusa b\xE1sica \xE9 confeccionada em fleece quentinho e macio, o tecido perfeito para garantir o bem-estar e o conforto da sua companheira nos dias mais frescos.
  A estampa \xE9 divertida, com um fundo vermelho vivo e ador\xE1veis abelhinhas sorridentes, dando um charme inconfund\xEDvel.
 Pensada no conforto e seguran\xE7a dos pets menores, a blusa conta com abertura no pesco\xE7o para a passagem da guia/coleira, facilitando o passeio.
