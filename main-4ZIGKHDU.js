@@ -48,7 +48,7 @@ Com estampa divertida e acabamento delicado, \xE9 uma pe\xE7a pr\xE1tica que com
 *Medidas:*
  Pesco\xE7o: at\xE9 28cm
  T\xF3rax: 32cm
-Comprimento: 40cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/gLVpTTg5/Basica-P-IA.png","https://i.ibb.co/LD8RSygT/Basica-P-Costas.png","https://i.ibb.co/mCb3m63t/Basica-P-Fte.png","https://i.ibb.co/hFGCqbHs/Basica-P-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa Veste F\xE1cil M",tamanhos:["M"],descricao:`A capinha veste f\xE1cil em fleece \xE9 perfeita para manter seu pet protegido e confort\xE1vel nos dias frios, sem complica\xE7\xE3o na hora de vestir.
+Comprimento: 40cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/gLVpTTg5/Basica-P-IA.png","https://i.ibb.co/LD8RSygT/Basica-P-Costas.png","https://i.ibb.co/mCb3m63t/Basica-P-Fte.png","https://i.ibb.co/hFGCqbHs/Basica-P-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Capa Veste F\xE1cil M",tamanhos:["M"],descricao:`A capinha veste f\xE1cil em fleece \xE9 perfeita para manter seu pet protegido e confort\xE1vel nos dias frios, sem complica\xE7\xE3o na hora de vestir.
 Com modelagem pr\xE1tica e confort\xE1vel, a pe\xE7a se ajusta ao corpo de forma suave, permitindo liberdade de movimento para brincar, passear ou descansar com muito aconchego.
 Confeccionada em tecido fleece com revestimento em pele artificial extremamente macio ajudam a manter o calor corporal, deixando seu companheiro ainda mais quentinho. A estampa divertida em tons pastel traz um visual delicado e encantador, ideal para pets cheios de personalidade.
 *Tecido:* Fleece
@@ -118,7 +118,7 @@ O modelo raglan proporciona melhor ajuste no corpo e mais mobilidade, sendo idea
 *Medidas:*
 Pesco\xE7o: 43 cm
 T\xF3rax: 58 cm
-Comprimento: 43 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/dJmrjyWD/Moletom-Vinho-IA.png","https://i.ibb.co/qLMdQJ9x/Moletom-Vinho-Costas.png","https://i.ibb.co/9LdJm7c/Moletom-Vinho-Fte.png","https://i.ibb.co/dsfXFWJD/Moletom-Vinho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Colete Azul M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 43 cm.`,preco:40,estoque:0,imagens:["https://i.ibb.co/dJmrjyWD/Moletom-Vinho-IA.png","https://i.ibb.co/qLMdQJ9x/Moletom-Vinho-Costas.png","https://i.ibb.co/9LdJm7c/Moletom-Vinho-Fte.png","https://i.ibb.co/dsfXFWJD/Moletom-Vinho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Colete Azul M",tamanhos:["M"],descricao:`*Novidade!* 
 Deixe seu pet quentinho e cheio de estilo com esse colete super elegante
 Confeccionado em tecido matelassado azul, com costuras geom\xE9tricas que trazem um toque moderno e sofisticado, ele \xE9 perfeito para os dias mais fresquinhos.
 O modelo possui gola estruturada que protege o pescocinho e fechamento em velcro na parte frontal, facilitando na hora de vestir e garantindo ajuste confort\xE1vel ao corpinho do seu pet. A parte interna \xE9 macia e aconchegante, proporcionando muito conforto durante o uso.
@@ -218,7 +218,7 @@ Com modelagem leve e confort\xE1vel, ela permite liberdade de movimento para bri
 *Medidas:*
 Pesco\xE7o: 28 a 38 cm
 T\xF3rax: 56 cm
-Comprimento: 44 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/7xXpNQk3/B-sica-Vermelho-IA.jpg","https://i.ibb.co/V0RCsX8Z/B-sica-Vermelho-Costas.png","https://i.ibb.co/S7HwQkdM/B-sica-Vermelho-Fte.png","https://i.ibb.co/Wp7q1qXR/B-sica-Vermelho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Xadrez P",tamanhos:["P"],descricao:`*Novidade!* 
+Comprimento: 44 cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/7xXpNQk3/B-sica-Vermelho-IA.jpg","https://i.ibb.co/V0RCsX8Z/B-sica-Vermelho-Costas.png","https://i.ibb.co/S7HwQkdM/B-sica-Vermelho-Fte.png","https://i.ibb.co/Wp7q1qXR/B-sica-Vermelho-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Xadrez P",tamanhos:["P"],descricao:`*Novidade!* 
 Deixe seu pet quentinho e confort\xE1vel com essa blusa b\xE1sica em fleece
 Com estampa xadrez em tons vibrantes de vermelho, azul marinho e branco, ela traz um visual cl\xE1ssico e estiloso para os dias mais fresquinhos. O acabamento em ribana preta na gola e nas aberturas garante melhor ajuste e um toque moderno \xE0 pe\xE7a.
 Confeccionada em fleece, \xE9 super macia, leve e aconchegante, mantendo seu pet aquecido sem limitar os movimentos. O modelo \xE9 pr\xE1tico e f\xE1cil de vestir, ideal para o dia a dia, passeios ou momentos de descanso.
@@ -361,7 +361,7 @@ Garanta j\xE1 o conforto e a fofura que a sua pet precisa!
 *Medidas:*
 - Pesco\xE7o: 40cm.
 - T\xF3rax: 44cm.
-- Comprimento: 30cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/b5Wg3hcy/Vestido-Babado-IA.png","https://i.ibb.co/Gv0TwX2f/Vestido-Babado-Fte-removebg-preview.png","https://i.ibb.co/Z6ndjTrD/IMG-7037.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa Dupla Face G",tamanhos:["G"],descricao:`A roupa perfeita para aquecer com zero estresse!
+- Comprimento: 30cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/b5Wg3hcy/Vestido-Babado-IA.png","https://i.ibb.co/Gv0TwX2f/Vestido-Babado-Fte-removebg-preview.png","https://i.ibb.co/Z6ndjTrD/IMG-7037.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Capa Dupla Face G",tamanhos:["G"],descricao:`A roupa perfeita para aquecer com zero estresse!
 Este lindo colete \xE9 feito em soft (material externo), e para um conforto e aquecimento extra, possui forro interno em Microsoft amarelo liso, garantindo um toque super agrad\xE1vel e o calor que seu pet merece. 
 O charme fica por conta da estampa de ursinhos do amor em um fundo amarelo alegre.
 A maior vantagem deste modelo \xE9 a sua facilidade de uso: ele \xE9 totalmente ajust\xE1vel gra\xE7as ao fechamento em velcro no pesco\xE7o e barriga. Esque\xE7a a dificuldade de vestir; basta envolver e prender!
@@ -407,7 +407,7 @@ Pensada no conforto e seguran\xE7a dos pets menores, a blusa conta com abertura 
 *Medidas:*
 - Pesco\xE7o: 41cm.
 - T\xF3rax: 51cm.
-- Comprimento: 37cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/3ycJW3j7/Basica-PP-IA.png","https://i.ibb.co/G4n31LzC/IMG-6722.png","https://i.ibb.co/HLD43J8K/Abelhinha-Fte.png"],tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Azul PP",tamanhos:["PP"],descricao:`A pe\xE7a ideal para aquecer e proteger!
+- Comprimento: 37cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/3ycJW3j7/Basica-PP-IA.png","https://i.ibb.co/G4n31LzC/IMG-6722.png","https://i.ibb.co/HLD43J8K/Abelhinha-Fte.png"],tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Azul PP",tamanhos:["PP"],descricao:`A pe\xE7a ideal para aquecer e proteger!
 Esta linda blusa b\xE1sica \xE9 confeccionada em soft de dupla camada (revestida/forrada), o tecido perfeito para garantir o dobro do calor e o bem-estar do seu pet nos dias mais frios.
 A estampa moderna em tons de azul, vermelho e cinza sobre o fundo claro \xE9 super estilosa, e os acabamentos em ribana de algod\xE3o vermelho na gola e nas cavas d\xE3o um toque vibrante de cor.
 O revestimento interno em microsoft amarelo beb\xEA garante que ele fique ainda mais quentinho.
