@@ -37,7 +37,7 @@ A estampa em tons de rosa com detalhes delicados traz um visual encantador, enqu
 *Medidas:*
 \u2022 Pesco\xE7o: at\xE9 32 cm
 \u2022 T\xF3rax: 53 cm
-\u2022 Comprimento: 44 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/nKKHr38/Basica-Fadas-IA.png","https://i.ibb.co/4RT5bFww/Basica-M-Rosa-Costas.png","https://i.ibb.co/r2FWw4zg/Basica-M-Rosa-Fte.png","https://i.ibb.co/nMv0NKKT/Basica-M-Rosa-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Verde Dinos P",tamanhos:["P"],descricao:`A blusa b\xE1sica em fleece \xE9 perfeita para proteger do frio leve, mantendo seu companheiro sempre quentinho e confort\xE1vel.
+\u2022 Comprimento: 44 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/nKKHr38/Basica-Fadas-IA.png","https://i.ibb.co/4RT5bFww/Basica-M-Rosa-Costas.png","https://i.ibb.co/r2FWw4zg/Basica-M-Rosa-Fte.png","https://i.ibb.co/nMv0NKKT/Basica-M-Rosa-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica Verde Dinos P",tamanhos:["P"],descricao:`A blusa b\xE1sica em fleece \xE9 perfeita para proteger do frio leve, mantendo seu companheiro sempre quentinho e confort\xE1vel.
 Confeccionada em tecido fleece macio e leve, a pe\xE7a proporciona um toque suave e agrad\xE1vel, ideal para uso di\xE1rio. A modelagem simples e confort\xE1vel permite liberdade de movimento, deixando seu pet \xE0 vontade para brincar, descansar ou passear.
 Com estampa divertida e acabamento delicado, \xE9 uma pe\xE7a pr\xE1tica que combina conforto e charme.
 
@@ -68,7 +68,7 @@ Confeccionada em tecido fleece com revestimento em microsoft anti piling, ajudam
 *Medidas:*
 \u2022 Pesco\xE7o: at\xE9 34 cm
 \u2022 T\xF3rax: 38-47 cm
-\u2022 Comprimento: 32 cm`,preco:30,estoque:1,imagens:["https://i.ibb.co/xSZW9Fpt/VF-P-IA.png","https://i.ibb.co/LDRwBSr3/VF-P-Costas.png","https://i.ibb.co/Qzxmwjt/VF-P-Fte.png","https://i.ibb.co/C3DYThwq/VF-P-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Amarelo P",tamanhos:["P"],descricao:`*Novidade!* 
+\u2022 Comprimento: 32 cm`,preco:30,estoque:0,imagens:["https://i.ibb.co/xSZW9Fpt/VF-P-IA.png","https://i.ibb.co/LDRwBSr3/VF-P-Costas.png","https://i.ibb.co/Qzxmwjt/VF-P-Fte.png","https://i.ibb.co/C3DYThwq/VF-P-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Amarelo P",tamanhos:["P"],descricao:`*Novidade!* 
 Conforto, praticidade e muito estilo para os dias mais fresquinhos! Esta blusa b\xE1sica para pets \xE9 confeccionada em soft amarelo estampado com avi\xF5ezinhos, um tecido macio, leve e quentinho, perfeito para manter seu pet confort\xE1vel no dia a dia.
 O modelo possui ribanas vermelhas no pesco\xE7o e nas cavas, que ajudam no ajuste ao corpinho e d\xE3o um toque alegre \xE0 pe\xE7a. Al\xE9m disso, conta com abertura nas costas para passagem da guia, permitindo usar com peitoral sem precisar tirar a roupinha na hora do passeio.
 
@@ -252,7 +252,7 @@ A estampa divertida de pinguins deixa a pe\xE7a ainda mais charmosa e alegre.
 *Medidas:*
 Pesco\xE7o: 40 a 47 cm
 T\xF3rax: 65 a 76 cm
-Comprimento: 45 cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/4nd1LDRP/Capa-VF-Pinguins-IA.jpg","https://i.ibb.co/ch1DvDgB/Capa-VF-Pinguins-Costas.png","https://i.ibb.co/yccqxHT5/Capa-VF-Pinguins-Fte.png","https://i.ibb.co/670j7gTW/Capa-VF-Pinguins-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Jaqueta Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 45 cm.`,preco:40,estoque:0,imagens:["https://i.ibb.co/4nd1LDRP/Capa-VF-Pinguins-IA.jpg","https://i.ibb.co/ch1DvDgB/Capa-VF-Pinguins-Costas.png","https://i.ibb.co/yccqxHT5/Capa-VF-Pinguins-Fte.png","https://i.ibb.co/670j7gTW/Capa-VF-Pinguins-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Jaqueta Moletom G",tamanhos:["G"],descricao:`*Novidade!* 
 Se voc\xEA busca o equil\xEDbrio perfeito entre estilo urbano e funcionalidade, a nossa Jaqueta Moletom com Z\xEDper \xE9 a escolha ideal. Com um tom bord\xF4 profundo e um bordado delicado, ela foi pensada para o pet que n\xE3o abre m\xE3o da eleg\xE2ncia, nem nos dias mais frios.
 Camada Dupla: Confeccionada em moletom encorpado com revestimento interno em moletinho, garantindo um toque suave que n\xE3o irrita a pele.
 Z\xEDper nas Costas: O fechamento superior facilita muito a hora de vestir, ideal para pets que t\xEAm receio de passar roupas pela cabe\xE7a.
@@ -317,7 +317,7 @@ Destaques do Modelo:
 \u{1F4CF} Medidas:
 Pesco\xE7o: Ajust\xE1vel at\xE9 46cm
 T\xF3rax: 50cm
-Comprimento: 43cm`,preco:35,estoque:1,imagens:["https://i.ibb.co/7cvcG53/Camiseta-BR-IA.jpg","https://i.ibb.co/7Jf1GHc7/Camiseta-BR-Costas.png","https://i.ibb.co/6cS3t0rT/Camiseta-BR-Zoom.png","https://i.ibb.co/93cC8MYQ/Camiseta-BR-Fte.png","https://i.ibb.co/DgCdpcDx/Camiseta-BR-Lado.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"B\xE1sica Azul M",tamanhos:["M"],descricao:`*Novidade!* 
+Comprimento: 43cm`,preco:35,estoque:0,imagens:["https://i.ibb.co/7cvcG53/Camiseta-BR-IA.jpg","https://i.ibb.co/7Jf1GHc7/Camiseta-BR-Costas.png","https://i.ibb.co/6cS3t0rT/Camiseta-BR-Zoom.png","https://i.ibb.co/93cC8MYQ/Camiseta-BR-Fte.png","https://i.ibb.co/DgCdpcDx/Camiseta-BR-Lado.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"unissex",sobMedida:!1},{nome:"B\xE1sica Azul M",tamanhos:["M"],descricao:`*Novidade!* 
 Roupa com regulagem no pesco\xE7o, garantindo ajuste perfeito e muito mais conforto para o seu pet.
 A pe\xE7a ideal para aquecer com estilo e conforto!
 Esta linda roupinha \xE9 confeccionada em moletinho, oferecendo o equil\xEDbrio perfeito entre leveza e aconchego, sem superaquecer o seu pet.
@@ -372,7 +372,7 @@ Praticidade, aconchego e estilo em um s\xF3 colete.
 *Medidas:*
 - Pesco\xE7o: 48 a 55cm.
 - T\xF3rax: 54 a 63cm.
-- Comprimento: 44cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/PvS1XC0G/Capa-DF-IA.png","https://i.ibb.co/8nbDNnZQ/IMG-6574.png","https://i.ibb.co/Z1fkn1hr/IMG-6710.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica P",tamanhos:["P"],descricao:`Prepare-se para esmagar de tanta fofura! 
+- Comprimento: 44cm.`,preco:40,estoque:0,imagens:["https://i.ibb.co/PvS1XC0G/Capa-DF-IA.png","https://i.ibb.co/8nbDNnZQ/IMG-6574.png","https://i.ibb.co/Z1fkn1hr/IMG-6710.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"B\xE1sica P",tamanhos:["P"],descricao:`Prepare-se para esmagar de tanta fofura! 
 Esta blusa b\xE1sica \xE9 feita em fleece extra macio e possui uma estampa l\xFAdica de bichinhos coloridos (elefantes, le\xF5es, macacos) sobre um charmoso fundo pink claro.
 Com o seu acabamento em ribana de algod\xE3o, a pe\xE7a garante durabilidade e um toque vibrante. 
 O conforto t\xE9rmico \xE9 garantido, sendo perfeita para noites frescas ou para relaxar dentro de casa.
@@ -440,7 +440,7 @@ Garanta j\xE1 o conforto e a fofura que a sua pet precisa!
 *Medidas:*
 - Pesco\xE7o: 41cm.
 - T\xF3rax: 51cm.
-- Comprimento: 37cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/7Nj1p6pk/Raglan-IA.png","https://i.ibb.co/8DfZ0msC/Blusa-Raglan-Fte.png","https://i.ibb.co/Cs8M9q5L/Blusa-Raglan-Verso.png"],tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Cama P",tamanhos:["P"],descricao:`\u{1F43E} O ref\xFAgio perfeito para o seu melhor amigo! \u2601\uFE0F
+- Comprimento: 37cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/7Nj1p6pk/Raglan-IA.png","https://i.ibb.co/8DfZ0msC/Blusa-Raglan-Fte.png","https://i.ibb.co/Cs8M9q5L/Blusa-Raglan-Verso.png"],tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"Cama P",tamanhos:["P"],descricao:`\u{1F43E} O ref\xFAgio perfeito para o seu melhor amigo! \u2601\uFE0F
 
 Procurando por conforto, higiene e estilo em um s\xF3 produto? Nossa caminha foi pensada em cada detalhe para garantir o descanso que o seu pet merece!
 \u2705 Conforto Premium: Enchimento em fibra siliconada antial\xE9rgica, super macia e fofinha.
@@ -501,7 +501,7 @@ Al\xE9m disso, ela possui fechamento em velcro tanto no pesco\xE7o quanto na bar
 *Medidas:*
 - Pesco\xE7o: 50 a 55 cm.
 - T\xF3rax: 54 a 62 cm.
-- Comprimento: 36 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/FbNZjDpT/Capa-G-IA.png","https://i.ibb.co/cXsVFZJv/Capa-Nylon-Transpasse-FTE.png","https://i.ibb.co/FZ2x3mt/Capa-Nylon-Transpasse-Costas.png"],observacao:"",isNovidade:!1,tipo:"acessorios",genero:"menino",sobMedida:!1},{nome:"Capa de chuva G",tamanhos:["G"],descricao:`Mantenha seu pet seco com uma capa que oferece prote\xE7\xE3o de qualidade e \xE9 super pr\xE1tica para os passeios!
+- Comprimento: 36 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/FbNZjDpT/Capa-G-IA.png","https://i.ibb.co/cXsVFZJv/Capa-Nylon-Transpasse-FTE.png","https://i.ibb.co/FZ2x3mt/Capa-Nylon-Transpasse-Costas.png"],observacao:"",isNovidade:!1,tipo:"acessorios",genero:"menino",sobMedida:!1},{nome:"Capa de chuva G",tamanhos:["G"],descricao:`Mantenha seu pet seco com uma capa que oferece prote\xE7\xE3o de qualidade e \xE9 super pr\xE1tica para os passeios!
  Esta capa \xE9 confeccionada em Nylon 70, um tecido conhecido por sua leveza, resist\xEAncia a rasgos e por ser o mesmo material utilizado em guarda-chuvas, garantindo sua efic\xE1cia como imperme\xE1vel. 
 O design funcional conta com capuz para proteger a cabe\xE7a e as orelhas e uma passagem para coleira/guia na regi\xE3o do pesco\xE7o, facilitando o uso sem comprometer a prote\xE7\xE3o. 
 Al\xE9m disso, ela possui fechamento em velcro tanto no pesco\xE7o quanto na barriga, assegurando um ajuste r\xE1pido, seguro e muito confort\xE1vel.
@@ -775,7 +775,7 @@ Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua exc
 
 Leve o frescor do mar para sua casa!`,preco:20,estoque:1,imagens:["https://i.ibb.co/q36Tb7f9/Cupcakes.png"],tipo:"artesanato",sobMedida:!1},{nome:"Necessaire multiuso",tamanhos:[""],descricao:`Feita em tricoline, essa necessaire \xE9 leve, resistente e cheia de charme. Possui al\xE7a lateral, que facilita o transporte e o uso no dia a dia.
 Super vers\xE1til, pode ser usada como farmacinha, necessaire, estojo escolar ou para organizar itens pessoais dentro da bolsa, mochila ou mala. Ideal para levar maquiagem, rem\xE9dios, itens de higiene, materiais escolares ou o que voc\xEA precisar manter sempre \xE0 m\xE3o.
-Um acess\xF3rio pr\xE1tico, funcional e com v\xE1rios usos, perfeito para quem gosta de organiza\xE7\xE3o sem abrir m\xE3o de estilo.`,preco:30,estoque:1,imagens:["https://i.ibb.co/4nkTTP8Z/Necessaire-IA.png","https://i.ibb.co/wFxzdYGy/IMG-8082.png","https://i.ibb.co/Y4c0XjLV/IMG-8081.png","https://i.ibb.co/JjYG5RKr/IMG-8080.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Esta necessaire \xE9 personaliz\xE1vel!
+Um acess\xF3rio pr\xE1tico, funcional e com v\xE1rios usos, perfeito para quem gosta de organiza\xE7\xE3o sem abrir m\xE3o de estilo.`,preco:30,estoque:0,imagens:["https://i.ibb.co/4nkTTP8Z/Necessaire-IA.png","https://i.ibb.co/wFxzdYGy/IMG-8082.png","https://i.ibb.co/Y4c0XjLV/IMG-8081.png","https://i.ibb.co/JjYG5RKr/IMG-8080.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Esta necessaire \xE9 personaliz\xE1vel!
 <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimens\xF5es para atender \xE0 sua necessidade.
 <strong>Estampas:</strong> Disponibilizamos um cat\xE1logo variado de estampas em tricoline.
 Entre em Contato para ver as op\xE7\xF5es de estampas, tamanhos e solicitar um or\xE7amento, chame-nos no WhatsApp! Ser\xE1 um prazer criar uma pe\xE7a \xFAnica para voc\xEA.
