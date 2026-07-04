@@ -206,7 +206,7 @@ Com estampa divertida e acabamento delicado, \xE9 uma pe\xE7a pr\xE1tica que com
 *Medidas:*
 Pesco\xE7o: 40 cm
 T\xF3rax: 54 cm
-Comprimento: 42 cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/v63YC4Ff/B-sica-Verde-IA.jpg","https://i.ibb.co/whq7nLwW/B-sica-Verde-Costas.png","https://i.ibb.co/ksZ6PrWh/B-sica-Verde-Fte.png","https://i.ibb.co/MxRCkfYN/B-sica-Verde-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Soft Vermelho G",tamanhos:["G"],descricao:`*Novidade!* 
+Comprimento: 42 cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/v63YC4Ff/B-sica-Verde-IA.jpg","https://i.ibb.co/whq7nLwW/B-sica-Verde-Costas.png","https://i.ibb.co/ksZ6PrWh/B-sica-Verde-Fte.png","https://i.ibb.co/MxRCkfYN/B-sica-Verde-Lado.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Soft Vermelho G",tamanhos:["G"],descricao:`*Novidade!* 
 Esta blusa em soft foi desenvolvida para manter seu companheiro quentinho nos dias mais fresquinhos, com um diferencial que garante ainda mais conforto: regulagem no pesco\xE7o.
 Confeccionada em soft macio e aconchegante, a pe\xE7a proporciona um toque suave e agrad\xE1vel, ideal para o uso di\xE1rio. A regulagem no pesco\xE7o permite ajustar melhor ao corpo do pet, oferecendo mais seguran\xE7a e um caimento confort\xE1vel.
 Com modelagem leve e confort\xE1vel, ela permite liberdade de movimento para brincar, passear ou descansar.
@@ -342,7 +342,7 @@ Uma pe\xE7a pr\xE1tica, charmosa e perfeita para o dia a dia do seu pet!
 *Medidas:*
 Pesco\xE7o: 37 a 45 cm
 T\xF3rax: 56 cm
-Comprimento: 40 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/R4s9nWht/Pluminha-rosa.jpg","https://i.ibb.co/23npTtXZ/IMG-8076.png","https://i.ibb.co/xKHmzQFh/IMG-8077.png","https://i.ibb.co/prnMYN6z/IMG-8075.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"menina",sobMedida:!0},{nome:"Vestido Soft com Jeans M",tamanhos:["M"],descricao:`Deixe sua pet quentinha e estilosa com esta roupinha super fofa! 
+Comprimento: 40 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/R4s9nWht/Pluminha-rosa.jpg","https://i.ibb.co/23npTtXZ/IMG-8076.png","https://i.ibb.co/xKHmzQFh/IMG-8077.png","https://i.ibb.co/prnMYN6z/IMG-8075.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"menina",sobMedida:!0},{nome:"Vestido Soft com Jeans M",tamanhos:["M"],descricao:`Deixe sua pet quentinha e estilosa com esta roupinha super fofa! 
 A parte superior em soft peludinho apresenta estampas divertidas de animais marinhos sorridentes, garantindo charme e alegria.
 A parte inferior em jeans d\xE1 um toque de modernidade e praticidade.
 
