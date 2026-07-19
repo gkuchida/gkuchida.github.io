@@ -477,7 +477,7 @@ Por que ela \xE9 incr\xEDvel?
 \u{1F31F} Toque de Nuvem: Feita em fleece ultra macio, que mant\xE9m o calor sem pesar.
 \u{1F31F} Tamanho Generoso: Com 1,00m x 0,90m, ela \xE9 ideal para cobrir camas m\xE9dias ou para o pet se enrolar todinho.
 \u{1F31F} Estampa Encantadora: Dinossauros.
-\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:40,estoque:2,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
+\u{1F4CF} Medidas: 1,00m x 0,90m`,preco:40,estoque:0,imagens:["https://i.ibb.co/fVx5mfw6/Manta-Azul-IA.jpg","https://i.ibb.co/mp2VMS1/Manta-Azul-Aberta.png","https://i.ibb.co/mCQxYFR1/Manta-Azul-Fte.png"],observacao:"",tipo:"acessorios",sobMedida:!1},{nome:"Capa de chuva Bagun G",tamanhos:["G"],descricao:`Garanta que seu pet se mantenha seco e estiloso nos dias de chuva!
 Esta capa \xE9 confeccionada em Nylon Bagun, um tecido t\xE9cnico de alta resist\xEAncia e maior rigidez, que confere um caimento estruturado \xE0 pe\xE7a, al\xE9m de ser totalmente imperme\xE1vel, protegendo seu companheiro da umidade.
 O design funcional conta com capuz para proteger a cabe\xE7a e as orelhas e um fechamento pr\xE1tico e seguro em velcro na barriga e no pesco\xE7o, permitindo um ajuste r\xE1pido e perfeito na hora de sair.
  O charme final fica por conta do acabamento em vi\xE9s de algod\xE3o (amarelo), que confere um toque moderno e sofisticado.
