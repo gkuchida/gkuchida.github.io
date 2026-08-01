@@ -351,7 +351,7 @@ A parte inferior em jeans d\xE1 um toque de modernidade e praticidade.
 *Medidas:*
 - Pesco\xE7o: 44cm.
 - T\xF3rax: 54cm.
-- Comprimento: 48cm.`,preco:40,estoque:1,imagens:["https://i.ibb.co/jkxS2Vh4/Vestido-jeans-IA.png","https://i.ibb.co/9H1Q3QjC/Vestido-Jeans-Fte-removebg-preview.png","https://i.ibb.co/tp0Pm9hk/IMG-7036.png"],observacao:"",isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Vestido Babadinho P",tamanhos:["P"],descricao:`A pe\xE7a ideal para aquecer e encantar! 
+- Comprimento: 48cm.`,preco:40,estoque:0,imagens:["https://i.ibb.co/jkxS2Vh4/Vestido-jeans-IA.png","https://i.ibb.co/9H1Q3QjC/Vestido-Jeans-Fte-removebg-preview.png","https://i.ibb.co/tp0Pm9hk/IMG-7036.png"],observacao:"",isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Vestido Babadinho P",tamanhos:["P"],descricao:`A pe\xE7a ideal para aquecer e encantar! 
 Este lindo vestido \xE9 confeccionado em soft quentinho, o tecido perfeito para garantir o bem-estar da sua companheira nos dias frios.
 A estampa de ursinhos e cora\xE7\xF5es sobre o fundo amarelo \xE9 alegre e vibrante. O babado delicado na barra confere um charme extra e um visual super fofo.
 Garanta j\xE1 o conforto e a fofura que a sua pet precisa!
@@ -429,7 +429,7 @@ Garanta j\xE1 o conforto e a fofura que a sua pet precisa!
 *Medidas:*
 - Pesco\xE7o: 34cm.
 - T\xF3rax: 52cm.
-- Comprimento: 40cm.`,preco:35,estoque:1,imagens:["https://i.ibb.co/Kxncn8Fs/Basica-M-IA.png","https://i.ibb.co/JRC5kzHt/IMG-5682.png","https://i.ibb.co/qYBWsDLb/IMG-5681.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan M",tamanhos:["M"],descricao:`A pe\xE7a ideal para aquecer e manter o estilo do seu pet aventureiro!
+- Comprimento: 40cm.`,preco:35,estoque:0,imagens:["https://i.ibb.co/Kxncn8Fs/Basica-M-IA.png","https://i.ibb.co/JRC5kzHt/IMG-5682.png","https://i.ibb.co/qYBWsDLb/IMG-5681.png"],isNovidade:!1,tipo:"inverno",genero:"menina",sobMedida:!0},{nome:"Blusa Raglan M",tamanhos:["M"],descricao:`A pe\xE7a ideal para aquecer e manter o estilo do seu pet aventureiro!
  Esta linda blusa \xE9 confeccionada em soft quentinho, o tecido perfeito para garantir o bem-estar do seu companheiro nos dias mais frescos.
  A estampa \xE9 vibrante, com um fundo vermelho vivo e uma divertida equipe de caminh\xF5es e m\xE1quinas de constru\xE7\xE3o, dando ao seu pet um look cheio de personalidade.
  O corte Raglan proporciona um visual estiloso e garante excelente mobilidade, e para a hora do passeio.
