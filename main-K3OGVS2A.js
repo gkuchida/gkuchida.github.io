@@ -330,7 +330,7 @@ Garanta j\xE1 conforto, charme e aquele toque gostoso que seu pet merece! \u{1F4
 *Medidas:*
 Pesco\xE7o: at\xE9 45 cm
 T\xF3rax: 56 cm
-Comprimento: 34 cm.`,preco:25,estoque:1,imagens:["https://i.ibb.co/tPTHd8n3/plumina-azul.png","https://i.ibb.co/S45BF9Yr/IMG-8074.png","https://i.ibb.co/QF7DjmtS/IMG-8073.png","https://i.ibb.co/Cp86yhtj/IMG-8072.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Rosa G",tamanhos:["G"],descricao:`Delicadeza e conforto para os dias frescos!
+Comprimento: 34 cm.`,preco:25,estoque:0,imagens:["https://i.ibb.co/tPTHd8n3/plumina-azul.png","https://i.ibb.co/S45BF9Yr/IMG-8074.png","https://i.ibb.co/QF7DjmtS/IMG-8073.png","https://i.ibb.co/Cp86yhtj/IMG-8072.png"],observacao:"",isNovidade:!0,tipo:"meiaestacao",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Rosa G",tamanhos:["G"],descricao:`Delicadeza e conforto para os dias frescos!
 Esta linda roupinha \xE9 confeccionada em moletinho macio, ideal para manter seu pet confort\xE1vel sem pesar.
 A estampa fofa com ursinhos e elementos delicados traz um visual alegre e encantador.
 O acabamento da gola e das cavas em ribana garante melhor ajuste ao corpo, enquanto o corpo da pe\xE7a \xE9 finalizado com o pr\xF3prio tecido, proporcionando um caimento leve e confort\xE1vel.
@@ -715,46 +715,46 @@ Panos de prato artesanais s\xE3o cl\xE1ssicos que nunca saem de moda. Esse model
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:1,imagens:["https://i.ibb.co/nMr8Q9Mx/Cupcake-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Cora\xE7\xF5es com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:0,imagens:["https://i.ibb.co/nMr8Q9Mx/Cupcake-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Cora\xE7\xF5es com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
 
 Panos de prato artesanais s\xE3o cl\xE1ssicos que nunca saem de moda. Esse modelo de cora\xE7\xF5es com renda e sianinha \xE9 o mimo ideal para ch\xE1 de cozinha, casa nova ou para voc\xEA mesma se presentear!
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:1,imagens:["https://i.ibb.co/M596ZpCp/Cora-es.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Bules com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:0,imagens:["https://i.ibb.co/M596ZpCp/Cora-es.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Bules com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
 
 Panos de prato artesanais s\xE3o cl\xE1ssicos que nunca saem de moda. Esse modelo de bules com po\xE1 azul e acabamento com renda e passa-fita \xE9 o mimo ideal para ch\xE1 de cozinha, casa nova ou para voc\xEA mesma se presentear!
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:1,imagens:["https://i.ibb.co/FkjgxQyV/Bule-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Doces com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:0,imagens:["https://i.ibb.co/FkjgxQyV/Bule-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Doces com renda",tamanhos:["45x60"],descricao:`Procurando um presente \xFAtil e lindo?
 
 Panos de prato artesanais s\xE3o cl\xE1ssicos que nunca saem de moda. Esse modelo de doces com po\xE1 bege e acabamento com renda e passa-fita \xE9 o mimo ideal para ch\xE1 de cozinha, casa nova ou para voc\xEA mesma se presentear!
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:1,imagens:["https://i.ibb.co/8nxbYJYt/Doces-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Bules",tamanhos:["45x60"],descricao:`Hora do caf\xE9 com eleg\xE2ncia!
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.`,preco:30,estoque:0,imagens:["https://i.ibb.co/8nxbYJYt/Doces-renda.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Bules",tamanhos:["45x60"],descricao:`Hora do caf\xE9 com eleg\xE2ncia!
 Tem coisa mais gostosa que uma cozinha com carinha de casa de v\xF3, mas com o capricho do artesanato moderno? Esse pano de prato traz uma estampa delicada de bules e flores que \xE9 puro charme.
 Barrado com estampa floral vintage
 Acabamento delicado em passa-fita
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:1,imagens:["https://i.ibb.co/DH7nWfYR/Bule.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Doces",tamanhos:["45x60"],descricao:`Uma explos\xE3o de cores e do\xE7ura!
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:0,imagens:["https://i.ibb.co/DH7nWfYR/Bule.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Doces",tamanhos:["45x60"],descricao:`Uma explos\xE3o de cores e do\xE7ura!
 Para quem gosta de uma cozinha cheia de vida e personalidade! Esse barrado de pirulitos e balas \xE9 perfeito para deixar o dia a dia mais alegre.
 Estampa l\xFAdica e colorida
 Barrado com acabamento em passa-fita verde
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:1,imagens:["https://i.ibb.co/C385Fj6R/Doces.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Corujas",tamanhos:["45x60"],descricao:`Charme e delicadeza para sua cozinha
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:0,imagens:["https://i.ibb.co/C385Fj6R/Doces.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Corujas",tamanhos:["45x60"],descricao:`Charme e delicadeza para sua cozinha
 Deixe sua cozinha mais alegre e acolhedora com esse lindo pano de prato artesanal!
 Com uma estampa encantadora de corujinhas coloridas, ele traz um toque de personalidade e carinho para o seu dia a dia.
 
 Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua excelente qualidade, alta absor\xE7\xE3o e durabilidade, esses panos s\xE3o ideais para secar lou\xE7as, enxugar as m\xE3os e auxiliar em todas as tarefas do dia a dia. Esque\xE7a aqueles panos que n\xE3o secam de verdade e soltam fiapos!
 <strong>Caracter\xEDsticas do Produto:</strong>
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
-- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:1,imagens:["https://i.ibb.co/gZpWc0dj/Corujas.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Peixes",tamanhos:["45x60"],descricao:`Mergulhe na fofura com esse barrado n\xE1utico!
+- <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade`,preco:20,estoque:0,imagens:["https://i.ibb.co/gZpWc0dj/Corujas.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Peixes",tamanhos:["45x60"],descricao:`Mergulhe na fofura com esse barrado n\xE1utico!
 Que tal um cardume de cores para alegrar a sua pia? Esse pano de prato com estampa de peixinhos e estrelas-do-mar \xE9 a escolha ideal para quem ama detalhes tem\xE1ticos e divertidos.
 Estampa vibrante em fundo azul marinho
 Acabamento com passa-fita amarelo
@@ -763,7 +763,7 @@ Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua exc
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
 - <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.
 
-Leve o frescor do mar para sua casa!`,preco:20,estoque:1,imagens:["https://i.ibb.co/9kg4YMks/Peixes.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Cupcakes",tamanhos:["45x60"],descricao:`Do\xE7ura e charme na sua cozinh
+Leve o frescor do mar para sua casa!`,preco:20,estoque:0,imagens:["https://i.ibb.co/9kg4YMks/Peixes.png"],tipo:"artesanato",sobMedida:!1},{nome:"Pano de prato Cupcakes",tamanhos:["45x60"],descricao:`Do\xE7ura e charme na sua cozinh
 Esse pano de prato \xE9 a escolha perfeita pra quem ama detalhes delicados e cheios de encanto!
 Com uma estampa fofa de cupcakes em tons suaves, ele traz leveza e um toque doce para o seu dia a dia.
 Estampa delicada e charmosa
@@ -773,7 +773,7 @@ Confeccionados com o aut\xEAntico tecido p\xE9 de galinha, conhecido por sua exc
 - <i>Pano Leg\xEDtimo P\xE9 de Galinha:</i> 100% algod\xE3o, alvejado (super branco) e com a trama tradicional que garante a melhor absor\xE7\xE3o.
 - <i>Detalhes que Encantam:</i> Cada pano \xE9 cuidadosamente finalizado com barrados em tecido de tricoline 100% algod\xE3o, trazendo estampas vivas e cheias de personalidade.
 
-Leve o frescor do mar para sua casa!`,preco:20,estoque:1,imagens:["https://i.ibb.co/q36Tb7f9/Cupcakes.png"],tipo:"artesanato",sobMedida:!1},{nome:"Necessaire multiuso",tamanhos:[""],descricao:`Feita em tricoline, essa necessaire \xE9 leve, resistente e cheia de charme. Possui al\xE7a lateral, que facilita o transporte e o uso no dia a dia.
+Leve o frescor do mar para sua casa!`,preco:20,estoque:0,imagens:["https://i.ibb.co/q36Tb7f9/Cupcakes.png"],tipo:"artesanato",sobMedida:!1},{nome:"Necessaire multiuso",tamanhos:[""],descricao:`Feita em tricoline, essa necessaire \xE9 leve, resistente e cheia de charme. Possui al\xE7a lateral, que facilita o transporte e o uso no dia a dia.
 Super vers\xE1til, pode ser usada como farmacinha, necessaire, estojo escolar ou para organizar itens pessoais dentro da bolsa, mochila ou mala. Ideal para levar maquiagem, rem\xE9dios, itens de higiene, materiais escolares ou o que voc\xEA precisar manter sempre \xE0 m\xE3o.
 Um acess\xF3rio pr\xE1tico, funcional e com v\xE1rios usos, perfeito para quem gosta de organiza\xE7\xE3o sem abrir m\xE3o de estilo.`,preco:30,estoque:0,imagens:["https://i.ibb.co/4nkTTP8Z/Necessaire-IA.png","https://i.ibb.co/wFxzdYGy/IMG-8082.png","https://i.ibb.co/Y4c0XjLV/IMG-8081.png","https://i.ibb.co/JjYG5RKr/IMG-8080.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Esta necessaire \xE9 personaliz\xE1vel!
 <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimens\xF5es para atender \xE0 sua necessidade.
@@ -784,7 +784,7 @@ Este porta filtro de caf\xE9 \xE9 ideal para organizar filtros de papel, mantend
 Confeccionado em tecido estampado, ele traz um toque alegre e acolhedor para o cantinho do caf\xE9.
 Para completar, o conjunto pode ser combinado com pano de prato com barrado no mesmo tecido, criando uma composi\xE7\xE3o harmoniosa e cheia de personalidade.
 Funcional, decorativo e perfeito para quem ama uma cozinha organizada e cheia de carinho.
-Ideal para presentear ou transformar seu cantinho do caf\xE9!`,preco:30,estoque:1,imagens:["https://i.ibb.co/5g6pvJHH/porta-filtro.jpg","https://i.ibb.co/SwFfPgVf/IMG-8079.png","https://i.ibb.co/ycP3SgT9/IMG-8078.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este kit \xE9 personaliz\xE1vel!
+Ideal para presentear ou transformar seu cantinho do caf\xE9!`,preco:30,estoque:0,imagens:["https://i.ibb.co/5g6pvJHH/porta-filtro.jpg","https://i.ibb.co/SwFfPgVf/IMG-8079.png","https://i.ibb.co/ycP3SgT9/IMG-8078.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este kit \xE9 personaliz\xE1vel!
 <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimens\xF5es para atender \xE0 sua necessidade.
 <strong>Estampas:</strong> Disponibilizamos um cat\xE1logo variado de estampas em tricoline.
 Entre em Contato para ver as op\xE7\xF5es de estampas, tamanhos e solicitar um or\xE7amento, chame-nos no WhatsApp! Ser\xE1 um prazer criar uma pe\xE7a \xFAnica para voc\xEA.
@@ -795,7 +795,7 @@ Entre em Contato para ver as op\xE7\xF5es de estampas, tamanhos e solicitar um o
  - <i>Fecho Pr\xE1tico:</i> Possui um fecho em cord\xE3o vermelho vibrante, que n\xE3o s\xF3 proporciona um fechamento seguro e r\xE1pido, mas tamb\xE9m adiciona um ponto de cor marcante. As pontas do cord\xE3o s\xE3o arrematadas com mi\xE7angas coloridas (amarelas, laranjas e peroladas), dando um toque artesanal e divertido.
  - <i>Multiuso:</i> Ideal como embalagem de presente reutiliz\xE1vel, saquinho organizador para viagens, porta-bijuterias, ou para guardar itens pessoais.
  - <i>Acabamento Artesanal:</i> Pe\xE7a com acabamento cuidadoso, feita \xE0 m\xE3o, garantindo exclusividade e aten\xE7\xE3o aos detalhes.
-<strong>Medidas:</strong>`,preco:20,estoque:1,imagens:["https://i.ibb.co/M5yJshgf/Saquinho-G-IA.png","https://i.ibb.co/fsfcFDQ/Saco-GG-Fte.png","https://i.ibb.co/tpcvNgTq/Saco-GG-Aberto.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho \xE9 personaliz\xE1vel!
+<strong>Medidas:</strong>`,preco:20,estoque:0,imagens:["https://i.ibb.co/M5yJshgf/Saquinho-G-IA.png","https://i.ibb.co/fsfcFDQ/Saco-GG-Fte.png","https://i.ibb.co/tpcvNgTq/Saco-GG-Aberto.png"],observacao:`<strong>Personalize o Seu!</strong> Gostou do modelo, mas prefere outras cores ou estampas? Este saquinho \xE9 personaliz\xE1vel!
 <strong>Tamanhos:</strong> Podemos confeccionar em diferentes dimens\xF5es para atender \xE0 sua necessidade.
 <strong>Estampas:</strong> Disponibilizamos um cat\xE1logo variado de estampas em tricoline.
 Entre em Contato para ver as op\xE7\xF5es de estampas, tamanhos e solicitar um or\xE7amento, chame-nos no WhatsApp! Ser\xE1 um prazer criar uma pe\xE7a \xFAnica para voc\xEA.
