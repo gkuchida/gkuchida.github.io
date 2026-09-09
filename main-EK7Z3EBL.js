@@ -26,7 +26,7 @@ A estampa em tons de amarelo com detalhes delicados traz um visual encantador, e
 *Medidas:*
 \u2022 Pesco\xE7o: at\xE9 32 cm
 \u2022 T\xF3rax: 53 cm
-\u2022 Comprimento: 44 cm.`,preco:30,estoque:1,imagens:["https://i.ibb.co/BKn607Fb/Basica-Amarela-IA.png","https://i.ibb.co/FNrDSGT/Basica-M-Costas.png","https://i.ibb.co/hxSwk9fc/Basica-M-Fte.png","https://i.ibb.co/qMGthjHR/Basica-M-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Rosa Fadas M",tamanhos:["M"],descricao:`A blusa b\xE1sica em fleece \xE9 perfeita para manter seu pet aquecido nos dias frios, unindo conforto, praticidade e muito charme.
+\u2022 Comprimento: 44 cm.`,preco:30,estoque:0,imagens:["https://i.ibb.co/BKn607Fb/Basica-Amarela-IA.png","https://i.ibb.co/FNrDSGT/Basica-M-Costas.png","https://i.ibb.co/hxSwk9fc/Basica-M-Fte.png","https://i.ibb.co/qMGthjHR/Basica-M-Lat.png"],observacao:"",isNovidade:!0,tipo:"inverno",genero:"menino",sobMedida:!0},{nome:"B\xE1sica Rosa Fadas M",tamanhos:["M"],descricao:`A blusa b\xE1sica em fleece \xE9 perfeita para manter seu pet aquecido nos dias frios, unindo conforto, praticidade e muito charme.
 Confeccionada em tecido fleece macio e aconchegante, proporciona um toque suave e agrad\xE1vel, ideal para o uso di\xE1rio. Sua modelagem confort\xE1vel permite liberdade de movimento, deixando seu companheiro \xE0 vontade para brincar, descansar ou passear.
 A estampa em tons de rosa com detalhes delicados traz um visual encantador, enquanto o acabamento em ribana pink garante um ajuste confort\xE1vel e bonito ao corpo do pet.
 
